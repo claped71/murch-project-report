@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated July 27, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated July 28, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "July 27, 2026",
+    "asOf": "July 28, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 43.5,
+    "overall": 44.5,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,13 +22,13 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, LV/DC cable 14%, civil and substation 10%.",
-    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. Pile installation stands at 84.7% across three active areas. Tracker assembly and module installation are the controlling fronts through August, and both are currently running below the pace required to hold their completion dates. The main power transformer was set on its foundation on July 24, placing the principal long-lead energization item on site; the first two inverters landed on July 27 with deliveries continuing. Monday July 27 was a full weather stop with no production on any front, and the balance of the week is being worked to recovery rates."
+    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. Pile installation stands at 85.6% across the remaining active areas, with 4,516 piles left to place. Tracker assembly and module installation are the controlling fronts through August and both remain below the pace required to hold their completion dates, although module installation returned above 3,000 per day on July 28. The main power transformer is set on its foundation and inverter stations are being placed in Areas A and C. LV and DC cable installation begins July 29, opening the last major workfront on the energization path. Production resumed on July 28 after the previous day was lost in full to weather."
   },
   "gates": [
     {
       "key": "piles",
       "name": "Foundation piles",
-      "installed": 26559,
+      "installed": 26836,
       "total": 31352,
       "unit": "piles",
       "forecast": "Aug 7, 2026",
@@ -37,7 +37,7 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 851,
+      "installed": 881,
       "total": 2486,
       "unit": "rows",
       "forecast": "Aug 30, 2026",
@@ -46,7 +46,7 @@ window.MURCH_REPORT = {
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 30780,
+      "installed": 33880,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -98,152 +98,157 @@ window.MURCH_REPORT = {
       {
         "d": "Jun 18",
         "v": 20,
-        "c": 15553
+        "c": 15730
       },
       {
         "d": "Jun 19",
         "v": 79,
-        "c": 15632
+        "c": 15809
       },
       {
         "d": "Jun 22",
         "v": 251,
-        "c": 15883
+        "c": 16060
       },
       {
         "d": "Jun 23",
         "v": 101,
-        "c": 15984
+        "c": 16161
       },
       {
         "d": "Jun 25",
         "v": 370,
-        "c": 16354
+        "c": 16531
       },
       {
         "d": "Jun 26",
         "v": 340,
-        "c": 16694
+        "c": 16871
       },
       {
         "d": "Jun 29",
         "v": 261,
-        "c": 16955
+        "c": 17132
       },
       {
         "d": "Jun 30",
         "v": 234,
-        "c": 17189
+        "c": 17366
       },
       {
         "d": "Jul 1",
         "v": 252,
-        "c": 17441
+        "c": 17618
       },
       {
         "d": "Jul 2",
         "v": 274,
-        "c": 17715
+        "c": 17892
       },
       {
         "d": "Jul 3",
         "v": 134,
-        "c": 17849
+        "c": 18026
       },
       {
         "d": "Jul 6",
         "v": 307,
-        "c": 18156
+        "c": 18333
       },
       {
         "d": "Jul 7",
         "v": 399,
-        "c": 18555
+        "c": 18732
       },
       {
         "d": "Jul 8",
         "v": 646,
-        "c": 19201
+        "c": 19378
       },
       {
         "d": "Jul 9",
         "v": 669,
-        "c": 19870
+        "c": 20047
       },
       {
         "d": "Jul 10",
         "v": 680,
-        "c": 20550
+        "c": 20727
       },
       {
         "d": "Jul 11",
         "v": 680,
-        "c": 21230
+        "c": 21407
       },
       {
         "d": "Jul 13",
         "v": 608,
-        "c": 21838
+        "c": 22015
       },
       {
         "d": "Jul 14",
         "v": 695,
-        "c": 22533
+        "c": 22710
       },
       {
         "d": "Jul 15",
         "v": 481,
-        "c": 23014
+        "c": 23191
       },
       {
         "d": "Jul 16",
         "v": 504,
-        "c": 23518
+        "c": 23695
       },
       {
         "d": "Jul 17",
         "v": 472,
-        "c": 23990
+        "c": 24167
       },
       {
         "d": "Jul 18",
         "v": 608,
-        "c": 24598
+        "c": 24775
       },
       {
         "d": "Jul 20",
         "v": 622,
-        "c": 25220
+        "c": 25397
       },
       {
         "d": "Jul 21",
         "v": 253,
-        "c": 25473
+        "c": 25650
       },
       {
         "d": "Jul 22",
         "v": 202,
-        "c": 25675
+        "c": 25852
       },
       {
         "d": "Jul 23",
         "v": 284,
-        "c": 25959
+        "c": 26136
       },
       {
         "d": "Jul 24",
         "v": 364,
-        "c": 26323
+        "c": 26500
       },
       {
         "d": "Jul 25",
         "v": 236,
-        "c": 26559
+        "c": 26736
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 26559
+        "c": 26736
+      },
+      {
+        "d": "Jul 28",
+        "v": 100,
+        "c": 26836
       }
     ],
     "trackers": [
@@ -391,6 +396,11 @@ window.MURCH_REPORT = {
         "d": "Jul 27",
         "v": 0,
         "c": 851
+      },
+      {
+        "d": "Jul 28",
+        "v": 30,
+        "c": 881
       }
     ],
     "modules": [
@@ -482,12 +492,17 @@ window.MURCH_REPORT = {
       {
         "d": "Jul 24",
         "v": 3134,
-        "c": 30780
+        "c": 31014
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 30780
+        "c": 31014
+      },
+      {
+        "d": "Jul 28",
+        "v": 3100,
+        "c": 33880
       }
     ]
   },
@@ -498,7 +513,7 @@ window.MURCH_REPORT = {
       "color": "#0f7a52",
       "planStart": "Jun 18",
       "planEnd": "Aug 7",
-      "planStartVal": 15553,
+      "planStartVal": 15730,
       "unit": "piles"
     },
     "trackers": {
@@ -553,7 +568,7 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Substation (overall)",
-      "done": 20,
+      "done": 21.7,
       "status": "Active",
       "note": "Overall substation progress 20.0%, up from 16.7% on July 21 — civil 59.3%, structural 11.3%, electrical 5.2%. Piers complete including concrete: 6 of 17. Main power transformer set on its foundation July 24."
     }
@@ -604,7 +619,7 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Piles executed",
-        "value": "26,559",
+        "value": "26,836",
         "note": "Current executed basis."
       },
       {
@@ -619,8 +634,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "606 / 851",
-        "note": "24.4% of the 2,486 rows in scope and 71.2% of the 851 built. Released rows feed the module installation front."
+        "value": "606 / 881",
+        "note": "24.4% of the 2,486 rows in scope and 68.8% of the 881 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -647,23 +662,25 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Jul 28 – Aug 1",
+      "period": "Jul 29 – Aug 1",
       "items": [
-        "Recover the weather day: pile installation at the 523/day rate required across the balance of the week.",
-        "Close out Areas B and F and hold the Area G rate above 300/day.",
-        "Tracker assembly at the 66 rows/day recovery rate, against a recent average near 30. Maintain same-week quality release of completed rows.",
-        "Module installation at the 4,680/day recovery rate, against a best day of 3,601. Second installation front brought to full strength.",
-        "Substation piers continuing at 2–4 per day. Breaker and structural steel deliveries tracked.",
-        "LV / DC cable installation kick-off preparation."
+        "LV and DC cable pull starts July 29 — first cabling front opens, 6,105 lf/day required for September 18.",
+        "Pile installation at 502/day to close the front around August 7; 4,516 remain.",
+        "Tracker assembly at 57 rows/day, with same-week quality release of completed rows.",
+        "Module installation at 4,047/day, holding the rate achieved on July 28.",
+        "Inverter station setting continuing in Areas A and C, with terminations to follow.",
+        "Substation piers continuing from 7 of 17; breaker and structural steel deliveries tracked.",
+        "Saturday working across all fronts."
       ]
     },
     {
       "period": "Aug 3 – Aug 8",
       "items": [
-        "First-phase pile installation forecast to complete around Aug 7, releasing the remaining tracker workfronts.",
-        "Area D slab demolition and second-phase pile workfront opening.",
+        "Pile installation forecast to complete around August 7, releasing the remaining tracker workfronts.",
+        "Area A LV cabling complete, extending the cable front into Areas B and C.",
         "Tracker assembly at full multi-crew rate.",
         "Module installation at sustained full-field rate.",
+        "Area D slab demolition and the second-phase pile workfront opening.",
         "Area G cut/fill following completion of the Area G basins.",
         "Substation structural steel erection start."
       ]
@@ -699,27 +716,27 @@ window.MURCH_REPORT = {
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "4,793 piles remain across three active areas. Completion in early August releases the tracker and module fronts and is the single largest driver of the mechanical completion date."
+      "note": "4,516 piles remain. Sustaining 502 per day closes the front in early August, which releases the remaining tracker and module workfronts and is the single largest driver of the mechanical completion date."
     },
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "1,635 rows remain to build and 1,880 to release for module installation. Assembly capacity is ramping and the quality release cadence is matched to the build rate so the module front is not held on released rows."
+      "note": "881 rows built of 2,486. 1,605 remain to build and 1,880 to release for module installation. 57 completed rows per day are required to hold August 30; the quality release cadence is matched to the build rate so the module front is not held waiting on released rows."
     },
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "140,690 modules remain. Material on site is not a constraint, with 126,460 modules in stock above the installed quantity. Installation capacity and released-row supply set the rate."
+      "note": "137,590 modules remain, with 4,047 per day required to hold September 6. Material is not a constraint — 123,360 modules are in stock above the installed quantity. Installation capacity and released-row supply set the rate."
     },
     {
       "title": "LV and DC cable installation",
-      "level": "Watch",
-      "note": "The cable pull is the next critical path to energization. Kick-off is being programmed with the material delivery sequence."
+      "level": "Priority",
+      "note": "Cable pull begins July 29 — the last major workfront on the path to energization. 6,105 linear feet per day are required to hold September 18. Area A is programmed to be LV-cabled next week."
     },
     {
       "title": "Substation completion",
       "level": "Watch",
-      "note": "Overall substation progress is 20%. The main power transformer is set; breakers and structural steel now control the interconnection path."
+      "note": "Overall substation progress is 21.7% — civil 65.6%, structural 10.8%, electrical 5.7%. Piers complete including concrete stand at 7 of 17. The main power transformer is set; breakers and structural steel now control the interconnection path."
     }
   ],
   "material": [
@@ -727,13 +744,13 @@ window.MURCH_REPORT = {
       "item": "Foundation piles",
       "delivered": "28,343",
       "pct": 90.4,
-      "note": "1,784 piles in stock above installed quantity. Deliveries exceed the installation rate."
+      "note": "1,507 piles in stock above installed quantity. Deliveries continue to exceed the installation rate."
     },
     {
       "item": "PV modules",
       "delivered": "157,240",
       "pct": 91.7,
-      "note": "126,460 modules in stock above installed quantity."
+      "note": "123,360 modules in stock above installed quantity."
     },
     {
       "item": "Tracker structures",
@@ -743,9 +760,9 @@ window.MURCH_REPORT = {
     },
     {
       "item": "Inverters",
-      "delivered": "2 received",
+      "delivered": "5 stations set",
       "pct": null,
-      "note": "First two units landed on site July 27. Deliveries continuing at approximately two units per day. Station platforms on site have base plates welded and foundations are 96% complete."
+      "note": "Inverter stations set on their foundations in Areas A and C, with serial numbers logged. Deliveries continuing; LV and MV terminations follow placement."
     },
     {
       "item": "Main power transformer",
@@ -831,7 +848,7 @@ window.MURCH_REPORT = {
       {
         "label": "Personnel on site",
         "value": "192",
-        "note": "Latest site-board headcount (July 20). Field labor plus management, quality and HSE."
+        "note": "Latest site-board headcount (Jul 20). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -845,8 +862,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "94,700",
-        "note": "Total manhours worked from the start of construction on April 1 through July 27, at 10 h/day, Monday to Saturday."
+        "value": "96,600",
+        "note": "Total manhours worked from the start of construction on April 1 through July 28, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -966,8 +983,8 @@ window.MURCH_REPORT = {
         "c": 77278
       },
       {
-        "d": "Jul 27",
-        "c": 94693
+        "d": "Jul 28",
+        "c": 96613
       }
     ],
     "mix": {
