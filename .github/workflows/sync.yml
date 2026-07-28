@@ -1,0 +1,92 @@
+name: Refresh Owner Project Report
+
+# Pulls the latest construction dashboard, re-derives the report's numeric
+# blocks, runs the publish guard, and republishes. Runs on GitHub — it does not
+# depend on anyone's laptop being open.
+#
+# The guard is a hard gate: if it fails, nothing is committed or published.
+
+on:
+  schedule:
+    # 02:30 and 12:30 UTC = 19:30 and 05:30 Phoenix. The evening run picks up the
+    # dashboard's end-of-day close; the morning run catches a late update.
+    - cron: '30 2 * * *'
+    - cron: '30 12 * * *'
+  workflow_dispatch:        # "Run workflow" button, for an on-demand refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the report
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch the construction dashboard
+        run: git clone --quiet --depth 1 https://github.com/claped71/murch-dashboard.git /tmp/dashboard
+
+      - name: Re-derive the report from the dashboard
+        id: sync
+        run: |
+          node tools/sync.js /tmp/dashboard/data.js --write | tee /tmp/sync.log
+          BASIS=$(node -e "global.window={};require('./data.js');process.stdout.write(window.MURCH_REPORT.meta.asOf)")
+          echo "basis=$BASIS" >> "$GITHUB_OUTPUT"
+
+      - name: Publish guard
+        run: node tools/guard.js
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No change since the last run."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Owner Project Report — basis ${{ steps.sync.outputs.basis }}"
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to the live site
+        if: steps.commit.outputs.changed == 'true'
+        # Pages serves this site from gh-pages, not main. Mirroring is what makes
+        # the published page actually move.
+        run: git push --force origin main:gh-pages
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Owner Project Report — basis ${{ steps.sync.outputs.basis }}"
+            echo ""
+            if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+              echo "Published: https://claped71.github.io/murch-project-report/"
+            else
+              echo "No change since the last run — nothing published."
+            fi
+            echo ""
+            echo '### Derived changes and review items'
+            echo '```'
+            cat /tmp/sync.log 2>/dev/null || echo "(sync log unavailable)"
+            echo '```'
+            echo ""
+            echo "> Items under REVIEW BEFORE PUBLISHING are prose blocks whose underlying"
+            echo "> numbers moved. The figures on the page are already correct; the wording"
+            echo "> around them may need a human pass."
+          } >> "$GITHUB_STEP_SUMMARY"
