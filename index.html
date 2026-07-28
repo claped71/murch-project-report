@@ -21,6 +21,17 @@ body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--sans)
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
 a{color:var(--brand)}
 
+/* ---- brand bar ---- */
+.brandbar{background:#fff;border-bottom:1px solid var(--line)}
+.brandbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.brandbar .side{display:flex;align-items:center;gap:14px;min-height:44px}
+.brandbar .side.r{margin-left:auto;text-align:right}
+.brandbar .role{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;line-height:1.4}
+.brandbar img{height:38px;width:auto;display:block}
+.brandbar .wordmark{font-size:20px;font-weight:700;letter-spacing:.02em;color:#1c3f6e}
+.brandbar .divider{width:1px;height:34px;background:var(--line)}
+@media(max-width:640px){.brandbar .wrap{gap:12px}.brandbar img{height:30px}.brandbar .divider{display:none}}
+
 /* ---- header ---- */
 header.top{background:linear-gradient(135deg,#0a4a35 0%,#0c5f43 55%,#12775a 100%);color:#fff;padding:34px 0 30px}
 header.top .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.8;font-weight:600}
@@ -118,6 +129,19 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </style>
 </head>
 <body>
+
+<div class="brandbar"><div class="wrap">
+  <div class="side">
+    <div class="role">Constructed by</div>
+    <img src="assets/greensol-logo.png" alt="GreenSol">
+  </div>
+  <div class="divider"></div>
+  <div class="side r">
+    <div class="role">Prepared for</div>
+    <img id="clientLogo" src="https://heelstoneenergy.com/wp-content/uploads/2025/11/HEEL_Logo_FINAL-11-768x145.png" alt="Heelstone Renewable Energy"
+         onerror="this.outerHTML='<span class=\'wordmark\'>HEELSTONE</span>'">
+  </div>
+</div></div>
 
 <header class="top">
   <div class="wrap">
@@ -309,9 +333,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   document.getElementById('title').textContent = D.meta.project;
   document.getElementById('subtitle').textContent = D.meta.capacityNote + ' · ' + D.meta.location;
   document.title = D.meta.project + ' — Owner Project Report';
-  var hm=[['Report date',D.meta.asOf],['Phase',D.meta.phase],['Mechanical completion',D.milestones[0].forecast],['Interconnection',D.milestones[1].forecast],['Prepared by',D.meta.preparedBy]];
+  var hm=[['Report date',D.meta.asOf],['Phase',D.meta.phase],['Mechanical completion',D.milestones[0].forecast],['Interconnection',D.milestones[1].forecast],['EPC contractor',D.meta.preparedBy]];
   document.getElementById('hdrmeta').innerHTML = hm.map(function(r){return '<div><span>'+r[0]+'</span><b>'+esc(r[1])+'</b></div>';}).join('');
-  document.getElementById('footText').textContent = D.meta.project + ' · ' + D.meta.reportNo + ' · Data as of ' + D.meta.asOf + ' · Prepared by ' + D.meta.preparedBy + '.';
+  document.getElementById('footText').textContent = D.meta.project + ' · ' + D.meta.reportNo + ' · Data as of ' + D.meta.asOf + ' · Prepared by ' + D.meta.preparedBy + ' for ' + (D.meta.client||'the Owner') + '.';
 
   /* summary */
   document.getElementById('overallNum').textContent = D.headline.overall.toFixed(1)+'%';
@@ -431,9 +455,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   /* material */
   document.getElementById('matBody').innerHTML = D.material.map(function(m){
+    var cell = (m.pct===null||m.pct===undefined)
+      ? '<span class="n" style="font-size:12px;color:var(--muted)">In delivery</span>'
+      : '<div class="bar" style="margin:4px 0 5px"><i style="width:'+m.pct+'%;background:var(--c2)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+m.pct+'%</span>';
     return '<tr><td><b>'+esc(m.item)+'</b></td><td class="n">'+esc(m.delivered)+'</td>'+
-    '<td><div class="bar" style="margin:4px 0 5px"><i style="width:'+m.pct+'%;background:var(--c2)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+m.pct+'%</span></td>'+
-    '<td class="note">'+esc(m.note)+'</td></tr>';
+    '<td>'+cell+'</td><td class="note">'+esc(m.note)+'</td></tr>';
   }).join('');
 
   /* safety + quality */
