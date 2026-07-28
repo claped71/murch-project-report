@@ -127,6 +127,84 @@ svg{display:block;width:100%;overflow:visible}
 .ph .cap p{margin:0;font-size:12.5px;color:var(--ink2)}
 
 footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+
+/* ---- horizontally scrollable chart shell (daily bars) ---- */
+.hscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.hscroll svg{display:block}
+.swipe{display:none;font-size:11px;color:var(--muted);margin-top:6px}
+
+/* =======================================================================
+   TABLETS AND PHONES
+   ======================================================================= */
+@media(max-width:1100px){
+  /* Four gate tiles cannot hold their forecast line and status pill on one row
+     at tablet-landscape width — go to two columns and let the footer wrap. */
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .gate .foot{white-space:normal;flex-wrap:wrap;row-gap:5px}
+}
+
+@media(max-width:1024px){
+  .wrap{padding:0 18px}
+  .sechead h2{font-size:19px}
+}
+
+@media(max-width:720px){
+  body{font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{padding:0 14px}
+  header.top{padding:24px 0 22px}
+  header.top h1{font-size:24px}
+  header.top .sub{font-size:13px}
+  .hdrmeta{gap:14px 22px;margin-top:14px;padding-top:14px}
+  nav a{padding:11px 10px;font-size:12px}
+  section{padding:28px 0 4px}
+  .sechead h2{font-size:18px}
+  .sechead p{font-size:13.5px}
+  .card{padding:14px}
+  .hero .num{font-size:42px}
+  .statement{font-size:14.5px}
+
+  /* --- tables become stacked cards --- */
+  table, tbody, tr, td{display:block;width:100%}
+  thead{display:none}
+  table{border-collapse:separate}
+  tr{border:1px solid var(--line);border-radius:9px;padding:12px;margin-bottom:10px;background:var(--card)}
+  tr:last-child{margin-bottom:0}
+  td{border:none;padding:5px 0;display:grid;grid-template-columns:112px 1fr;gap:10px;align-items:start}
+  td::before{
+    content:attr(data-label);
+    font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;padding-top:2px;line-height:1.35;
+  }
+  td[data-label=""]::before{display:none}
+  td .pill{justify-self:start}
+  td .bar{max-width:220px}
+  td.block{display:block}
+  td.block::before{display:block;margin-bottom:4px}
+  td.n{white-space:normal}
+  .card[style*="padding:18px 6px"]{padding:14px !important;border:none;background:transparent}
+
+  /* --- charts --- */
+  .chartcard{padding:14px}
+  .tiles{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+  .tile{padding:12px}
+  .tile .v{font-size:21px}
+  .gal{grid-template-columns:1fr}
+  .ph img{height:210px}
+  .la li{font-size:13px}
+  .brandbar .wrap{padding-top:12px;padding-bottom:12px}
+  .brandbar img{height:26px}
+  .brandbar .role{font-size:8.5px;letter-spacing:.12em}
+  .brandbar .wordmark{font-size:17px}
+  .brandbar .wordmark em{font-size:8px;letter-spacing:.16em}
+  .gate .foot{flex-wrap:wrap;white-space:normal;row-gap:6px}
+  .tt{max-width:80vw;white-space:normal}
+}
+
+@media(max-width:400px){
+  td{grid-template-columns:1fr;gap:2px}
+  td::before{padding-top:0}
+  .brandbar .wrap{gap:10px}
+}
 </style>
 </head>
 <body>
@@ -160,6 +238,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   <a href="#milestones">Milestones</a>
   <a href="#progress">Progress</a>
   <a href="#civil">Civil &amp; Substation</a>
+  <a href="#workforce">Workforce</a>
   <a href="#material">Material</a>
   <a href="#safety">Safety</a>
   <a href="#quality">Quality</a>
@@ -228,6 +307,43 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     <div class="card" style="padding:18px 6px">
       <table><thead><tr><th>Activity</th><th style="width:180px">Progress</th><th>Status</th><th>Notes</th></tr></thead>
       <tbody id="civilBody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="workforce">
+    <div class="sechead">
+      <div class="kicker">Workforce</div>
+      <h2 id="wfHead">Personnel on site and manhours expended</h2>
+      <p id="wfBasis"></p>
+    </div>
+    <div class="card" style="margin-bottom:14px">
+      <div class="tiles" id="wfTiles"></div>
+    </div>
+    <div class="grid g2">
+      <div class="chartcard">
+        <h3>Personnel on site</h3>
+        <p class="csub" id="hcSub"></p>
+        <div class="legend">
+          <span><i style="background:#0f7a52"></i>Recorded headcount</span>
+          <span><i class="dash"></i>Estimated mobilization</span>
+        </div>
+        <div id="hcChart"></div>
+      </div>
+      <div class="chartcard">
+        <h3>Cumulative manhours</h3>
+        <p class="csub" id="mhSub"></p>
+        <div class="legend">
+          <span><i style="background:#2769a8"></i>From recorded headcount</span>
+          <span><i class="dash"></i>Estimated period</span>
+        </div>
+        <div id="mhChart"></div>
+      </div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="card">
+      <h3 style="margin:0 0 3px;font-size:15px;font-weight:700">Workforce by discipline</h3>
+      <p class="csub" style="margin:0 0 14px;font-size:12.5px;color:var(--muted)" id="mixSub"></p>
+      <div id="mixBars"></div>
     </div>
   </section>
 
@@ -356,8 +472,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   /* milestones */
   document.getElementById('msBody').innerHTML = D.milestones.map(function(m){
-    return '<tr><td><b>'+esc(m.name)+'</b></td><td class="n">'+esc(m.contract)+'</td><td class="n"><b>'+esc(m.forecast)+'</b></td>'+
-      '<td><span class="pill '+pillCls(m.status)+'">'+esc(m.status)+'</span></td><td class="note">'+esc(m.note)+'</td></tr>';
+    return '<tr><td data-label="Milestone"><b>'+esc(m.name)+'</b></td>'+
+      '<td class="n" data-label="Contract date">'+esc(m.contract)+'</td>'+
+      '<td class="n" data-label="Forecast"><b>'+esc(m.forecast)+'</b></td>'+
+      '<td data-label="Status"><span class="pill '+pillCls(m.status)+'">'+esc(m.status)+'</span></td>'+
+      '<td class="note block" data-label="Basis">'+esc(m.note)+'</td></tr>';
   }).join('');
 
   /* ---------- S-curves ---------- */
@@ -405,10 +524,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       '<circle cx="'+last[0].toFixed(1)+'" cy="'+last[1].toFixed(1)+'" r="4" fill="'+meta.color+'" stroke="#fff" stroke-width="2"/>'+
       hot+'</svg></div>';
   }
-  document.getElementById('curveGrid').innerHTML = ['piles','trackers','modules'].map(curve).join('');
+  function renderCurves(){ document.getElementById('curveGrid').innerHTML = ['piles','trackers','modules'].map(curve).join(''); }
+  renderCurves();
 
   /* ---------- daily bars ---------- */
-  (function(){
+  function isNarrow(){ return window.innerWidth < 720; }
+  function renderDaily(){
     var keys=['piles','trackers','modules'];
     document.getElementById('dailyLegend').innerHTML = keys.map(function(k){
       return '<span><i style="background:'+D.seriesMeta[k].color+'"></i>'+esc(D.seriesMeta[k].label)+'</span>';
@@ -416,7 +537,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var html='';
     keys.forEach(function(k){
       var meta=D.seriesMeta[k], data=D.series[k];
-      var W=1060,H=120,ml=54,mr=10,mt=10,mb=24;
+      var narrow=isNarrow();
+      // On a phone the full run of days compresses the axis text into nothing.
+      // Use a narrower viewBox with larger type, and let the card scroll sideways.
+      var W = narrow ? 560 : 1060, H = narrow ? 150 : 120;
+      var ml = narrow ? 44 : 54, mr=10, mt=10, mb = narrow ? 30 : 24;
+      var FS = narrow ? 13 : 9.5;
       var iw=W-ml-mr, ih=H-mt-mb;
       var mx=Math.max.apply(null,data.map(function(d){return d.v;}))||1;
       var bw=Math.max(3,(iw/data.length)-3);
@@ -427,18 +553,21 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           ' data-t="'+esc(d.d)+'|'+fmt(d.c)+'|'+fmt(d.v)+'|'+esc(meta.unit)+'|'+((d.c/meta.total*100).toFixed(1))+'"/>';
       }).join('');
       var xl=data.map(function(d,i){
-        if(i%4!==0 && i!==data.length-1) return '';
-        return '<text x="'+(ml+i*(iw/data.length)+bw/2).toFixed(1)+'" y="'+(H-7)+'" text-anchor="middle" font-size="9.5" fill="#78857f">'+d.d+'</text>';
+        var every = narrow ? Math.ceil(data.length/5) : 4;
+        if(i%every!==0 && i!==data.length-1) return '';
+        return '<text x="'+(ml+i*(iw/data.length)+bw/2).toFixed(1)+'" y="'+(H-9)+'" text-anchor="middle" font-size="'+FS+'" fill="#78857f">'+d.d+'</text>';
       }).join('');
       html+='<div style="margin-bottom:6px"><div style="font-size:12px;font-weight:700;color:#41524c;margin:10px 0 2px">'+esc(meta.label)+' <span style="font-weight:500;color:#78857f">— peak '+fmt(mx)+' '+esc(meta.unit)+'/day</span></div>'+
-        '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:120px" role="img" aria-label="Daily '+esc(meta.label)+'">'+
+        '<div class="hscroll"><svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto" role="img" aria-label="Daily '+esc(meta.label)+'">'+
         '<line x1="'+ml+'" x2="'+(W-mr)+'" y1="'+(mt+ih)+'" y2="'+(mt+ih)+'" stroke="#e2e7e4"/>'+
-        '<text x="'+(ml-8)+'" y="'+(mt+6)+'" text-anchor="end" font-size="9.5" fill="#78857f">'+fmt(mx)+'</text>'+
-        '<text x="'+(ml-8)+'" y="'+(mt+ih)+'" text-anchor="end" font-size="9.5" fill="#78857f">0</text>'+
-        bars+xl+'</svg></div>';
+        '<text x="'+(ml-8)+'" y="'+(mt+6)+'" text-anchor="end" font-size="'+FS+'" fill="#78857f">'+fmt(mx)+'</text>'+
+        '<text x="'+(ml-8)+'" y="'+(mt+ih)+'" text-anchor="end" font-size="'+FS+'" fill="#78857f">0</text>'+
+        bars+xl+'</svg></div></div>';
     });
-    document.getElementById('dailyChart').innerHTML=html;
-  })();
+    document.getElementById('dailyChart').innerHTML=html
+      + (isNarrow() ? '<div class="swipe">Swipe a chart sideways to see every day.</div>' : '');
+  }
+  renderDaily();
 
   /* tooltips */
   document.addEventListener('mouseover',function(e){
@@ -450,10 +579,27 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   document.addEventListener('mouseout',function(e){ if(e.target.getAttribute && e.target.getAttribute('data-t')) hideTT(); });
   document.addEventListener('mousemove',function(e){ if(tt.style.opacity==1){ tt.style.left=(e.clientX+14)+'px'; tt.style.top=(e.clientY-10)+'px'; } });
 
+  // Touch devices have no hover: tap a mark to read it, tap away to dismiss.
+  document.addEventListener('touchstart',function(e){
+    var el=e.target, t=el&&el.getAttribute&&el.getAttribute('data-t');
+    if(!t){ hideTT(); return; }
+    var p=t.split('|'), r=el.getBoundingClientRect();
+    showTT('<b>'+p[0]+'</b>'+p[2]+' '+p[3]+' installed<br>Cumulative '+p[1]+' ('+p[4]+'%)',
+           Math.min(r.left, window.innerWidth-180), r.top);
+  }, {passive:true});
+
+  // Re-draw after rotation or resize so the charts match the new width.
+  var rt; window.addEventListener('resize', function(){
+    clearTimeout(rt);
+    rt = setTimeout(function(){ hideTT(); renderCurves(); renderDaily(); }, 180);
+  });
+
   /* civil */
   document.getElementById('civilBody').innerHTML = D.civil.map(function(c){
-    return '<tr><td><b>'+esc(c.activity)+'</b></td><td><div class="bar" style="margin:4px 0 5px"><i style="width:'+c.done+'%;background:var(--c1)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+c.done+'%</span></td>'+
-    '<td><span class="pill '+pillCls(c.status)+'">'+esc(c.status)+'</span></td><td class="note">'+esc(c.note)+'</td></tr>';
+    return '<tr><td data-label="Activity"><b>'+esc(c.activity)+'</b></td>'+
+    '<td data-label="Progress"><div class="bar" style="margin:4px 0 5px"><i style="width:'+c.done+'%;background:var(--c1)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+c.done+'%</span></td>'+
+    '<td data-label="Status"><span class="pill '+pillCls(c.status)+'">'+esc(c.status)+'</span></td>'+
+    '<td class="note block" data-label="Notes">'+esc(c.note)+'</td></tr>';
   }).join('');
 
   /* material */
@@ -461,8 +607,10 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var cell = (m.pct===null||m.pct===undefined)
       ? '<span class="n" style="font-size:12px;color:var(--muted)">In delivery</span>'
       : '<div class="bar" style="margin:4px 0 5px"><i style="width:'+m.pct+'%;background:var(--c2)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+m.pct+'%</span>';
-    return '<tr><td><b>'+esc(m.item)+'</b></td><td class="n">'+esc(m.delivered)+'</td>'+
-    '<td>'+cell+'</td><td class="note">'+esc(m.note)+'</td></tr>';
+    return '<tr><td data-label="Item"><b>'+esc(m.item)+'</b></td>'+
+    '<td class="n" data-label="Delivered">'+esc(m.delivered)+'</td>'+
+    '<td data-label="Of scope">'+cell+'</td>'+
+    '<td class="note block" data-label="Notes">'+esc(m.note)+'</td></tr>';
   }).join('');
 
   /* safety + quality */
@@ -478,7 +626,10 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   /* weather */
   document.getElementById('wxNote').textContent = D.weatherNote;
   document.getElementById('wxBody').innerHTML = D.weatherLog.map(function(w){
-    return '<tr><td class="n"><b>'+esc(w.date)+'</b></td><td>'+esc(w.type)+'</td><td>'+esc(w.impact)+'</td><td class="note">'+esc(w.detail)+'</td></tr>';
+    return '<tr><td class="n" data-label="Date"><b>'+esc(w.date)+'</b></td>'+
+    '<td data-label="Condition">'+esc(w.type)+'</td>'+
+    '<td data-label="Impact">'+esc(w.impact)+'</td>'+
+    '<td class="note block" data-label="Record">'+esc(w.detail)+'</td></tr>';
   }).join('');
 
   /* lookahead + focus */
@@ -492,8 +643,84 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   /* owner items */
   document.getElementById('ownBody').innerHTML = D.ownerItems.map(function(o){
-    return '<tr><td><b>'+esc(o.item)+'</b></td><td><span class="pill '+pillCls(o.status)+'">'+esc(o.status)+'</span></td><td class="n">'+esc(o.since)+'</td><td class="note">'+esc(o.detail)+'</td></tr>';
+    return '<tr><td data-label="Item"><b>'+esc(o.item)+'</b></td>'+
+    '<td data-label="Status"><span class="pill '+pillCls(o.status)+'">'+esc(o.status)+'</span></td>'+
+    '<td class="n" data-label="Open since">'+esc(o.since)+'</td>'+
+    '<td class="note block" data-label="Detail">'+esc(o.detail)+'</td></tr>';
   }).join('');
+
+  /* ---------- workforce ---------- */
+  (function(){
+    var W = D.workforce; if(!W) return;
+    document.getElementById('wfBasis').textContent = W.basis;
+    tiles('wfTiles', W.tiles);
+
+    // Split any est/actual series into a dashed estimated leg and a solid recorded leg.
+    function twoLeg(data, valKey, color, unit, fmtY){
+      var narrow = isNarrow();
+      var W2 = 480, H = narrow ? 230 : 200, ml = narrow ? 52 : 56, mr = 14, mt = 12, mb = 30;
+      var iw = W2-ml-mr, ih = H-mt-mb;
+      var maxY = Math.max.apply(null, data.map(function(d){ return d[valKey]; })) * 1.08;
+      var FS = narrow ? 12 : 10;
+      var x = function(i){ return ml + (i/(data.length-1))*iw; };
+      var y = function(v){ return mt + ih - (v/maxY)*ih; };
+      var gl='';
+      for(var g=0; g<=4; g++){
+        var v = maxY*g/4, yy = y(v);
+        gl += '<line x1="'+ml+'" x2="'+(W2-mr)+'" y1="'+yy.toFixed(1)+'" y2="'+yy.toFixed(1)+'" stroke="#eef1ef"/>'
+           +  '<text x="'+(ml-8)+'" y="'+(yy+3.5).toFixed(1)+'" text-anchor="end" font-size="'+FS+'" fill="#78857f">'+fmtY(v)+'</text>';
+      }
+      var pts = data.map(function(d,i){ return [x(i), y(d[valKey])]; });
+      function path(a){ return a.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1); }).join(' '); }
+      // last estimated index — the two legs share that point so the line is continuous
+      var lastEst = -1; data.forEach(function(d,i){ if(d.est) lastEst = i; });
+      var estPts = lastEst >= 0 ? pts.slice(0, lastEst+2) : [];
+      var actPts = lastEst >= 0 ? pts.slice(lastEst+1) : pts;
+      var area = actPts.length > 1
+        ? path(actPts)+' L'+actPts[actPts.length-1][0].toFixed(1)+' '+(mt+ih)+' L'+actPts[0][0].toFixed(1)+' '+(mt+ih)+' Z' : '';
+      var xl = data.map(function(d,i){
+        var every = narrow ? Math.ceil(data.length/4) : Math.ceil(data.length/6);
+        if(i%every!==0 && i!==data.length-1) return '';
+        var anch = i===0 ? 'start' : (i===data.length-1 ? 'end' : 'middle');
+        return '<text x="'+x(i).toFixed(1)+'" y="'+(H-9)+'" text-anchor="'+anch+'" font-size="'+FS+'" fill="#78857f">'+d.d+'</text>';
+      }).join('');
+      var hot = data.map(function(d,i){
+        return '<rect x="'+(x(i)-iw/data.length/2).toFixed(1)+'" y="'+mt+'" width="'+(iw/data.length).toFixed(1)+'" height="'+ih+'" fill="transparent"'
+          + ' data-t="'+esc(d.d)+(d.est?' (estimated)':'')+'|'+fmt(Math.round(d[valKey]))+'|'+fmt(Math.round(d[valKey]))+'|'+esc(unit)+'|—"/>';
+      }).join('');
+      var last = pts[pts.length-1];
+      return '<svg viewBox="0 0 '+W2+' '+H+'" style="width:100%;height:auto" role="img">'
+        + gl + xl
+        + (area ? '<path d="'+area+'" fill="'+color+'" opacity="0.10"/>' : '')
+        + (estPts.length>1 ? '<path d="'+path(estPts)+'" fill="none" stroke="#9aa5a0" stroke-width="2" stroke-dasharray="5 4"/>' : '')
+        + (actPts.length>1 ? '<path d="'+path(actPts)+'" fill="none" stroke="'+color+'" stroke-width="2" stroke-linejoin="round"/>' : '')
+        + '<circle cx="'+last[0].toFixed(1)+'" cy="'+last[1].toFixed(1)+'" r="4" fill="'+color+'" stroke="#fff" stroke-width="2"/>'
+        + hot + '</svg>';
+    }
+
+    function renderWorkforce(){
+      var hc = W.headcount, mh = W.manhours;
+      document.getElementById('hcSub').textContent =
+        'Latest recorded ' + hc[hc.length-1].v + ' people (' + hc[hc.length-1].d + '). Peak to date ' + Math.max.apply(null, hc.map(function(h){return h.v;})) + '.';
+      document.getElementById('mhSub').textContent =
+        fmt(mh[mh.length-1].c) + ' manhours to ' + mh[mh.length-1].d + ', of which ' + fmt(W.estimatedTotal) + ' are estimated for the mobilization period.';
+      document.getElementById('hcChart').innerHTML = twoLeg(hc, 'v', '#0f7a52', 'people', function(v){ return Math.round(v); });
+      document.getElementById('mhChart').innerHTML = twoLeg(mh, 'c', '#2769a8', 'manhours', function(v){ return v>=1000 ? Math.round(v/1000)+'k' : Math.round(v); });
+    }
+    renderWorkforce();
+    window.addEventListener('resize', function(){ clearTimeout(window.__wfT); window.__wfT = setTimeout(renderWorkforce, 200); });
+
+    var mix = W.mix;
+    document.getElementById('mixSub').textContent = 'Site board of ' + mix.day + ' — ' + mix.total + ' people. Disciplines, not individual contractors.';
+    document.getElementById('mixBars').innerHTML = mix.rows.map(function(r){
+      var p = (r.people/mix.total*100);
+      return '<div style="margin-bottom:11px">'
+        + '<div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:4px">'
+        +   '<span style="font-weight:600">'+esc(r.trade)+'</span>'
+        +   '<span class="n" style="color:var(--ink2)">'+r.people+' <span style="color:var(--muted)">· '+p.toFixed(0)+'%</span></span></div>'
+        + '<div class="bar" style="margin:0"><i style="width:'+p.toFixed(1)+'%;background:'+r.color+'"></i></div></div>';
+    }).join('');
+  })();
 
   /* photos */
   document.getElementById('gal').innerHTML = D.photos.map(function(p){

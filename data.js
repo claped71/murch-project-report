@@ -818,5 +818,217 @@ window.MURCH_REPORT = {
       "note": "Overall substation progress 20.0%, up from 16.7% on July 21 — civil 59.3%, structural 11.3%, electrical 5.2%. Piers complete including concrete: 6 of 17. Main power transformer set on its foundation July 24.",
       "why": "clarifies that the 6-of-17 ratio is the pier front, not overall substation progress"
     }
+  },
+  "workforce": {
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board; the record begins June 17, 2026 and is current to July 20. July 21–25 is carried at the last recorded headcount. April 1 – June 16 is an estimated mobilization ramp, shown separately and labelled as an estimate.",
+    "tiles": [
+      {
+        "label": "Personnel on site",
+        "value": "192",
+        "note": "Latest site-board headcount (Jul 20). Field labor plus management, quality and HSE."
+      },
+      {
+        "label": "Peak headcount",
+        "value": "209",
+        "note": "Highest recorded headcount to date (July 15)."
+      },
+      {
+        "label": "Average since June 17",
+        "value": "172",
+        "note": "Mean of the recorded site-board headcounts."
+      },
+      {
+        "label": "Manhours — recorded",
+        "value": "57,600",
+        "note": "June 17 to July 27, from recorded headcount at 10 h/day, Monday to Saturday. Days the site was fully stopped are excluded."
+      },
+      {
+        "label": "Manhours — project to date",
+        "value": "94,700",
+        "note": "Including an estimated 37,100 manhours for the mobilization period before headcount records begin on June 17."
+      },
+      {
+        "label": "Recordable incident rate",
+        "value": "0.00",
+        "note": "Recordable cases per 200,000 manhours. Zero recordable incidents across all hours worked."
+      }
+    ],
+    "headcount": [
+      {
+        "d": "Apr 1",
+        "v": 15,
+        "est": true
+      },
+      {
+        "d": "Apr 15",
+        "v": 25,
+        "est": true
+      },
+      {
+        "d": "May 1",
+        "v": 35,
+        "est": true
+      },
+      {
+        "d": "May 6",
+        "v": 45,
+        "est": true
+      },
+      {
+        "d": "May 15",
+        "v": 60,
+        "est": true
+      },
+      {
+        "d": "Jun 1",
+        "v": 85,
+        "est": true
+      },
+      {
+        "d": "Jun 10",
+        "v": 110,
+        "est": true
+      },
+      {
+        "d": "Jun 17",
+        "v": 136,
+        "est": false
+      },
+      {
+        "d": "Jun 25",
+        "v": 149,
+        "est": false
+      },
+      {
+        "d": "Jun 26",
+        "v": 134,
+        "est": false
+      },
+      {
+        "d": "Jun 29",
+        "v": 146,
+        "est": false
+      },
+      {
+        "d": "Jun 30",
+        "v": 148,
+        "est": false
+      },
+      {
+        "d": "Jul 7",
+        "v": 170,
+        "est": false
+      },
+      {
+        "d": "Jul 9",
+        "v": 191,
+        "est": false
+      },
+      {
+        "d": "Jul 13",
+        "v": 191,
+        "est": false
+      },
+      {
+        "d": "Jul 14",
+        "v": 202,
+        "est": false
+      },
+      {
+        "d": "Jul 15",
+        "v": 209,
+        "est": false
+      },
+      {
+        "d": "Jul 16",
+        "v": 198,
+        "est": false
+      },
+      {
+        "d": "Jul 20",
+        "v": 192,
+        "est": false
+      }
+    ],
+    "manhours": [
+      {
+        "d": "Apr 1",
+        "c": 150,
+        "est": true
+      },
+      {
+        "d": "Apr 15",
+        "c": 2593,
+        "est": true
+      },
+      {
+        "d": "May 1",
+        "c": 6849,
+        "est": true
+      },
+      {
+        "d": "May 15",
+        "c": 12792,
+        "est": true
+      },
+      {
+        "d": "Jun 1",
+        "c": 23045,
+        "est": true
+      },
+      {
+        "d": "Jun 15",
+        "c": 35737,
+        "est": true
+      },
+      {
+        "d": "Jul 1",
+        "c": 55632,
+        "est": false
+      },
+      {
+        "d": "Jul 15",
+        "c": 77278,
+        "est": false
+      },
+      {
+        "d": "Jul 27",
+        "c": 94693,
+        "est": false
+      }
+    ],
+    "mix": {
+      "day": "July 20, 2026",
+      "total": 192,
+      "rows": [
+        {
+          "trade": "Tracker assembly and piling",
+          "people": 97,
+          "color": "#0f7a52"
+        },
+        {
+          "trade": "Module installation",
+          "people": 51,
+          "color": "#2769a8"
+        },
+        {
+          "trade": "Electrical and substation",
+          "people": 14,
+          "color": "#b96f18"
+        },
+        {
+          "trade": "Civil and fencing",
+          "people": 11,
+          "color": "#7b4fa8"
+        },
+        {
+          "trade": "EPC management, quality and HSE",
+          "people": 19,
+          "color": "#66716d"
+        }
+      ]
+    },
+    "estimatedTotal": 37060,
+    "recordedTotal": 57633
   }
 };

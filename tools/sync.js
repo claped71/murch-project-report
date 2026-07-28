@@ -205,7 +205,7 @@ setTile(qTiles, 'Tracker rows released', `${fmt(trk.released)} / ${fmt(trk.insta
 function setTile(arr, label, value, noteText) {
   const t = arr.find(x => x.label === label);
   if (!t) return;
-  if (t.value !== value) changed.push(`quality "${label}" ${t.value} -> ${value}`);
+  if (t.value !== value) changed.push(`tile "${label}" ${t.value} -> ${value}`);
   t.value = value;
   if (noteText) t.note = noteText;
 }
@@ -233,6 +233,121 @@ function zeroProductionDays() {
   }));
 }
 function yearOf() { const m = String(I.control.asOf).match(/(\d{4})/); return m ? m[1] : '2026'; }
+
+/* ---------- 8b. workforce ---------- */
+// Headcount comes from the dashboard's manpower history; manhours are recomputed
+// from it on the stated shift basis, so the two can never drift apart.
+if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length) {
+  const WF = C.workforce;
+  const HRS = 10;                     // hours per person per day
+  const WORKDAY = dt => dt.getDay() >= 1 && dt.getDay() <= 6;   // Mon-Sat
+  const YEAR = Number(yearOf());
+  const toDate = label => {
+    const d = new Date(`${label}, ${YEAR}`);
+    return isNaN(d) ? null : d;
+  };
+
+  // Keep the estimated mobilization ramp; replace the recorded leg wholesale.
+  const est = WF.headcount.filter(h => h.est);
+  const rec = I.manpowerHistory
+    .map(h => ({ d: h.day, v: Number(h.total) || 0, est: false }))
+    .filter(h => h.v > 0 && toDate(h.d));
+  const prevLast = WF.headcount[WF.headcount.length - 1];
+  WF.headcount = est.concat(rec);
+  const last = rec[rec.length - 1];
+  if (!prevLast || prevLast.d !== last.d || prevLast.v !== last.v) {
+    changed.push(`workforce headcount -> ${last.v} people (${last.d})`);
+  }
+
+  // Integrate headcount over working days. Values between recorded points are
+  // interpolated; the tail is held flat at the last recorded headcount.
+  const pts = WF.headcount.map(h => ({ t: toDate(h.d), v: h.v, est: h.est })).filter(p => p.t);
+  pts.sort((a, b) => a.t - b.t);
+  const interp = t => {
+    if (t <= pts[0].t) return pts[0].v;
+    if (t >= pts[pts.length - 1].t) return pts[pts.length - 1].v;
+    for (let i = 0; i < pts.length - 1; i++) {
+      if (pts[i].t <= t && t <= pts[i + 1].t) {
+        const span = (pts[i + 1].t - pts[i].t) / 86400000 || 1;
+        return pts[i].v + (pts[i + 1].v - pts[i].v) * ((t - pts[i].t) / 86400000 / span);
+      }
+    }
+    return pts[pts.length - 1].v;
+  };
+  const firstRec = pts.find(p => !p.est);
+  const endDate = toDate(String(I.control.asOf).replace(/,.*$/, '')) || pts[pts.length - 1].t;
+  // Days the site was fully stopped earned no hours — take them from the weather log.
+  const stopped = new Set();
+  (C.weatherLog || []).forEach(w => {
+    if (!/full stop/i.test(w.impact || '')) return;
+    const dt = new Date(String(w.date).replace(/\s*\(\w+\)\s*$/, ''));
+    if (!isNaN(dt)) stopped.add(dt.toDateString());
+  });
+  if (stopped.size) note(review, `workforce: ${stopped.size} full-stop day(s) excluded from manhours (${[...stopped].join('; ')})`);
+
+  let estH = 0, recH = 0, cum = 0;
+  const curve = [];
+  for (let t = new Date(pts[0].t); t <= endDate; t.setDate(t.getDate() + 1)) {
+    if (!WORKDAY(t)) continue;
+    if (stopped.has(t.toDateString())) continue;
+    const h = interp(t) * HRS;
+    cum += h;
+    if (firstRec && t < firstRec.t) estH += h; else recH += h;
+    if (t.getDate() === 1 || t.getDate() === 15) {
+      curve.push({ d: t.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), c: Math.round(cum), est: !!(firstRec && t < firstRec.t) });
+    }
+  }
+  const endLabel = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  if (!curve.length || curve[curve.length - 1].d !== endLabel) curve.push({ d: endLabel, c: Math.round(cum), est: false });
+  WF.manhours = curve;
+  WF.estimatedTotal = Math.round(estH);
+  WF.recordedTotal = Math.round(recH);
+
+  const round100 = n => Math.round(n / 100) * 100;
+  const peak = Math.max.apply(null, rec.map(r => r.v));
+  const mean = Math.round(rec.reduce((a, b) => a + b.v, 0) / rec.length);
+  setTile(WF.tiles, 'Personnel on site', String(last.v));
+  setTile(WF.tiles, 'Peak headcount', String(peak));
+  setTile(WF.tiles, WF.tiles.filter(t => /^Average since/.test(t.label)).map(t => t.label)[0] || 'Average since June 17', String(mean));
+  const recStart = firstRec ? firstRec.t.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '';
+  const endLong = endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+  setTile(WF.tiles, 'Manhours — recorded', fmt(round100(recH)),
+    `${recStart} to ${endLong}, from recorded headcount at ${HRS} h/day, Monday to Saturday. Days the site was fully stopped are excluded.`);
+  setTile(WF.tiles, 'Manhours — project to date', fmt(round100(estH + recH)),
+    `Including an estimated ${fmt(round100(estH))} manhours for the mobilization period before headcount records begin on ${recStart}.`);
+  const avgTile = WF.tiles.find(t => /^Average since/.test(t.label));
+  if (avgTile) avgTile.label = 'Average since ' + recStart;
+  setTile(WF.tiles, 'Personnel on site', String(last.v), `Latest site-board headcount (${last.d}). Field labor plus management, quality and HSE.`);
+
+  // Recordable incident rate: recordables x 200,000 / manhours.
+  const recordables = Number((WF.recordables !== undefined) ? WF.recordables : 0);
+  setTile(WF.tiles, 'Recordable incident rate', ((recordables * 200000) / (estH + recH)).toFixed(2));
+  changed.push(`workforce manhours -> ${fmt(round100(estH + recH))} project to date`);
+  note(review, `workforce: manhours recomputed on the ${HRS} h/day Mon-Sat basis — confirm the shift basis still matches site practice, and re-read the tile notes if the headcount record start date moved`);
+
+  // Discipline mix, with trade labels made client-facing.
+  const TRADE = {
+    'Trackers & Piling': 'Tracker assembly and piling',
+    'Module Installation': 'Module installation',
+    'Electrical & SET': 'Electrical and substation',
+    'Civil & Fencing': 'Civil and fencing',
+    'GreenSol EPC': 'EPC management, quality and HSE'
+  };
+  const mixSrc = I.manpowerMixToday;
+  if (mixSrc && Array.isArray(mixSrc.mix)) {
+    const palette = ['#0f7a52', '#2769a8', '#b96f18', '#7b4fa8', '#66716d'];
+    C.workforce.mix = {
+      day: longDate(String(mixSrc.day).replace(/,\s*\d{4}$/, '')) + ', ' + YEAR,
+      total: Number(mixSrc.total) || 0,
+      rows: mixSrc.mix.map((m, i) => {
+        const label = TRADE[m.trade];
+        if (!label) note(review, `workforce: unmapped trade "${m.trade}" — add it to TRADE in tools/sync.js`);
+        return { trade: label || scrub(m.trade), people: Number(m.people) || 0, color: palette[i % palette.length] };
+      })
+    };
+    changed.push(`workforce mix -> ${C.workforce.mix.total} people across ${C.workforce.mix.rows.length} disciplines`);
+  }
+}
 
 /* ---------- 9. staleness review for curated prose ---------- */
 if (changed.some(c => c.startsWith('gate') || c.startsWith('overall'))) {

@@ -7,7 +7,7 @@ const BRAND_ALLOW = ['GreenSol', 'Greensol', 'Heelstone', 'Heelstone Renewable E
 
 // Companies and people that must never reach the client report.
 const NAMES = [
-  'Latnovva', 'ECCS', 'Brumont', 'Workforce', 'GameChange', 'Game Change', 'Chemik',
+  'Latnovva', 'ECCS', 'Brumont', 'GameChange', 'Game Change', 'Chemik',
   'Topland', 'Lounsbury', 'Hurricane', 'AB Power', 'ABPower', 'ABPOWER', 'Dig It', 'DIG IT',
   'Michael Power', 'SWCA', 'Westwood', 'Kalamazoo', 'Hi-Tech', 'HI-TECH', 'NTG', 'Landstar',
   'Pennsylvania Transformer', 'GreenSol Construction', 'Greensol Construction',
@@ -17,6 +17,11 @@ const NAMES = [
 ];
 // 'ITS' and 'United' need word-boundary care (common English words).
 const NAMES_WORD = ['ITS', 'United'];
+
+// Case-SENSITIVE, all-caps only. The module-installation subcontractor is written
+// WORKFORCE in the internal records, while "workforce" is ordinary English the
+// report needs (the workforce section). Only the shouted form is a company name.
+const NAMES_CAPS = ['WORKFORCE'];
 
 // Commercially sensitive / internal-control vocabulary.
 const TERMS = [
@@ -71,6 +76,9 @@ function hits(text) {
   for (const n of NAMES_WORD) {
     if (new RegExp('\\b' + esc(n) + '\\b').test(probe)) found.push({ type: 'name', term: n });
   }
+  for (const n of NAMES_CAPS) {
+    if (new RegExp('\\b' + esc(n) + '\\b').test(probe)) found.push({ type: 'name', term: n });
+  }
   for (const t of TERMS) {
     if (new RegExp('\\b' + esc(t) + '\\b', 'i').test(probe)) found.push({ type: 'term', term: t });
   }
@@ -78,4 +86,4 @@ function hits(text) {
   return found;
 }
 
-module.exports = { scrub, hits, NAMES, NAMES_WORD, TERMS, BRAND_ALLOW, MONEY };
+module.exports = { scrub, hits, NAMES, NAMES_WORD, NAMES_CAPS, TERMS, BRAND_ALLOW, MONEY };
