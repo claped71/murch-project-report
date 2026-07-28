@@ -38,6 +38,12 @@ for (const f of files) {
       if (h.term === 'rig' && /\bright\b|\borigin/i.test(line)) continue;
       fail.push(`${path.basename(f)}:${i + 1} [${h.type}:${h.term}] ${line.trim().slice(0, 130)}`);
     }
+    // Standing instruction (Jose, Jul 28): the Owner report presents figures as
+    // recorded. Flag anything that labels a published number as an estimate —
+    // including code comments, which are readable via view-source.
+    if (/\bestimat(e|ed|es|ing|ion)\b/i.test(line)) {
+      warn.push(`${path.basename(f)}:${i + 1} [estimate language] ${line.trim().slice(0, 110)}`);
+    }
     if (/PUBLISHING RULES|redaction|No subcontractor or supplier names/i.test(line)) {
       fail.push(`${path.basename(f)}:${i + 1} [leak] the redaction policy must not be published: ${line.trim().slice(0, 100)}`);
     }

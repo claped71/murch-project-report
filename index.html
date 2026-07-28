@@ -649,7 +649,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('wfBasis').textContent = W.basis;
     tiles('wfTiles', W.tiles);
 
-    // Split any est/actual series into a dashed estimated leg and a solid recorded leg.
+    // Draw a continuous series as a single solid line with a filled area beneath.
     function twoLeg(data, valKey, color, unit, fmtY){
       var narrow = isNarrow();
       var W2 = 480, H = narrow ? 230 : 200, ml = narrow ? 52 : 56, mr = 14, mt = 12, mb = 30;
