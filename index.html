@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Murch Solar Project — Owner Project Report</title>
+<style>
+:root{
+  --ink:#12211c; --ink2:#41524c; --muted:#78857f;
+  --line:#e2e7e4; --line2:#eef1ef;
+  --surface:#fcfcfb; --card:#ffffff; --panel:#f6f8f7;
+  --brand:#0c5f43; --brand2:#0f7a52;
+  --c1:#0f7a52; --c2:#2769a8; --c3:#b96f18; --c4:#7b4fa8;
+  --good:#1d7a4d; --warn:#b07708; --serious:#b8541b; --crit:#a8322c;
+  --radius:10px;
+  --sans:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+a{color:var(--brand)}
+
+/* ---- header ---- */
+header.top{background:linear-gradient(135deg,#0a4a35 0%,#0c5f43 55%,#12775a 100%);color:#fff;padding:34px 0 30px}
+header.top .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.8;font-weight:600}
+header.top h1{margin:8px 0 4px;font-size:30px;font-weight:700;letter-spacing:-.02em}
+header.top .sub{opacity:.88;font-size:14px}
+.hdrmeta{display:flex;flex-wrap:wrap;gap:26px;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2)}
+.hdrmeta div span{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.72;font-weight:600}
+.hdrmeta div b{font-size:14px;font-weight:600}
+
+/* ---- nav ---- */
+nav{position:sticky;top:0;z-index:50;background:rgba(252,252,251,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;padding-top:0;padding-bottom:0}
+nav a{padding:12px 12px;font-size:12.5px;font-weight:600;color:var(--ink2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent}
+nav a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+
+section{padding:38px 0 6px}
+.sechead{margin-bottom:16px}
+.sechead .kicker{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--brand);font-weight:700}
+.sechead h2{margin:5px 0 4px;font-size:21px;font-weight:700;letter-spacing:-.015em}
+.sechead p{margin:0;color:var(--ink2);font-size:14px;max-width:80ch}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* ---- headline ---- */
+.headwrap{display:grid;grid-template-columns:230px 1fr;gap:20px;align-items:center}
+@media(max-width:760px){.headwrap{grid-template-columns:1fr}}
+.hero{text-align:center}
+.hero .num{font-size:52px;font-weight:700;letter-spacing:-.03em;color:var(--brand);line-height:1}
+.hero .lbl{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:6px}
+.statement{font-size:15px;color:var(--ink2);line-height:1.65}
+
+/* ---- gate tiles ---- */
+.gate{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.gate .nm{font-size:12px;font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em}
+.gate .big{font-size:27px;font-weight:700;letter-spacing:-.02em;margin-top:6px}
+.gate .big small{font-size:13px;font-weight:500;color:var(--muted)}
+.bar{height:7px;background:var(--line2);border-radius:4px;overflow:hidden;margin:10px 0 8px}
+.bar i{display:block;height:100%;border-radius:4px}
+.gate .foot{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
+.p-good{background:#e6f3ec;color:var(--good)} .p-watch{background:#fdf3e0;color:var(--warn)}
+.p-behind{background:#fbeee7;color:var(--serious)} .p-ns{background:#eef1ef;color:var(--muted)}
+.p-crit{background:#fae9e8;color:var(--crit)}
+
+/* ---- tables ---- */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 12px 9px;border-bottom:1px solid var(--line)}
+td{padding:12px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{color:var(--ink2);font-size:12.5px;line-height:1.5}
+
+/* ---- chart ---- */
+.chartcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.chartcard h3{margin:0 0 2px;font-size:15px;font-weight:700}
+.chartcard .csub{margin:0 0 14px;font-size:12.5px;color:var(--muted)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin-bottom:8px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.legend .dash{background:repeating-linear-gradient(90deg,var(--muted) 0 5px,transparent 5px 9px);height:2px}
+svg{display:block;width:100%;overflow:visible}
+.tt{position:fixed;pointer-events:none;background:#12211c;color:#fff;font-size:12px;padding:8px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:99;line-height:1.45;white-space:nowrap}
+.tt b{display:block;font-size:11px;opacity:.75;font-weight:600;margin-bottom:3px}
+
+/* ---- lists ---- */
+.la{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.la h3{margin:0 0 10px;font-size:14px;font-weight:700;color:var(--brand)}
+.la ul{margin:0;padding-left:18px}
+.la li{margin-bottom:7px;font-size:13.5px;color:var(--ink2)}
+
+.focus{border-left:3px solid var(--line);padding:2px 0 2px 14px;margin-bottom:16px}
+.focus.pri{border-left-color:var(--serious)}
+.focus.wat{border-left-color:var(--warn)}
+.focus h4{margin:0 0 3px;font-size:14px;font-weight:700}
+.focus p{margin:0;font-size:13px;color:var(--ink2)}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line2);border-radius:8px;padding:14px}
+.tile .v{font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--brand)}
+.tile .l{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:2px}
+.tile .n{font-size:12px;color:var(--ink2);margin-top:6px;line-height:1.45}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.ph{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.ph img{width:100%;height:190px;object-fit:cover;display:block;background:var(--panel)}
+.ph .cap{padding:13px}
+.ph .cap .dt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.ph .cap h4{margin:4px 0 5px;font-size:14px;font-weight:700}
+.ph .cap p{margin:0;font-size:12.5px;color:var(--ink2)}
+
+footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow" id="eyebrow">Owner Project Report</div>
+    <h1 id="title">Murch Solar Project</h1>
+    <div class="sub" id="subtitle">Utility-scale photovoltaic generating facility · Lawrence, Van Buren County, Michigan</div>
+    <div class="hdrmeta" id="hdrmeta"></div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#summary">Summary</a>
+  <a href="#milestones">Milestones</a>
+  <a href="#progress">Progress</a>
+  <a href="#civil">Civil &amp; Substation</a>
+  <a href="#material">Material</a>
+  <a href="#safety">Safety</a>
+  <a href="#quality">Quality</a>
+  <a href="#weather">Weather record</a>
+  <a href="#lookahead">Lookahead</a>
+  <a href="#owner">Owner items</a>
+  <a href="#photos">Site photos</a>
+</div></nav>
+
+<div class="wrap">
+
+  <section id="summary">
+    <div class="sechead">
+      <div class="kicker">Executive summary</div>
+      <h2>Project status at a glance</h2>
+    </div>
+    <div class="card" style="margin-bottom:14px">
+      <div class="headwrap">
+        <div class="hero">
+          <div class="num" id="overallNum">—</div>
+          <div class="lbl">Overall completion</div>
+        </div>
+        <div>
+          <p class="statement" id="statement"></p>
+          <p class="note" style="margin:10px 0 0" id="overallNote"></p>
+        </div>
+      </div>
+    </div>
+    <div class="grid g4" id="gateGrid"></div>
+  </section>
+
+  <section id="milestones">
+    <div class="sechead">
+      <div class="kicker">Contract milestones</div>
+      <h2>Contract dates versus current forecast</h2>
+      <p>Forecast dates reflect the current construction sequence and the production rates required to hold it.</p>
+    </div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th>Milestone</th><th>Contract date</th><th>Current forecast</th><th>Status</th><th>Basis</th></tr></thead>
+      <tbody id="msBody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="progress">
+    <div class="sechead">
+      <div class="kicker">Production</div>
+      <h2>Cumulative progress against plan</h2>
+      <p>Solid line is installed quantity to date. The dashed line is the straight-line pace required to reach the forecast completion date for each discipline.</p>
+    </div>
+    <div class="grid g3" id="curveGrid"></div>
+    <div style="height:14px"></div>
+    <div class="chartcard">
+      <h3>Daily installation output</h3>
+      <p class="csub" id="dailySub">Reported daily production. Non-working days and weather stops appear as zero.</p>
+      <div class="legend" id="dailyLegend"></div>
+      <div id="dailyChart"></div>
+    </div>
+  </section>
+
+  <section id="civil">
+    <div class="sechead">
+      <div class="kicker">Civil, balance of plant and substation</div>
+      <h2>Supporting works progress</h2>
+    </div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th>Activity</th><th style="width:180px">Progress</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody id="civilBody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="material">
+    <div class="sechead">
+      <div class="kicker">Procurement</div>
+      <h2>Material received on site</h2>
+      <p>Delivered quantities against project scope. Material availability is not currently constraining installation.</p>
+    </div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th>Item</th><th>Delivered</th><th style="width:170px">Of scope</th><th>Notes</th></tr></thead>
+      <tbody id="matBody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="sechead">
+      <div class="kicker">Health &amp; safety</div>
+      <h2 id="safeHead"></h2>
+    </div>
+    <div class="card">
+      <div class="tiles" id="safeTiles"></div>
+      <p class="note" style="margin:14px 0 0" id="safeNote"></p>
+    </div>
+  </section>
+
+  <section id="quality">
+    <div class="sechead">
+      <div class="kicker">Quality assurance</div>
+      <h2 id="qHead"></h2>
+    </div>
+    <div class="card">
+      <div class="tiles" id="qTiles"></div>
+      <p class="note" style="margin:14px 0 0" id="qNote"></p>
+    </div>
+  </section>
+
+  <section id="weather">
+    <div class="sechead">
+      <div class="kicker">Weather record</div>
+      <h2>Days with recorded production impact</h2>
+      <p id="wxNote"></p>
+    </div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th style="width:180px">Date</th><th>Condition</th><th>Impact</th><th>Record</th></tr></thead>
+      <tbody id="wxBody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="lookahead">
+    <div class="sechead">
+      <div class="kicker">Two-week lookahead</div>
+      <h2>Planned work</h2>
+    </div>
+    <div class="grid g2" id="laGrid"></div>
+    <div style="height:18px"></div>
+    <div class="sechead"><h2 style="font-size:17px">Focus areas</h2></div>
+    <div class="card" id="focusBox"></div>
+  </section>
+
+  <section id="owner">
+    <div class="sechead">
+      <div class="kicker">Action</div>
+      <h2>Items awaiting Owner</h2>
+      <p>Items where an Owner decision, approval or confirmation supports the construction sequence.</p>
+    </div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th>Item</th><th style="width:120px">Status</th><th style="width:120px">Open since</th><th>Detail</th></tr></thead>
+      <tbody id="ownBody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="photos">
+    <div class="sechead">
+      <div class="kicker">Site record</div>
+      <h2>Recent site photographs</h2>
+    </div>
+    <div class="gal" id="gal"></div>
+  </section>
+
+  <footer>
+    <div id="footText"></div>
+    <div style="margin-top:8px">Physical progress and quantities only. This report contains no commercial or contractual value information.</div>
+  </footer>
+</div>
+
+<div class="tt" id="tt"></div>
+<script src="data.js"></script>
+<script>
+(function(){
+  var D = window.MURCH_REPORT;
+  var tt = document.getElementById('tt');
+  function showTT(html,x,y){ tt.innerHTML=html; tt.style.opacity=1; tt.style.left=(x+14)+'px'; tt.style.top=(y-10)+'px'; }
+  function hideTT(){ tt.style.opacity=0; }
+  function fmt(n){ return n.toLocaleString('en-US'); }
+  function esc(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
+  function pillCls(s){
+    s=(s||'').toLowerCase();
+    if(s.indexOf('complete')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
+    if(s.indexOf('watch')>=0||s.indexOf('active')>=0||s.indexOf('open')>=0) return 'p-watch';
+    if(s.indexOf('behind')>=0||s.indexOf('priority')>=0) return 'p-behind';
+    if(s.indexOf('critical')>=0) return 'p-crit';
+    return 'p-ns';
+  }
+
+  /* header */
+  document.getElementById('eyebrow').textContent = D.meta.reportNo + ' · ' + D.meta.asOf;
+  document.getElementById('title').textContent = D.meta.project;
+  document.getElementById('subtitle').textContent = D.meta.capacityNote + ' · ' + D.meta.location;
+  document.title = D.meta.project + ' — Owner Project Report';
+  var hm=[['Report date',D.meta.asOf],['Phase',D.meta.phase],['Mechanical completion',D.milestones[0].forecast],['Interconnection',D.milestones[1].forecast],['Prepared by',D.meta.preparedBy]];
+  document.getElementById('hdrmeta').innerHTML = hm.map(function(r){return '<div><span>'+r[0]+'</span><b>'+esc(r[1])+'</b></div>';}).join('');
+  document.getElementById('footText').textContent = D.meta.project + ' · ' + D.meta.reportNo + ' · Data as of ' + D.meta.asOf + ' · Prepared by ' + D.meta.preparedBy + '.';
+
+  /* summary */
+  document.getElementById('overallNum').textContent = D.headline.overall.toFixed(1)+'%';
+  document.getElementById('statement').textContent = D.headline.statement;
+  document.getElementById('overallNote').textContent = D.headline.overallNote;
+
+  var colors={piles:'#0f7a52',trackers:'#2769a8',modules:'#b96f18',electrical:'#7b4fa8'};
+  document.getElementById('gateGrid').innerHTML = D.gates.map(function(g){
+    var pct = g.total ? (g.installed/g.total*100) : 0;
+    return '<div class="gate"><div class="nm">'+esc(g.name)+'</div>'+
+      '<div class="big">'+pct.toFixed(1)+'% <small>'+fmt(g.installed)+' / '+fmt(g.total)+'</small></div>'+
+      '<div class="bar"><i style="width:'+Math.max(pct,0.6)+'%;background:'+(colors[g.key]||'#0f7a52')+'"></i></div>'+
+      '<div class="foot"><span>Forecast '+esc(g.forecast)+'</span><span class="pill '+pillCls(g.status)+'">'+esc(g.status)+'</span></div></div>';
+  }).join('');
+
+  /* milestones */
+  document.getElementById('msBody').innerHTML = D.milestones.map(function(m){
+    return '<tr><td><b>'+esc(m.name)+'</b></td><td class="n">'+esc(m.contract)+'</td><td class="n"><b>'+esc(m.forecast)+'</b></td>'+
+      '<td><span class="pill '+pillCls(m.status)+'">'+esc(m.status)+'</span></td><td class="note">'+esc(m.note)+'</td></tr>';
+  }).join('');
+
+  /* ---------- S-curves ---------- */
+  function curve(key){
+    var meta=D.seriesMeta[key], data=D.series[key];
+    var W=340,H=180,ml=52,mr=14,mt=12,mb=28;
+    var iw=W-ml-mr, ih=H-mt-mb;
+    var n=data.length;
+    // plan: straight line from first point value to total, extended past last actual to the forecast end
+    var planSpan = n + Math.round(n*0.85); // visual runway to forecast completion
+    var maxY = meta.total;
+    var x=function(i){ return ml + (i/(planSpan-1))*iw; };
+    var y=function(v){ return mt + ih - (v/maxY)*ih; };
+    var planPts=[], p0=meta.planStartVal;
+    for(var i=0;i<planSpan;i++){ planPts.push([x(i), y(p0 + (meta.total-p0)*(i/(planSpan-1)))]); }
+    var actPts=data.map(function(d,i){ return [x(i), y(d.c)]; });
+    function path(pts){ return pts.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1); }).join(' '); }
+    var area = path(actPts)+' L'+actPts[actPts.length-1][0].toFixed(1)+' '+(mt+ih)+' L'+actPts[0][0].toFixed(1)+' '+(mt+ih)+' Z';
+
+    var gl='';
+    for(var g=0;g<=4;g++){
+      var v=maxY*g/4, yy=y(v);
+      gl+='<line x1="'+ml+'" x2="'+(W-mr)+'" y1="'+yy.toFixed(1)+'" y2="'+yy.toFixed(1)+'" stroke="#eef1ef" stroke-width="1"/>';
+      var lab = v>=10000 ? Math.round(v/1000)+'k' : (v>=1000 ? (v/1000).toFixed(1).replace(/\.0$/,'')+'k' : Math.round(v));
+      gl+='<text x="'+(ml-8)+'" y="'+(yy+3.5).toFixed(1)+'" text-anchor="end" font-size="9.5" fill="#78857f">'+lab+'</text>';
+    }
+    // x labels: first actual, last actual, forecast end
+    var xl='<text x="'+x(0)+'" y="'+(H-8)+'" font-size="9.5" fill="#78857f">'+data[0].d+'</text>'+
+           '<text x="'+x(n-1)+'" y="'+(H-8)+'" text-anchor="middle" font-size="9.5" fill="#78857f">'+data[n-1].d+'</text>'+
+           '<text x="'+(W-mr)+'" y="'+(H-8)+'" text-anchor="end" font-size="9.5" fill="#78857f">'+meta.planEnd+'</text>';
+
+    var hot=data.map(function(d,i){
+      return '<rect x="'+(x(i)-(iw/planSpan/2)).toFixed(1)+'" y="'+mt+'" width="'+(iw/planSpan).toFixed(1)+'" height="'+ih+'" fill="transparent" '+
+        'data-t="'+esc(d.d)+'|'+fmt(d.c)+'|'+fmt(d.v)+'|'+esc(meta.unit)+'|'+((d.c/meta.total*100).toFixed(1))+'"/>';
+    }).join('');
+
+    var last=actPts[actPts.length-1];
+    return '<div class="chartcard"><h3>'+esc(meta.label)+'</h3><p class="csub">'+fmt(data[n-1].c)+' of '+fmt(meta.total)+' '+esc(meta.unit)+' · '+(data[n-1].c/meta.total*100).toFixed(1)+'% · forecast '+esc(meta.planEnd)+'</p>'+
+      '<div class="legend"><span><i style="background:'+meta.color+'"></i>Installed</span><span><i class="dash"></i>Required pace</span></div>'+
+      '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Cumulative '+esc(meta.label)+'">'+
+      gl+xl+
+      '<path d="'+area+'" fill="'+meta.color+'" opacity="0.10"/>'+
+      '<path d="'+path(planPts)+'" fill="none" stroke="#9aa5a0" stroke-width="2" stroke-dasharray="5 4"/>'+
+      '<path d="'+path(actPts)+'" fill="none" stroke="'+meta.color+'" stroke-width="2" stroke-linejoin="round"/>'+
+      '<circle cx="'+last[0].toFixed(1)+'" cy="'+last[1].toFixed(1)+'" r="4" fill="'+meta.color+'" stroke="#fff" stroke-width="2"/>'+
+      hot+'</svg></div>';
+  }
+  document.getElementById('curveGrid').innerHTML = ['piles','trackers','modules'].map(curve).join('');
+
+  /* ---------- daily bars ---------- */
+  (function(){
+    var keys=['piles','trackers','modules'];
+    document.getElementById('dailyLegend').innerHTML = keys.map(function(k){
+      return '<span><i style="background:'+D.seriesMeta[k].color+'"></i>'+esc(D.seriesMeta[k].label)+'</span>';
+    }).join('');
+    var html='';
+    keys.forEach(function(k){
+      var meta=D.seriesMeta[k], data=D.series[k];
+      var W=1060,H=120,ml=54,mr=10,mt=10,mb=24;
+      var iw=W-ml-mr, ih=H-mt-mb;
+      var mx=Math.max.apply(null,data.map(function(d){return d.v;}))||1;
+      var bw=Math.max(3,(iw/data.length)-3);
+      var bars=data.map(function(d,i){
+        var bh=(d.v/mx)*ih, bx=ml+i*(iw/data.length), by=mt+ih-bh;
+        var r=Math.min(3,bh/2);
+        return '<rect x="'+bx.toFixed(1)+'" y="'+(bh>0?by.toFixed(1):(mt+ih-1))+'" width="'+bw.toFixed(1)+'" height="'+(bh>0?bh.toFixed(1):1)+'" rx="'+r.toFixed(1)+'" fill="'+meta.color+'" '+(d.v?'':'opacity="0.28"')+
+          ' data-t="'+esc(d.d)+'|'+fmt(d.c)+'|'+fmt(d.v)+'|'+esc(meta.unit)+'|'+((d.c/meta.total*100).toFixed(1))+'"/>';
+      }).join('');
+      var xl=data.map(function(d,i){
+        if(i%4!==0 && i!==data.length-1) return '';
+        return '<text x="'+(ml+i*(iw/data.length)+bw/2).toFixed(1)+'" y="'+(H-7)+'" text-anchor="middle" font-size="9.5" fill="#78857f">'+d.d+'</text>';
+      }).join('');
+      html+='<div style="margin-bottom:6px"><div style="font-size:12px;font-weight:700;color:#41524c;margin:10px 0 2px">'+esc(meta.label)+' <span style="font-weight:500;color:#78857f">— peak '+fmt(mx)+' '+esc(meta.unit)+'/day</span></div>'+
+        '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:120px" role="img" aria-label="Daily '+esc(meta.label)+'">'+
+        '<line x1="'+ml+'" x2="'+(W-mr)+'" y1="'+(mt+ih)+'" y2="'+(mt+ih)+'" stroke="#e2e7e4"/>'+
+        '<text x="'+(ml-8)+'" y="'+(mt+6)+'" text-anchor="end" font-size="9.5" fill="#78857f">'+fmt(mx)+'</text>'+
+        '<text x="'+(ml-8)+'" y="'+(mt+ih)+'" text-anchor="end" font-size="9.5" fill="#78857f">0</text>'+
+        bars+xl+'</svg></div>';
+    });
+    document.getElementById('dailyChart').innerHTML=html;
+  })();
+
+  /* tooltips */
+  document.addEventListener('mouseover',function(e){
+    var t=e.target.getAttribute && e.target.getAttribute('data-t');
+    if(!t){ return; }
+    var p=t.split('|');
+    showTT('<b>'+p[0]+'</b>'+p[2]+' '+p[3]+' installed<br>Cumulative '+p[1]+' ('+p[4]+'%)', e.clientX, e.clientY);
+  });
+  document.addEventListener('mouseout',function(e){ if(e.target.getAttribute && e.target.getAttribute('data-t')) hideTT(); });
+  document.addEventListener('mousemove',function(e){ if(tt.style.opacity==1){ tt.style.left=(e.clientX+14)+'px'; tt.style.top=(e.clientY-10)+'px'; } });
+
+  /* civil */
+  document.getElementById('civilBody').innerHTML = D.civil.map(function(c){
+    return '<tr><td><b>'+esc(c.activity)+'</b></td><td><div class="bar" style="margin:4px 0 5px"><i style="width:'+c.done+'%;background:var(--c1)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+c.done+'%</span></td>'+
+    '<td><span class="pill '+pillCls(c.status)+'">'+esc(c.status)+'</span></td><td class="note">'+esc(c.note)+'</td></tr>';
+  }).join('');
+
+  /* material */
+  document.getElementById('matBody').innerHTML = D.material.map(function(m){
+    return '<tr><td><b>'+esc(m.item)+'</b></td><td class="n">'+esc(m.delivered)+'</td>'+
+    '<td><div class="bar" style="margin:4px 0 5px"><i style="width:'+m.pct+'%;background:var(--c2)"></i></div><span class="n" style="font-size:12px;color:var(--ink2)">'+m.pct+'%</span></td>'+
+    '<td class="note">'+esc(m.note)+'</td></tr>';
+  }).join('');
+
+  /* safety + quality */
+  function tiles(el,arr){ document.getElementById(el).innerHTML = arr.map(function(t){
+    return '<div class="tile"><div class="v">'+esc(t.value)+'</div><div class="l">'+esc(t.label)+'</div><div class="n">'+esc(t.note)+'</div></div>'; }).join(''); }
+  document.getElementById('safeHead').textContent = D.safety.headline;
+  tiles('safeTiles', D.safety.tiles);
+  document.getElementById('safeNote').textContent = D.safety.note;
+  document.getElementById('qHead').textContent = D.quality.headline;
+  tiles('qTiles', D.quality.tiles);
+  document.getElementById('qNote').textContent = D.quality.note;
+
+  /* weather */
+  document.getElementById('wxNote').textContent = D.weatherNote;
+  document.getElementById('wxBody').innerHTML = D.weatherLog.map(function(w){
+    return '<tr><td class="n"><b>'+esc(w.date)+'</b></td><td>'+esc(w.type)+'</td><td>'+esc(w.impact)+'</td><td class="note">'+esc(w.detail)+'</td></tr>';
+  }).join('');
+
+  /* lookahead + focus */
+  document.getElementById('laGrid').innerHTML = D.lookahead.map(function(l){
+    return '<div class="la"><h3>'+esc(l.period)+'</h3><ul>'+l.items.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul></div>';
+  }).join('');
+  document.getElementById('focusBox').innerHTML = D.focus.map(function(f){
+    var cls = f.level==='Priority' ? 'pri' : 'wat';
+    return '<div class="focus '+cls+'"><h4>'+esc(f.title)+' <span class="pill '+pillCls(f.level)+'">'+esc(f.level)+'</span></h4><p>'+esc(f.note)+'</p></div>';
+  }).join('');
+
+  /* owner items */
+  document.getElementById('ownBody').innerHTML = D.ownerItems.map(function(o){
+    return '<tr><td><b>'+esc(o.item)+'</b></td><td><span class="pill '+pillCls(o.status)+'">'+esc(o.status)+'</span></td><td class="n">'+esc(o.since)+'</td><td class="note">'+esc(o.detail)+'</td></tr>';
+  }).join('');
+
+  /* photos */
+  document.getElementById('gal').innerHTML = D.photos.map(function(p){
+    return '<div class="ph"><img src="'+p.src+'" alt="'+esc(p.title)+'" loading="lazy"><div class="cap"><div class="dt">'+esc(p.date)+'</div><h4>'+esc(p.title)+'</h4><p>'+esc(p.note)+'</p></div></div>';
+  }).join('');
+})();
+</script>
+</body>
+</html>
