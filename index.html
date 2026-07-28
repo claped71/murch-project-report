@@ -64,11 +64,10 @@ section{padding:38px 0 6px}
 .gate .big small{font-size:13px;font-weight:500;color:var(--muted)}
 .bar{height:7px;background:var(--line2);border-radius:4px;overflow:hidden;margin:10px 0 8px}
 .bar i{display:block;height:100%;border-radius:4px}
-.gate .foot{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.gate .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--muted);white-space:nowrap}
 .pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
 .p-good{background:#e6f3ec;color:var(--good)} .p-watch{background:#fdf3e0;color:var(--warn)}
 .p-behind{background:#fbeee7;color:var(--serious)} .p-ns{background:#eef1ef;color:var(--muted)}
-.p-crit{background:#fae9e8;color:var(--crit)}
 
 /* ---- tables ---- */
 table{width:100%;border-collapse:collapse;font-size:13.5px}
@@ -149,6 +148,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     <div class="sechead">
       <div class="kicker">Executive summary</div>
       <h2>Project status at a glance</h2>
+      <p>Discipline tiles report progress against the rate required to hold each completion date. Contract milestone status is reported separately below.</p>
     </div>
     <div class="card" style="margin-bottom:14px">
       <div class="headwrap">
@@ -283,7 +283,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   <footer>
     <div id="footText"></div>
-    <div style="margin-top:8px">Physical progress and quantities only. This report contains no commercial or contractual value information.</div>
   </footer>
 </div>
 
@@ -301,8 +300,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     s=(s||'').toLowerCase();
     if(s.indexOf('complete')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
     if(s.indexOf('watch')>=0||s.indexOf('active')>=0||s.indexOf('open')>=0) return 'p-watch';
-    if(s.indexOf('behind')>=0||s.indexOf('priority')>=0) return 'p-behind';
-    if(s.indexOf('critical')>=0) return 'p-crit';
+    if(s.indexOf('behind')>=0||s.indexOf('below')>=0||s.indexOf('priority')>=0) return 'p-behind';
     return 'p-ns';
   }
 
