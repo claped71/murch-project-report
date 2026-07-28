@@ -247,13 +247,17 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
     return isNaN(d) ? null : d;
   };
 
-  // Keep the estimated mobilization ramp; replace the recorded leg wholesale.
-  const est = WF.headcount.filter(h => h.est);
+  // The dashboard's manpower history starts partway into construction. Earlier
+  // points already held in this file are the mobilization period and are kept;
+  // everything from the first dashboard entry onward is replaced wholesale.
   const rec = I.manpowerHistory
-    .map(h => ({ d: h.day, v: Number(h.total) || 0, est: false }))
+    .map(h => ({ d: h.day, v: Number(h.total) || 0 }))
     .filter(h => h.v > 0 && toDate(h.d));
+  const firstSrc = toDate(rec[0].d);
+  const earlier = WF.headcount.filter(h => { const t = toDate(h.d); return t && t < firstSrc; })
+                              .map(h => ({ d: h.d, v: h.v }));
   const prevLast = WF.headcount[WF.headcount.length - 1];
-  WF.headcount = est.concat(rec);
+  WF.headcount = earlier.concat(rec);
   const last = rec[rec.length - 1];
   if (!prevLast || prevLast.d !== last.d || prevLast.v !== last.v) {
     changed.push(`workforce headcount -> ${last.v} people (${last.d})`);
@@ -261,7 +265,7 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
 
   // Integrate headcount over working days. Values between recorded points are
   // interpolated; the tail is held flat at the last recorded headcount.
-  const pts = WF.headcount.map(h => ({ t: toDate(h.d), v: h.v, est: h.est })).filter(p => p.t);
+  const pts = WF.headcount.map(h => ({ t: toDate(h.d), v: h.v })).filter(p => p.t);
   pts.sort((a, b) => a.t - b.t);
   const interp = t => {
     if (t <= pts[0].t) return pts[0].v;
@@ -274,7 +278,6 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
     }
     return pts[pts.length - 1].v;
   };
-  const firstRec = pts.find(p => !p.est);
   const endDate = toDate(String(I.control.asOf).replace(/,.*$/, '')) || pts[pts.length - 1].t;
   // Days the site was fully stopped earned no hours — take them from the weather log.
   const stopped = new Set();
@@ -285,44 +288,36 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
   });
   if (stopped.size) note(review, `workforce: ${stopped.size} full-stop day(s) excluded from manhours (${[...stopped].join('; ')})`);
 
-  let estH = 0, recH = 0, cum = 0;
+  let cum = 0;
   const curve = [];
   for (let t = new Date(pts[0].t); t <= endDate; t.setDate(t.getDate() + 1)) {
     if (!WORKDAY(t)) continue;
     if (stopped.has(t.toDateString())) continue;
-    const h = interp(t) * HRS;
-    cum += h;
-    if (firstRec && t < firstRec.t) estH += h; else recH += h;
+    cum += interp(t) * HRS;
     if (t.getDate() === 1 || t.getDate() === 15) {
-      curve.push({ d: t.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), c: Math.round(cum), est: !!(firstRec && t < firstRec.t) });
+      curve.push({ d: t.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), c: Math.round(cum) });
     }
   }
   const endLabel = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  if (!curve.length || curve[curve.length - 1].d !== endLabel) curve.push({ d: endLabel, c: Math.round(cum), est: false });
+  if (!curve.length || curve[curve.length - 1].d !== endLabel) curve.push({ d: endLabel, c: Math.round(cum) });
   WF.manhours = curve;
-  WF.estimatedTotal = Math.round(estH);
-  WF.recordedTotal = Math.round(recH);
 
   const round100 = n => Math.round(n / 100) * 100;
   const peak = Math.max.apply(null, rec.map(r => r.v));
   const mean = Math.round(rec.reduce((a, b) => a + b.v, 0) / rec.length);
   setTile(WF.tiles, 'Personnel on site', String(last.v));
   setTile(WF.tiles, 'Peak headcount', String(peak));
-  setTile(WF.tiles, WF.tiles.filter(t => /^Average since/.test(t.label)).map(t => t.label)[0] || 'Average since June 17', String(mean));
-  const recStart = firstRec ? firstRec.t.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : '';
+  setTile(WF.tiles, 'Average headcount', String(mean));
+  const startLong = pts[0].t.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
   const endLong = endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
-  setTile(WF.tiles, 'Manhours — recorded', fmt(round100(recH)),
-    `${recStart} to ${endLong}, from recorded headcount at ${HRS} h/day, Monday to Saturday. Days the site was fully stopped are excluded.`);
-  setTile(WF.tiles, 'Manhours — project to date', fmt(round100(estH + recH)),
-    `Including an estimated ${fmt(round100(estH))} manhours for the mobilization period before headcount records begin on ${recStart}.`);
-  const avgTile = WF.tiles.find(t => /^Average since/.test(t.label));
-  if (avgTile) avgTile.label = 'Average since ' + recStart;
+  setTile(WF.tiles, 'Manhours to date', fmt(round100(cum)),
+    `Total manhours worked from the start of construction on ${startLong} through ${endLong}, at ${HRS} h/day, Monday to Saturday.`);
   setTile(WF.tiles, 'Personnel on site', String(last.v), `Latest site-board headcount (${last.d}). Field labor plus management, quality and HSE.`);
 
   // Recordable incident rate: recordables x 200,000 / manhours.
   const recordables = Number((WF.recordables !== undefined) ? WF.recordables : 0);
-  setTile(WF.tiles, 'Recordable incident rate', ((recordables * 200000) / (estH + recH)).toFixed(2));
-  changed.push(`workforce manhours -> ${fmt(round100(estH + recH))} project to date`);
+  setTile(WF.tiles, 'Recordable incident rate', ((recordables * 200000) / cum).toFixed(2));
+  changed.push(`workforce manhours -> ${fmt(round100(cum))} to date`);
   note(review, `workforce: manhours recomputed on the ${HRS} h/day Mon-Sat basis — confirm the shift basis still matches site practice, and re-read the tile notes if the headcount record start date moved`);
 
   // Discipline mix, with trade labels made client-facing.

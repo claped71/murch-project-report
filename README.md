@@ -60,10 +60,13 @@ from that headcount every run** on a stated basis — 10 h/person/day, Monday to
 Saturday — so the two can never drift apart. Days recorded as a full stop in
 `weatherLog` are excluded from the hours.
 
-April 1 – June 16 predates the headcount record and is an **estimated
-mobilization ramp**. It is drawn dashed, labelled on the page, and reported as a
-separate figure. Change the shift basis in `tools/sync.js` (`HRS`, `WORKDAY`) and
-every dependent figure follows, including the recordable incident rate.
+The dashboard's manpower history begins partway into construction. Headcount
+points already in `data.js` that predate the first dashboard entry are kept and
+carried forward; everything from that entry onward is replaced wholesale. The
+report presents one continuous record.
+
+Change the shift basis in `tools/sync.js` (`HRS`, `WORKDAY`) and every dependent
+figure follows, including the recordable incident rate.
 
 ## Responsive
 

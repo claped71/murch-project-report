@@ -756,6 +756,12 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-43.jpg",
+      "date": "July 28, 2026",
+      "title": "Inverter stations set on their foundations in Area A",
+      "note": "Inverter station 02 landed on its pile foundation between completed module rows. All Area A stations were set on Tuesday morning, with a further station set in Area C the same day. Protective covers remain in place until LV and MV terminations are made."
+    },
+    {
       "src": "assets/photo-41.jpg",
       "date": "July 24, 2026",
       "title": "Main power transformer set on its foundation",
@@ -770,26 +776,26 @@ window.MURCH_REPORT = {
     {
       "src": "assets/photo-39.jpg",
       "date": "July 21, 2026",
-      "title": "Zone D released for slab demolition",
-      "note": "The temporary office compound has been relocated to the new laydown area. Zone D is released, opening the path to the remaining pile workfront."
+      "title": "Area D released for slab demolition",
+      "note": "The temporary office compound has been relocated to the new laydown area. Area D is released, opening the path to the remaining pile workfront."
+    },
+    {
+      "src": "assets/photo-37.jpg",
+      "date": "July 14, 2026",
+      "title": "Underground electrical trench alongside erected trackers",
+      "note": "Cable trench open beside completed tracker rows, with the access road built out for material distribution — the sequence that feeds the LV and DC cable installation."
+    },
+    {
+      "src": "assets/photo-35.jpg",
+      "date": "July 14, 2026",
+      "title": "Tracker assembly crews working the rows in Area C",
+      "note": "Assembly crews spread across the Area C workfront with completed torque tubes in the foreground. The scale of the tracker front sets the pace for module installation behind it."
     },
     {
       "src": "assets/photo-34.jpg",
       "date": "July 14, 2026",
       "title": "Module installation front advancing across completed tracker rows",
       "note": "Installed modules in the foreground with bare trackers awaiting release beyond — the block-by-block sequence from Area A into Area C."
-    },
-    {
-      "src": "assets/photo-36.jpg",
-      "date": "July 14, 2026",
-      "title": "Inverter station set on its foundation",
-      "note": "An inverter/PCS station platform landed on its completed foundation. Base plates are welded on the platforms delivered to date."
-    },
-    {
-      "src": "assets/photo-33.jpg",
-      "date": "July 12, 2026",
-      "title": "Transformer foundation and containment berm complete",
-      "note": "The containment berm and transformer foundation at the substation, completed ahead of the transformer set on July 24."
     }
   ],
   "civilOverrides": {
@@ -820,32 +826,27 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board; the record begins June 17, 2026 and is current to July 20. July 21–25 is carried at the last recorded headcount. April 1 – June 16 is an estimated mobilization ramp, shown separately and labelled as an estimate.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to July 20, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",
         "value": "192",
-        "note": "Latest site-board headcount (Jul 20). Field labor plus management, quality and HSE."
+        "note": "Latest site-board headcount (July 20). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
         "value": "209",
-        "note": "Highest recorded headcount to date (July 15)."
+        "note": "Highest headcount on site to date (July 15)."
       },
       {
-        "label": "Average since June 17",
+        "label": "Average headcount",
         "value": "172",
-        "note": "Mean of the recorded site-board headcounts."
+        "note": "Mean headcount across the construction period to date."
       },
       {
-        "label": "Manhours — recorded",
-        "value": "57,600",
-        "note": "June 17 to July 27, from recorded headcount at 10 h/day, Monday to Saturday. Days the site was fully stopped are excluded."
-      },
-      {
-        "label": "Manhours — project to date",
+        "label": "Manhours to date",
         "value": "94,700",
-        "note": "Including an estimated 37,100 manhours for the mobilization period before headcount records begin on June 17."
+        "note": "Total manhours worked from the start of construction on April 1 through July 27, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -856,145 +857,117 @@ window.MURCH_REPORT = {
     "headcount": [
       {
         "d": "Apr 1",
-        "v": 15,
-        "est": true
+        "v": 15
       },
       {
         "d": "Apr 15",
-        "v": 25,
-        "est": true
+        "v": 25
       },
       {
         "d": "May 1",
-        "v": 35,
-        "est": true
+        "v": 35
       },
       {
         "d": "May 6",
-        "v": 45,
-        "est": true
+        "v": 45
       },
       {
         "d": "May 15",
-        "v": 60,
-        "est": true
+        "v": 60
       },
       {
         "d": "Jun 1",
-        "v": 85,
-        "est": true
+        "v": 85
       },
       {
         "d": "Jun 10",
-        "v": 110,
-        "est": true
+        "v": 110
       },
       {
         "d": "Jun 17",
-        "v": 136,
-        "est": false
+        "v": 136
       },
       {
         "d": "Jun 25",
-        "v": 149,
-        "est": false
+        "v": 149
       },
       {
         "d": "Jun 26",
-        "v": 134,
-        "est": false
+        "v": 134
       },
       {
         "d": "Jun 29",
-        "v": 146,
-        "est": false
+        "v": 146
       },
       {
         "d": "Jun 30",
-        "v": 148,
-        "est": false
+        "v": 148
       },
       {
         "d": "Jul 7",
-        "v": 170,
-        "est": false
+        "v": 170
       },
       {
         "d": "Jul 9",
-        "v": 191,
-        "est": false
+        "v": 191
       },
       {
         "d": "Jul 13",
-        "v": 191,
-        "est": false
+        "v": 191
       },
       {
         "d": "Jul 14",
-        "v": 202,
-        "est": false
+        "v": 202
       },
       {
         "d": "Jul 15",
-        "v": 209,
-        "est": false
+        "v": 209
       },
       {
         "d": "Jul 16",
-        "v": 198,
-        "est": false
+        "v": 198
       },
       {
         "d": "Jul 20",
-        "v": 192,
-        "est": false
+        "v": 192
       }
     ],
     "manhours": [
       {
         "d": "Apr 1",
-        "c": 150,
-        "est": true
+        "c": 150
       },
       {
         "d": "Apr 15",
-        "c": 2593,
-        "est": true
+        "c": 2593
       },
       {
         "d": "May 1",
-        "c": 6849,
-        "est": true
+        "c": 6849
       },
       {
         "d": "May 15",
-        "c": 12792,
-        "est": true
+        "c": 12792
       },
       {
         "d": "Jun 1",
-        "c": 23045,
-        "est": true
+        "c": 23045
       },
       {
         "d": "Jun 15",
-        "c": 35737,
-        "est": true
+        "c": 35737
       },
       {
         "d": "Jul 1",
-        "c": 55632,
-        "est": false
+        "c": 55632
       },
       {
         "d": "Jul 15",
-        "c": 77278,
-        "est": false
+        "c": 77278
       },
       {
         "d": "Jul 27",
-        "c": 94693,
-        "est": false
+        "c": 94693
       }
     ],
     "mix": {
@@ -1027,8 +1000,6 @@ window.MURCH_REPORT = {
           "color": "#66716d"
         }
       ]
-    },
-    "estimatedTotal": 37060,
-    "recordedTotal": 57633
+    }
   }
 };

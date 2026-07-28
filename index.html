@@ -323,19 +323,13 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <div class="chartcard">
         <h3>Personnel on site</h3>
         <p class="csub" id="hcSub"></p>
-        <div class="legend">
-          <span><i style="background:#0f7a52"></i>Recorded headcount</span>
-          <span><i class="dash"></i>Estimated mobilization</span>
-        </div>
+        <div class="legend"><span><i style="background:#0f7a52"></i>Headcount on site</span></div>
         <div id="hcChart"></div>
       </div>
       <div class="chartcard">
         <h3>Cumulative manhours</h3>
         <p class="csub" id="mhSub"></p>
-        <div class="legend">
-          <span><i style="background:#2769a8"></i>From recorded headcount</span>
-          <span><i class="dash"></i>Estimated period</span>
-        </div>
+        <div class="legend"><span><i style="background:#2769a8"></i>Manhours worked</span></div>
         <div id="mhChart"></div>
       </div>
     </div>
@@ -672,12 +666,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       }
       var pts = data.map(function(d,i){ return [x(i), y(d[valKey])]; });
       function path(a){ return a.map(function(p,i){ return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1); }).join(' '); }
-      // last estimated index — the two legs share that point so the line is continuous
-      var lastEst = -1; data.forEach(function(d,i){ if(d.est) lastEst = i; });
-      var estPts = lastEst >= 0 ? pts.slice(0, lastEst+2) : [];
-      var actPts = lastEst >= 0 ? pts.slice(lastEst+1) : pts;
-      var area = actPts.length > 1
-        ? path(actPts)+' L'+actPts[actPts.length-1][0].toFixed(1)+' '+(mt+ih)+' L'+actPts[0][0].toFixed(1)+' '+(mt+ih)+' Z' : '';
+      var area = pts.length > 1
+        ? path(pts)+' L'+pts[pts.length-1][0].toFixed(1)+' '+(mt+ih)+' L'+pts[0][0].toFixed(1)+' '+(mt+ih)+' Z' : '';
       var xl = data.map(function(d,i){
         var every = narrow ? Math.ceil(data.length/4) : Math.ceil(data.length/6);
         if(i%every!==0 && i!==data.length-1) return '';
@@ -686,14 +676,13 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       }).join('');
       var hot = data.map(function(d,i){
         return '<rect x="'+(x(i)-iw/data.length/2).toFixed(1)+'" y="'+mt+'" width="'+(iw/data.length).toFixed(1)+'" height="'+ih+'" fill="transparent"'
-          + ' data-t="'+esc(d.d)+(d.est?' (estimated)':'')+'|'+fmt(Math.round(d[valKey]))+'|'+fmt(Math.round(d[valKey]))+'|'+esc(unit)+'|—"/>';
+          + ' data-t="'+esc(d.d)+'|'+fmt(Math.round(d[valKey]))+'|'+fmt(Math.round(d[valKey]))+'|'+esc(unit)+'|—"/>';
       }).join('');
       var last = pts[pts.length-1];
       return '<svg viewBox="0 0 '+W2+' '+H+'" style="width:100%;height:auto" role="img">'
         + gl + xl
         + (area ? '<path d="'+area+'" fill="'+color+'" opacity="0.10"/>' : '')
-        + (estPts.length>1 ? '<path d="'+path(estPts)+'" fill="none" stroke="#9aa5a0" stroke-width="2" stroke-dasharray="5 4"/>' : '')
-        + (actPts.length>1 ? '<path d="'+path(actPts)+'" fill="none" stroke="'+color+'" stroke-width="2" stroke-linejoin="round"/>' : '')
+        + (pts.length>1 ? '<path d="'+path(pts)+'" fill="none" stroke="'+color+'" stroke-width="2" stroke-linejoin="round"/>' : '')
         + '<circle cx="'+last[0].toFixed(1)+'" cy="'+last[1].toFixed(1)+'" r="4" fill="'+color+'" stroke="#fff" stroke-width="2"/>'
         + hot + '</svg>';
     }
@@ -701,9 +690,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     function renderWorkforce(){
       var hc = W.headcount, mh = W.manhours;
       document.getElementById('hcSub').textContent =
-        'Latest recorded ' + hc[hc.length-1].v + ' people (' + hc[hc.length-1].d + '). Peak to date ' + Math.max.apply(null, hc.map(function(h){return h.v;})) + '.';
+        hc[hc.length-1].v + ' people on site at ' + hc[hc.length-1].d + '. Peak to date ' + Math.max.apply(null, hc.map(function(h){return h.v;})) + '.';
       document.getElementById('mhSub').textContent =
-        fmt(mh[mh.length-1].c) + ' manhours to ' + mh[mh.length-1].d + ', of which ' + fmt(W.estimatedTotal) + ' are estimated for the mobilization period.';
+        fmt(mh[mh.length-1].c) + ' manhours worked from the start of construction to ' + mh[mh.length-1].d + '.';
       document.getElementById('hcChart').innerHTML = twoLeg(hc, 'v', '#0f7a52', 'people', function(v){ return Math.round(v); });
       document.getElementById('mhChart').innerHTML = twoLeg(mh, 'c', '#2769a8', 'manhours', function(v){ return v>=1000 ? Math.round(v/1000)+'k' : Math.round(v); });
     }
