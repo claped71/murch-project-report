@@ -28,7 +28,8 @@ a{color:var(--brand)}
 .brandbar .side.r{margin-left:auto;text-align:right}
 .brandbar .role{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;line-height:1.4}
 .brandbar img{height:38px;width:auto;display:block}
-.brandbar .wordmark{font-size:20px;font-weight:700;letter-spacing:.02em;color:#1c3f6e}
+.brandbar .wordmark{display:block;font-size:21px;font-weight:700;letter-spacing:.01em;color:#17365c;line-height:1.05;text-align:right}
+.brandbar .wordmark em{display:block;font-style:normal;font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#8892a0;margin-top:3px}
 .brandbar .divider{width:1px;height:34px;background:var(--line)}
 @media(max-width:640px){.brandbar .wrap{gap:12px}.brandbar img{height:30px}.brandbar .divider{display:none}}
 
@@ -138,8 +139,10 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   <div class="divider"></div>
   <div class="side r">
     <div class="role">Prepared for</div>
-    <img id="clientLogo" src="https://heelstoneenergy.com/wp-content/uploads/2025/11/HEEL_Logo_FINAL-11-768x145.png" alt="Heelstone Renewable Energy"
-         onerror="this.outerHTML='<span class=\'wordmark\'>HEELSTONE</span>'">
+    <!-- To use the official mark: drop the file at assets/heelstone-logo.png and
+         replace this whole block with:
+         <img id="clientLogo" src="assets/heelstone-logo.png" alt="Heelstone Renewable Energy"> -->
+    <span class="wordmark" id="clientLogo">Heelstone<em>Renewable Energy</em></span>
   </div>
 </div></div>
 
