@@ -47,4 +47,8 @@ fi
 ASOF=$(node -e "global.window={};require('$REPORT_DIR/data.js');process.stdout.write(window.MURCH_REPORT.meta.asOf)")
 git -C "$REPORT_DIR" commit --quiet -m "Owner Project Report — basis $ASOF"
 git -C "$REPORT_DIR" push --quiet origin main
-echo "    pushed. Live in 2-4 minutes: https://claped71.github.io/murch-project-report/"
+# GitHub Pages serves this site from gh-pages, NOT main. Mirror it or the
+# published page silently goes stale while main moves on.
+git -C "$REPORT_DIR" push --quiet --force origin main:gh-pages
+echo "    pushed to main and mirrored to gh-pages."
+echo "    live in 2-4 minutes: https://claped71.github.io/murch-project-report/"

@@ -713,7 +713,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   /* photos */
   document.getElementById('gal').innerHTML = D.photos.map(function(p){
-    return '<div class="ph"><img src="'+p.src+'" alt="'+esc(p.title)+'" loading="lazy"><div class="cap"><div class="dt">'+esc(p.date)+'</div><h4>'+esc(p.title)+'</h4><p>'+esc(p.note)+'</p></div></div>';
+    // Phones pull the small variant (~30 KB) instead of the full image (~200 KB).
+    var sm = p.src.replace(/\.jpg$/, '-sm.jpg');
+    var md = p.src.replace(/\.jpg$/, '-md.jpg');
+    return '<div class="ph"><img src="'+sm+'" srcset="'+sm+' 520w, '+md+' 820w, '+p.src+' 1200w" '
+      + 'sizes="(max-width:720px) 60vw, (max-width:1100px) 50vw, 320px" '
+      + 'alt="'+esc(p.title)+'" loading="lazy" decoding="async"><div class="cap"><div class="dt">'+esc(p.date)+'</div><h4>'+esc(p.title)+'</h4><p>'+esc(p.note)+'</p></div></div>';
   }).join('');
 })();
 </script>
