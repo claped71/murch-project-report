@@ -41,6 +41,24 @@ Two escape hatches, both self-announcing on every run so they cannot quietly rot
 - `civilOverrides` — restate an activity the internal sheet reports against
   released areas only. Each override carries a `why`.
 
+## How it stays current
+
+A GitHub Action (`.github/workflows/sync.yml`) refreshes and republishes the
+report on a schedule — **02:30 and 12:30 UTC (19:30 and 05:30 Phoenix)** — plus a
+**Run workflow** button for an on-demand refresh. It runs on GitHub, so it does
+not depend on anyone's laptop being open.
+
+Each run clones the dashboard, runs `tools/sync.js --write`, runs `tools/guard.js`,
+and only then commits to `main` and mirrors to `gh-pages`. **If the guard fails,
+nothing is published.** The run summary lists the derived changes and the
+REVIEW BEFORE PUBLISHING items, so stale prose is visible without digging.
+
+`tools/update.sh` remains the manual equivalent for running it from a laptop.
+
+Note: writing `.github/workflows/*` needs a PAT with `workflow` scope. The PAT in
+`github_helpers` does not have it — that file was added through the GitHub API
+instead. Edit the workflow on github.com or via the API, not by `git push`.
+
 ## Publishing rules
 
 Enforced by `tools/guard.js`; the rules themselves live in `tools/redact.js` and
