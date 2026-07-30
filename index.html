@@ -768,9 +768,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           '<a id="qfLink" hidden aria-hidden="true"></a>'+
         '</div>'+
         '<div class="hint">'+(toOk
-          ? 'Send opens your email program with the query addressed and filled in, so it is sent from your own mailbox and you keep a copy in Sent items.'
+          ? 'Send opens your email program, addressed and filled in \u2014 sent from your own mailbox, so you keep a copy.'
           : '<b class="err">Recipient addresses are not yet configured</b> — set clientQueries.routing in data.js. Use Copy text and email the project mailbox meanwhile.')+
-          ' Subject convention: <b>'+esc(Q.subjectConvention)+'</b>.</div>'+
+          ' Subject: <b>'+esc(Q.subjectConvention)+'</b>.</div>'+
       '</div>';
 
     function refreshClock(){

@@ -758,7 +758,7 @@ window.MURCH_REPORT = {
       "role": "Site Construction Manager",
       "organisation": "Heelstone",
       "email": "jburnett@heelstoneenergy.com",
-      "note": "Queries and information requests are raised by the Owner's Site Construction Manager. Requests from other Owner personnel should be routed through him so the register remains a single ordered record with one reference series."
+      "note": "Other Owner personnel should route requests through him, so the register keeps one ordered reference series."
     },
     "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "MV collection", "Substation and inverters", "Quality and inspection", "Health and safety", "Environmental", "Programme and milestones", "Other"],
     "refPrefix": "MQ",
