@@ -42,6 +42,20 @@ header.top .sub{opacity:.88;font-size:14px}
 .hdrmeta div span{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.72;font-weight:600}
 .hdrmeta div b{font-size:14px;font-weight:600}
 
+/* ---- query form ---- */
+.qf{display:grid;gap:9px}
+.qf .row{display:grid;gap:9px;grid-template-columns:1fr 1fr}
+.qf label{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--ink2);display:block;margin-bottom:3px}
+.qf input,.qf select,.qf textarea{width:100%;box-sizing:border-box;font:inherit;font-size:13px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.qf textarea{min-height:88px;resize:vertical}
+.qf input:focus,.qf select:focus,.qf textarea:focus{outline:2px solid rgba(15,122,82,.35);outline-offset:0;border-color:var(--brand)}
+.qf .acts{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:2px}
+.qf button{font:inherit;font-size:13px;font-weight:700;padding:9px 16px;border-radius:6px;border:1px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer}
+.qf button.alt{background:#fff;color:var(--brand)}
+.qf button:disabled{opacity:.45;cursor:not-allowed}
+.qf .hint{font-size:11.5px;color:var(--ink2);line-height:1.45}
+.qf .err{font-size:11.5px;color:#b5442f;font-weight:600}
+@media(max-width:560px){.qf .row{grid-template-columns:1fr}}
 /* ---- nav ---- */
 nav{position:sticky;top:0;z-index:50;background:rgba(252,252,251,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;gap:2px;overflow-x:auto;padding-top:0;padding-bottom:0}
@@ -424,7 +438,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <h2>Owner query register</h2>
       <p id="cqLead"></p>
     </div>
-    <div class="card" style="padding:6px 14px"><div id="cqBody"></div></div>
+    <div class="card" style="padding:14px"><div id="cqForm"></div></div>
+    <div class="card" style="padding:6px 14px;margin-top:10px"><div id="cqBody"></div></div>
     <div class="card" style="margin-top:10px"><p class="note block" id="cqNote"></p></div>
   </section>
 
@@ -702,15 +717,72 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   /* owner query register */
   (function(){
     var Q = D.clientQueries; if(!Q) return;
-    var valid = Q.intakeEmail && /@/.test(Q.intakeEmail) && !/SET-THIS/.test(Q.intakeEmail);
+    var R = Q.routing || {};
+    var toOk = R.to && R.to.email && /@/.test(R.to.email) && !/SET-EMAIL/.test(R.to.email);
+    var ccList = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
-    var how = '<div style="padding:10px 0;font-size:12.5px;line-height:1.5">'+
-      '<b>How to raise a query</b><br>'+
-      (valid
-        ? 'Email <a href="mailto:'+esc(Q.intakeEmail)+'?subject='+encodeURIComponent(Q.subjectConvention)+'"><b>'+esc(Q.intakeEmail)+'</b></a> using the subject line <b>'+esc(Q.subjectConvention)+'</b>.'
-        : 'Email the project mailbox using the subject line <b>'+esc(Q.subjectConvention)+'</b>.')+
-      ' Each query is given a reference, logged below with the date received, and answered in the next published report or sooner. '+esc(Q.responseTarget)+'.</div>';
+
+    var areaOpts = (Q.areas||[]).map(function(a){ return '<option>'+esc(a)+'</option>'; }).join('');
+    document.getElementById('cqForm').innerHTML =
+      '<div class="qf">'+
+        '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
+        '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+')'+
+          (R.cc&&R.cc.length? ', copied to <b>'+esc(R.cc[0].name)+'</b> ('+esc(R.cc[0].role)+')':'')+
+          '. '+esc(Q.responseTarget)+'.</div>'+
+        '<div class="row">'+
+          '<div><label for="qfName">Your name</label><input id="qfName" type="text" autocomplete="name"></div>'+
+          '<div><label for="qfCo">Company</label><input id="qfCo" type="text" value="Heelstone" autocomplete="organization"></div>'+
+        '</div>'+
+        '<div class="row">'+
+          '<div><label for="qfArea">Area or discipline</label><select id="qfArea">'+areaOpts+'</select></div>'+
+          '<div><label for="qfBy">Response needed by (optional)</label><input id="qfBy" type="date"></div>'+
+        '</div>'+
+        '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
+        '<div><label for="qfBody">Query, comment or information requested</label><textarea id="qfBody" placeholder="Type the query here."></textarea></div>'+
+        '<div class="acts">'+
+          '<button id="qfSend" type="button"'+(toOk?'':' disabled')+'>Send query</button>'+
+          '<button id="qfCopy" class="alt" type="button">Copy text</button>'+
+          '<span class="err" id="qfMsg"></span>'+
+        '</div>'+
+        '<div class="hint">'+(toOk
+          ? 'Send opens your email program with the query addressed and filled in, so it is sent from your own mailbox and you keep a copy in Sent items.'
+          : '<b class="err">Recipient addresses are not yet configured</b> — set clientQueries.routing in data.js. Use Copy text and email the project mailbox meanwhile.')+
+          ' Subject convention: <b>'+esc(Q.subjectConvention)+'</b>.</div>'+
+      '</div>';
+
+    function compose(){
+      var g=function(id){ var el=document.getElementById(id); return el? el.value.trim():''; };
+      var subj=g('qfSubj'), body=g('qfBody');
+      if(!subj||!body){ document.getElementById('qfMsg').textContent='Add a subject and the query text.'; return null; }
+      document.getElementById('qfMsg').textContent='';
+      var by=g('qfBy');
+      var text='MURCH SOLAR \u2014 OWNER QUERY\n\n'+
+        'Raised by: '+(g('qfName')||'(not given)')+'\n'+
+        'Company: '+(g('qfCo')||'(not given)')+'\n'+
+        'Area / discipline: '+g('qfArea')+'\n'+
+        'Response requested by: '+(by||'not specified')+'\n\n'+
+        'QUERY\n'+body+'\n\n'+
+        '---\nSubmitted from the Murch Solar Owner Project Report\nReport basis: '+esc(Q.asOf)+'\n';
+      return { subject: Q.subjectConvention.replace('<subject>', subj), text: text };
+    }
+    document.getElementById('qfSend').addEventListener('click', function(){
+      var m=compose(); if(!m) return;
+      var url='mailto:'+encodeURIComponent(R.to.email)+
+        '?subject='+encodeURIComponent(m.subject)+
+        (ccList.length? '&cc='+encodeURIComponent(ccList.map(function(c){return c.email;}).join(',')):'')+
+        '&body='+encodeURIComponent(m.text);
+      window.location.href=url;
+    });
+    document.getElementById('qfCopy').addEventListener('click', function(){
+      var m=compose(); if(!m) return;
+      var full=m.subject+'\n\n'+m.text;
+      var done=function(){ document.getElementById('qfMsg').style.color='#0f7a52'; document.getElementById('qfMsg').textContent='Copied.'; };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(full).then(done,function(){}); }
+      else { var ta=document.createElement('textarea'); ta.value=full; document.body.appendChild(ta); ta.select();
+             try{document.execCommand('copy');done();}catch(e){} document.body.removeChild(ta); }
+    });
+
     var rows = Q.items.length ? Q.items.map(function(q,i){
       var last = (i === Q.items.length-1);
       return '<div style="padding:10px 0'+(last?'':';border-bottom:1px solid var(--line)')+'">'+
@@ -723,7 +795,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           '<b>Query:</b> '+esc(q.query)+(q.response?'<br><b>Response:</b> '+esc(q.response):'')+'</div>'+
       '</div>';
     }).join('') : '<div style="padding:10px 0;border-top:1px solid var(--line);font-size:12px;color:#4a5b53;line-height:1.5">'+esc(Q.openingNote)+'</div>';
-    document.getElementById('cqBody').innerHTML = how + rows;
+    document.getElementById('cqBody').innerHTML = rows;
     document.getElementById('cqNote').textContent = Q.noticeNote;
   })();
 

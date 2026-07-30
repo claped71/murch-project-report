@@ -15,6 +15,14 @@ const NAMES = [
   'Rosario Ruiz', 'Rosario', 'Daniel Morilla', 'Morilla', 'Axel Cano', 'Axel',
   'Shreeya Devkota', 'Shreeya', 'Joshua Spalding', 'Joshua', 'Luis Romero', 'Jose Romero'
 ];
+// DESIGNATED PROJECT REPRESENTATIVES — the only people who may be named, and ONLY
+// inside a structured contact entry (a line that also carries a role and an email).
+// These are the Owner's routine points of contact, so withholding them would defeat
+// the query register. Anywhere else — production prose, notes, photo captions — they
+// stay blocked by NAMES exactly as before. Do not widen this list to field personnel.
+const CONTACT_ALLOW = ['Luis Romero', 'Audelio Zuniga', 'Audelio'];
+const CONTACT_CONTEXT = /"role"\s*:/;
+
 // 'ITS' and 'United' need word-boundary care (common English words).
 const NAMES_WORD = ['ITS', 'United'];
 
@@ -65,10 +73,15 @@ function scrub(text) {
 }
 
 /** All rule violations in a string. Brand-allowed names are ignored. */
-function hits(text) {
+function hits(text, opts) {
   if (typeof text !== 'string') return [];
   let probe = text;
   for (const b of BRAND_ALLOW) probe = probe.replace(new RegExp(esc(b), 'gi'), '');
+  // A structured contact entry may name the designated project representatives.
+  const contactCtx = (opts && opts.contactContext) || CONTACT_CONTEXT.test(text);
+  if (contactCtx) {
+    for (const c of CONTACT_ALLOW) probe = probe.replace(new RegExp(esc(c), 'gi'), '');
+  }
   const found = [];
   for (const n of NAMES) {
     if (new RegExp(esc(n), 'i').test(probe)) found.push({ type: 'name', term: n });
@@ -86,4 +99,4 @@ function hits(text) {
   return found;
 }
 
-module.exports = { scrub, hits, NAMES, NAMES_WORD, NAMES_CAPS, TERMS, BRAND_ALLOW, MONEY };
+module.exports = { scrub, hits, NAMES, CONTACT_ALLOW, NAMES_WORD, NAMES_CAPS, TERMS, BRAND_ALLOW, MONEY };

@@ -749,7 +749,12 @@ window.MURCH_REPORT = {
   },
   "clientQueries": {
     "asOf": "Jul 30, 2026",
-    "intakeEmail": "SET-THIS-IN-data.js",
+    "routing": {
+      "to": { "name": "Luis Romero", "role": "Project Manager", "email": "SET-EMAIL-IN-data.js" },
+      "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "SET-EMAIL-IN-data.js" } ],
+      "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
+    },
+    "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "Substation and inverters", "Quality and inspection", "Programme and milestones", "Other"],
     "subjectConvention": "MURCH QUERY - <subject>",
     "responseTarget": "Response within 5 working days of receipt",
     "openingNote": "This register opens with the July 30 report. Queries, comments and information requests raised by the Owner are logged here with the EPC response, so both the question and the answer stay on the record and visible to everyone on the project.",
