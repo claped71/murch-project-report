@@ -237,7 +237,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   <a href="#summary">Summary</a>
   <a href="#milestones">Milestones</a>
   <a href="#progress">Progress</a>
-  <a href="#trackerearned">Tracker progress</a>
+  <a href="#trackerearned">Earned progress</a>
   <a href="#civil">Civil &amp; Substation</a>
   <a href="#workforce">Workforce</a>
   <a href="#material">Material</a>
@@ -302,23 +302,15 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   <section id="trackerearned">
     <div class="sechead">
-      <div class="kicker">Tracker assembly</div>
-      <h2 id="teTitle"></h2>
-      <p>Completed rows govern the completion date. Earned progress additionally credits the physical work standing in rows that are built but not yet finished.</p>
+      <div class="kicker">Earned progress</div>
+      <h2>Completed units and earned progress</h2>
+      <p id="epLead"></p>
     </div>
-    <div class="grid g4" id="teTiles"></div>
-    <div style="height:14px"></div>
-    <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th>Area</th><th class="n">Rows in progress</th><th class="n">Step reached</th><th>Physical state confirmed</th><th class="n">Step value</th><th class="n">Row-equivalents</th></tr></thead>
-      <tbody id="teAreas"></tbody></table>
+    <div class="card" style="padding:14px 6px">
+      <table><thead><tr><th>Scope</th><th class="n">Completed</th><th class="n">Completed&nbsp;%</th><th class="n">Earned&nbsp;%</th><th>In progress</th></tr></thead>
+      <tbody id="epBody"></tbody></table>
     </div>
-    <div style="height:14px"></div>
-    <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th class="n">Step</th><th>Verified physical state</th><th class="n">Weight</th><th class="n">Cumulative</th></tr></thead>
-      <tbody id="teSteps"></tbody></table>
-    </div>
-    <div style="height:14px"></div>
-    <div class="card"><p class="note block" id="teNote"></p></div>
+    <div class="card" style="margin-top:10px"><p class="note block" id="epNote"></p></div>
   </section>
 
   <section id="civil">
@@ -496,32 +488,20 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       '<td class="note block" data-label="Basis">'+esc(m.note)+'</td></tr>';
   }).join('');
 
-  /* ---------- tracker earned progress ---------- */
+  /* ---------- earned progress (compact) ---------- */
   (function(){
-    var t = D.trackerEarned; if(!t) return;
-    document.getElementById('teTitle').textContent =
-      fmt(t.completedRows)+' rows complete of '+fmt(t.total)+' ('+t.completedPct.toFixed(1)+'%) \u2014 '+
-      fmt(Math.round(t.earnedEquivalent))+' row-equivalents earned ('+t.earnedPct.toFixed(1)+'%)';
-    var tiles = [
-      { l:'Rows complete', v:fmt(t.completedRows)+' / '+fmt(t.total), n:t.completedPct.toFixed(1)+'% \u2014 finished to 100% with both purlin types installed. Sole basis for the August 30 completion date, the progress curves and certification.' },
-      { l:'Rows in progress', v:fmt(t.openRows)+' rows', n:'Built but not finished, across three areas. Reported by the step reached in the field, not by a judged percentage.' },
-      { l:'Row-equivalents in progress', v:t.equivalents.toFixed(1), n:'The rows in progress converted on the fixed five-step weighted ladder below.' },
-      { l:'Earned progress', v:t.earnedPct.toFixed(1)+'%', n:fmt(Math.round(t.earnedEquivalent))+' row-equivalents of '+fmt(t.total)+'. '+(t.earnedPct-t.completedPct).toFixed(1)+' points above the completed-rows measure; that difference is work in progress and does not advance the completion date.' }
-    ];
-    document.getElementById('teTiles').innerHTML = tiles.map(function(x){
-      return '<div class="gate"><div class="nm">'+esc(x.l)+'</div><div class="big">'+esc(x.v)+'</div>'+
-        '<div class="foot" style="border:0;padding-top:6px"><span style="font-size:11px;color:#4a5b53;line-height:1.45">'+esc(x.n)+'</span></div></div>';
+    var e = D.earnedProgress; if(!e) return;
+    document.getElementById('epLead').textContent =
+      'Completed units govern the dates. Earned progress also credits verified partial work, and does not move any completion date.';
+    document.getElementById('epBody').innerHTML = e.scopes.map(function(r){
+      var lift = (r.earnedPct - r.gatePct).toFixed(1);
+      return '<tr><td data-label="Scope"><b>'+esc(r.scope)+'</b></td>'+
+        '<td class="n" data-label="Completed">'+esc(r.gate)+'</td>'+
+        '<td class="n" data-label="Completed %">'+r.gatePct.toFixed(1)+'%</td>'+
+        '<td class="n" data-label="Earned %"><b>'+r.earnedPct.toFixed(1)+'%</b> <span style="font-size:11px;color:#4a5b53">(+'+lift+')</span></td>'+
+        '<td class="note" data-label="In progress">'+esc(r.inProgress)+' &mdash; '+esc(r.detail)+'</td></tr>';
     }).join('');
-    document.getElementById('teAreas').innerHTML = t.areas.map(function(a){
-      return '<tr><td data-label="Area"><b>'+esc(a.area)+'</b></td><td class="n" data-label="Rows in progress">'+fmt(a.rows)+'</td>'+
-        '<td class="n" data-label="Step reached">'+a.step+' of 5</td><td data-label="Physical state">'+esc(a.stepName)+'</td>'+
-        '<td class="n" data-label="Step value">'+a.pct+'%</td><td class="n" data-label="Row-equivalents"><b>'+a.equivalents.toFixed(1)+'</b></td></tr>';
-    }).join('') + '<tr><td><b>Total</b></td><td class="n"><b>'+fmt(t.openRows)+'</b></td><td class="n">\u2014</td><td>\u2014</td><td class="n">\u2014</td><td class="n"><b>'+t.equivalents.toFixed(1)+'</b></td></tr>';
-    document.getElementById('teSteps').innerHTML = t.steps.map(function(x){
-      return '<tr><td class="n" data-label="Step"><b>'+x.step+'</b></td><td data-label="Verified physical state">'+esc(x.name)+'</td>'+
-        '<td class="n" data-label="Weight">'+x.weight+'%</td><td class="n" data-label="Cumulative">'+x.cumulative+'%</td></tr>';
-    }).join('');
-    document.getElementById('teNote').textContent = t.note;
+    document.getElementById('epNote').textContent = e.note + ' ' + e.ladder;
   })();
 
   /* ---------- S-curves ---------- */

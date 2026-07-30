@@ -61,34 +61,24 @@ window.MURCH_REPORT = {
       "installed": 0,
       "total": 274720,
       "unit": "lf",
+      "earnedPct": 1.3,
+      "earnedLabel": "1.3% earned on the weighted control line",
       "forecast": "Sep 18, 2026",
       "status": "Not started"
     }
   ],
-  "trackerEarned": {
+  "earnedProgress": {
     "asOf": "Jul 29, 2026",
-    "title": "Tracker rows: completed rows and earned progress",
-    "completedRows": 916,
-    "completedPct": 36.8,
-    "openRows": 136,
-    "equivalents": 50.1,
-    "earnedEquivalent": 966.1,
-    "earnedPct": 38.9,
-    "total": 2486,
-    "areas": [
-      { "area": "Area E", "rows": 34, "step": 3, "stepName": "Purlins installed (both types)", "pct": 70, "equivalents": 23.8 },
-      { "area": "Area EW", "rows": 20, "step": 3, "stepName": "Purlins installed (both types)", "pct": 70, "equivalents": 14.0 },
-      { "area": "Area F", "rows": 82, "step": 1, "stepName": "Bearings and saddles set on piles", "pct": 15, "equivalents": 12.3 }
+    "scopes": [
+      { "scope": "Tracker rows", "unit": "rows", "gate": "916 / 2,486", "gatePct": 36.8, "inProgress": "136 rows", "earnedPct": 38.9,
+        "detail": "Area E 34 and Area EW 20 at step 3 of 5 (purlins installed); Area F 82 at step 1 (bearings and saddles set)." },
+      { "scope": "Inverter stations", "unit": "stations", "gate": "5 / 23 set", "gatePct": 21.7, "inProgress": "13 staged, 3 foundations ready", "earnedPct": 26.3,
+        "detail": "No station is yet terminated. On the completion measure — stations with LV, MV, grounding and testing closed — this scope stands at zero." },
+      { "scope": "LV / DC installation", "unit": "lf of cable", "gate": "0 / 274,720 lf", "gatePct": 0.0, "inProgress": "56 of 419 boxes mounted", "earnedPct": 1.3,
+        "detail": "Control-line components weighted by labour content. Aerial supports in Area A are complete but carry no take-off quantity yet, worth roughly 2.5 further points." }
     ],
-    "steps": [
-      { "step": 1, "name": "Bearings and saddles set on piles", "weight": 15, "cumulative": 15 },
-      { "step": 2, "name": "Torque tube installed and spliced", "weight": 30, "cumulative": 45 },
-      { "step": 3, "name": "Purlins installed (both types)", "weight": 25, "cumulative": 70 },
-      { "step": 4, "name": "Damper, actuator and drive line", "weight": 20, "cumulative": 90 },
-      { "step": 5, "name": "Torque, alignment and punch list closed", "weight": 10, "cumulative": 100 }
-    ],
-    "note": "Two measures are reported for tracker assembly and they are not interchangeable. COMPLETED ROWS — 916 of 2,486, or 36.8% — counts a row only when it is finished to 100% with both purlin types installed. It remains the sole basis for the August 30 completion date, the progress curves and every certification, because only a finished row can be released by Quality and only a released row can receive modules. EARNED PROGRESS — 966 row-equivalents of 2,486, or 38.9% — additionally credits the physical work standing in the 136 rows that are built but not yet finished, so that installed material and labour already in place are visible rather than reported as zero. Conversion uses the fixed five-step weighted ladder above, adopted 30 July 2026: each step is a physically verifiable state confirmed in the field, replacing subjective percentage judgements. A row leaves the in-progress register the moment it is credited as complete, so no quantity is counted twice, and Quality release is deliberately excluded from the ladder because release is a separate gate applied only to finished rows. The 2.1-point difference between the two measures is the work in progress; it does not advance the completion date.",
-    "steps_note": "Weights sum to 100% and are fixed for the duration of the project."
+    "ladder": "Tracker row steps: bearings and saddles 15% · torque tube 30% · purlins 25% · damper, actuator and drive line 20% · torque, alignment and punch 10%.",
+    "note": "Two measures are reported for each scope. Completed units govern the dates and certification; earned progress additionally credits verified partial work so material and labour already installed are visible. Conversion uses fixed weights adopted 30 July 2026, and each step is a physically confirmed state rather than a judged percentage. Earned progress does not advance any completion date."
   },
   "milestones": [
     {
