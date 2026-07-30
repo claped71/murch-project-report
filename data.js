@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, LV/DC cable 14%, civil and substation 10%.",
-    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. Pile installation stands at 88.4%, with 3,638 piles left to place; July 29 was the first day since the mid-week weather stop on which pile output exceeded the rate required to close the front in early August, and two of the pile areas are now within a day of completion. The second-phase pile area opens in early August with its slab demolition complete. Tracker assembly and module installation remain the controlling fronts through August and both are still below the pace required to hold their completion dates; on tracker assembly the binding constraint has shifted from build rate to quality release, with 310 completed rows now awaiting release. Module installation held above 3,000 per day for a fifth consecutive working day and the second module area is complete, opening a new installation front. The main power transformer is set on its foundation and the inverter stations in Areas A and C are placed, pending terminations. The LV workfront has opened: low-voltage box installation in Area A is complete, although no measured cable footage has yet been recorded against the September 18 requirement."
+    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. Pile installation stands at 88.4%, with 3,638 piles left to place; July 29 was the first day since the mid-week weather stop on which pile output exceeded the rate required to close the front in early August, and two of the pile areas are now within a day of completion. The second-phase pile area opens in early August with its slab demolition complete. Tracker assembly and module installation remain the controlling fronts through August and both are still below the pace required to hold their completion dates; on tracker assembly the binding constraint has shifted from build rate to quality release, with 310 completed rows now awaiting release. Completed tracker rows stand at 916 of 2,486 (36.8%); including the physical work standing in 136 rows that are built but not yet finished, earned progress is 966 row-equivalents, or 38.9%, measured on a fixed five-step weighted ladder adopted this week. Module installation held above 3,000 per day for a fifth consecutive working day and the second module area is complete, opening a new installation front. The main power transformer is set on its foundation and the inverter stations in Areas A and C are placed, pending terminations. The LV workfront has opened: low-voltage box installation in Area A is complete, although no measured cable footage has yet been recorded against the September 18 requirement."
   },
   "gates": [
     {
@@ -40,6 +40,9 @@ window.MURCH_REPORT = {
       "installed": 916,
       "total": 2486,
       "unit": "rows",
+      "earned": 966.1,
+      "earnedPct": 38.9,
+      "earnedLabel": "38.9% earned incl. rows in progress (966 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
@@ -62,6 +65,31 @@ window.MURCH_REPORT = {
       "status": "Not started"
     }
   ],
+  "trackerEarned": {
+    "asOf": "Jul 29, 2026",
+    "title": "Tracker rows: completed rows and earned progress",
+    "completedRows": 916,
+    "completedPct": 36.8,
+    "openRows": 136,
+    "equivalents": 50.1,
+    "earnedEquivalent": 966.1,
+    "earnedPct": 38.9,
+    "total": 2486,
+    "areas": [
+      { "area": "Area E", "rows": 34, "step": 3, "stepName": "Purlins installed (both types)", "pct": 70, "equivalents": 23.8 },
+      { "area": "Area EW", "rows": 20, "step": 3, "stepName": "Purlins installed (both types)", "pct": 70, "equivalents": 14.0 },
+      { "area": "Area F", "rows": 82, "step": 1, "stepName": "Bearings and saddles set on piles", "pct": 15, "equivalents": 12.3 }
+    ],
+    "steps": [
+      { "step": 1, "name": "Bearings and saddles set on piles", "weight": 15, "cumulative": 15 },
+      { "step": 2, "name": "Torque tube installed and spliced", "weight": 30, "cumulative": 45 },
+      { "step": 3, "name": "Purlins installed (both types)", "weight": 25, "cumulative": 70 },
+      { "step": 4, "name": "Damper, actuator and drive line", "weight": 20, "cumulative": 90 },
+      { "step": 5, "name": "Torque, alignment and punch list closed", "weight": 10, "cumulative": 100 }
+    ],
+    "note": "Two measures are reported for tracker assembly and they are not interchangeable. COMPLETED ROWS — 916 of 2,486, or 36.8% — counts a row only when it is finished to 100% with both purlin types installed. It remains the sole basis for the August 30 completion date, the progress curves and every certification, because only a finished row can be released by Quality and only a released row can receive modules. EARNED PROGRESS — 966 row-equivalents of 2,486, or 38.9% — additionally credits the physical work standing in the 136 rows that are built but not yet finished, so that installed material and labour already in place are visible rather than reported as zero. Conversion uses the fixed five-step weighted ladder above, adopted 30 July 2026: each step is a physically verifiable state confirmed in the field, replacing subjective percentage judgements. A row leaves the in-progress register the moment it is credited as complete, so no quantity is counted twice, and Quality release is deliberately excluded from the ladder because release is a separate gate applied only to finished rows. The 2.1-point difference between the two measures is the work in progress; it does not advance the completion date.",
+    "steps_note": "Weights sum to 100% and are fixed for the duration of the project."
+  },
   "milestones": [
     {
       "name": "Mechanical Completion",
@@ -737,7 +765,7 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "916 rows built of 2,486. 1,570 remain to build and 1,880 to release for module installation. 58 completed rows per day are required to hold August 30. Three areas are now producing rows, and the constraint has shifted: no rows were released on July 29 while 35 were completed, so 310 built rows are waiting on release and the released-row buffer ahead of the module crews is under two days."
+      "note": "916 rows complete of 2,486 (36.8%) — the measure that governs the August 30 date. A further 136 rows are built but not finished: Area E 34 and Area EW 20 at step 3 of 5 with purlins installed, Area F 82 at step 1 with bearings and saddles set. On the fixed five-step ladder those rows carry 50.1 row-equivalents, so earned progress is 966 of 2,486, or 38.9%. 1,570 rows remain to build and 1,880 to release for module installation, and 58 completed rows per day are required to hold August 30. Three areas are now producing rows and the constraint has shifted: no rows were released on July 29 while 35 were completed, so 310 built rows are waiting on release and the released-row buffer ahead of the module crews is under two days. The 54 rows sitting at step 3 need only dampers, actuators, drive line and final torque and are the nearest available movement on the completion measure."
     },
     {
       "title": "Module installation rate",
