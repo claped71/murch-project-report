@@ -306,10 +306,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <h2>Completed units and earned progress</h2>
       <p id="epLead"></p>
     </div>
-    <div class="card" style="padding:14px 6px">
-      <table><thead><tr><th>Scope</th><th class="n">Completed</th><th class="n">Completed&nbsp;%</th><th class="n">Earned&nbsp;%</th><th>In progress</th></tr></thead>
-      <tbody id="epBody"></tbody></table>
-    </div>
+    <div class="card" style="padding:6px 14px"><div id="epBody"></div></div>
     <div class="card" style="margin-top:10px"><p class="note block" id="epNote"></p></div>
   </section>
 
@@ -493,13 +490,17 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var e = D.earnedProgress; if(!e) return;
     document.getElementById('epLead').textContent =
       'Completed units govern the dates. Earned progress also credits verified partial work.';
-    document.getElementById('epBody').innerHTML = e.scopes.map(function(r){
-      var lift = (r.earnedPct - r.gatePct).toFixed(1);
-      return '<tr><td data-label="Scope"><b>'+esc(r.scope)+'</b></td>'+
-        '<td class="n" data-label="Completed">'+esc(r.gate)+'</td>'+
-        '<td class="n" data-label="Completed %">'+r.gatePct.toFixed(1)+'%</td>'+
-        '<td class="n" data-label="Earned %"><b>'+r.earnedPct.toFixed(1)+'%</b> <span style="font-size:11px;color:#4a5b53">(+'+lift+')</span></td>'+
-        '<td class="note" data-label="In progress">'+esc(r.inProgress)+'</td></tr>';
+    document.getElementById('epBody').innerHTML = e.scopes.map(function(r,i){
+      var last = (i === e.scopes.length-1);
+      return '<div style="padding:10px 0'+(last?'':';border-bottom:1px solid var(--line)')+'">'+
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap">'+
+          '<b style="font-size:14px">'+esc(r.scope)+'</b>'+
+          '<span style="white-space:nowrap;font-size:13px;color:#4a5b53">'+r.gatePct.toFixed(1)+'%'+
+            ' <span style="color:#9aa8a1">&rarr;</span> <b style="font-size:16px;color:#0f7a52">'+r.earnedPct.toFixed(1)+'%</b></span>'+
+        '</div>'+
+        '<div style="font-size:11.5px;color:#4a5b53;margin-top:1px;line-height:1.4">'+
+          esc(r.gate)+' complete <span style="color:#9aa8a1">&middot;</span> '+esc(r.inProgress)+'</div>'+
+      '</div>';
     }).join('');
     document.getElementById('epNote').textContent = e.note + ' ' + e.ladder;
   })();
