@@ -771,7 +771,7 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       { "ref": "MQ-20260730-1325", "subject": "Torque wrenches out of calibration \u2014 certificates attached", "area": "Tracker assembly", "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "Open", "assignedTo": "QA/QC lead" },
+        "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "In review", "assignedTo": "QA/QC lead" },
       { "ref": "MQ-20260730-1251", "subject": "Protective watertight caps on cable ends at the inverters", "area": "MV collection", "raisedBy": "James Burnett",
         "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "Open", "assignedTo": "Electrical lead (MV)" },
       { "ref": "MQ-20260730-0710", "subject": "Office WI-FI", "area": "Other", "raisedBy": "James Burnett",
