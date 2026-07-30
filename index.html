@@ -476,6 +476,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     s=(s||'').toLowerCase();
     if(s.indexOf('complete')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
     if(s.indexOf('watch')>=0||s.indexOf('active')>=0||s.indexOf('open')>=0) return 'p-watch';
+    if(s.indexOf('in review')>=0) return 'p-behind';
     if(s.indexOf('behind')>=0||s.indexOf('below')>=0||s.indexOf('priority')>=0) return 'p-behind';
     return 'p-ns';
   }
@@ -726,11 +727,14 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var Q = D.clientQueries; if(!Q) return;
     var R = Q.routing || {};
     var toOk = R.to && R.to.email && /@/.test(R.to.email) && !/SET-EMAIL/.test(R.to.email);
-    var AR = Q.authorisedRequester || null;
-    var ccList = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
-    if (AR && AR.email && /@/.test(AR.email)) {
-      ccList = ccList.concat([{ name: AR.name, role: AR.role + ', ' + AR.organisation, email: AR.email }]);
+    var RR = Q.responseRecipient || null;          // recipient of record for all responses
+    var POL = Q.raisingPolicy || null;
+    var APV = Q.approval || null;
+    var baseCc = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
+    if (RR && RR.email && /@/.test(RR.email)) {
+      baseCc = baseCc.concat([{ name: RR.name, role: RR.role + ', ' + RR.organisation, email: RR.email }]);
     }
+    var ccList = baseCc;
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
 
@@ -749,20 +753,22 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('cqForm').innerHTML =
       '<div class="qf">'+
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
-        (AR? '<div class="hint"><b>'+esc(AR.name)+'</b>, '+esc(AR.role)+', '+esc(AR.organisation)+
-          ' \u00b7 '+esc(AR.email)+'. '+esc(AR.note)+'</div>' : '')+
+        (POL? '<div class="hint">'+esc(POL.note)+'</div>' : '')+
+        (RR? '<div class="hint">Answers are issued to <b>'+esc(RR.name)+'</b> ('+esc(RR.role)+') as recipient of record, copied to you'+
+          (APV? ', after approval by the '+esc(APV.by) : '')+'.</div>' : '')+
         '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
           (toOk? ', '+esc(R.to.email):'')+')'+
           (ccList.length? ', copied to '+ccList.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(' and ')+'.':'.')+
           ' '+esc(Q.responseTarget)+'.</div>'+
         '<div class="row">'+
-          '<div><label for="qfName">Raised by</label><input id="qfName" type="text" autocomplete="name" value="'+esc(AR?AR.name:'')+'"></div>'+
-          '<div><label for="qfArea">Area or discipline</label><select id="qfArea">'+areaOpts+'</select></div>'+
+          '<div><label for="qfName">Your name</label><input id="qfName" type="text" autocomplete="name" placeholder="Name and role"></div>'+
+          '<div><label for="qfEmail">Your email</label><input id="qfEmail" type="email" autocomplete="email" placeholder="you@heelstoneenergy.com"></div>'+
         '</div>'+
         '<div class="row">'+
-          '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
+          '<div><label for="qfArea">Area or discipline</label><select id="qfArea">'+areaOpts+'</select></div>'+
           '<div><label for="qfBy">Owner needs it by (optional)</label><input id="qfBy" type="date"></div>'+
         '</div>'+
+        '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
         '<div><label for="qfBody">Query, comment or information requested</label><textarea id="qfBody" placeholder="Type the query here."></textarea></div>'+
         '<div id="qfClock" style="font-size:11.5px;color:#4a5b53;background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px;line-height:1.5"></div>'+
         '<div class="acts">'+
@@ -790,8 +796,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
     function compose(){
       var g=function(id){ var el=document.getElementById(id); return el? el.value.trim():''; };
-      var subj=g('qfSubj'), body=g('qfBody');
-      if(!subj||!body){ document.getElementById('qfMsg').textContent='Add a subject and the query text.'; return null; }
+      var subj=g('qfSubj'), body=g('qfBody'), who=g('qfName'), mail=g('qfEmail');
+      var msg=document.getElementById('qfMsg'); msg.style.color='#b5442f';
+      if(!who){ msg.textContent='Add your name.'; return null; }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){ msg.textContent='Add a valid email so the response reaches you.'; return null; }
+      if(!subj||!body){ msg.textContent='Add a subject and the query text.'; return null; }
       document.getElementById('qfMsg').textContent='';
       var by=g('qfBy');
       var c=refreshClock()||{ now:new Date(), due:new Date() };
@@ -801,15 +810,16 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'Raised: '+stamp(c.now)+'\n'+
         'Response due by: '+longDate(c.due)+', '+(Q.responseCutoff||'')+'\n'+
         '  ('+(Q.responseWorkingDays||5)+' working days, '+(Q.workingWeek||'')+')\n\n'+
-        'Raised by: '+(g('qfName')||'(not given)')+(AR&&g('qfName')===AR.name? ' \u2014 '+AR.role : '')+'\n'+
-        'Company: '+((AR&&AR.organisation)||'(not given)')+'\n'+
+        'Raised by: '+who+' \u2014 '+mail+'\n'+
+        'Organisation: '+((RR&&RR.organisation)||'Owner')+' site management\n'+
         'Area / discipline: '+g('qfArea')+'\n'+
         'Owner requests response by: '+(by||'not specified')+'\n\n'+
         'QUERY\n'+body+'\n\n'+
         'RESPOND TO\n'+
-        (AR? AR.name+' \u2014 '+AR.email+'\n' : '')+
-        'Reply directly to the address above, quoting reference '+ref+', and copy the Project Manager and Construction Manager.\n'+
-        'If this request is forwarded to a discipline lead, the response still goes to the address above \u2014 not to the forwarding party.\n\n'+
+        (RR? RR.name+' \u2014 '+RR.email+'  (recipient of record)\n' : '')+
+        'Copy: '+who+' \u2014 '+mail+'  (raised this query)\n'+
+        (APV? 'Release: draft the response, obtain '+APV.by+' approval, then issue to the address above.\n' : '')+
+        'Quote reference '+ref+' in the reply. If this request is forwarded to a discipline lead, the response still goes to the address above \u2014 not to the forwarding party.\n\n'+
         '---\nSubmitted from the Murch Solar Owner Project Report\n'+
         'Report basis: '+esc(Q.asOf)+'\n'+
         'Log this reference in the Owner query register with the date received and the date answered.\n';
@@ -817,9 +827,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     document.getElementById('qfSend').addEventListener('click', function(){
       var m=compose(); if(!m) return;
+      var mine=(document.getElementById('qfEmail')||{value:''}).value.trim();
+      var cc=ccList.map(function(c){return c.email;});
+      if(mine && cc.indexOf(mine)<0) cc.push(mine);
       var url='mailto:'+R.to.email+
         '?subject='+encodeURIComponent(m.subject)+
-        (ccList.length? '&cc='+encodeURIComponent(ccList.map(function(c){return c.email;}).join(',')):'')+
+        (cc.length? '&cc='+encodeURIComponent(cc.join(',')):'')+
         '&body='+encodeURIComponent(m.text);
       var a=document.getElementById('qfLink');
       a.setAttribute('href',url);
@@ -868,7 +881,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
     document.getElementById('cqBody').innerHTML = items.length ? items.map(function(q){
       var st = q._overdue ? 'Overdue' : q.status;
-      var clock = q.status === 'Open'
+      var clock = q.status === 'In review' ? 'with '+esc((Q.approval&&Q.approval.by)||'PM')+' for approval'
+        : q.status === 'Open'
         ? (q._overdue ? '<b style="color:#b5442f">'+Math.abs(q._daysLeft)+' d overdue</b>'
                       : (q._daysLeft === 0 ? '<b>due today</b>' : q._daysLeft+' d left'))
         : (typeof q.turnaroundDays === 'number' ? q.turnaroundDays+' wd' : '\u2014');

@@ -753,13 +753,22 @@ window.MURCH_REPORT = {
       "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" } ],
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
-    "authorisedRequester": {
+    "raisingPolicy": {
+      "who": "Owner site management personnel",
+      "note": "Any member of the Owner's site management team may raise a query. Give your name and email so the response reaches you as well."
+    },
+    "responseRecipient": {
       "name": "James Burnett",
       "role": "Site Construction Manager",
       "organisation": "Heelstone",
       "email": "jburnett@heelstoneenergy.com",
-      "note": "Other Owner personnel should route requests through him, so the register keeps one ordered reference series."
+      "note": "Recipient of record for every response, whoever raised the query."
     },
+    "approval": {
+      "by": "Project Manager",
+      "note": "Responses are drafted by the responsible discipline lead, approved by the Project Manager, and only then issued to the Owner's Site Construction Manager."
+    },
+    "statusFlow": ["Open", "In review", "Answered", "Closed"],
     "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "MV collection", "Substation and inverters", "Quality and inspection", "Health and safety", "Environmental", "Programme and milestones", "Other"],
     "refPrefix": "MQ",
     "responseWorkingDays": 5,
@@ -768,9 +777,9 @@ window.MURCH_REPORT = {
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
     "openingNote": "No queries raised yet. The register opens with the July 30 report.",
-    "responseNote": "Responses are issued by email direct to the Owner's Site Construction Manager, who raised the request \u2014 including where the request has been forwarded internally to a discipline lead. This register carries the status and the dates only \u2014 reference, discipline, date raised, date due, date responded and turnaround \u2014 so the request can be traced without reproducing the correspondence.",
+    "responseNote": "Any member of the Owner's site management team may raise a query. Every response is drafted by the responsible discipline lead, approved by the Project Manager, and then issued by email to the Owner's Site Construction Manager as recipient of record, copied to whoever raised it. This register carries the status and the dates only \u2014 reference, discipline, date raised, date due, date issued and turnaround \u2014 so a request can be traced without reproducing the correspondence. \u201cIn review\u201d means the response is drafted and with the Project Manager for approval.",
     "noticeNote": "This register is a coordination tool for day-to-day information flow. It does not replace, vary or satisfy the formal correspondence provisions of the Agreement, which continue to apply as written.",
-    "itemSchema": "ref, subject, area, raisedBy, raisedISO, dueISO, status (Open | Answered | Closed), respondedISO, turnaroundDays, assignedTo (ROLE only, never a personal name), closedISO",
+    "itemSchema": "ref, subject, area, raisedBy, raisedByEmail, raisedISO, dueISO, status (Open | In review | Answered | Closed), approvedISO, respondedISO (date ISSUED to the Owner, after approval), turnaroundDays, assignedTo (ROLE only, never a personal name), closedISO",
     "items": []
   },
 
