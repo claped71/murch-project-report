@@ -785,7 +785,7 @@ window.MURCH_REPORT = {
     {
       "title": "Substation completion",
       "level": "Watch",
-      "note": "Overall substation progress is 21.7% — civil 65.6%, structural 10.8%, electrical 5.7%. Piers complete including concrete stand at 7 of 17. The main power transformer is set; breakers and structural steel now control the interconnection path."
+      "note": "Overall substation progress is 21.7% — civil 65.6%, structural 10.8%, electrical 5.7%. Piers complete including concrete stand at 7 of 17. The main power transformer is set; breakers and structural steel now control the interconnection path. The substation is one of the four fronts inside the electrical total above, weighted 15%, and is not counted separately in the project percentage."
     }
   ],
   "material": [
