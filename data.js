@@ -70,15 +70,15 @@ window.MURCH_REPORT = {
   "earnedProgress": {
     "asOf": "Jul 29, 2026",
     "scopes": [
-      { "scope": "Tracker rows", "unit": "rows", "gate": "916 / 2,486", "gatePct": 36.8, "inProgress": "136 rows", "earnedPct": 38.9,
-        "detail": "Area E 34 and Area EW 20 at step 3 of 5 (purlins installed); Area F 82 at step 1 (bearings and saddles set)." },
-      { "scope": "Inverter stations", "unit": "stations", "gate": "5 / 23 set", "gatePct": 21.7, "inProgress": "13 staged, 3 foundations ready", "earnedPct": 26.3,
-        "detail": "No station is yet terminated. On the completion measure — stations with LV, MV, grounding and testing closed — this scope stands at zero." },
+      { "scope": "Tracker rows", "unit": "rows", "gate": "916 / 2,486", "gatePct": 36.8, "inProgress": "136 rows part-built", "earnedPct": 38.9,
+        "detail": "Areas E and EW at step 3 of 5; Area F at step 1." },
+      { "scope": "Inverter stations", "unit": "stations", "gate": "5 / 23 set", "gatePct": 21.7, "inProgress": "13 staged · 3 foundations ready", "earnedPct": 26.3,
+        "detail": "No station terminated yet." },
       { "scope": "LV / DC installation", "unit": "lf of cable", "gate": "0 / 274,720 lf", "gatePct": 0.0, "inProgress": "56 of 419 boxes mounted", "earnedPct": 1.3,
-        "detail": "Control-line components weighted by labour content. Aerial supports in Area A are complete but carry no take-off quantity yet, worth roughly 2.5 further points." }
+        "detail": "Area A supports complete, not yet in the take-off." }
     ],
-    "ladder": "Tracker row steps: bearings and saddles 15% · torque tube 30% · purlins 25% · damper, actuator and drive line 20% · torque, alignment and punch 10%.",
-    "note": "Two measures are reported for each scope. Completed units govern the dates and certification; earned progress additionally credits verified partial work so material and labour already installed are visible. Conversion uses fixed weights adopted 30 July 2026, and each step is a physically confirmed state rather than a judged percentage. Earned progress does not advance any completion date."
+    "ladder": "Tracker row steps: saddles 15 · torque tube 30 · purlins 25 · damper and drive 20 · torque and punch 10.",
+    "note": "Completed units govern the dates and certification. Earned progress credits verified partial work on fixed weights adopted 30 July 2026, from confirmed physical states rather than judged percentages. It does not advance any completion date."
   },
   "milestones": [
     {
