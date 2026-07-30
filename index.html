@@ -815,9 +815,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'RESPONSE \u2014 RELEASE CONTROL\n'+
         'NO RESPONSE IS TO BE ISSUED TO THE OWNER UNTIL IT HAS BEEN AUDITED AND APPROVED BY THE PROJECT MANAGER.\n'+
         'This query carries no Owner address. If it is forwarded to a discipline lead, the reply returns to the Project Manager, not to the Owner.\n'+
-        'Once approved, issue the response to:\n'+
-        '  '+who+' \u2014 '+mail+'  (raised this query)\n'+
-        (RR? '  '+RR.name+' \u2014 '+RR.email+'  (Owner\'s '+RR.role+')\n' : '')+
+        'Once approved, issue the response to the sender of this message ('+who+') and to the Owner\'s '+
+          (RR? RR.role : 'Site Construction Manager')+'. Addresses are held by the Project Manager and are deliberately not restated here.\n'+
         'Quote reference '+ref+' in the response.\n\n'+
         '---\nSubmitted from the Murch Solar Owner Project Report\n'+
         'Report basis: '+esc(Q.asOf)+'\n'+

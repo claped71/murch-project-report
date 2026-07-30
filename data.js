@@ -721,7 +721,7 @@ window.MURCH_REPORT = {
   ],
   "ownerActions": {
     "asOf": "Jul 30, 2026",
-    "responseNote": "Responses are issued by email. This register carries the reference, discipline and dates only.",
+    "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       { "ref": "OA-01", "item": "Area G sequencing confirmation", "since": "Jul 3, 2026", "days": 27, "status": "Open",
         "blocks": "Programming of Area G cut and fill, which in turn releases the last pile workfront.",
@@ -767,7 +767,7 @@ window.MURCH_REPORT = {
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
     "openingNote": "No queries raised yet.",
-    "responseNote": "Any member of the Owner's site management team may raise a query. It reaches the Project Manager and Construction Manager, who direct it to the category lead for the discipline selected. The response is drafted by that lead, approved by the Project Manager, and then issued by email to the person who raised the query, copied to the Owner's Site Construction Manager as recipient of record. This register carries the status and the dates only \u2014 reference, discipline, date raised, date due, date issued and turnaround \u2014 so a request can be traced without reproducing the correspondence. \u201cIn review\u201d means the response is drafted and with the Project Manager for approval.",
+    "responseNote": "Responses are issued by email. This register carries the reference, discipline and dates only.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": []
   },
