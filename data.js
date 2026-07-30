@@ -767,7 +767,7 @@ window.MURCH_REPORT = {
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
     "openingNote": "No queries raised yet.",
-    "responseNote": "There is no sign-in and no account. Sending the query is all that is required \u2014 you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication, and responses are issued by email.",
+    "responseNote": "There is no sign-in and no account. Sending the query is all that is required \u2014 you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       { "ref": "MQ-20260730-0710", "subject": "Office WI-FI", "area": "Other", "raisedBy": "James Burnett",
