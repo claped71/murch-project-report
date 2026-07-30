@@ -439,8 +439,14 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <p id="cqLead"></p>
     </div>
     <div class="card" style="padding:14px"><div id="cqForm"></div></div>
-    <div class="card" style="padding:6px 14px;margin-top:10px"><div id="cqBody"></div></div>
-    <div class="card" style="margin-top:10px"><p class="note block" id="cqNote"></p></div>
+    <div style="height:12px"></div>
+    <div class="grid g4" id="cqKpis"></div>
+    <div style="height:12px"></div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th>Ref</th><th>Subject</th><th>Discipline</th><th class="n">Raised</th><th class="n">Due</th><th class="n">Responded</th><th class="n">Clock</th><th>With</th><th>Status</th></tr></thead>
+      <tbody id="cqBody"></tbody></table>
+    </div>
+    <div class="card" style="margin-top:10px"><p class="note block" id="cqResp"></p><p class="note block" id="cqNote" style="margin-top:8px"></p></div>
   </section>
 
   <section id="photos">
@@ -826,21 +832,57 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
              try{document.execCommand('copy');done();}catch(e){} document.body.removeChild(ta); }
     });
 
-    var rows = Q.items.length ? Q.items.map(function(q,i){
-      var last = (i === Q.items.length-1);
-      return '<div style="padding:10px 0'+(last?'':';border-bottom:1px solid var(--line)')+'">'+
-        '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap">'+
-          '<b style="font-size:13.5px"><span style="color:#9aa8a1;font-weight:600">'+esc(q.ref)+'</span> '+esc(q.subject)+'</b>'+
-          '<span style="white-space:nowrap;font-size:12px"><span class="pill '+pillCls(q.status)+'">'+esc(q.status)+'</span></span>'+
-        '</div>'+
-        '<div style="font-size:11.5px;color:#4a5b53;margin-top:2px;line-height:1.45">'+
-          (q.raisedBy? 'Raised by '+esc(q.raisedBy)+' &middot; ' : '')+'received '+esc(q.received)+
-          (q.dueBy? ' &middot; <b'+(q.overdue?' style="color:#b5442f"':'')+'>due '+esc(q.dueBy)+(q.overdue?' \u2014 OVERDUE':'')+'</b>':'')+
-          (q.answered?' &middot; answered '+esc(q.answered):'')+'<br>'+
-          '<b>Query:</b> '+esc(q.query)+(q.response?'<br><b>Response:</b> '+esc(q.response):'')+'</div>'+
-      '</div>';
-    }).join('') : '<div style="padding:10px 0;border-top:1px solid var(--line);font-size:12px;color:#4a5b53;line-height:1.5">'+esc(Q.openingNote)+'</div>';
-    document.getElementById('cqBody').innerHTML = rows;
+    // ---- RFI traceability: status and dates only, no response text ----
+    function iso(d){ return d? new Date(d+'T12:00:00') : null; }
+    function shortDate(d){ var x=iso(d); return x? x.getDate()+' '+MONS[x.getMonth()].slice(0,3)+' '+x.getFullYear() : '\u2014'; }
+    var todayMid = new Date(); todayMid.setHours(12,0,0,0);
+    var items = (Q.items||[]).map(function(q){
+      var due = iso(q.dueISO);
+      var isOpen = (q.status === 'Open');
+      var overdue = isOpen && due && due < todayMid;
+      var daysLeft = due ? Math.round((due - todayMid)/86400000) : null;
+      return Object.assign({}, q, { _overdue: overdue, _daysLeft: daysLeft });
+    });
+    var nOpen = items.filter(function(q){ return q.status === 'Open'; }).length;
+    var nOver = items.filter(function(q){ return q._overdue; }).length;
+    var answered = items.filter(function(q){ return q.respondedISO; });
+    var onTime = answered.filter(function(q){ return iso(q.respondedISO) <= iso(q.dueISO); }).length;
+    var turn = answered.filter(function(q){ return typeof q.turnaroundDays === 'number'; });
+    var avgTurn = turn.length ? (turn.reduce(function(a,q){ return a+q.turnaroundDays; },0)/turn.length).toFixed(1) : null;
+
+    document.getElementById('cqKpis').innerHTML = [
+      { l:'Raised to date', v:String(items.length), f:'Since 30 July 2026' },
+      { l:'Open', v:String(nOpen), f: nOpen? 'Awaiting response' : 'Nothing outstanding' },
+      { l:'Overdue', v:String(nOver), alert: nOver>0, f: nOver? 'Past the 5 working-day target' : 'None past target' },
+      { l:'Answered within target', v: answered.length? onTime+' / '+answered.length : '\u2014',
+        f: avgTurn? 'Average turnaround '+avgTurn+' working days' : 'No responses issued yet' }
+    ].map(function(k){
+      return '<div class="gate"><div class="nm">'+esc(k.l)+'</div>'+
+        '<div class="big" style="'+(k.alert?'color:#b5442f':'')+'">'+esc(k.v)+'</div>'+
+        '<div class="foot" style="border:0;padding-top:4px"><span style="font-size:11px;color:#4a5b53">'+esc(k.f)+'</span></div></div>';
+    }).join('');
+
+    document.getElementById('cqBody').innerHTML = items.length ? items.map(function(q){
+      var st = q._overdue ? 'Overdue' : q.status;
+      var clock = q.status === 'Open'
+        ? (q._overdue ? '<b style="color:#b5442f">'+Math.abs(q._daysLeft)+' d overdue</b>'
+                      : (q._daysLeft === 0 ? '<b>due today</b>' : q._daysLeft+' d left'))
+        : (typeof q.turnaroundDays === 'number' ? q.turnaroundDays+' wd' : '\u2014');
+      return '<tr>'+
+        '<td data-label="Ref"><b>'+esc(q.ref)+'</b></td>'+
+        '<td data-label="Subject">'+esc(q.subject)+'</td>'+
+        '<td data-label="Discipline">'+esc(q.area||'\u2014')+'</td>'+
+        '<td class="n" data-label="Raised">'+shortDate(q.raisedISO)+'</td>'+
+        '<td class="n" data-label="Due">'+shortDate(q.dueISO)+'</td>'+
+        '<td class="n" data-label="Responded">'+shortDate(q.respondedISO)+'</td>'+
+        '<td class="n" data-label="Clock / turnaround">'+clock+'</td>'+
+        '<td data-label="With">'+esc(q.assignedTo||'\u2014')+'</td>'+
+        '<td data-label="Status"><span class="pill '+pillCls(st)+'">'+esc(st)+'</span></td>'+
+      '</tr>';
+    }).join('')
+      : '<tr><td colspan="9" class="note" style="text-align:center;padding:14px">'+esc(Q.openingNote)+'</td></tr>';
+
+    document.getElementById('cqResp').textContent = Q.responseNote;
     document.getElementById('cqNote').textContent = Q.noticeNote;
   })();
 
