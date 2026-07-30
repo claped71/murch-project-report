@@ -754,8 +754,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       '<div class="qf">'+
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
         (POL? '<div class="hint">'+esc(POL.note)+'</div>' : '')+
-        (RR? '<div class="hint">Answers are issued to <b>'+esc(RR.name)+'</b> ('+esc(RR.role)+') as recipient of record, copied to you'+
-          (APV? ', after approval by the '+esc(APV.by) : '')+'.</div>' : '')+
+        '<div class="hint">The answer comes back <b>to you</b>'+
+          (RR? ', copied to <b>'+esc(RR.name)+'</b> ('+esc(RR.role)+') as the Owner\'s recipient of record' : '')+
+          (APV? ', after the category lead drafts it and the '+esc(APV.by)+' approves it' : '')+'.</div>'+
         '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
           (toOk? ', '+esc(R.to.email):'')+')'+
           (ccList.length? ', copied to '+ccList.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(' and ')+'.':'.')+
@@ -770,6 +771,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '</div>'+
         '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
         '<div><label for="qfBody">Query, comment or information requested</label><textarea id="qfBody" placeholder="Type the query here."></textarea></div>'+
+        '<div id="qfLead" class="hint"></div>'+
         '<div id="qfClock" style="font-size:11.5px;color:#4a5b53;background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px;line-height:1.5"></div>'+
         '<div class="acts">'+
           '<button id="qfSend" type="button"'+(toOk?'':' disabled')+'>Send query</button>'+
@@ -793,6 +795,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     refreshClock();
     setInterval(refreshClock, 30000);
+    (function(){
+      var sel=document.getElementById('qfArea'), box=document.getElementById('qfLead');
+      if(!sel||!box) return;
+      function show(){ var l=(Q.categoryLeads||{})[sel.value]; box.innerHTML = l? 'Routed to the <b>'+esc(l)+'</b> to draft the response.' : ''; }
+      sel.addEventListener('change', show); show();
+    })();
 
     function compose(){
       var g=function(id){ var el=document.getElementById(id); return el? el.value.trim():''; };
@@ -805,6 +813,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       var by=g('qfBy');
       var c=refreshClock()||{ now:new Date(), due:new Date() };
       var ref=makeRef(c.now);
+      var area=g('qfArea');
+      var lead=((Q.categoryLeads||{})[area])||'Project Manager';
       var text='MURCH SOLAR \u2014 OWNER QUERY\n\n'+
         'Reference: '+ref+'\n'+
         'Raised: '+stamp(c.now)+'\n'+
@@ -816,10 +826,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'Owner requests response by: '+(by||'not specified')+'\n\n'+
         'QUERY\n'+body+'\n\n'+
         'RESPOND TO\n'+
-        (RR? RR.name+' \u2014 '+RR.email+'  (recipient of record)\n' : '')+
-        'Copy: '+who+' \u2014 '+mail+'  (raised this query)\n'+
-        (APV? 'Release: draft the response, obtain '+APV.by+' approval, then issue to the address above.\n' : '')+
-        'Quote reference '+ref+' in the reply. If this request is forwarded to a discipline lead, the response still goes to the address above \u2014 not to the forwarding party.\n\n'+
+        who+' \u2014 '+mail+'  (raised this query)\n'+
+        (RR? 'Copy: '+RR.name+' \u2014 '+RR.email+'  (Owner\'s recipient of record)\n' : '')+
+        '\nROUTING\n'+
+        'Category lead for this discipline: '+lead+'\n'+
+        (APV? 'Release: the category lead drafts the response, the '+APV.by+' approves it, then it is issued to the addresses above.\n' : '')+
+        'Quote reference '+ref+' in the reply. If this request is forwarded internally, the response still goes to the addresses above \u2014 not back to the forwarding party.\n\n'+
         '---\nSubmitted from the Murch Solar Owner Project Report\n'+
         'Report basis: '+esc(Q.asOf)+'\n'+
         'Log this reference in the Owner query register with the date received and the date answered.\n';
