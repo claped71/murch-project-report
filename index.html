@@ -720,7 +720,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var Q = D.clientQueries; if(!Q) return;
     var R = Q.routing || {};
     var toOk = R.to && R.to.email && /@/.test(R.to.email) && !/SET-EMAIL/.test(R.to.email);
+    var AR = Q.authorisedRequester || null;
     var ccList = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
+    if (AR && AR.email && /@/.test(AR.email)) {
+      ccList = ccList.concat([{ name: AR.name, role: AR.role + ', ' + AR.organisation, email: AR.email }]);
+    }
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
 
@@ -739,13 +743,16 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('cqForm').innerHTML =
       '<div class="qf">'+
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
+        (AR? '<div class="hint" style="background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px">'+
+          '<b>Raised by '+esc(AR.name)+'</b> \u2014 '+esc(AR.role)+', '+esc(AR.organisation)+' ('+esc(AR.email)+')<br>'+
+          esc(AR.note)+'</div>' : '')+
         '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
           (toOk? ', '+esc(R.to.email):'')+')'+
-          (ccList.length? ', copied to <b>'+esc(ccList[0].name)+'</b> ('+esc(ccList[0].role)+')':'')+
-          '. '+esc(Q.responseTarget)+'.</div>'+
+          (ccList.length? ', copied to '+ccList.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(' and ')+'.':'.')+
+          ' '+esc(Q.responseTarget)+'.</div>'+
         '<div class="row">'+
-          '<div><label for="qfName">Your name</label><input id="qfName" type="text" autocomplete="name"></div>'+
-          '<div><label for="qfCo">Company</label><input id="qfCo" type="text" value="Heelstone" autocomplete="organization"></div>'+
+          '<div><label for="qfName">Raised by</label><input id="qfName" type="text" autocomplete="name" value="'+esc(AR?AR.name:'')+'"></div>'+
+          '<div><label for="qfCo">Company</label><input id="qfCo" type="text" value="'+esc(AR?AR.organisation:'Heelstone')+'" autocomplete="organization"></div>'+
         '</div>'+
         '<div class="row">'+
           '<div><label for="qfArea">Area or discipline</label><select id="qfArea">'+areaOpts+'</select></div>'+
@@ -790,7 +797,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'Raised: '+stamp(c.now)+'\n'+
         'Response due by: '+longDate(c.due)+', '+(Q.responseCutoff||'')+'\n'+
         '  ('+(Q.responseWorkingDays||5)+' working days, '+(Q.workingWeek||'')+')\n\n'+
-        'Raised by: '+(g('qfName')||'(not given)')+'\n'+
+        'Raised by: '+(g('qfName')||'(not given)')+(AR&&g('qfName')===AR.name? ' \u2014 '+AR.role : '')+'\n'+
         'Company: '+(g('qfCo')||'(not given)')+'\n'+
         'Area / discipline: '+g('qfArea')+'\n'+
         'Owner requests response by: '+(by||'not specified')+'\n\n'+
@@ -829,7 +836,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           '<span style="white-space:nowrap;font-size:12px"><span class="pill '+pillCls(q.status)+'">'+esc(q.status)+'</span></span>'+
         '</div>'+
         '<div style="font-size:11.5px;color:#4a5b53;margin-top:2px;line-height:1.45">'+
-          'Received '+esc(q.received)+
+          (q.raisedBy? 'Raised by '+esc(q.raisedBy)+' &middot; ' : '')+'received '+esc(q.received)+
           (q.dueBy? ' &middot; <b'+(q.overdue?' style="color:#b5442f"':'')+'>due '+esc(q.dueBy)+(q.overdue?' \u2014 OVERDUE':'')+'</b>':'')+
           (q.answered?' &middot; answered '+esc(q.answered):'')+'<br>'+
           '<b>Query:</b> '+esc(q.query)+(q.response?'<br><b>Response:</b> '+esc(q.response):'')+'</div>'+

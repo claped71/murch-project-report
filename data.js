@@ -753,6 +753,13 @@ window.MURCH_REPORT = {
       "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" } ],
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
+    "authorisedRequester": {
+      "name": "Jame Burnett",
+      "role": "Site Construction Manager",
+      "organisation": "Heelstone",
+      "email": "jburnett@heelstoneenergy.com",
+      "note": "Queries and information requests are raised by the Owner's Site Construction Manager. Requests from other Owner personnel should be routed through him so the register remains a single ordered record with one reference series."
+    },
     "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "MV collection", "Substation and inverters", "Quality and inspection", "Health and safety", "Environmental", "Programme and milestones", "Other"],
     "refPrefix": "MQ",
     "responseWorkingDays": 5,
