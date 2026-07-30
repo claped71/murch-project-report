@@ -855,12 +855,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var todayMid = new Date(); todayMid.setHours(12,0,0,0);
     var items = (Q.items||[]).map(function(q){
       var due = iso(q.dueISO);
-      var isOpen = (q.status === 'Open');
-      var overdue = isOpen && due && due < todayMid;
+      var outstanding = (q.status === 'Open' || q.status === 'In review');
+      var overdue = outstanding && due && due < todayMid;
       var daysLeft = due ? Math.round((due - todayMid)/86400000) : null;
-      return Object.assign({}, q, { _overdue: overdue, _daysLeft: daysLeft });
+      return Object.assign({}, q, { _overdue: overdue, _daysLeft: daysLeft, _outstanding: outstanding });
     });
-    var nOpen = items.filter(function(q){ return q.status === 'Open'; }).length;
+    var nOpen = items.filter(function(q){ return q._outstanding; }).length;
     var nOver = items.filter(function(q){ return q._overdue; }).length;
     var answered = items.filter(function(q){ return q.respondedISO; });
     var onTime = answered.filter(function(q){ return iso(q.respondedISO) <= iso(q.dueISO); }).length;
@@ -869,7 +869,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
     document.getElementById('cqKpis').innerHTML = [
       { l:'Raised to date', v:String(items.length), f:'Since 30 July 2026' },
-      { l:'Open', v:String(nOpen), f: nOpen? 'Awaiting response' : 'Nothing outstanding' },
+      { l:'Outstanding', v:String(nOpen), f: nOpen? 'Open or with the Project Manager for approval' : 'Nothing outstanding' },
       { l:'Overdue', v:String(nOver), alert: nOver>0, f: nOver? 'Past the 5 working-day target' : 'None past target' },
       { l:'Answered within target', v: answered.length? onTime+' / '+answered.length : '\u2014',
         f: avgTurn? 'Average turnaround '+avgTurn+' working days' : 'No responses issued yet' }
@@ -881,11 +881,16 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
     document.getElementById('cqBody').innerHTML = items.length ? items.map(function(q){
       var st = q._overdue ? 'Overdue' : q.status;
-      var clock = q.status === 'In review' ? 'with '+esc((Q.approval&&Q.approval.by)||'PM')+' for approval'
-        : q.status === 'Open'
-        ? (q._overdue ? '<b style="color:#b5442f">'+Math.abs(q._daysLeft)+' d overdue</b>'
-                      : (q._daysLeft === 0 ? '<b>due today</b>' : q._daysLeft+' d left'))
-        : (typeof q.turnaroundDays === 'number' ? q.turnaroundDays+' wd' : '\u2014');
+      var clock;
+      if (q._overdue) {
+        clock = '<b style="color:#b5442f">'+Math.abs(q._daysLeft)+' d overdue</b>'+
+          (q.status === 'In review' ? '<br><span style="font-size:10.5px">awaiting approval</span>' : '');
+      } else if (q._outstanding) {
+        clock = (q._daysLeft === 0 ? '<b>due today</b>' : q._daysLeft+' d left')+
+          (q.status === 'In review' ? '<br><span style="font-size:10.5px">with '+esc((Q.approval&&Q.approval.by)||'PM')+' for approval</span>' : '');
+      } else {
+        clock = (typeof q.turnaroundDays === 'number' ? q.turnaroundDays+' wd' : '\u2014');
+      }
       return '<tr>'+
         '<td data-label="Ref"><b>'+esc(q.ref)+'</b></td>'+
         '<td data-label="Subject">'+esc(q.subject)+'</td>'+
