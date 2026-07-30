@@ -768,7 +768,7 @@ window.MURCH_REPORT = {
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
     "openingNote": "No queries raised yet. The register opens with the July 30 report.",
-    "responseNote": "Responses are issued by email direct to the Owner's Site Construction Manager, who raised the request. This register carries the status and the dates only \u2014 reference, discipline, date raised, date due, date responded and turnaround \u2014 so the request can be traced without reproducing the correspondence.",
+    "responseNote": "Responses are issued by email direct to the Owner's Site Construction Manager, who raised the request \u2014 including where the request has been forwarded internally to a discipline lead. This register carries the status and the dates only \u2014 reference, discipline, date raised, date due, date responded and turnaround \u2014 so the request can be traced without reproducing the correspondence.",
     "noticeNote": "This register is a coordination tool for day-to-day information flow. It does not replace, vary or satisfy the formal correspondence provisions of the Agreement, which continue to apply as written.",
     "itemSchema": "ref, subject, area, raisedBy, raisedISO, dueISO, status (Open | Answered | Closed), respondedISO, turnaroundDays, assignedTo (ROLE only, never a personal name), closedISO",
     "items": []

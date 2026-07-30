@@ -806,6 +806,10 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'Area / discipline: '+g('qfArea')+'\n'+
         'Owner requests response by: '+(by||'not specified')+'\n\n'+
         'QUERY\n'+body+'\n\n'+
+        'RESPOND TO\n'+
+        (AR? AR.name+' \u2014 '+AR.email+'\n' : '')+
+        'Reply directly to the address above, quoting reference '+ref+', and copy the Project Manager and Construction Manager.\n'+
+        'If this request is forwarded to a discipline lead, the response still goes to the address above \u2014 not to the forwarding party.\n\n'+
         '---\nSubmitted from the Murch Solar Owner Project Report\n'+
         'Report basis: '+esc(Q.asOf)+'\n'+
         'Log this reference in the Owner query register with the date received and the date answered.\n';
