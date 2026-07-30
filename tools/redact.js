@@ -20,7 +20,7 @@ const NAMES = [
 // These are the Owner's routine points of contact, so withholding them would defeat
 // the query register. Anywhere else — production prose, notes, photo captions — they
 // stay blocked by NAMES exactly as before. Do not widen this list to field personnel.
-const CONTACT_ALLOW = ['Luis Romero', 'Audelio Zuniga', 'Audelio'];
+const CONTACT_ALLOW = ['Luis Romero', 'Audelio Zuniga', 'Audelio', 'Jose Romero', 'José Antonio Romero'];
 const CONTACT_CONTEXT = /"role"\s*:/;
 
 // 'ITS' and 'United' need word-boundary care (common English words).
