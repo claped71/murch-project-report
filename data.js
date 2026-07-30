@@ -770,6 +770,10 @@ window.MURCH_REPORT = {
     "responseNote": "There is no sign-in and no account. Sending the query is all that is required \u2014 you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
+      { "ref": "MQ-20260730-1325", "subject": "Torque wrenches out of calibration \u2014 certificates attached", "area": "Tracker assembly", "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "Open", "assignedTo": "QA/QC lead" },
+      { "ref": "MQ-20260730-1251", "subject": "Protective watertight caps on cable ends at the inverters", "area": "MV collection", "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "Open", "assignedTo": "Electrical lead (MV)" },
       { "ref": "MQ-20260730-0710", "subject": "Office WI-FI", "area": "Other", "raisedBy": "James Burnett",
         "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "Open", "assignedTo": "Construction Manager" }
     ]
