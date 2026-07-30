@@ -749,8 +749,8 @@ window.MURCH_REPORT = {
   "clientQueries": {
     "asOf": "Jul 30, 2026",
     "routing": {
-      "to": { "name": "Luis Romero", "role": "Project Manager", "email": "l.romero@green-sol.us" },
-      "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" } ],
+      "to": { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" },
+      "cc": [ { "name": "Jose Romero", "role": "VP of Construction", "email": "ja.romero@green-sol.us" } ],
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
     "responseRecipient": {
@@ -767,9 +767,12 @@ window.MURCH_REPORT = {
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
     "openingNote": "No queries raised yet.",
-    "responseNote": "Responses are issued by email. This register carries the reference, discipline and dates only.",
+    "responseNote": "There is no sign-in and no account. Sending the query is all that is required \u2014 you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication, and responses are issued by email.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
-    "items": []
+    "items": [
+      { "ref": "MQ-20260730-0710", "subject": "Office WI-FI", "area": "Other", "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-30", "dueISO": "2026-08-06", "status": "Open", "assignedTo": "Construction Manager" }
+    ]
   },
 
   "focus": [
