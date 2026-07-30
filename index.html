@@ -728,8 +728,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('cqForm').innerHTML =
       '<div class="qf">'+
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
-        '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+')'+
-          (R.cc&&R.cc.length? ', copied to <b>'+esc(R.cc[0].name)+'</b> ('+esc(R.cc[0].role)+')':'')+
+        '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
+          (toOk? ', '+esc(R.to.email):'')+')'+
+          (ccList.length? ', copied to <b>'+esc(ccList[0].name)+'</b> ('+esc(ccList[0].role)+')':'')+
           '. '+esc(Q.responseTarget)+'.</div>'+
         '<div class="row">'+
           '<div><label for="qfName">Your name</label><input id="qfName" type="text" autocomplete="name"></div>'+
