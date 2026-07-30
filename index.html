@@ -727,14 +727,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var Q = D.clientQueries; if(!Q) return;
     var R = Q.routing || {};
     var toOk = R.to && R.to.email && /@/.test(R.to.email) && !/SET-EMAIL/.test(R.to.email);
-    var RR = Q.responseRecipient || null;          // recipient of record for all responses
-    var POL = Q.raisingPolicy || null;
-    var APV = Q.approval || null;
-    var baseCc = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
-    if (RR && RR.email && /@/.test(RR.email)) {
-      baseCc = baseCc.concat([{ name: RR.name, role: RR.role + ', ' + RR.organisation, email: RR.email }]);
-    }
-    var ccList = baseCc;
+    var RR = Q.responseRecipient || null;
+    // The query is addressed to the Project Manager and Construction Manager ONLY.
+    // No Owner address is carried on it, so a request forwarded to a discipline lead
+    // cannot be answered straight back to the Owner — release runs through the PM.
+    var ccList = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
 
@@ -753,10 +750,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('cqForm').innerHTML =
       '<div class="qf">'+
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
-        (POL? '<div class="hint">'+esc(POL.note)+'</div>' : '')+
-        '<div class="hint">The answer comes back <b>to you</b>'+
-          (RR? ', copied to <b>'+esc(RR.name)+'</b> ('+esc(RR.role)+') as the Owner\'s recipient of record' : '')+
-          (APV? ', after the category lead drafts it and the '+esc(APV.by)+' approves it' : '')+'.</div>'+
+        '<div class="hint">Any member of the Owner\'s site management team may raise a query. Give your name and email \u2014 the answer is returned to you'+
+          (RR? ' and to the '+esc(RR.role) : '')+'.</div>'+
         '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
           (toOk? ', '+esc(R.to.email):'')+')'+
           (ccList.length? ', copied to '+ccList.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(' and ')+'.':'.')+
@@ -771,7 +766,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '</div>'+
         '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
         '<div><label for="qfBody">Query, comment or information requested</label><textarea id="qfBody" placeholder="Type the query here."></textarea></div>'+
-        '<div id="qfLead" class="hint"></div>'+
         '<div id="qfClock" style="font-size:11.5px;color:#4a5b53;background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px;line-height:1.5"></div>'+
         '<div class="acts">'+
           '<button id="qfSend" type="button"'+(toOk?'':' disabled')+'>Send query</button>'+
@@ -795,12 +789,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     refreshClock();
     setInterval(refreshClock, 30000);
-    (function(){
-      var sel=document.getElementById('qfArea'), box=document.getElementById('qfLead');
-      if(!sel||!box) return;
-      function show(){ var l=(Q.categoryLeads||{})[sel.value]; box.innerHTML = l? 'Routed to the <b>'+esc(l)+'</b> to draft the response.' : ''; }
-      sel.addEventListener('change', show); show();
-    })();
 
     function compose(){
       var g=function(id){ var el=document.getElementById(id); return el? el.value.trim():''; };
@@ -814,7 +802,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       var c=refreshClock()||{ now:new Date(), due:new Date() };
       var ref=makeRef(c.now);
       var area=g('qfArea');
-      var lead=((Q.categoryLeads||{})[area])||'Project Manager';
       var text='MURCH SOLAR \u2014 OWNER QUERY\n\n'+
         'Reference: '+ref+'\n'+
         'Raised: '+stamp(c.now)+'\n'+
@@ -825,13 +812,13 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'Area / discipline: '+g('qfArea')+'\n'+
         'Owner requests response by: '+(by||'not specified')+'\n\n'+
         'QUERY\n'+body+'\n\n'+
-        'RESPOND TO\n'+
-        who+' \u2014 '+mail+'  (raised this query)\n'+
-        (RR? 'Copy: '+RR.name+' \u2014 '+RR.email+'  (Owner\'s recipient of record)\n' : '')+
-        '\nROUTING\n'+
-        'Category lead for this discipline: '+lead+'\n'+
-        (APV? 'Release: the category lead drafts the response, the '+APV.by+' approves it, then it is issued to the addresses above.\n' : '')+
-        'Quote reference '+ref+' in the reply. If this request is forwarded internally, the response still goes to the addresses above \u2014 not back to the forwarding party.\n\n'+
+        'RESPONSE \u2014 RELEASE CONTROL\n'+
+        'NO RESPONSE IS TO BE ISSUED TO THE OWNER UNTIL IT HAS BEEN AUDITED AND APPROVED BY THE PROJECT MANAGER.\n'+
+        'This query carries no Owner address. If it is forwarded to a discipline lead, the reply returns to the Project Manager, not to the Owner.\n'+
+        'Once approved, issue the response to:\n'+
+        '  '+who+' \u2014 '+mail+'  (raised this query)\n'+
+        (RR? '  '+RR.name+' \u2014 '+RR.email+'  (Owner\'s '+RR.role+')\n' : '')+
+        'Quote reference '+ref+' in the response.\n\n'+
         '---\nSubmitted from the Murch Solar Owner Project Report\n'+
         'Report basis: '+esc(Q.asOf)+'\n'+
         'Log this reference in the Owner query register with the date received and the date answered.\n';
@@ -839,9 +826,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     document.getElementById('qfSend').addEventListener('click', function(){
       var m=compose(); if(!m) return;
-      var mine=(document.getElementById('qfEmail')||{value:''}).value.trim();
       var cc=ccList.map(function(c){return c.email;});
-      if(mine && cc.indexOf(mine)<0) cc.push(mine);
       var url='mailto:'+R.to.email+
         '?subject='+encodeURIComponent(m.subject)+
         (cc.length? '&cc='+encodeURIComponent(cc.join(',')):'')+
@@ -899,7 +884,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           (q.status === 'In review' ? '<br><span style="font-size:10.5px">awaiting approval</span>' : '');
       } else if (q._outstanding) {
         clock = (q._daysLeft === 0 ? '<b>due today</b>' : q._daysLeft+' d left')+
-          (q.status === 'In review' ? '<br><span style="font-size:10.5px">with '+esc((Q.approval&&Q.approval.by)||'PM')+' for approval</span>' : '');
+          (q.status === 'In review' ? '<br><span style="font-size:10.5px">under review</span>' : '');
       } else {
         clock = (typeof q.turnaroundDays === 'number' ? q.turnaroundDays+' wd' : '\u2014');
       }

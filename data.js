@@ -721,7 +721,7 @@ window.MURCH_REPORT = {
   ],
   "ownerActions": {
     "asOf": "Jul 30, 2026",
-    "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
+    "responseNote": "Responses are issued by email. This register carries the reference, discipline and dates only.",
     "items": [
       { "ref": "OA-01", "item": "Area G sequencing confirmation", "since": "Jul 3, 2026", "days": 27, "status": "Open",
         "blocks": "Programming of Area G cut and fill, which in turn releases the last pile workfront.",
@@ -753,37 +753,12 @@ window.MURCH_REPORT = {
       "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" } ],
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
-    "raisingPolicy": {
-      "who": "Owner site management personnel",
-      "note": "Any member of the Owner's site management team may raise a query. Give your name and email so the response reaches you as well."
-    },
     "responseRecipient": {
       "name": "James Burnett",
       "role": "Site Construction Manager",
       "organisation": "Heelstone",
-      "email": "jburnett@heelstoneenergy.com",
-      "note": "Copied on every response as the Owner's recipient of record, whoever raised the query."
+      "email": "jburnett@heelstoneenergy.com"
     },
-    "responseGoesTo": "the person who raised the query, copied to the Owner's Site Construction Manager",
-    "categoryLeads": {
-      "Piles and foundations": "Piling lead",
-      "Tracker assembly": "Mechanical lead",
-      "Module installation": "Mechanical lead",
-      "LV and DC electrical": "Electrical lead (LV/DC)",
-      "MV collection": "Electrical lead (MV)",
-      "Substation and inverters": "Substation lead",
-      "Quality and inspection": "QA/QC lead",
-      "Health and safety": "HSE lead",
-      "Environmental": "Environmental lead",
-      "Programme and milestones": "Planning lead",
-      "Other": "Project Manager"
-    },
-    "leadsNote": "The discipline selected on the query determines which category lead drafts the response. Roles only \u2014 the register never names individuals.",
-    "approval": {
-      "by": "Project Manager",
-      "note": "Responses are drafted by the responsible discipline lead, approved by the Project Manager, and only then issued to the Owner's Site Construction Manager."
-    },
-    "statusFlow": ["Open", "In review", "Answered", "Closed"],
     "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "MV collection", "Substation and inverters", "Quality and inspection", "Health and safety", "Environmental", "Programme and milestones", "Other"],
     "refPrefix": "MQ",
     "responseWorkingDays": 5,
@@ -791,10 +766,9 @@ window.MURCH_REPORT = {
     "responseCutoff": "17:00 site time (Eastern)",
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
-    "openingNote": "No queries raised yet. The register opens with the July 30 report.",
+    "openingNote": "No queries raised yet.",
     "responseNote": "Any member of the Owner's site management team may raise a query. It reaches the Project Manager and Construction Manager, who direct it to the category lead for the discipline selected. The response is drafted by that lead, approved by the Project Manager, and then issued by email to the person who raised the query, copied to the Owner's Site Construction Manager as recipient of record. This register carries the status and the dates only \u2014 reference, discipline, date raised, date due, date issued and turnaround \u2014 so a request can be traced without reproducing the correspondence. \u201cIn review\u201d means the response is drafted and with the Project Manager for approval.",
-    "noticeNote": "This register is a coordination tool for day-to-day information flow. It does not replace, vary or satisfy the formal correspondence provisions of the Agreement, which continue to apply as written.",
-    "itemSchema": "ref, subject, area, raisedBy, raisedByEmail, raisedISO, dueISO, status (Open | In review | Answered | Closed), approvedISO, respondedISO (date ISSUED to the Owner, after approval), turnaroundDays, assignedTo (ROLE only, never a personal name), closedISO",
+    "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": []
   },
 
