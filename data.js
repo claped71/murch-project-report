@@ -77,8 +77,8 @@ window.MURCH_REPORT = {
       { "scope": "LV / DC installation", "unit": "lf of cable", "gate": "0 / 274,720 lf", "gatePct": 0.0, "inProgress": "56 of 419 boxes mounted", "earnedPct": 1.3,
         "detail": "Area A supports complete, not yet in the take-off." }
     ],
-    "ladder": "Tracker row steps: saddles 15 · torque tube 30 · purlins 25 · damper and drive 20 · torque and punch 10.",
-    "note": "Completed units govern the dates and certification. Earned progress credits verified partial work on fixed weights adopted 30 July 2026, from confirmed physical states rather than judged percentages. It does not advance any completion date."
+    "ladder": "Tracker steps: saddles 15 · tube 30 · purlins 25 · damper 20 · torque 10.",
+    "note": "Completed units govern the dates and certification. Earned progress credits verified partial work on fixed weights adopted 30 July 2026, from confirmed physical states, and does not advance any completion date."
   },
   "milestones": [
     {
