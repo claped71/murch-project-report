@@ -746,6 +746,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           '<button id="qfSend" type="button"'+(toOk?'':' disabled')+'>Send query</button>'+
           '<button id="qfCopy" class="alt" type="button">Copy text</button>'+
           '<span class="err" id="qfMsg"></span>'+
+          '<a id="qfLink" hidden aria-hidden="true"></a>'+
         '</div>'+
         '<div class="hint">'+(toOk
           ? 'Send opens your email program with the query addressed and filled in, so it is sent from your own mailbox and you keep a copy in Sent items.'
@@ -770,11 +771,15 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     document.getElementById('qfSend').addEventListener('click', function(){
       var m=compose(); if(!m) return;
-      var url='mailto:'+encodeURIComponent(R.to.email)+
+      var url='mailto:'+R.to.email+
         '?subject='+encodeURIComponent(m.subject)+
         (ccList.length? '&cc='+encodeURIComponent(ccList.map(function(c){return c.email;}).join(',')):'')+
         '&body='+encodeURIComponent(m.text);
-      window.location.href=url;
+      var a=document.getElementById('qfLink');
+      a.setAttribute('href',url);
+      a.click();
+      document.getElementById('qfMsg').style.color='#0f7a52';
+      document.getElementById('qfMsg').textContent='Opening your email program\u2026 if nothing happens, use Copy text.';
     });
     document.getElementById('qfCopy').addEventListener('click', function(){
       var m=compose(); if(!m) return;

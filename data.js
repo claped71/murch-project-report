@@ -750,7 +750,7 @@ window.MURCH_REPORT = {
     "asOf": "Jul 30, 2026",
     "routing": {
       "to": { "name": "Luis Romero", "role": "Project Manager", "email": "l.romero@green-sol.us" },
-      "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "SET-EMAIL-IN-data.js" } ],
+      "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" } ],
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
     "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "MV collection", "Substation and inverters", "Quality and inspection", "Health and safety", "Environmental", "Programme and milestones", "Other"],
