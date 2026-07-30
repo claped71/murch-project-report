@@ -245,7 +245,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   <a href="#quality">Quality</a>
   <a href="#weather">Weather record</a>
   <a href="#lookahead">Lookahead</a>
-  <a href="#owner">Owner items</a>
+  <a href="#owner">Owner items &amp; queries</a>
   <a href="#photos">Site photos</a>
 </div></nav>
 
@@ -413,12 +413,19 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     <div class="sechead">
       <div class="kicker">Action</div>
       <h2>Items awaiting Owner</h2>
-      <p>Items where an Owner decision, approval or confirmation supports the construction sequence.</p>
+      <p id="oaLead"></p>
     </div>
-    <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th>Item</th><th style="width:120px">Status</th><th style="width:120px">Open since</th><th>Detail</th></tr></thead>
-      <tbody id="ownBody"></tbody></table>
+    <div class="card" style="padding:6px 14px"><div id="oaBody"></div></div>
+    <div class="card" style="margin-top:10px"><p class="note block" id="oaNote"></p></div>
+
+    <div style="height:22px"></div>
+    <div class="sechead">
+      <div class="kicker">Collaboration</div>
+      <h2>Owner query register</h2>
+      <p id="cqLead"></p>
     </div>
+    <div class="card" style="padding:6px 14px"><div id="cqBody"></div></div>
+    <div class="card" style="margin-top:10px"><p class="note block" id="cqNote"></p></div>
   </section>
 
   <section id="photos">
@@ -667,13 +674,58 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     return '<div class="focus '+cls+'"><h4>'+esc(f.title)+' <span class="pill '+pillCls(f.level)+'">'+esc(f.level)+'</span></h4><p>'+esc(f.note)+'</p></div>';
   }).join('');
 
-  /* owner items */
-  document.getElementById('ownBody').innerHTML = D.ownerItems.map(function(o){
-    return '<tr><td data-label="Item"><b>'+esc(o.item)+'</b></td>'+
-    '<td data-label="Status"><span class="pill '+pillCls(o.status)+'">'+esc(o.status)+'</span></td>'+
-    '<td class="n" data-label="Open since">'+esc(o.since)+'</td>'+
-    '<td class="note block" data-label="Detail">'+esc(o.detail)+'</td></tr>';
-  }).join('');
+  /* owner action register — ageing */
+  (function(){
+    var A = D.ownerActions; if(!A) return;
+    var open = A.items.filter(function(x){ return x.status !== 'Closed'; });
+    var oldest = open.reduce(function(m,x){ return Math.max(m, x.days||0); }, 0);
+    document.getElementById('oaLead').textContent =
+      open.length + ' items await an Owner decision, approval or confirmation. Oldest outstanding ' + oldest + ' days.';
+    document.getElementById('oaBody').innerHTML = A.items.map(function(o,i){
+      var last = (i === A.items.length-1);
+      var hot = (o.days >= 14 && o.status === 'Open');
+      return '<div style="padding:10px 0'+(last?'':';border-bottom:1px solid var(--line)')+'">'+
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap">'+
+          '<b style="font-size:13.5px"><span style="color:#9aa8a1;font-weight:600">'+esc(o.ref)+'</span> '+esc(o.item)+'</b>'+
+          '<span style="white-space:nowrap;font-size:12px">'+
+            '<b style="font-size:15px;color:'+(hot?'#b5442f':'#4a5b53')+'">'+o.days+'</b>'+
+            '<span style="color:#9aa8a1"> days</span> '+
+            '<span class="pill '+pillCls(o.status)+'">'+esc(o.status)+'</span></span>'+
+        '</div>'+
+        '<div style="font-size:11.5px;color:#4a5b53;margin-top:2px;line-height:1.45">'+
+          '<b>Holds:</b> '+esc(o.blocks)+' <span style="color:#9aa8a1">&middot;</span> open since '+esc(o.since)+'</div>'+
+      '</div>';
+    }).join('');
+    document.getElementById('oaNote').textContent = A.responseNote;
+  })();
+
+  /* owner query register */
+  (function(){
+    var Q = D.clientQueries; if(!Q) return;
+    var valid = Q.intakeEmail && /@/.test(Q.intakeEmail) && !/SET-THIS/.test(Q.intakeEmail);
+    document.getElementById('cqLead').textContent =
+      (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
+    var how = '<div style="padding:10px 0;font-size:12.5px;line-height:1.5">'+
+      '<b>How to raise a query</b><br>'+
+      (valid
+        ? 'Email <a href="mailto:'+esc(Q.intakeEmail)+'?subject='+encodeURIComponent(Q.subjectConvention)+'"><b>'+esc(Q.intakeEmail)+'</b></a> using the subject line <b>'+esc(Q.subjectConvention)+'</b>.'
+        : 'Email the project mailbox using the subject line <b>'+esc(Q.subjectConvention)+'</b>.')+
+      ' Each query is given a reference, logged below with the date received, and answered in the next published report or sooner. '+esc(Q.responseTarget)+'.</div>';
+    var rows = Q.items.length ? Q.items.map(function(q,i){
+      var last = (i === Q.items.length-1);
+      return '<div style="padding:10px 0'+(last?'':';border-bottom:1px solid var(--line)')+'">'+
+        '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap">'+
+          '<b style="font-size:13.5px"><span style="color:#9aa8a1;font-weight:600">'+esc(q.ref)+'</span> '+esc(q.subject)+'</b>'+
+          '<span style="white-space:nowrap;font-size:12px"><span class="pill '+pillCls(q.status)+'">'+esc(q.status)+'</span></span>'+
+        '</div>'+
+        '<div style="font-size:11.5px;color:#4a5b53;margin-top:2px;line-height:1.45">'+
+          'Received '+esc(q.received)+(q.answered?' &middot; answered '+esc(q.answered):'')+'<br>'+
+          '<b>Query:</b> '+esc(q.query)+(q.response?'<br><b>Response:</b> '+esc(q.response):'')+'</div>'+
+      '</div>';
+    }).join('') : '<div style="padding:10px 0;border-top:1px solid var(--line);font-size:12px;color:#4a5b53;line-height:1.5">'+esc(Q.openingNote)+'</div>';
+    document.getElementById('cqBody').innerHTML = how + rows;
+    document.getElementById('cqNote').textContent = Q.noticeNote;
+  })();
 
   /* ---------- workforce ---------- */
   (function(){

@@ -720,32 +720,43 @@ window.MURCH_REPORT = {
       ]
     }
   ],
-  "ownerItems": [
-    {
-      "item": "Pile inspection records",
-      "detail": "EPC pile inspection stands at 99.5% of executed piles. Records are submitted area by area for Owner review so the quality record closes out with production.",
-      "status": "In progress",
-      "since": "Jul 6, 2026"
-    },
-    {
-      "item": "Area G sequencing",
-      "detail": "Area G is released for pile driving and material distribution. Confirmation of the sediment basin completion sequence allows Area G cut/fill to be programmed.",
-      "status": "Open",
-      "since": "Jul 3, 2026"
-    },
-    {
-      "item": "Substation equipment deliveries",
-      "detail": "Breakers and structural steel are the remaining controlling substation items on the interconnection path. Delivery dates are requested so the substation sequence can be firmed up.",
-      "status": "Open",
-      "since": "Jul 17, 2026"
-    },
-    {
-      "item": "Interconnection readiness coordination",
-      "detail": "Utility witness testing and energization windows to be aligned with the October pre-commissioning program.",
-      "status": "Open",
-      "since": "Jul 20, 2026"
-    }
-  ],
+  "ownerActions": {
+    "asOf": "Jul 30, 2026",
+    "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
+    "items": [
+      { "ref": "OA-01", "item": "Area G sequencing confirmation", "since": "Jul 3, 2026", "days": 27, "status": "Open",
+        "blocks": "Programming of Area G cut and fill, which in turn releases the last pile workfront.",
+        "detail": "Area G is released for pile driving and material distribution. Confirmation of the sediment basin completion sequence is required to programme the cut and fill." },
+      { "ref": "OA-02", "item": "Refreshed defect count", "since": "Jul 6, 2026", "days": 24, "status": "Open",
+        "blocks": "Closure of the quality record for completed areas.",
+        "detail": "The defect position is still carried at 242 from the July 6 snapshot. A current count is required to reconcile the quality record against the 27,714 piles now executed." },
+      { "ref": "OA-03", "item": "Owner approval log for inspected work", "since": "Jul 13, 2026", "days": 17, "status": "Open",
+        "blocks": "Certification of inspected work; the EPC record has advanced well beyond the approved position.",
+        "detail": "The Owner approval log remains at the July 6/13 snapshot of 6,682 piles and 107 tracker rows, against 26,439 piles inspected by the EPC. Updating the log is required for the quality record to close out with production." },
+      { "ref": "OA-04", "item": "Substation equipment delivery dates", "since": "Jul 17, 2026", "days": 13, "status": "Open",
+        "blocks": "Firming the substation erection sequence on the interconnection path.",
+        "detail": "Breakers and structural steel are the remaining controlling substation items. Delivery dates are requested so the sequence can be fixed against the pre-commissioning window." },
+      { "ref": "OA-05", "item": "Interconnection readiness coordination", "since": "Jul 20, 2026", "days": 10, "status": "Open",
+        "blocks": "Alignment of the October pre-commissioning programme.",
+        "detail": "Utility witness testing and energization windows to be aligned with the pre-commissioning programme running September 14 to October 15." },
+      { "ref": "OA-06", "item": "Area G change order signature", "since": "Jul 28, 2026", "days": 2, "status": "Open",
+        "blocks": "Full release of the Area G pile workfront, the largest remaining pile quantity at 1,779.",
+        "detail": "Signature is outstanding on the Area G change order. Piling is proceeding in the released portion; full release requires the signed instrument." },
+      { "ref": "OA-07", "item": "Pile inspection records for review", "since": "Jul 6, 2026", "days": 24, "status": "In progress",
+        "blocks": "Nothing at present; submitted progressively by area.",
+        "detail": "EPC pile inspection stands at 26,439 records, 95.4% of executed piles. Records are submitted area by area for Owner review so the quality record closes with production." }
+    ]
+  },
+  "clientQueries": {
+    "asOf": "Jul 30, 2026",
+    "intakeEmail": "SET-THIS-IN-data.js",
+    "subjectConvention": "MURCH QUERY - <subject>",
+    "responseTarget": "Response within 5 working days of receipt",
+    "openingNote": "This register opens with the July 30 report. Queries, comments and information requests raised by the Owner are logged here with the EPC response, so both the question and the answer stay on the record and visible to everyone on the project.",
+    "noticeNote": "This register is a coordination tool for day-to-day information flow. It does not replace, vary or satisfy the formal correspondence provisions of the Agreement, which continue to apply as written.",
+    "items": []
+  },
+
   "focus": [
     {
       "title": "Pile completion",
