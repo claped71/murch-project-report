@@ -754,9 +754,13 @@ window.MURCH_REPORT = {
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
     "areas": ["Piles and foundations", "Tracker assembly", "Module installation", "LV and DC electrical", "MV collection", "Substation and inverters", "Quality and inspection", "Health and safety", "Environmental", "Programme and milestones", "Other"],
-    "subjectConvention": "MURCH QUERY - <subject>",
-    "responseTarget": "Response within 5 working days of receipt",
-    "openingNote": "This register opens with the July 30 report. Queries, comments and information requests raised by the Owner are logged here with the EPC response, so both the question and the answer stay on the record and visible to everyone on the project.",
+    "refPrefix": "MQ",
+    "responseWorkingDays": 5,
+    "workingWeek": "Monday to Friday",
+    "responseCutoff": "17:00 site time (Eastern)",
+    "subjectConvention": "MURCH QUERY <ref> - <subject>",
+    "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
+    "openingNote": "This register opens with the July 30 report. Every query is stamped with a reference, the date and time it was raised and the date the response is due, and is logged here with the EPC response \u2014 so the question, the clock and the answer all stay on the record and visible to everyone on the project.",
     "noticeNote": "This register is a coordination tool for day-to-day information flow. It does not replace, vary or satisfy the formal correspondence provisions of the Agreement, which continue to apply as written.",
     "items": []
   },

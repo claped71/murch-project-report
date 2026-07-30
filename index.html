@@ -724,6 +724,17 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
 
+    // reference + response clock (no server: the reference is timestamp-derived so it is unique,
+    // and the PM assigns the sequential register number when logging it)
+    function pad(n){ return (n<10?'0':'')+n; }
+    function makeRef(d){ return (Q.refPrefix||'MQ')+'-'+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'-'+pad(d.getHours())+pad(d.getMinutes()); }
+    function addWorkingDays(d, n){ var r=new Date(d.getTime()), added=0;
+      while(added<n){ r.setDate(r.getDate()+1); var wd=r.getDay(); if(wd!==0&&wd!==6) added++; } return r; }
+    var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var MONS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    function longDate(d){ return DAYS[d.getDay()]+' '+d.getDate()+' '+MONS[d.getMonth()]+' '+d.getFullYear(); }
+    function stamp(d){ return longDate(d)+' at '+pad(d.getHours())+':'+pad(d.getMinutes()); }
+
     var areaOpts = (Q.areas||[]).map(function(a){ return '<option>'+esc(a)+'</option>'; }).join('');
     document.getElementById('cqForm').innerHTML =
       '<div class="qf">'+
@@ -742,6 +753,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '</div>'+
         '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
         '<div><label for="qfBody">Query, comment or information requested</label><textarea id="qfBody" placeholder="Type the query here."></textarea></div>'+
+        '<div id="qfClock" style="font-size:11.5px;color:#4a5b53;background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px;line-height:1.5"></div>'+
         '<div class="acts">'+
           '<button id="qfSend" type="button"'+(toOk?'':' disabled')+'>Send query</button>'+
           '<button id="qfCopy" class="alt" type="button">Copy text</button>'+
@@ -754,20 +766,39 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           ' Subject convention: <b>'+esc(Q.subjectConvention)+'</b>.</div>'+
       '</div>';
 
+    function refreshClock(){
+      var now=new Date(), due=addWorkingDays(now, Q.responseWorkingDays||5);
+      var el=document.getElementById('qfClock'); if(!el) return null;
+      el.innerHTML = '<b>Reference</b> '+makeRef(now)+' &nbsp;&middot;&nbsp; <b>Raised</b> '+stamp(now)+
+        '<br><b>Response due by</b> '+longDate(due)+', '+esc(Q.responseCutoff||'')+
+        ' &nbsp;('+(Q.responseWorkingDays||5)+' working days, '+esc(Q.workingWeek||'')+')';
+      return { now: now, due: due };
+    }
+    refreshClock();
+    setInterval(refreshClock, 30000);
+
     function compose(){
       var g=function(id){ var el=document.getElementById(id); return el? el.value.trim():''; };
       var subj=g('qfSubj'), body=g('qfBody');
       if(!subj||!body){ document.getElementById('qfMsg').textContent='Add a subject and the query text.'; return null; }
       document.getElementById('qfMsg').textContent='';
       var by=g('qfBy');
+      var c=refreshClock()||{ now:new Date(), due:new Date() };
+      var ref=makeRef(c.now);
       var text='MURCH SOLAR \u2014 OWNER QUERY\n\n'+
+        'Reference: '+ref+'\n'+
+        'Raised: '+stamp(c.now)+'\n'+
+        'Response due by: '+longDate(c.due)+', '+(Q.responseCutoff||'')+'\n'+
+        '  ('+(Q.responseWorkingDays||5)+' working days, '+(Q.workingWeek||'')+')\n\n'+
         'Raised by: '+(g('qfName')||'(not given)')+'\n'+
         'Company: '+(g('qfCo')||'(not given)')+'\n'+
         'Area / discipline: '+g('qfArea')+'\n'+
-        'Response requested by: '+(by||'not specified')+'\n\n'+
+        'Owner requests response by: '+(by||'not specified')+'\n\n'+
         'QUERY\n'+body+'\n\n'+
-        '---\nSubmitted from the Murch Solar Owner Project Report\nReport basis: '+esc(Q.asOf)+'\n';
-      return { subject: Q.subjectConvention.replace('<subject>', subj), text: text };
+        '---\nSubmitted from the Murch Solar Owner Project Report\n'+
+        'Report basis: '+esc(Q.asOf)+'\n'+
+        'Log this reference in the Owner query register with the date received and the date answered.\n';
+      return { ref: ref, subject: Q.subjectConvention.replace('<ref>', ref).replace('<subject>', subj), text: text };
     }
     document.getElementById('qfSend').addEventListener('click', function(){
       var m=compose(); if(!m) return;
@@ -798,7 +829,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
           '<span style="white-space:nowrap;font-size:12px"><span class="pill '+pillCls(q.status)+'">'+esc(q.status)+'</span></span>'+
         '</div>'+
         '<div style="font-size:11.5px;color:#4a5b53;margin-top:2px;line-height:1.45">'+
-          'Received '+esc(q.received)+(q.answered?' &middot; answered '+esc(q.answered):'')+'<br>'+
+          'Received '+esc(q.received)+
+          (q.dueBy? ' &middot; <b'+(q.overdue?' style="color:#b5442f"':'')+'>due '+esc(q.dueBy)+(q.overdue?' \u2014 OVERDUE':'')+'</b>':'')+
+          (q.answered?' &middot; answered '+esc(q.answered):'')+'<br>'+
           '<b>Query:</b> '+esc(q.query)+(q.response?'<br><b>Response:</b> '+esc(q.response):'')+'</div>'+
       '</div>';
     }).join('') : '<div style="padding:10px 0;border-top:1px solid var(--line);font-size:12px;color:#4a5b53;line-height:1.5">'+esc(Q.openingNote)+'</div>';
