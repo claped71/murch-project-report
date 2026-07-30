@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 46.1,
+    "overall": 49.4,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -21,7 +21,7 @@ window.MURCH_REPORT = {
       "electrical": 0.14,
       "civil": 0.1
     },
-    "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, LV/DC cable 14%, civil and substation 10%.",
+    "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts \u2014 LV and DC cable, MV collection, inverter stations and the substation \u2014 combined into one total. Civil excludes the substation so it is not counted twice.",
     "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. Pile installation stands at 88.4%, with 3,638 piles left to place; July 29 was the first day since the mid-week weather stop on which pile output exceeded the rate required to close the front in early August, and two of the pile areas are now within a day of completion. The second-phase pile area opens in early August with its slab demolition complete. Tracker assembly and module installation remain the controlling fronts through August and both are still below the pace required to hold their completion dates; on tracker assembly the binding constraint has shifted from build rate to quality release, with 310 completed rows now awaiting release. Completed tracker rows stand at 916 of 2,486 (36.8%); including the physical work standing in 136 rows that are built but not yet finished, earned progress is 966 row-equivalents, or 38.9%, measured on a fixed five-step weighted ladder adopted this week. Module installation held above 3,000 per day for a fifth consecutive working day and the second module area is complete, opening a new installation front. The main power transformer is set on its foundation and the inverter stations in Areas A and C are placed, pending terminations. The LV workfront has opened: low-voltage box installation in Area A is complete, although no measured cable footage has yet been recorded against the September 18 requirement."
   },
   "gates": [
@@ -57,14 +57,15 @@ window.MURCH_REPORT = {
     },
     {
       "key": "electrical",
-      "name": "LV / DC cable installation",
-      "installed": 0,
-      "total": 274720,
-      "unit": "lf",
-      "earnedPct": 1.3,
-      "earnedLabel": "1.3% earned on the weighted control line",
-      "forecast": "Sep 18, 2026",
-      "status": "Not started"
+      "name": "Electrical — total",
+      "pctOnly": true,
+      "gatePct": 16.1,
+      "earnedPct": 21.5,
+      "unit": "%",
+      "earnedLabel": "21.5% earned incl. work in progress",
+      "mix": "LV and DC cable 45% \u00b7 MV collection 22% \u00b7 inverter stations 18% \u00b7 substation 15%",
+      "forecast": "Oct 16, 2026",
+      "status": "Below rate"
     }
   ],
   "earnedProgress": {
@@ -72,10 +73,8 @@ window.MURCH_REPORT = {
     "scopes": [
       { "scope": "Tracker rows", "unit": "rows", "gate": "916 / 2,486", "gatePct": 36.8, "inProgress": "136 rows part-built", "earnedPct": 38.9,
         "detail": "Areas E and EW at step 3 of 5; Area F at step 1." },
-      { "scope": "Inverter stations", "unit": "stations", "gate": "5 / 23 set", "gatePct": 21.7, "inProgress": "13 staged · 3 foundations ready", "earnedPct": 26.3,
-        "detail": "No station terminated yet." },
-      { "scope": "LV / DC installation", "unit": "lf of cable", "gate": "0 / 274,720 lf", "gatePct": 0.0, "inProgress": "56 of 419 boxes mounted", "earnedPct": 1.3,
-        "detail": "Area A supports complete, not yet in the take-off." }
+      { "scope": "Electrical \u2014 all fronts", "unit": "%", "gate": "16.1% of scope", "gatePct": 16.1, "inProgress": "MV 58.6% \u00b7 5 of 23 inverter stations set \u00b7 56 of 419 boxes", "earnedPct": 21.5,
+        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined." }
     ],
     "ladder": "Tracker steps: saddles 15 · tube 30 · purlins 25 · damper 20 · torque 10.",
     "note": "Completed units govern the dates and certification. Earned progress credits verified partial work on fixed weights adopted 30 July 2026, from confirmed physical states, and does not advance any completion date."
@@ -779,9 +778,9 @@ window.MURCH_REPORT = {
       "note": "134,481 modules remain, with 4,075 per day required to hold September 6. Material is not a constraint — 120,251 modules are in stock above the installed quantity. The second module area is complete and a third front has opened, so released-row supply and installation capacity now set the rate."
     },
     {
-      "title": "LV and DC cable installation",
+      "title": "Electrical \u2014 all fronts",
       "level": "Priority",
-      "note": "The LV workfront has opened — the last major front on the path to energization. Low-voltage box installation in Area A is complete (50 of 50) and the project total stands at 56 of 419 following a re-based control count; area support installation is complete in three sub-areas and at 90% in a fourth. No measured cable footage has been recorded yet, against 6,243 linear feet per day required to hold September 18. Area A is programmed to be fully LV-cabled next week."
+      "note": "Electrical progress is reported as one total across four fronts: 16.1% on completed units and 21.5% including verified work in progress, weighted LV and DC cable 45%, MV collection 22%, inverter stations 18% and substation 15%. MV collection is the most advanced at 58.6% \u2014 36 of 46 cable segments and 17 of 20 bores complete \u2014 and carries almost the whole figure. The other three fronts together contribute roughly 3 points: low-voltage box installation is complete in Area A at 50 of 50 but no measured cable footage has been recorded against the 6,243 linear feet per day required for September 18; 5 of 23 inverter stations are set with none yet terminated; and the substation stands at 21.7% against roughly 44% plan-to-date. This is the total to watch against the October 16 interconnection date."
     },
     {
       "title": "Substation completion",

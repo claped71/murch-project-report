@@ -490,9 +490,10 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
   var colors={piles:'#0f7a52',trackers:'#2769a8',modules:'#b96f18',electrical:'#7b4fa8'};
   document.getElementById('gateGrid').innerHTML = D.gates.map(function(g){
-    var pct = g.total ? (g.installed/g.total*100) : 0;
+    var pct = g.pctOnly ? g.gatePct : (g.total ? (g.installed/g.total*100) : 0);
+    var sub = g.pctOnly ? esc(g.mix||'') : fmt(g.installed)+' / '+fmt(g.total);
     return '<div class="gate"><div class="nm">'+esc(g.name)+'</div>'+
-      '<div class="big">'+pct.toFixed(1)+'% <small>'+fmt(g.installed)+' / '+fmt(g.total)+'</small></div>'+
+      '<div class="big">'+pct.toFixed(1)+'% <small>'+sub+'</small></div>'+
       '<div class="bar">'+(g.earnedPct? '<i style="width:'+Math.max(g.earnedPct,0.6)+'%;background:#9fc4b0"></i>':'')+'<i style="width:'+Math.max(pct,0.6)+'%;background:'+(colors[g.key]||'#0f7a52')+'"></i></div>'+
       (g.earnedLabel? '<div class="foot" style="border:0;padding-top:4px"><span style="font-size:11px;color:#4a5b53">'+esc(g.earnedLabel)+'</span></div>':'')+
       '<div class="foot"><span>Forecast '+esc(g.forecast)+'</span><span class="pill '+pillCls(g.status)+'">'+esc(g.status)+'</span></div></div>';
