@@ -749,7 +749,7 @@ window.MURCH_REPORT = {
   "clientQueries": {
     "asOf": "Jul 30, 2026",
     "routing": {
-      "to": { "name": "Luis Romero", "role": "Project Manager", "email": "l.montero@greening-group.com" },
+      "to": { "name": "Luis Romero Montero", "role": "Construction Director", "email": "l.montero@greening-group.com" },
       "cc": [ { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" }, { "name": "Jose Romero", "role": "VP of Construction", "email": "ja.romero@green-sol.us" } ],
       "note": "Queries are received by the Project Manager, copied to the Construction Manager, and directed to the responsible discipline lead for response."
     },
