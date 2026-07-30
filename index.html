@@ -743,22 +743,20 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     document.getElementById('cqForm').innerHTML =
       '<div class="qf">'+
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
-        (AR? '<div class="hint" style="background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px">'+
-          '<b>Raised by '+esc(AR.name)+'</b> \u2014 '+esc(AR.role)+', '+esc(AR.organisation)+' ('+esc(AR.email)+')<br>'+
-          esc(AR.note)+'</div>' : '')+
+        (AR? '<div class="hint"><b>'+esc(AR.name)+'</b>, '+esc(AR.role)+', '+esc(AR.organisation)+
+          ' \u00b7 '+esc(AR.email)+'. '+esc(AR.note)+'</div>' : '')+
         '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
           (toOk? ', '+esc(R.to.email):'')+')'+
           (ccList.length? ', copied to '+ccList.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(' and ')+'.':'.')+
           ' '+esc(Q.responseTarget)+'.</div>'+
         '<div class="row">'+
           '<div><label for="qfName">Raised by</label><input id="qfName" type="text" autocomplete="name" value="'+esc(AR?AR.name:'')+'"></div>'+
-          '<div><label for="qfCo">Company</label><input id="qfCo" type="text" value="'+esc(AR?AR.organisation:'Heelstone')+'" autocomplete="organization"></div>'+
+          '<div><label for="qfArea">Area or discipline</label><select id="qfArea">'+areaOpts+'</select></div>'+
         '</div>'+
         '<div class="row">'+
-          '<div><label for="qfArea">Area or discipline</label><select id="qfArea">'+areaOpts+'</select></div>'+
-          '<div><label for="qfBy">Response needed by (optional)</label><input id="qfBy" type="date"></div>'+
+          '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
+          '<div><label for="qfBy">Owner needs it by (optional)</label><input id="qfBy" type="date"></div>'+
         '</div>'+
-        '<div><label for="qfSubj">Subject</label><input id="qfSubj" type="text" placeholder="Short subject line"></div>'+
         '<div><label for="qfBody">Query, comment or information requested</label><textarea id="qfBody" placeholder="Type the query here."></textarea></div>'+
         '<div id="qfClock" style="font-size:11.5px;color:#4a5b53;background:#f2f6f4;border:1px solid var(--line);border-radius:6px;padding:8px 10px;line-height:1.5"></div>'+
         '<div class="acts">'+
@@ -770,15 +768,15 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<div class="hint">'+(toOk
           ? 'Send opens your email program, addressed and filled in \u2014 sent from your own mailbox, so you keep a copy.'
           : '<b class="err">Recipient addresses are not yet configured</b> — set clientQueries.routing in data.js. Use Copy text and email the project mailbox meanwhile.')+
-          ' Subject: <b>'+esc(Q.subjectConvention)+'</b>.</div>'+
+          '</div>'+
       '</div>';
 
     function refreshClock(){
       var now=new Date(), due=addWorkingDays(now, Q.responseWorkingDays||5);
       var el=document.getElementById('qfClock'); if(!el) return null;
-      el.innerHTML = '<b>Reference</b> '+makeRef(now)+' &nbsp;&middot;&nbsp; <b>Raised</b> '+stamp(now)+
-        '<br><b>Response due by</b> '+longDate(due)+', '+esc(Q.responseCutoff||'')+
-        ' &nbsp;('+(Q.responseWorkingDays||5)+' working days, '+esc(Q.workingWeek||'')+')';
+      el.innerHTML = '<b>'+makeRef(now)+'</b> &middot; raised '+stamp(now)+
+        '<br><b>Response due '+longDate(due)+'</b>, '+esc(Q.responseCutoff||'')+
+        ' ('+(Q.responseWorkingDays||5)+' working days)';
       return { now: now, due: due };
     }
     refreshClock();
@@ -798,7 +796,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         'Response due by: '+longDate(c.due)+', '+(Q.responseCutoff||'')+'\n'+
         '  ('+(Q.responseWorkingDays||5)+' working days, '+(Q.workingWeek||'')+')\n\n'+
         'Raised by: '+(g('qfName')||'(not given)')+(AR&&g('qfName')===AR.name? ' \u2014 '+AR.role : '')+'\n'+
-        'Company: '+(g('qfCo')||'(not given)')+'\n'+
+        'Company: '+((AR&&AR.organisation)||'(not given)')+'\n'+
         'Area / discipline: '+g('qfArea')+'\n'+
         'Owner requests response by: '+(by||'not specified')+'\n\n'+
         'QUERY\n'+body+'\n\n'+
