@@ -40,9 +40,9 @@ window.MURCH_REPORT = {
       "installed": 946,
       "total": 2486,
       "unit": "rows",
-      "earned": 966.1,
-      "earnedPct": 38.9,
-      "earnedLabel": "38.9% earned incl. rows in progress (966 row-equivalents)",
+      "earned": 1005.5,
+      "earnedPct": 40.4,
+      "earnedLabel": "40.4% earned incl. rows in progress (1,006 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
@@ -69,24 +69,24 @@ window.MURCH_REPORT = {
     }
   ],
   "earnedProgress": {
-    "asOf": "Jul 29, 2026",
+    "asOf": "Jul 30, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "916 / 2,486",
-        "gatePct": 36.8,
-        "inProgress": "136 rows part-built",
-        "earnedPct": 38.9,
-        "detail": "Areas E and EW at step 3 of 5; Area F at step 1."
+        "gate": "946 / 2,486",
+        "gatePct": 38.1,
+        "inProgress": "85 rows part-built, all at step 3 of 5",
+        "earnedPct": 40.4,
+        "detail": "Areas E, EW and F all standing at step 3 of 5 — purlins installed, with damper, actuator, drive line and final torque outstanding."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "16.1% of scope",
-        "gatePct": 16.1,
-        "inProgress": "MV 58.6% · 5 of 23 inverter stations set · 56 of 419 boxes",
-        "earnedPct": 21.5,
+        "gate": "16.7% of scope",
+        "gatePct": 16.7,
+        "inProgress": "MV 59.7% · 13 of 23 inverter stations set · 78 of 419 boxes",
+        "earnedPct": 23.3,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined."
       }
     ],
@@ -623,15 +623,15 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Inverter station foundations",
-      "done": 91,
+      "done": 96,
       "status": "Active",
-      "note": "21 of 23 station foundations complete; five stations in Areas A and C carry their inverters. Welding procedure approved July 21."
+      "note": "22 of 23 station foundations complete; 13 stations carry their inverters, set and welded, pending terminations. The remaining foundation follows the opening of the second-phase area. Welding procedure approved July 21."
     },
     {
       "activity": "Substation (overall)",
       "done": 21.7,
       "status": "Active",
-      "note": "Overall substation progress 20.0%, up from 16.7% on July 21 — civil 59.3%, structural 11.3%, electrical 5.2%. Piers complete including concrete: 6 of 17. Main power transformer set on its foundation July 24."
+      "note": "Overall substation progress 23.7%, up from 21.7% on July 28 — civil 73.1%, structural 10.8%, electrical 6.0%. Piers complete including concrete: 11 of 17, with all 17 planned complete in the first week of August. Main power transformer set on its foundation July 24. Civil advanced 7.5 points on the pier run; the structural percentage is unchanged and is governed by steel fabrication and delivery."
     }
   ],
   "safety": {
@@ -676,22 +676,27 @@ window.MURCH_REPORT = {
     "note": "Reporting of unsafe conditions and behaviors increased in May, which is the intended direction for a leading-indicator program. All open observations are tracked to closure."
   },
   "quality": {
-    "headline": "Pile inspection stands at 95.4% of executed piles — production has run two days ahead of the latest inspection cut.",
+    "headline": "Quality approval stands at 87.3% of executed piles, and 296 of 946 completed tracker rows are released by the Owner's quality process.",
     "tiles": [
       {
         "label": "Piles executed",
         "value": "28,341",
-        "note": "Current executed basis."
+        "note": "Current executed basis, 90.4% of project scope."
       },
       {
-        "label": "Piles QA inspected",
-        "value": "26,439",
-        "note": "95.4% of executed piles · 84.3% of full project scope. The last inspection cut predates the two most recent production days."
+        "label": "Piles approved",
+        "value": "24,751",
+        "note": "87.3% of executed piles. The latest approval cut is dated July 27 and predates the three most recent production days; a refreshed cut is due."
       },
       {
-        "label": "Awaiting inspection",
-        "value": "1,275",
-        "note": "Open inspection fronts follow the active production areas. A refreshed inspection cut is due."
+        "label": "Awaiting approval",
+        "value": "3,590",
+        "note": "Open inspection fronts follow the active production areas. The main remaining pile area carries the bulk of the outstanding inspections."
+      },
+      {
+        "label": "Owner approved — piles",
+        "value": "6,836",
+        "note": "The Owner approval record advanced this week for the first time since the early-July snapshot, on both piles and tracker rows."
       },
       {
         "label": "Tracker rows released",
@@ -701,10 +706,10 @@ window.MURCH_REPORT = {
       {
         "label": "Pile refusals recorded",
         "value": "242",
-        "note": "Refusal piles recorded to date. Reinstallation and tap-down corrections are complete or in progress."
+        "note": "0.9% of executed piles. Reinstallation and tap-down corrections are complete or in progress."
       }
     ],
-    "note": "Inspection records are submitted for Owner review as areas close out. Module spacing is verified by measurement during tightening rather than assumed from the purlin."
+    "note": "Release is reported on the Owner-approved measure: rows are counted as released only once they have passed the Owner's quality process, not on internal approval alone. Damper replacement work is currently holding rows back from release in the second area, and a proposal to combine the racking and module inspections into a single release is with the Owner for decision. Inspection records are submitted for Owner review as areas close out. Module spacing is verified by measurement during tightening rather than assumed from the purlin."
   },
   "weatherLog": [
     {
@@ -769,18 +774,18 @@ window.MURCH_REPORT = {
         "item": "Refreshed defect count",
         "since": "Jul 6, 2026",
         "days": 24,
-        "status": "Open",
-        "blocks": "Closure of the quality record for completed areas.",
-        "detail": "The defect position is still carried at 242 from the July 6 snapshot. A current count is required to reconcile the quality record against the 27,714 piles now executed."
+        "status": "Answered",
+        "blocks": "Nothing further.",
+        "detail": "RESOLVED — the July 30 quality sheet restates the defect position at 242, equal to 0.9% of executed piles, against the current executed basis. No further action is required unless the position changes."
       },
       {
         "ref": "OA-03",
         "item": "Owner approval log for inspected work",
         "since": "Jul 13, 2026",
         "days": 17,
-        "status": "Open",
-        "blocks": "Certification of inspected work; the EPC record has advanced well beyond the approved position.",
-        "detail": "The Owner approval log remains at the July 6/13 snapshot of 6,682 piles and 107 tracker rows, against 26,439 piles inspected by the EPC. Updating the log is required for the quality record to close out with production."
+        "status": "In progress",
+        "blocks": "Certification of inspected work; the EPC record remains ahead of the approved position.",
+        "detail": "MOVED THIS WEEK — the Owner approval log advanced for the first time since the early-July snapshot, from 6,682 to 6,836 piles and from 107 to 296 tracker rows. It still stands well behind the EPC record of 24,751 approved piles, so continued updating is required for the quality record to close out with production."
       },
       {
         "ref": "OA-04",
@@ -816,7 +821,16 @@ window.MURCH_REPORT = {
         "days": 24,
         "status": "In progress",
         "blocks": "Nothing at present; submitted progressively by area.",
-        "detail": "EPC pile inspection stands at 26,439 records, 95.4% of executed piles. Records are submitted area by area for Owner review so the quality record closes with production."
+        "detail": "EPC pile approval stands at 24,751 records, 87.3% of executed piles. The latest cut is dated July 27 and predates the three most recent production days. Records are submitted area by area for Owner review so the quality record closes with production."
+      },
+      {
+        "ref": "OA-08",
+        "item": "Decision on a combined racking and module quality release",
+        "since": "Jul 30, 2026",
+        "days": 0,
+        "status": "Open",
+        "blocks": "The module installation front, which is currently limited by release cadence rather than by installation capacity.",
+        "detail": "A proposal has been submitted to carry out a single quality release covering both the racking and the module installation on a row, in place of two separate inspections. The EPC would retain full responsibility for the racking and would remove and reinstall modules at its own cost if a racking defect were identified afterwards. A decision is requested so that release cadence can keep pace with the build rate."
       }
     ]
   },

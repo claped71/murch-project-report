@@ -92,6 +92,16 @@ for (const g of C.gates) {
   g.installed = src.installed;
   g.total = src.total;
   if (before !== g.installed + '/' + g.total) changed.push(`gate ${g.key} ${before} -> ${g.installed}/${g.total}`);
+  // A quantity gate may also carry an earned measure (tracker rows). It is NOT
+  // derived from installed/total, so without this it silently keeps last
+  // week's row-equivalents while the quantities move underneath it.
+  if (typeof g.earnedPct === 'number' && typeof src.earnedPct === 'number') {
+    const beforeEarned = g.earned + '/' + g.earnedPct;
+    if (typeof src.earnedEquivalent === 'number') g.earned = src.earnedEquivalent;
+    g.earnedPct = src.earnedPct;
+    g.earnedLabel = `${g.earnedPct}% earned incl. rows in progress (${Math.round(g.earned).toLocaleString('en-US')} row-equivalents)`;
+    if (beforeEarned !== g.earned + '/' + g.earnedPct) changed.push(`gate ${g.key} earned ${beforeEarned} -> ${g.earned}/${g.earnedPct}`);
+  }
   // pace status: below required rate unless the discipline is finished
   const pct = g.total ? g.installed / g.total : 0;
   g.status = pct >= 1 ? 'Complete' : (g.installed === 0 ? 'Not started' : 'Below rate');
