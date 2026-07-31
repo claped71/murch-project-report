@@ -885,6 +885,28 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       {
+        "ref": "MQ-20260731-0843",
+        "subject": "Verification that the installed PV and game fence meet the authority’s requirements, with drawings redlined where the installation differs",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-31",
+        "dueISO": "2026-08-07",
+        "respondedISO": "2026-07-31",
+        "turnaroundDays": 0,
+        "status": "Answered",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260731-0759",
+        "subject": "Easement staking on the MV route east of the substation, and confirmation that cable is installed within that easement",
+        "area": "MV collection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-31",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Construction Manager"
+      },
+      {
         "ref": "MQ-20260730-1325",
         "subject": "Torque wrenches out of calibration — certificates attached",
         "area": "Tracker assembly",

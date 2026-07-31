@@ -474,7 +474,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   function esc(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
   function pillCls(s){
     s=(s||'').toLowerCase();
-    if(s.indexOf('complete')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
+    if(s.indexOf('complete')>=0||s.indexOf('answered')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
     if(s.indexOf('watch')>=0||s.indexOf('active')>=0||s.indexOf('open')>=0) return 'p-watch';
     if(s.indexOf('in review')>=0) return 'p-behind';
     if(s.indexOf('behind')>=0||s.indexOf('below')>=0||s.indexOf('priority')>=0) return 'p-behind';
