@@ -1,0 +1,67 @@
+name: Apply register patch
+
+# Temporary, one-shot. Runs tools/patch-register.js, re-runs the publish guard
+# and republishes. Idempotent: if the reference is already logged it exits
+# without committing. Delete this file and tools/patch-register.js once it has run.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Apply the register patch
+        run: node tools/patch-register.js
+
+      - name: Publish guard
+        run: node tools/guard.js
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Owner query register - log MQ-20260731-0759"
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to the live site
+        if: steps.commit.outputs.changed == 'true'
+        run: git push --force origin main:gh-pages
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Register patch"
+            if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+              echo "MQ-20260731-0759 logged and published."
+            else
+              echo "No change - the reference was already logged."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
