@@ -730,7 +730,6 @@ window.MURCH_REPORT = {
     {
       "period": "Jul 31 – Aug 1",
       "items": [
-        "Pile deliveries to resume — site stock is level with installed quantity and receipts now govern the installation rate.",
         "Pile installation at 430/day to close the front around August 7; 3,011 remain and two areas close within the week.",
         "Tracker assembly at 59 rows/day, with the 85 rows standing at step 3 of 5 converted to completed rows — damper, actuator, drive line and final torque are the only outstanding operations on them.",
         "Quality release of completed rows, including a decision on combining the racking and module inspections into a single release.",
@@ -919,9 +918,9 @@ window.MURCH_REPORT = {
   },
   "focus": [
     {
-      "title": "Pile completion and material supply",
+      "title": "Pile completion",
       "level": "Priority",
-      "note": "3,011 piles remain and 430 per day closes the front in early August, which releases the remaining tracker and module workfronts. July 30 delivered 627 against that requirement — the second consecutive day above rate and the strongest since the weather stop — with the main remaining area moving from 47% to 62% in two days despite hard ground. Two areas are within a day of completion and the second-phase area opens in early August. The constraint has now moved from installation capacity to material: site pile stock is level with the installed quantity, so receipts must resume immediately to protect the date."
+      "note": "3,011 piles remain and 430 per day closes the front in early August, which releases the remaining tracker and module workfronts. July 30 delivered 627 against that requirement — the second consecutive day above rate and the strongest since the weather stop — with the main remaining area moving from 47% to 62% in two days despite hard ground. Two areas are within a day of completion and the second-phase area opens in early August. Material does not constrain this front: pile delivery is complete, with the full project quantity received on site, so every one of the remaining piles is already in the laydown areas. The only variables are crew rate, the hard ground in the main remaining area and the outstanding change-order signature there."
     },
     {
       "title": "Tracker assembly and quality release",
@@ -952,9 +951,9 @@ window.MURCH_REPORT = {
   "material": [
     {
       "item": "Foundation piles",
-      "delivered": "28,343",
-      "pct": 90.4,
-      "note": "Site stock is now level with the installed quantity. Further receipts are required to sustain the current installation rate, which on July 30 exceeded the rate needed to close the front in early August."
+      "delivered": "31,352",
+      "pct": 100,
+      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding. 3,011 piles stand in stock against the 3,011 still to place, so material does not constrain the pile front at any point to the early-August finish."
     },
     {
       "item": "PV modules",
