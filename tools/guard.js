@@ -22,16 +22,28 @@ const { hits } = require('./redact');
 
 const ROOT = path.join(__dirname, '..');
 const files = ['data.js', 'index.html'].map(f => path.join(ROOT, f));
+// The query-routing block names the designated project representatives by
+// design (CONTACT_ALLOW in redact.js). A line-based scan has no path context,
+// so recognise the block by its own bounds and pass the contact flag through.
+const ROUTING_OPEN = /"routing"\s*:|routing\s*:\s*\{/;
 const fail = [];
 const warn = [];
 
 /* ---------- 1 + 2. text scan ---------- */
 for (const f of files) {
   const src = fs.readFileSync(f, 'utf8');
+  let inRouting = false, routingDepth = 0;
   src.split('\n').forEach((line, i) => {
     // Skip the tools' own vocabulary if it is ever inlined.
     if (/require\(.\.\/redact/.test(line)) return;
-    for (const h of hits(line)) {
+    const net = (line.match(/\{/g) || []).length - (line.match(/\}/g) || []).length;
+    let contactCtx = inRouting;
+    if (!inRouting && ROUTING_OPEN.test(line)) { inRouting = true; contactCtx = true; routingDepth = net; }
+    else if (inRouting) {
+      routingDepth += net;
+      if (routingDepth <= 0) inRouting = false; // this line still closes the block
+    }
+    for (const h of hits(line, { contactContext: contactCtx })) {
       // Allow schedule-standard phrases that collide with the term list.
       if (h.term === 'critical path' || /critical path/i.test(line)) continue;
       if (h.term === 'float' && /\bfloat(:|\s*right|\s*left)/i.test(line)) continue; // CSS

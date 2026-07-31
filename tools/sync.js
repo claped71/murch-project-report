@@ -68,6 +68,26 @@ const GATE_KEYS = { piles: 'piles', trackers: 'trackers', modules: 'modules', el
 for (const g of C.gates) {
   const src = I.control[GATE_KEYS[g.key]];
   if (!src) continue;
+  // A percentage-only card (the combined Electrical total) carries no
+  // installed/total pair. Pulling control.electrical through here would
+  // silently replace the four-front total with the LV cable gate (0 lf) and
+  // make the report disagree with the dashboard. Sync its percentages instead.
+  if (g.pctOnly) {
+    const et = I.electricalTotal;
+    if (et) {
+      const beforePct = g.gatePct + '/' + g.earnedPct;
+      g.gatePct = et.gatePct;
+      g.earnedPct = et.earnedPct;
+      g.earnedLabel = et.earnedPct + '% earned incl. work in progress';
+      if (beforePct !== g.gatePct + '/' + g.earnedPct) changed.push(`gate ${g.key} (pct) ${beforePct} -> ${g.gatePct}/${g.earnedPct}`);
+      if (Array.isArray(et.components)) {
+        const mix = et.components.map(c => `${c.name} ${c.weight}%`).join(' \u00b7 ');
+        if (mix && mix !== g.mix) { g.mix = mix; changed.push(`gate ${g.key} mix refreshed`); }
+      }
+    }
+    g.status = g.gatePct >= 100 ? 'Complete' : (g.gatePct > 0 ? 'Below rate' : 'Not started');
+    continue;
+  }
   const before = g.installed + '/' + g.total;
   g.installed = src.installed;
   g.total = src.total;
@@ -82,9 +102,15 @@ for (const g of C.gates) {
 // weights the previous report used, so the headline number stays comparable.
 const W = C.headline.weights || { piles: 0.28, trackers: 0.22, modules: 0.26, electrical: 0.14, civil: 0.10 };
 const civilAvg = avg((I.civilActivities || []).map(a => Number(a.done) || 0));
-const overall =
-  W.piles * pct('piles') + W.trackers * pct('trackers') + W.modules * pct('modules') +
-  W.electrical * pct('electrical') + W.civil * (civilAvg / 100);
+// SINGLE SOURCE OF TRUTH: the dashboard publishes the weighted roll-up in
+// projectTotal on exactly these weights. Deriving it again here diverged --
+// pct('electrical') reads the LV cable gate (0 lf) rather than the four-front
+// electrical total, and civilAvg includes the substation, which projectTotal
+// deliberately excludes to avoid double counting it inside electrical.
+const overall = (I.projectTotal && typeof I.projectTotal.gatePct === 'number')
+  ? I.projectTotal.gatePct / 100
+  : (W.piles * pct('piles') + W.trackers * pct('trackers') + W.modules * pct('modules') +
+     W.electrical * pct('electrical') + W.civil * (civilAvg / 100));
 function pct(k) { const c = I.control[k]; return c && c.total ? c.installed / c.total : 0; }
 function avg(a) { return a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0; }
 const newOverall = Math.round(overall * 1000) / 10;
@@ -359,7 +385,10 @@ if (Array.isArray(I.photos) && I.photos.length) {
 /* ---------- 10. redaction gate on the derived output ---------- */
 const violations = [];
 walk(C, [], (val, p) => {
-  const h = hits(val);
+  // clientQueries.routing is a structured contact entry: the designated
+  // project representatives are named there by design (CONTACT_ALLOW).
+  const isContact = p.join('.').startsWith('clientQueries.routing');
+  const h = hits(val, { contactContext: isContact });
   if (h.length) violations.push({ path: p.join('.'), text: String(val).slice(0, 120), rules: h.map(x => `${x.type}:${x.term}`) });
 });
 function walk(o, p, fn) {
