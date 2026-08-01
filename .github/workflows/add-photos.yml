@@ -5,6 +5,9 @@ name: Add gallery photos
 # originals are geotagged), then runs tools/add-photos.js and the publish guard.
 # Idempotent: re-running adds nothing. Delete this file and tools/add-photos.js
 # once it has run.
+#
+# Resizing uses sharp, not ImageMagick — `convert` is no longer present on the
+# ubuntu-latest runner image.
 
 on:
   push:
@@ -36,19 +39,31 @@ jobs:
 
       - name: Resize into the gallery variants
         run: |
-          set -e
-          IM=magick
-          command -v magick >/dev/null 2>&1 || IM=convert
-          echo "using $IM"
-          # recent-N in the dashboard becomes photo-N in the report.
-          for n in 45 30 32 28 23 21; do
-            SRC=/tmp/dashboard/assets/recent/recent-$n.jpg
-            if [ ! -f "$SRC" ]; then echo "missing $SRC"; exit 1; fi
-            $IM "$SRC" -auto-orient -strip -resize '1200x1200>' -quality 80 -interlace Plane "assets/photo-$n.jpg"
-            $IM "$SRC" -auto-orient -strip -resize  '820x820>'  -quality 74 -interlace Plane "assets/photo-$n-md.jpg"
-            $IM "$SRC" -auto-orient -strip -resize  '520x520>'  -quality 68 -interlace Plane "assets/photo-$n-sm.jpg"
-            ls -o "assets/photo-$n.jpg" "assets/photo-$n-md.jpg" "assets/photo-$n-sm.jpg"
-          done
+          npm i --no-save --silent sharp@0.33.5
+          cat > /tmp/resize.js <<'EOF'
+          const sharp = require('sharp');
+          const fs = require('fs');
+          // recent-N in the dashboard becomes photo-N in the report.
+          const NUMBERS = [45, 30, 32, 28, 23, 21];
+          const VARIANTS = [['', 1200, 80], ['-md', 820, 74], ['-sm', 520, 68]];
+          (async () => {
+            for (const n of NUMBERS) {
+              const src = '/tmp/dashboard/assets/recent/recent-' + n + '.jpg';
+              if (!fs.existsSync(src)) throw new Error('missing source: ' + src);
+              for (const [suffix, size, quality] of VARIANTS) {
+                const out = 'assets/photo-' + n + suffix + '.jpg';
+                await sharp(src)
+                  .rotate()                                  // honour EXIF orientation
+                  .resize({ width: size, height: size, fit: 'inside', withoutEnlargement: true })
+                  .jpeg({ quality, progressive: true })      // sharp drops metadata by default
+                  .toFile(out);
+                const kb = Math.round(fs.statSync(out).size / 1024);
+                console.log(out + '  ' + kb + ' KB');
+              }
+            }
+          })().catch(e => { console.error(e.message); process.exit(1); });
+          EOF
+          node /tmp/resize.js
 
       - name: Add them to the gallery
         run: node tools/add-photos.js
