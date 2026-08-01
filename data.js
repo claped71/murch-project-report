@@ -1025,6 +1025,12 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-45.jpg",
+      "date": "July 29, 2026",
+      "title": "Inverter station lowered onto its welded pile foundation",
+      "note": "A prefabricated inverter station being craned onto its steel pile foundation, with completed tracker rows and the delivery vehicle behind it. Protective wrapping stays in place until the low-voltage and medium-voltage terminations are made."
+    },
+    {
       "src": "assets/photo-43.jpg",
       "date": "July 28, 2026",
       "title": "Inverter stations set on their foundations in Area A",
@@ -1065,6 +1071,36 @@ window.MURCH_REPORT = {
       "date": "July 14, 2026",
       "title": "Module installation front advancing across completed tracker rows",
       "note": "Installed modules in the foreground with bare trackers awaiting release beyond — the block-by-block sequence from Area A into Area C."
+    },
+    {
+      "src": "assets/photo-30.jpg",
+      "date": "July 9, 2026",
+      "title": "Foundation piles being driven in Area E",
+      "note": "A pile driver setting foundations in Area E with the site team checking line and level against the string. Piles are the largest single quantity on the project at 31,352, and closing this front is what releases the tracker and module work behind it."
+    },
+    {
+      "src": "assets/photo-32.jpg",
+      "date": "July 9, 2026",
+      "title": "Damper replacement on erected tracker rows, Area A",
+      "note": "GreenSol crews replacing dampers on rows already erected. This is the work that currently governs how quickly completed rows can be presented for the Owner’s quality release, and it is carried out at GreenSol’s own cost."
+    },
+    {
+      "src": "assets/photo-28.jpg",
+      "date": "July 7, 2026",
+      "title": "Control building set at the substation",
+      "note": "The control building landed on its foundation at the substation, ahead of the main power transformer and the pier structures that followed it. The set continued into the evening to complete in a single shift."
+    },
+    {
+      "src": "assets/photo-23.jpg",
+      "date": "June 25, 2026",
+      "title": "Medium-voltage cable installed at depth, Area A",
+      "note": "Cable laid between the first two inverter positions and measured at six feet of cover where it crosses the DC route. Depth is checked and recorded at each crossing as the plough advances."
+    },
+    {
+      "src": "assets/photo-21.jpg",
+      "date": "June 25, 2026",
+      "title": "First completed rows — modules installed on erected trackers",
+      "note": "The first fully completed rows in the earliest area released, with modules installed on erected tracker rows. The same sequence is now repeating across the later areas."
     }
   ],
   "civilOverrides": {
