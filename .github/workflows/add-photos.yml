@@ -1,0 +1,88 @@
+name: Add gallery photos
+
+# Temporary, one-shot. Pulls six frames from the internal dashboard repo, resizes
+# each into the three variants the gallery's srcset expects, strips EXIF (the
+# originals are geotagged), then runs tools/add-photos.js and the publish guard.
+# Idempotent: re-running adds nothing. Delete this file and tools/add-photos.js
+# once it has run.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch the dashboard
+        run: git clone --quiet --depth 1 https://github.com/claped71/murch-dashboard.git /tmp/dashboard
+
+      - name: Resize into the gallery variants
+        run: |
+          set -e
+          IM=magick
+          command -v magick >/dev/null 2>&1 || IM=convert
+          echo "using $IM"
+          # recent-N in the dashboard becomes photo-N in the report.
+          for n in 45 30 32 28 23 21; do
+            SRC=/tmp/dashboard/assets/recent/recent-$n.jpg
+            if [ ! -f "$SRC" ]; then echo "missing $SRC"; exit 1; fi
+            $IM "$SRC" -auto-orient -strip -resize '1200x1200>' -quality 80 -interlace Plane "assets/photo-$n.jpg"
+            $IM "$SRC" -auto-orient -strip -resize  '820x820>'  -quality 74 -interlace Plane "assets/photo-$n-md.jpg"
+            $IM "$SRC" -auto-orient -strip -resize  '520x520>'  -quality 68 -interlace Plane "assets/photo-$n-sm.jpg"
+            ls -o "assets/photo-$n.jpg" "assets/photo-$n-md.jpg" "assets/photo-$n-sm.jpg"
+          done
+
+      - name: Add them to the gallery
+        run: node tools/add-photos.js
+
+      - name: Publish guard
+        run: node tools/guard.js
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Site photos: widen the gallery to 13, covering piles, MV collection, quality and the substation building"
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to the live site
+        if: steps.commit.outputs.changed == 'true'
+        run: git push --force origin main:gh-pages
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Gallery"
+            if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+              echo "Six photos added and published."
+            else
+              echo "No change — the gallery already held them."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
