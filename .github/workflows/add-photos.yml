@@ -3,12 +3,14 @@ name: Add gallery photos
 # Temporary, one-shot. Pulls six frames from the internal dashboard repo, resizes
 # each into the three variants the gallery's srcset expects, strips EXIF (the
 # originals are geotagged), then runs tools/add-photos.js and the publish guard.
-# Idempotent: re-running adds nothing. Delete this file, tools/add-photos.js and
-# _run-log.txt once it has run.
+# Idempotent: re-running adds nothing.
 #
-# The whole job runs in one step and tees its output to _run-log.txt, which is
-# committed even on failure — the run log is not readable from where this was
-# authored, so the repo is the channel.
+# The script is written INTO THE WORKSPACE, not /tmp: node resolves node_modules
+# from the script's own directory, so a script in /tmp cannot require('sharp')
+# however it was installed. The job tees to _run-log.txt and commits it even on
+# failure, because the Actions log is not readable from where this was authored.
+#
+# Delete this file, tools/add-photos.js and _run-log.txt once it has run.
 
 on:
   push:
@@ -35,37 +37,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Build the gallery
-        id: build
-        continue-on-error: true
-        run: |
-          set -x
-          {
-            echo "== node/npm =="
-            node -v; npm -v
-            echo "== clone dashboard =="
-            git clone --quiet --depth 1 https://github.com/claped71/murch-dashboard.git /tmp/dashboard
-            ls /tmp/dashboard/assets/recent/recent-45.jpg /tmp/dashboard/assets/recent/recent-21.jpg
-            echo "== install sharp =="
-            npm i --no-save sharp@0.33.5 2>&1 | tail -5
-            echo "== resize =="
-            node /tmp/resize.js
-            echo "== add-photos =="
-            node tools/add-photos.js
-            echo "== guard =="
-            node tools/guard.js
-            echo "== OK =="
-          } > /tmp/run.log 2>&1
-          echo "exit=$?" >> /tmp/run.log
-        env:
-          NODE_OPTIONS: ""
-
       - name: Write the resize script
-        if: always()
         run: |
-          cat > /tmp/resize.js <<'EOF'
+          cat > resize.js <<'EOF'
           const sharp = require('sharp');
           const fs = require('fs');
+          // recent-N in the dashboard becomes photo-N in the report.
           const NUMBERS = [45, 30, 32, 28, 23, 21];
           const VARIANTS = [['', 1200, 80], ['-md', 820, 74], ['-sm', 520, 68]];
           (async () => {
@@ -75,37 +52,44 @@ jobs:
               for (const [suffix, size, quality] of VARIANTS) {
                 const out = 'assets/photo-' + n + suffix + '.jpg';
                 await sharp(src)
-                  .rotate()
+                  .rotate()                              // honour EXIF orientation
                   .resize({ width: size, height: size, fit: 'inside', withoutEnlargement: true })
-                  .jpeg({ quality, progressive: true })
+                  .jpeg({ quality, progressive: true })  // sharp drops metadata by default
                   .toFile(out);
                 console.log(out + '  ' + Math.round(fs.statSync(out).size / 1024) + ' KB');
               }
             }
           })().catch(e => { console.error('RESIZE FAILED: ' + e.message); process.exit(1); });
           EOF
-          echo "resize script written"
+          echo "written"
 
-      - name: Retry the build now the script exists
-        id: build2
+      - name: Build the gallery
+        id: build
         continue-on-error: true
         run: |
           {
-            echo "== retry =="
-            test -d /tmp/dashboard || git clone --quiet --depth 1 https://github.com/claped71/murch-dashboard.git /tmp/dashboard
-            test -d node_modules/sharp || npm i --no-save sharp@0.33.5 2>&1 | tail -5
-            node /tmp/resize.js
+            set -e
+            echo "== clone dashboard =="
+            git clone --quiet --depth 1 https://github.com/claped71/murch-dashboard.git /tmp/dashboard
+            echo "== install sharp =="
+            npm i --no-save sharp@0.33.5 2>&1 | tail -3
+            echo "== resize =="
+            node ./resize.js
+            echo "== add-photos =="
             node tools/add-photos.js
+            echo "== guard =="
             node tools/guard.js
             echo "== OK =="
-          } >> /tmp/run.log 2>&1
-          echo "retry_exit=$?" >> /tmp/run.log
+          } > /tmp/run.log 2>&1
 
       - name: Commit whatever happened
         if: always()
         run: |
-          cp /tmp/run.log _run-log.txt || echo "no log" > _run-log.txt
-          rm -rf node_modules package.json package-lock.json
+          cp /tmp/run.log _run-log.txt 2>/dev/null || echo "no log produced" > _run-log.txt
+          rm -rf node_modules package.json package-lock.json resize.js
+          OK=no
+          grep -q "^== OK ==" _run-log.txt && OK=yes
+          if [ "$OK" = "yes" ]; then rm -f _run-log.txt; fi
           git config user.name  "murch-report-bot"
           git config user.email "murch-report-bot@users.noreply.github.com"
           git add -A
@@ -113,11 +97,16 @@ jobs:
             echo "Nothing to commit."
             exit 0
           fi
-          git commit -m "Site photos: gallery build run"
+          if [ "$OK" = "yes" ]; then
+            git commit -m "Site photos: widen the gallery to 13, covering piles, MV collection, quality and the substation building"
+          else
+            git commit -m "Site photos: build failed, run log only"
+          fi
           git push origin main
-          if grep -q "^== OK ==" _run-log.txt; then
+          if [ "$OK" = "yes" ]; then
             git push --force origin main:gh-pages
             echo "published"
           else
-            echo "build did not reach OK — main updated with the log, live site untouched"
+            echo "not published — live site untouched"
+            exit 1
           fi
