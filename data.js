@@ -900,6 +900,46 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       {
+        "ref": "MQ-20260801-0802",
+        "subject": "Protective caps on module connectors to keep dust and debris out of unmated connections",
+        "area": "Module installation",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
+      {
+        "ref": "MQ-20260801-0752",
+        "subject": "Supplier recommendation for treating vacated tap-screw holes in torque tubes, and confirmation of saddle-bracket fastener counts by slope",
+        "area": "Tracker assembly",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260801-0749",
+        "subject": "Securing of tracker control unit charging modules and the timing of node controller connection for battery charging",
+        "area": "Module installation",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Construction Manager"
+      },
+      {
+        "ref": "MQ-20260801-0736",
+        "subject": "Surface water drainage within the Area A arrays and vegetation management to support ongoing installation and operation",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Construction Manager"
+      },
+      {
         "ref": "MQ-20260731-0843",
         "subject": "Verification that the installed PV and game fence meet the authority’s requirements, with drawings redlined where the installation differs",
         "area": "Quality and inspection",
@@ -907,8 +947,7 @@ window.MURCH_REPORT = {
         "raisedISO": "2026-07-31",
         "dueISO": "2026-08-07",
         "respondedISO": "2026-07-31",
-        "turnaroundDays": 0,
-        "status": "Answered",
+        "status": "Open",
         "assignedTo": "Engineering lead"
       },
       {
