@@ -946,7 +946,6 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-07-31",
         "dueISO": "2026-08-07",
-        "respondedISO": "2026-07-31",
         "status": "Open",
         "assignedTo": "Engineering lead"
       },
