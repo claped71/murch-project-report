@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 52.3,
+    "overall": 52.6,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. The week closed with one clear step forward and one weak Saturday. The step forward is on the low-voltage front: on August 1 the first measured cable footage of the project was placed — 478 linear feet of DC cable in Area A on four combiner boxes of the first inverter — alongside 1,083 linear feet of messenger wire and seven further box installations, taking box mounting to 110 of 419. That scope had reported zero installed cable since it opened, so the number is small against the 6,689 feet per day now required for September 18, but the method is proven in the field and the front is live. Pile installation stands at 91.5% with 2,674 left to place; no pile quantity was filed on August 1, so the rate required to close the front around August 7 has risen to 535 per day over the five working days remaining. Module installation reached 45,063 of 171,470 (26.3%). July 31 was the first day the module front met its required rate — 4,136 placed against 4,104 needed, with output per installer at 84 modules — but August 1 returned 780 with only one of the two installation crews reporting, so the required rate has risen to 4,214 per day. Tracker assembly remains the controlling front: completed rows stand at 986 of 2,486 (39.7%), of which 296 are released by the Owner's quality process, and 63 completed rows per day are now required to hold August 30. No row was completed on August 1 by any crew. Including the physical work standing in 109 rows that are built but not finished, earned progress is 1,064 row-equivalents, or 42.8%. Those open rows are now spread across four areas and three steps of the five-step ladder: twenty of them are in final torque and quality presentation and are the nearest completions available, and a new assembly front opened in a further area. On the electrical fronts the main power transformer is set, 18 of 23 inverter stations are placed and welded pending terminations, and substation piers stand at 14 of 17 with the remainder scheduled for completion on August 4, at which point every substation foundation is finished."
+    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. The week closed with one clear step forward and one weak Saturday. The step forward is on the low-voltage front: on August 1 the first measured cable footage of the project was placed — 478 linear feet of DC cable in Area A on four combiner boxes of the first inverter — alongside 1,083 linear feet of messenger wire and seven further box installations, taking box mounting to 110 of 419. That scope had reported zero installed cable since it opened, so the number is small against the 6,689 feet per day now required for September 18, but the method is proven in the field and the front is live. Pile installation stands at 91.5% with 2,674 left to place; no pile quantity was filed on August 1, so the rate required to close the front around August 7 has risen to 535 per day over the five working days remaining. Module installation reached 45,063 of 171,470 (26.3%). July 31 was the first day the module front met its required rate — 4,136 placed against 4,104 needed, with output per installer at 84 modules — but August 1 returned 780 with only one of the two installation crews reporting, so the required rate has risen to 4,214 per day. Tracker assembly remains the controlling front: completed rows stand at 1,026 of 2,486 (41.3%), of which 296 are released by the Owner's quality process, and 61 completed rows per day are required to hold August 30. One assembly crew closed 40 rows on August 1 — its second consecutive 40-row day — while the other two crews closed none. Including the physical work standing in 99 rows that are built but not finished, earned progress is 1,097 row-equivalents, or 44.1%. Those open rows sit across three areas and three steps of the five-step ladder: twenty are in final torque and quality presentation and are the nearest completions available, and a new assembly front opened in a further area. On the electrical fronts the main power transformer is set, 18 of 23 inverter stations are placed and welded pending terminations, and substation piers stand at 14 of 17 with the remainder scheduled for completion on August 4, at which point every substation foundation is finished."
   },
   "gates": [
     {
@@ -37,12 +37,12 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 986,
+      "installed": 1026,
       "total": 2486,
       "unit": "rows",
-      "earned": 1063.6,
-      "earnedPct": 42.8,
-      "earnedLabel": "42.8% earned incl. rows in progress (1,064 row-equivalents)",
+      "earned": 1096.6,
+      "earnedPct": 44.1,
+      "earnedLabel": "44.1% earned incl. rows in progress (1,097 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
@@ -470,8 +470,8 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Aug 1",
-        "v": 0,
-        "c": 986
+        "v": 40,
+        "c": 1026
       }
     ],
     "modules": [
@@ -706,7 +706,7 @@ window.MURCH_REPORT = {
     "note": "Reporting of unsafe conditions and behaviors increased in May, which is the intended direction for a leading-indicator program. All open observations are tracked to closure."
   },
   "quality": {
-    "headline": "Quality approval stands at 86.3% of executed piles, and 296 of 986 completed tracker rows are released by the Owner's quality process. No approval cut has been issued since July 30.",
+    "headline": "Quality approval stands at 86.3% of executed piles, and 296 of 1,026 completed tracker rows are released by the Owner's quality process. No approval cut has been issued since July 30.",
     "tiles": [
       {
         "label": "Piles executed",
@@ -730,8 +730,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 986",
-        "note": "11.9% of the 2,486 rows in scope and 30.0% of the 986 built. Released rows feed the module installation front."
+        "value": "296 / 1,026",
+        "note": "11.9% of the 2,486 rows in scope and 28.8% of the 1,026 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -761,7 +761,7 @@ window.MURCH_REPORT = {
       "period": "Aug 3 – Aug 5",
       "items": [
         "Pile installation at 535/day to close the front around August 7; 2,674 remain and two areas close within one shift each.",
-        "Tracker assembly at 63 rows/day. Twenty rows are in final torque and quality presentation and should convert first; sixty-eight more sit one step behind them.",
+        "Tracker assembly at 61 rows/day. Twenty rows are in final torque and quality presentation and should convert first; sixty-eight more sit one step behind them.",
         "Quality release of completed rows — no approval cut has been issued since July 30 and one is now due, together with a decision on combining the racking and module inspections into a single release.",
         "Module installation back to 4,214/day with both installation crews at full strength on every working day.",
         "LV cable installation to build on the first 478 feet — 6,689 lf/day required for September 18. Crew strength on the cable pull is the constraint.",
@@ -1060,7 +1060,7 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "986 rows complete of 2,486 (39.7%) — the measure that governs the August 30 date — of which 296 are released through the Owner's quality process. 1,500 rows remain and 63 completed rows per day are now required, up from 60. No row was completed on August 1 by any crew. A further 109 rows are built but not finished, spread across four areas and three steps of the five-step ladder: 68 at step 3 with purlins installed, 20 at step 4 in final torque and quality presentation, 10 at step 3, and 11 at step 2 on a newly opened assembly front. On the fixed ladder those rows carry 77.6 row-equivalents, so earned progress is 1,064 of 2,486, or 42.8%. The twenty rows in final torque are the nearest completions available anywhere on the project. Release cadence remains the second constraint and no approval cut has been issued since July 30."
+      "note": "1,026 rows complete of 2,486 (41.3%) — the measure that governs the August 30 date — of which 296 are released through the Owner's quality process. 1,460 rows remain and 61 completed rows per day are required. One assembly crew closed 40 rows on August 1, its second consecutive 40-row day and the only completions filed on the project that day; the other two crews closed none. A further 99 rows are built but not finished, across three areas and three steps of the five-step ladder: 68 at step 3 with purlins installed, 20 at step 4 in final torque and quality presentation, and 11 at step 2 on a newly opened assembly front. On the fixed ladder those rows carry 70.6 row-equivalents, so earned progress is 1,097 of 2,486, or 44.1%. Eighty-eight of the 99 open rows sit with the two crews that filed no completions. Release cadence remains the second constraint and no approval cut has been issued since July 30."
     },
     {
       "title": "Module installation rate",
