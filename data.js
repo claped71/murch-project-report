@@ -930,6 +930,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-03",
         "dueISO": "2026-08-10",
+        "respondedISO": "2026-08-03",
         "status": "Open",
         "assignedTo": "Health and safety lead"
       },
@@ -940,6 +941,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-03",
         "dueISO": "2026-08-10",
+        "respondedISO": "2026-08-03",
         "status": "Open",
         "assignedTo": "Construction Manager"
       },
@@ -950,6 +952,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-03",
         "dueISO": "2026-08-10",
+        "respondedISO": "2026-08-03",
         "status": "Open",
         "assignedTo": "Construction Manager"
       },
@@ -970,7 +973,9 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-01",
         "dueISO": "2026-08-07",
-        "status": "Open",
+        "respondedISO": "2026-08-03",
+        "turnaroundDays": 1,
+        "status": "Answered",
         "assignedTo": "QA/QC lead"
       },
       {
@@ -980,6 +985,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-01",
         "dueISO": "2026-08-07",
+        "respondedISO": "2026-08-03",
         "status": "Open",
         "assignedTo": "Engineering lead"
       },
@@ -990,6 +996,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-01",
         "dueISO": "2026-08-07",
+        "respondedISO": "2026-08-03",
         "status": "Open",
         "assignedTo": "Construction Manager"
       },
@@ -1000,6 +1007,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-01",
         "dueISO": "2026-08-07",
+        "respondedISO": "2026-08-03",
         "status": "Open",
         "assignedTo": "Construction Manager"
       },
@@ -1010,8 +1018,8 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-07-31",
         "dueISO": "2026-08-07",
-        "status": "Open",
         "respondedISO": "2026-07-31",
+        "status": "Open",
         "assignedTo": "Engineering lead"
       },
       {
