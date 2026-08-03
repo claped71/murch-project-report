@@ -900,6 +900,16 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       {
+        "ref": "MQ-20260803-0736",
+        "subject": "Subcontractor working hours and rest days, and the fatigue management arrangements applied on site",
+        "area": "Health and safety",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "status": "Open",
+        "assignedTo": "Health and safety lead"
+      },
+      {
         "ref": "MQ-20260801-0802",
         "subject": "Protective caps on module connectors to keep dust and debris out of unmated connections",
         "area": "Module installation",
@@ -947,6 +957,7 @@ window.MURCH_REPORT = {
         "raisedISO": "2026-07-31",
         "dueISO": "2026-08-07",
         "status": "Open",
+        "respondedISO": "2026-07-31",
         "assignedTo": "Engineering lead"
       },
       {
