@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 52.6,
+    "overall": 52.8,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. The week closed with one clear step forward and one weak Saturday. The step forward is on the low-voltage front: on August 1 the first measured cable footage of the project was placed — 478 linear feet of DC cable in Area A on four combiner boxes of the first inverter — alongside 1,083 linear feet of messenger wire and seven further box installations, taking box mounting to 110 of 419. That scope had reported zero installed cable since it opened, so the number is small against the 6,689 feet per day now required for September 18, but the method is proven in the field and the front is live. Pile installation stands at 91.5% with 2,674 left to place; no pile quantity was filed on August 1, so the rate required to close the front around August 7 has risen to 535 per day over the five working days remaining. Module installation reached 45,063 of 171,470 (26.3%). July 31 was the first day the module front met its required rate — 4,136 placed against 4,104 needed, with output per installer at 84 modules — but August 1 returned 780 with only one of the two installation crews reporting, so the required rate has risen to 4,214 per day. Tracker assembly remains the controlling front: completed rows stand at 1,026 of 2,486 (41.3%), of which 296 are released by the Owner's quality process, and 61 completed rows per day are required to hold August 30. One assembly crew closed 40 rows on August 1 — its second consecutive 40-row day — while the other two crews closed none. Including the physical work standing in 99 rows that are built but not finished, earned progress is 1,097 row-equivalents, or 44.1%. Those open rows sit across three areas and three steps of the five-step ladder: twenty are in final torque and quality presentation and are the nearest completions available, and a new assembly front opened in a further area. On the electrical fronts the main power transformer is set, 18 of 23 inverter stations are placed and welded pending terminations, and substation piers stand at 14 of 17 with the remainder scheduled for completion on August 4, at which point every substation foundation is finished."
+    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. The week closed with one clear step forward and one weak Saturday. The step forward is on the low-voltage front: on August 1 the first measured cable footage of the project was placed — 478 linear feet of DC cable in Area A on four combiner boxes of the first inverter — alongside 1,083 linear feet of messenger wire and seven further box installations, taking box mounting to 110 of 419. That scope had reported zero installed cable since it opened, so the number is small against the 6,689 feet per day now required for September 18, but the method is proven in the field and the front is live. Pile installation stands at 91.5% with 2,674 left to place; no pile quantity was filed on August 1, so the rate required to close the front around August 7 has risen to 535 per day over the five working days remaining. Module installation reached 46,063 of 171,470 (26.9%). July 31 was the first day the module front met its required rate — 4,136 placed against 4,104 needed, with output per installer at 84 modules — but August 1 returned 1,780 with both crews on site at 37 modules per installer, so the required rate stands at 4,180 per day. Saturday productivity, rather than crew availability, is the variable to address. Tracker assembly remains the controlling front: completed rows stand at 1,026 of 2,486 (41.3%), of which 296 are released by the Owner's quality process, and 61 completed rows per day are required to hold August 30. One assembly crew closed 40 rows on August 1 — its second consecutive 40-row day — while the other two crews closed none. Including the physical work standing in 99 rows that are built but not finished, earned progress is 1,097 row-equivalents, or 44.1%. Those open rows sit across three areas and three steps of the five-step ladder: twenty are in final torque and quality presentation and are the nearest completions available, and a new assembly front opened in a further area. On the electrical fronts the main power transformer is set, 18 of 23 inverter stations are placed and welded pending terminations, and substation piers stand at 14 of 17 with the remainder scheduled for completion on August 4, at which point every substation foundation is finished."
   },
   "gates": [
     {
@@ -49,7 +49,7 @@ window.MURCH_REPORT = {
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 45063,
+      "installed": 46063,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -592,8 +592,8 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Aug 1",
-        "v": 780,
-        "c": 45063
+        "v": 1780,
+        "c": 46063
       }
     ]
   },
@@ -1065,7 +1065,7 @@ window.MURCH_REPORT = {
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "126,407 modules remain, with 4,214 per day required to hold September 6, up from 4,103. July 31 placed 4,136 — the first day at or above the required rate — with both installation crews exceeding 2,000 and output per installer at 84 modules. August 1 returned 780 with only one crew reporting. The conclusion is that the required rate is achievable at current productivity but only with both crews present on every working day; a single absent crew costs the whole day's rate and raises the requirement for every day that follows. Material is not a constraint: deliveries are complete and 126,407 modules stand in stock. Released rows remain the second constraint — recent output has gone into an area that carries no quality release."
+      "note": "125,407 modules remain, with 4,180 per day required to hold September 6. July 31 placed 4,136 — the first day at or above the required rate — with both installation crews exceeding 2,000 and output per installer at 84 modules. August 1 returned 1,780 with both crews present and 48 installers producing 37 each. The conclusion has changed with the fuller picture: this is not a crew-availability problem but a productivity one on the sixth working day, and it should be understood before further resource is added. The Monday headcount board carries 43 installers, five fewer than Saturday. Material is not a constraint: deliveries are complete and 125,407 modules stand in stock. Released rows remain the second constraint — recent output has gone into an area that carries no quality release."
     },
     {
       "title": "LV and DC installation — the pull has started",
@@ -1238,8 +1238,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "253",
-        "note": "Latest site-board headcount (Jul 30). Field labor plus management, quality and HSE."
+        "value": "243",
+        "note": "Latest site-board headcount (Aug 3). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1248,12 +1248,12 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "183",
+        "value": "187",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "108,100",
+        "value": "108,000",
         "note": "Total manhours worked from the start of construction on April 1 through August 1, at 10 h/day, Monday to Saturday."
       },
       {
@@ -1346,6 +1346,10 @@ window.MURCH_REPORT = {
       {
         "d": "Jul 30",
         "v": 253
+      },
+      {
+        "d": "Aug 3",
+        "v": 243
       }
     ],
     "manhours": [
@@ -1383,21 +1387,21 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Aug 1",
-        "c": 108114
+        "c": 108039
       }
     ],
     "mix": {
-      "day": "July 30, 2026",
-      "total": 253,
+      "day": "August 3, 2026",
+      "total": 243,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 131,
+          "people": 128,
           "color": "#0f7a52"
         },
         {
           "trade": "Module installation",
-          "people": 53,
+          "people": 43,
           "color": "#2769a8"
         },
         {
@@ -1407,12 +1411,12 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "Civil and fencing",
-          "people": 7,
+          "people": 5,
           "color": "#7b4fa8"
         },
         {
           "trade": "EPC management, quality and HSE",
-          "people": 20,
+          "people": 25,
           "color": "#66716d"
         }
       ]
