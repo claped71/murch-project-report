@@ -914,6 +914,16 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       {
+        "ref": "MQ-20260803-0752",
+        "subject": "Formal RFI process between the subcontractors and the EPC, and Owner participation in engineering and land RFIs",
+        "area": "Programme and milestones",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
         "ref": "MQ-20260803-0745",
         "subject": "Vehicle speeds on 48th Street on the approach to the substation",
         "area": "Health and safety",
