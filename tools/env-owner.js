@@ -1,46 +1,23 @@
 'use strict';
-/* One-shot, idempotent: environmental queries belong to the Environmental lead.
-   MQ-20260804-0726 (erosion control) was sitting with the Construction Manager, and
-   MQ-20260801-0736 (surface water drainage and vegetation) had been retagged from
-   Environmental to Quality by an automated sweep. Both return to Environmental.
+/* One-shot, idempotent. The register's first owner is the person the Owner's own
+   discipline tag designates — the same routing the query email follows. Internal
+   reassignment to another lead stays visible in the With column, but it does not
+   change who the query was addressed to.
    Verified against a real DOM before publishing. Delete with its workflow once run. */
 const fs = require('fs');
-const path = require('path');
-const DATA = 'data.js';
+const IDX = 'index.html';
 
-const FIX = {
-  'MQ-20260804-0726': { area: 'Environmental', assignedTo: 'Environmental lead' },
-  'MQ-20260801-0736': { area: 'Environmental', assignedTo: 'Environmental lead' }
-};
+const from = "    function ownerOf(q){\n" +
+  "      var people = BY_ROLE[q.assignedTo];\n" +
+  "      if (people && people.length) return people;\n" +
+  "      return R.to ? [R.to] : null;   // no named lead for this role: the Director owns it\n" +
+  "    }";
+const to = "    // First owner is set by the discipline the Owner designates on the query — the\n" +
+  "    // same routing the email follows. Internal reassignment shows in the With column.\n" +
+  "    function ownerOf(q){ var t = routeFor(q.area).to; return t.length ? t : null; }";
 
-global.window = {};
-require(path.resolve(DATA));
-const items = global.window.MURCH_REPORT.clientQueries.items;
-
-let changed = 0;
-items.forEach(function (q) {
-  const f = FIX[q.ref];
-  if (!f) return;
-  Object.keys(f).forEach(function (k) {
-    if (q[k] !== f[k]) { console.log(q.ref + ': ' + k + ' ' + q[k] + ' -> ' + f[k]); q[k] = f[k]; changed++; }
-  });
-});
-if (!changed) { console.log('Already correct.'); process.exit(0); }
-
-const ORDER = ['ref', 'subject', 'area', 'raisedBy', 'raisedISO', 'dueISO', 'respondedISO', 'turnaroundDays', 'status', 'assignedTo'];
-function render(it) {
-  const keys = ORDER.filter(function (k) { return it[k] !== undefined; })
-    .concat(Object.keys(it).filter(function (k) { return ORDER.indexOf(k) === -1; }));
-  return '      {\n' + keys.map(function (k) {
-    return '        ' + JSON.stringify(k) + ': ' + JSON.stringify(it[k]);
-  }).join(',\n') + '\n      }';
-}
-let src = fs.readFileSync(DATA, 'utf8');
-const OPEN = 'the formal correspondence provisions of the Agreement.",\n    "items": [\n';
-const start = src.indexOf(OPEN);
-if (start === -1) { console.error('register anchor not found'); process.exit(1); }
-const from = start + OPEN.length;
-const end = src.indexOf('\n    ]', from);
-if (end === -1) { console.error('register end not found'); process.exit(1); }
-fs.writeFileSync(DATA, src.slice(0, from) + items.map(render).join(',\n') + src.slice(end));
-console.log(changed + ' field(s) changed across ' + items.length + ' queries.');
+let s = fs.readFileSync(IDX, 'utf8');
+if (s.indexOf(to) !== -1) { console.log('already applied'); process.exit(0); }
+if (s.indexOf(from) === -1) { console.error('ANCHOR NOT FOUND'); process.exit(1); }
+fs.writeFileSync(IDX, s.replace(from, to));
+console.log('patched: owner derives from the designated discipline');
