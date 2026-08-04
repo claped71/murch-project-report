@@ -914,6 +914,46 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       {
+        "ref": "MQ-20260804-0732",
+        "subject": "Inverter station foundations",
+        "area": "Substation and inverters",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260804-0728",
+        "subject": "Medium-voltage trench crossings at site roads",
+        "area": "MV collection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Open",
+        "assignedTo": "Electrical lead (MV)"
+      },
+      {
+        "ref": "MQ-20260804-0726",
+        "subject": "Erosion control devices",
+        "area": "Environmental",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Open",
+        "assignedTo": "Construction Manager"
+      },
+      {
+        "ref": "MQ-20260804-0724",
+        "subject": "Protective caps on conduit ends",
+        "area": "LV and DC electrical",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Open",
+        "assignedTo": "Electrical lead"
+      },
+      {
         "ref": "MQ-20260803-0752",
         "subject": "Formal RFI process between the subcontractors and the EPC, and Owner participation in engineering and land RFIs",
         "area": "Programme and milestones",
