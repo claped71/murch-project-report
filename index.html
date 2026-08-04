@@ -755,7 +755,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     var BY_ROLE = R.byRole || {};
     function ownerOf(q){
       var people = BY_ROLE[q.assignedTo];
-      return (people && people.length) ? people : null;
+      if (people && people.length) return people;
+      return R.to ? [R.to] : null;   // no named lead for this role: the Director owns it
     }
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
@@ -961,8 +962,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<td data-label="With">'+esc(q.assignedTo||'\u2014')+'</td>'+
         '<td data-label="Owner">'+(function(){
           var o=ownerOf(q);
-          if(o) return o.map(function(p){ return esc(p.name); }).join('<br>');
-          return q.assignedTo ? '<span style="color:#8a968f">'+esc(q.assignedTo)+'</span>' : '\u2014';
+          return o ? o.map(function(p){ return esc(p.name); }).join('<br>') : '\u2014';
         })()+'</td>'+
         '<td data-label="Status"><span class="pill '+pillCls(st)+'">'+esc(st)+'</span></td>'+
       '</tr>';
