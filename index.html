@@ -481,7 +481,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   function esc(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }
   function pillCls(s){
     s=(s||'').toLowerCase();
-    if(s.indexOf('complete')>=0||s.indexOf('answered')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
+    if(s.indexOf('complete')>=0||s.indexOf('answered')>=0||s.indexOf('closed')>=0||s.indexOf('on target')>=0||s.indexOf('on track')>=0) return 'p-good';
     if(s.indexOf('watch')>=0||s.indexOf('active')>=0||s.indexOf('open')>=0) return 'p-watch';
     if(s.indexOf('in review')>=0) return 'p-behind';
     if(s.indexOf('behind')>=0||s.indexOf('below')>=0||s.indexOf('priority')>=0) return 'p-behind';
@@ -916,8 +916,23 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<div class="foot" style="border:0;padding-top:4px"><span style="font-size:11px;color:#4a5b53">'+esc(k.f)+'</span></div></div>';
     }).join('');
 
-    function renderRows(showAll){
-    var rows = showAll ? items : items.filter(function(q){ return q._outstanding; });
+    // out       still awaiting a response, or answered but not accepted
+    // responded a reply demonstrably went to the Owner (may still be open)
+    // closed    the Owner accepted it, or the physical condition was met
+    var VIEWS = {
+      out:       function(q){ return q._outstanding; },
+      responded: function(q){ return !!q.respondedISO && q.status !== 'Closed'; },
+      closed:    function(q){ return q.status === 'Closed'; },
+      all:       function(){ return true; }
+    };
+    var EMPTY = {
+      out: 'Nothing outstanding.',
+      responded: 'No responses issued yet.',
+      closed: 'Nothing closed yet. A query closes when the Owner accepts the response, or when the physical work it refers to is complete.',
+      all: null
+    };
+    function renderRows(mode){
+    var rows = items.filter(VIEWS[mode] || VIEWS.all);
     document.getElementById('cqBody').innerHTML = rows.length ? rows.map(function(q){
       var st = q._overdue ? 'Overdue' : q.status;
       var clock;
@@ -930,7 +945,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       } else {
         clock = (typeof q.turnaroundDays === 'number' ? q.turnaroundDays+' wd' : '\u2014');
       }
-      return '<tr>'+
+      return '<tr'+(q.status === 'Closed' ? ' style="opacity:.62"' : '')+'>'+
         '<td data-label="Ref"><b>'+esc(q.ref)+'</b></td>'+
         '<td data-label="Subject">'+esc(q.subject)+'</td>'+
         '<td data-label="Discipline">'+esc(q.area||'\u2014')+'</td>'+
@@ -943,20 +958,24 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<td data-label="Status"><span class="pill '+pillCls(st)+'">'+esc(st)+'</span></td>'+
       '</tr>';
     }).join('')
-      : '<tr><td colspan="10" class="note" style="text-align:center;padding:14px">'+(showAll? esc(Q.openingNote) : 'Nothing outstanding.')+'</td></tr>';
+      : '<tr><td colspan="10" class="note" style="text-align:center;padding:14px">'+esc(EMPTY[mode] || Q.openingNote)+'</td></tr>';
     }
-    renderRows(false);
     (function(){
-      var box = document.getElementById('cqToggle'); if(!box) return;
-      box.innerHTML = '<button type="button" id="cqOut" class="on">Outstanding (' + nOpen + ')</button>' +
-                      '<button type="button" id="cqAll">All (' + items.length + ')</button>';
-      function pick(all){
-        renderRows(all);
-        document.getElementById('cqOut').className = all ? '' : 'on';
-        document.getElementById('cqAll').className = all ? 'on' : '';
-      }
-      document.getElementById('cqOut').addEventListener('click', function(){ pick(false); });
-      document.getElementById('cqAll').addEventListener('click', function(){ pick(true); });
+      var box = document.getElementById('cqToggle'); if(!box) { renderRows('out'); return; }
+      var TABS = [
+        ['out', 'Outstanding'], ['responded', 'Responded'], ['closed', 'Closed'], ['all', 'All']
+      ];
+      box.innerHTML = TABS.map(function(t){
+        return '<button type="button" data-view="'+t[0]+'"'+(t[0]==='out'?' class="on"':'')+'>'+
+               t[1]+' ('+items.filter(VIEWS[t[0]]).length+')</button>';
+      }).join('');
+      box.querySelectorAll('button').forEach(function(b){
+        b.addEventListener('click', function(){
+          renderRows(b.dataset.view);
+          box.querySelectorAll('button').forEach(function(x){ x.className = (x === b) ? 'on' : ''; });
+        });
+      });
+      renderRows('out');
     })();
 
     document.getElementById('cqResp').textContent = Q.responseNote;
