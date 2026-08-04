@@ -865,6 +865,21 @@ window.MURCH_REPORT = {
   "clientQueries": {
     "asOf": "Jul 30, 2026",
     "routing": {
+      "byRole": {
+        "QA/QC lead": [
+          { "name": "Daniel Morilla", "role": "Quality Manager", "email": "d.morilla@green-sol.us" }
+        ],
+        "Health and safety lead": [
+          { "name": "Bethany Valdez", "role": "Health and Safety", "email": "valdez@green-sol.us" },
+          { "name": "Helena Suarez", "role": "Health and Safety", "email": "h.suarez@greening-group.com" }
+        ],
+        "Environmental lead": [
+          { "name": "Rosario Ruiz", "role": "Environmental", "email": "r.ruiz@green-sol.us" }
+        ],
+        "Construction Manager": [
+          { "name": "Audelio Zuniga", "role": "Construction Manager", "email": "a.zuniga@green-sol.us" }
+        ]
+      },
       "byArea": {
         "Quality and inspection": {
           "to": [

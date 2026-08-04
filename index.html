@@ -751,7 +751,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       }
       return { to: (R.to && addrOk(R.to.email)) ? [R.to] : [], cc: ccList };
     }
-    function ownerOf(q){ var t = routeFor(q.area).to; return t.length ? t : null; }
+    // Owner is the role that must answer, not the discipline the query was filed under.
+    var BY_ROLE = R.byRole || {};
+    function ownerOf(q){
+      var people = BY_ROLE[q.assignedTo];
+      return (people && people.length) ? people : null;
+    }
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
 
@@ -954,7 +959,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<td class="n" data-label="Responded">'+shortDate(q.respondedISO)+'</td>'+
         '<td class="n" data-label="Clock / turnaround">'+clock+'</td>'+
         '<td data-label="With">'+esc(q.assignedTo||'\u2014')+'</td>'+
-        '<td data-label="Owner">'+(function(){ var o=ownerOf(q); return o? o.map(function(p){ return esc(p.name); }).join('<br>') : '\u2014'; })()+'</td>'+
+        '<td data-label="Owner">'+(function(){
+          var o=ownerOf(q);
+          if(o) return o.map(function(p){ return esc(p.name); }).join('<br>');
+          return q.assignedTo ? '<span style="color:#8a968f">'+esc(q.assignedTo)+'</span>' : '\u2014';
+        })()+'</td>'+
         '<td data-label="Status"><span class="pill '+pillCls(st)+'">'+esc(st)+'</span></td>'+
       '</tr>';
     }).join('')
