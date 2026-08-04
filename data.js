@@ -1388,8 +1388,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "243",
-        "note": "Latest site-board headcount (Aug 3). Field labor plus management, quality and HSE."
+        "value": "247",
+        "note": "Latest site-board headcount (Aug 4). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1398,7 +1398,7 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "187",
+        "value": "191",
         "note": "Mean headcount across the construction period to date."
       },
       {
@@ -1500,6 +1500,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 3",
         "v": 243
+      },
+      {
+        "d": "Aug 4",
+        "v": 247
       }
     ],
     "manhours": [
@@ -1545,32 +1549,32 @@ window.MURCH_REPORT = {
       }
     ],
     "mix": {
-      "day": "August 3, 2026",
-      "total": 243,
+      "day": "August 4, 2026",
+      "total": 247,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 128,
+          "people": 126,
           "color": "#0f7a52"
         },
         {
           "trade": "Module installation",
-          "people": 43,
+          "people": 48,
           "color": "#2769a8"
         },
         {
           "trade": "Electrical and substation",
-          "people": 42,
+          "people": 39,
           "color": "#b96f18"
         },
         {
           "trade": "Civil and fencing",
-          "people": 5,
+          "people": 6,
           "color": "#7b4fa8"
         },
         {
           "trade": "EPC management, quality and HSE",
-          "people": 25,
+          "people": 28,
           "color": "#66716d"
         }
       ]
