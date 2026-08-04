@@ -681,17 +681,17 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
-    "headline": "Zero recordable accidents. 204 days without a lost-time injury.",
+    "headline": "Zero recordable injuries in 321 days. One first-aid case on 4 August, treated on site with no lost time.",
     "tiles": [
       {
         "label": "Recordable accidents",
         "value": "0",
-        "note": "No fatalities, lost-time, restricted-work or medical-treatment cases to date."
+        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date."
       },
       {
-        "label": "Days without LTI",
-        "value": "204",
-        "note": "No lost-time injury reported on the project."
+        "label": "Days without recordable",
+        "value": "321",
+        "note": "286 at the June close, plus 35 days to 4 August with no recordable reported."
       },
       {
         "label": "Lost days",
@@ -701,25 +701,30 @@ window.MURCH_REPORT = {
       {
         "label": "First-aid cases",
         "value": "1",
-        "note": "One first-aid case, recorded in May."
+        "note": "4 August: an operative sprained an ankle while carrying modules; tall grass concealed uneven ground. Treated on site, no lost time."
       },
       {
-        "label": "Safety observations YTD",
-        "value": "76",
-        "note": "48 unsafe conditions, 26 unsafe behaviors, 1 near miss, 1 first-aid case — leading-indicator reporting."
+        "label": "Man-hours to date",
+        "value": "76,131",
+        "note": "Audited to the June close. June alone: 28,904 hours across 127 personnel."
       },
       {
-        "label": "Safety orientations",
-        "value": "155",
-        "note": "Site inductions completed."
+        "label": "Property damage — June",
+        "value": "5",
+        "note": "Plant and loads moving over uneven or obstructed ground, and two module pallets struck during unloading. No injuries."
       },
       {
-        "label": "Toolbox talks",
-        "value": "26",
-        "note": "Including coordination meetings and Owner safety visits."
+        "label": "Leading indicators — June",
+        "value": "41",
+        "note": "25 unsafe conditions, 6 unsafe acts or behaviours, 10 toolbox talks."
+      },
+      {
+        "label": "Personnel trained",
+        "value": "123",
+        "note": "Cumulative site inductions and training to the June close."
       }
     ],
-    "note": "Reporting of unsafe conditions and behaviors increased in May, which is the intended direction for a leading-indicator program. All open observations are tracked to closure."
+    "note": "The injury record is clean: 321 days with no recordable, no lost time and no restricted work. The recurring hazard on this site is ground and vegetation rather than the work itself — most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain. This is the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, and the corrective action is being handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
   },
   "quality": {
     "headline": "Quality approval stands at 85.7% of executed piles, and 296 of 1,112 completed tracker rows are released by the Owner's quality process. The module release process begins this week.",
