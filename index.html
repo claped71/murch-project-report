@@ -219,6 +219,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   td::before{padding-top:0}
   .brandbar .wrap{gap:10px}
 }
+.qtoggle{display:flex;gap:8px;margin:0 0 10px}
+.qtoggle button{font:inherit;font-size:12.5px;font-weight:700;padding:6px 14px;border-radius:6px;cursor:pointer;
+  border:1px solid var(--line);background:#fff;color:#4a5b53}
+.qtoggle button.on{background:#0f7a52;border-color:#0f7a52;color:#fff}
+.qscroll{max-height:520px;overflow:auto}
+@media (max-width:720px){.qscroll{max-height:none;overflow:visible}}
 </style>
 </head>
 <body>
@@ -442,10 +448,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     <div style="height:12px"></div>
     <div class="grid g4" id="cqKpis"></div>
     <div style="height:12px"></div>
-    <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th>Ref</th><th>Subject</th><th>Discipline</th><th class="n">Raised</th><th class="n">Due</th><th class="n">Responded</th><th class="n">Clock</th><th>With</th><th>Status</th></tr></thead>
+    <div id="cqToggle" class="qtoggle"></div>
+    <div class="card" style="padding:18px 6px"><div class="qscroll">
+      <table><thead><tr><th>Ref</th><th>Subject</th><th>Discipline</th><th class="n">Raised</th><th class="n">Due</th><th class="n">Responded</th><th class="n">Clock</th><th>With</th><th>Owner</th><th>Status</th></tr></thead>
       <tbody id="cqBody"></tbody></table>
-    </div>
+    </div></div>
     <div class="card" style="margin-top:10px"><p class="note block" id="cqResp"></p><p class="note block" id="cqNote" style="margin-top:8px"></p></div>
   </section>
 
@@ -732,6 +739,19 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     // No Owner address is carried on it, so a request forwarded to a discipline lead
     // cannot be answered straight back to the Owner — release runs through the PM.
     var ccList = (R.cc||[]).filter(function(c){ return c.email && /@/.test(c.email) && !/SET-EMAIL/.test(c.email); });
+    // Discipline routing: quality, health & safety and environmental queries go straight
+    // to the responsible lead, with the Director copied so release control still holds.
+    var BY_AREA = R.byArea || {};
+    function addrOk(e){ return !!e && /@/.test(e) && !/SET-EMAIL/.test(e); }
+    function routeFor(area){
+      var a = BY_AREA[area];
+      if (a && a.to && a.to.length) {
+        return { to: a.to.filter(function(p){ return addrOk(p.email); }),
+                 cc: (R.to ? [R.to] : []).concat(R.cc || []).filter(function(c){ return addrOk(c.email); }) };
+      }
+      return { to: (R.to && addrOk(R.to.email)) ? [R.to] : [], cc: ccList };
+    }
+    function ownerOf(q){ var t = routeFor(q.area).to; return t.length ? t : null; }
     document.getElementById('cqLead').textContent =
       (Q.items.length ? Q.items.length + ' queries logged. ' : 'No queries logged yet. ') + Q.responseTarget + '.';
 
@@ -752,10 +772,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<div style="font-size:13px;font-weight:700">Raise a query</div>'+
         '<div class="hint">Any member of the Owner\'s site management team may raise a query. Give your name and email \u2014 the answer is returned to you'+
           (RR? ' and to the '+esc(RR.role) : '')+'.</div>'+
-        '<div class="hint">Goes to <b>'+esc(R.to?R.to.name:'')+'</b> ('+esc(R.to?R.to.role:'')+
-          (toOk? ', '+esc(R.to.email):'')+')'+
-          (ccList.length? ', copied to '+ccList.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(' and ')+'.':'.')+
-          ' '+esc(Q.responseTarget)+'.</div>'+
+        '<div class="hint" id="qfRoute"></div>'+
         '<div class="row">'+
           '<div><label for="qfName">Your name</label><input id="qfName" type="text" autocomplete="name" placeholder="Name and role"></div>'+
           '<div><label for="qfEmail">Your email</label><input id="qfEmail" type="email" autocomplete="email" placeholder="you@heelstoneenergy.com"></div>'+
@@ -790,6 +807,20 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     refreshClock();
     setInterval(refreshClock, 30000);
+
+    // The recipient depends on the discipline chosen, so it is redrawn on change.
+    function renderRoute(){
+      var el = document.getElementById('qfRoute'); if(!el) return;
+      var sel = document.getElementById('qfArea');
+      var r = routeFor(sel ? sel.value : '');
+      el.innerHTML = 'Goes to ' + (r.to.length
+          ? r.to.map(function(p){ return '<b>'+esc(p.name)+'</b> ('+esc(p.role)+', '+esc(p.email)+')'; }).join(' and ')
+          : '<b class="err">no recipient configured</b>') +
+        (r.cc.length ? ', copied to ' + r.cc.map(function(c){ return '<b>'+esc(c.name)+'</b>'; }).join(', ') + '.' : '.') +
+        ' ' + esc(Q.responseTarget) + '.';
+    }
+    renderRoute();
+    (function(){ var s = document.getElementById('qfArea'); if(s) s.addEventListener('change', renderRoute); })();
 
     function compose(){
       var g=function(id){ var el=document.getElementById(id); return el? el.value.trim():''; };
@@ -827,8 +858,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     }
     document.getElementById('qfSend').addEventListener('click', function(){
       var m=compose(); if(!m) return;
-      var cc=ccList.map(function(c){return c.email;});
-      var url='mailto:'+R.to.email+
+      var rt=routeFor((document.getElementById('qfArea')||{}).value);
+      var cc=rt.cc.map(function(c){return c.email;});
+      var url='mailto:'+rt.to.map(function(p){return p.email;}).join(',')+
         '?subject='+encodeURIComponent(m.subject)+
         (cc.length? '&cc='+encodeURIComponent(cc.join(',')):'')+
         '&body='+encodeURIComponent(m.text);
@@ -884,7 +916,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<div class="foot" style="border:0;padding-top:4px"><span style="font-size:11px;color:#4a5b53">'+esc(k.f)+'</span></div></div>';
     }).join('');
 
-    document.getElementById('cqBody').innerHTML = items.length ? items.map(function(q){
+    function renderRows(showAll){
+    var rows = showAll ? items : items.filter(function(q){ return q._outstanding; });
+    document.getElementById('cqBody').innerHTML = rows.length ? rows.map(function(q){
       var st = q._overdue ? 'Overdue' : q.status;
       var clock;
       if (q._overdue) {
@@ -905,10 +939,25 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         '<td class="n" data-label="Responded">'+shortDate(q.respondedISO)+'</td>'+
         '<td class="n" data-label="Clock / turnaround">'+clock+'</td>'+
         '<td data-label="With">'+esc(q.assignedTo||'\u2014')+'</td>'+
+        '<td data-label="Owner">'+(function(){ var o=ownerOf(q); return o? o.map(function(p){ return esc(p.name); }).join('<br>') : '\u2014'; })()+'</td>'+
         '<td data-label="Status"><span class="pill '+pillCls(st)+'">'+esc(st)+'</span></td>'+
       '</tr>';
     }).join('')
-      : '<tr><td colspan="9" class="note" style="text-align:center;padding:14px">'+esc(Q.openingNote)+'</td></tr>';
+      : '<tr><td colspan="10" class="note" style="text-align:center;padding:14px">'+(showAll? esc(Q.openingNote) : 'Nothing outstanding.')+'</td></tr>';
+    }
+    renderRows(false);
+    (function(){
+      var box = document.getElementById('cqToggle'); if(!box) return;
+      box.innerHTML = '<button type="button" id="cqOut" class="on">Outstanding (' + nOpen + ')</button>' +
+                      '<button type="button" id="cqAll">All (' + items.length + ')</button>';
+      function pick(all){
+        renderRows(all);
+        document.getElementById('cqOut').className = all ? '' : 'on';
+        document.getElementById('cqAll').className = all ? 'on' : '';
+      }
+      document.getElementById('cqOut').addEventListener('click', function(){ pick(false); });
+      document.getElementById('cqAll').addEventListener('click', function(){ pick(true); });
+    })();
 
     document.getElementById('cqResp').textContent = Q.responseNote;
     document.getElementById('cqNote').textContent = Q.noticeNote;
