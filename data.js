@@ -1554,7 +1554,7 @@ window.MURCH_REPORT = {
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 126,
+          "people": 129,
           "color": "#0f7a52"
         },
         {
@@ -1569,7 +1569,7 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "Civil and fencing",
-          "people": 6,
+          "people": 3,
           "color": "#7b4fa8"
         },
         {
