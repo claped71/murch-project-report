@@ -1010,7 +1010,7 @@ window.MURCH_REPORT = {
         "raisedISO": "2026-08-04",
         "dueISO": "2026-08-11",
         "status": "Open",
-        "assignedTo": "Construction Manager"
+        "assignedTo": "Environmental lead"
       },
       {
         "ref": "MQ-20260804-0724",
@@ -1112,13 +1112,13 @@ window.MURCH_REPORT = {
       {
         "ref": "MQ-20260801-0736",
         "subject": "Surface water drainage within the Area A arrays and vegetation management to support ongoing installation and operation",
-        "area": "Quality and inspection",
+        "area": "Environmental",
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-01",
         "dueISO": "2026-08-07",
         "respondedISO": "2026-08-03",
         "status": "Open",
-        "assignedTo": "Construction Manager"
+        "assignedTo": "Environmental lead"
       },
       {
         "ref": "MQ-20260731-0843",
