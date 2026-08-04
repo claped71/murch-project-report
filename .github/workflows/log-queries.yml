@@ -1,0 +1,54 @@
+name: Log queries
+
+# Temporary, one-shot. Runs tools/log-queries.js, the publish guard, then commits
+# and mirrors. Commits its own run log on failure so the error is readable from
+# the repo. Delete this file, tools/log-queries.js and _run-log.txt once it has run.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: Build
+        continue-on-error: true
+        run: |
+          {
+            set -e
+            node tools/log-queries.js
+            node tools/guard.js
+            echo "== OK =="
+          } > /tmp/run.log 2>&1
+
+      - name: Commit
+        if: always()
+        run: |
+          cp /tmp/run.log _run-log.txt 2>/dev/null || echo "no log" > _run-log.txt
+          OK=no; grep -q "^== OK ==" _run-log.txt && OK=yes
+          [ "$OK" = "yes" ] && rm -f _run-log.txt
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          if [ "$OK" = "yes" ]; then
+            git commit -m "Owner query register - log the 13 queries raised 1-4 August"
+          else
+            git commit -m "Query log build failed, run log only"
+          fi
+          git push origin main
+          if [ "$OK" = "yes" ]; then git push --force origin main:gh-pages; else exit 1; fi
