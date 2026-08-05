@@ -742,7 +742,7 @@ window.MURCH_REPORT = {
     "note": "The injury record is clean: 321 days with no recordable, no lost time and no restricted work. The recurring hazard on this site is ground and vegetation rather than the work itself — most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain. This is the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, and the corrective action is being handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
   },
   "quality": {
-    "headline": "Quality approval stands at 85.7% of executed piles, and 296 of 1,112 completed tracker rows are released by the Owner's quality process. The module release process begins this week.",
+    "headline": "Quality approval stands at 85.4% of executed piles, and 296 of 1,172 completed tracker rows are released by the Owner's quality process. The module release process begins this week.",
     "tiles": [
       {
         "label": "Piles executed",
