@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+# The legacy Pages builder stopped publishing: the last successful build was
+# 2026-08-05, so the Owner kept reading a report two days behind the dashboard
+# while every push appeared to succeed. This deploys main as a static artifact
+# through Actions instead, which reports success or failure explicitly.
+#
+# workflow_run is required: sync.yml commits with GITHUB_TOKEN, and a
+# token-authored push does NOT trigger a push-event workflow. Without it the
+# twice-daily refresh would write data.js and never publish it.
+
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["Refresh Owner Project Report"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - id: deployment
+        uses: actions/deploy-pages@v4
