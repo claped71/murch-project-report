@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 56.6,
+    "overall": 57.7,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Bulk earthworks are complete across Areas A to F and the perimeter is substantially closed. The most significant development on Wednesday 5 August was the opening of a second pile workfront: three additional pile-driving machines were mobilised to the remaining untouched area and the first 48 piles were driven there, alongside 52 in the area that had carried the front alone for eight working days. Pile installation now stands at 29,093 of 31,352 (92.8%) with 2,259 remaining, of which 1,420 sit in the newly opened area. The required rate to close the front around 7 August is now 1,130 per day against the 100 achieved, having risen from 446 per day within eight days; the completion date requires re-forecasting on the two-workfront rate now being demonstrated. Every substation foundation is now complete: the last outstanding pier was poured on 5 August, taking the pier front to 17 of 17, and structural steel is the sole outstanding substation item. Module installation placed 4,134 against 4,216 per day required for 6 September — 98% of the required rate and the strongest two-workfront day recorded — taking cumulative installation to 57,644 of 171,470 (33.6%). The workfront opened the previous day doubled its output from 1,040 to 2,106, which confirms that the earlier shortfall reflected the cost of opening a new area rather than crew productivity. Low-voltage and DC cable installation held its step change with a further 1,915 linear feet, taking the cumulative pull to 4,752 linear feet; 3,871 feet were installed across two days against 881 feet over the whole preceding period. Tracker assembly completed 33 rows against the 61 per day now required to hold 30 August, all of them from a single crew: completed rows stand at 1,205 of 2,486 (48.5%), of which 296 are released by the Owner's quality process, and 1,281 remain. All 23 inverter stations are set, welded and repaired, and none is yet terminated — termination is the measure that counts toward mechanical completion.",
+    "statement": "Civil works are effectively closed. The 5 August civil control sheet finishes three of the five civil lines: bulk earthworks on 17 July, the inverter station foundations on 24 July and the internal access road network on 4 August. Only the sediment basins (95%) and the perimeter fence (95%) remain, and the fence is held by the outstanding drain-commissioning signature rather than by production. Civil excluding the substation now stands at 98.0%. In the field, the most significant development on Wednesday 5 August was the opening of a second pile workfront: three additional pile-driving machines were mobilised to the remaining untouched area and the first 48 piles were driven there, alongside 52 in the area that had carried the front alone for eight working days. Pile installation stands at 29,093 of 31,352 (92.8%) with 2,259 remaining, of which 1,420 sit in the newly opened area. The required rate to close the front around 7 August is 1,130 per day against the 100 achieved, having risen from 446 per day within eight days; the completion date requires re-forecasting. The remaining pile scope has also been consolidated: the subcontract covering the final 36 piles in one area was ended and that work transferred to the contractor already driving piles, so a single contractor now holds every outstanding pile on the project. Its resourcing is the determining factor in any revised completion date. Every substation foundation is now complete: the last outstanding pier was poured on 5 August, taking the pier front to 17 of 17, and structural steel is the sole outstanding substation item. Module installation placed 4,134 against 4,216 per day required for 6 September — 98% of the required rate and the strongest two-workfront day recorded — taking cumulative installation to 57,644 of 171,470 (33.6%). The workfront opened the previous day doubled its output from 1,040 to 2,106, which confirms that the earlier shortfall reflected the cost of opening a new area rather than crew productivity. Low-voltage and DC cable installation held its step change with a further 1,915 linear feet, taking the cumulative pull to 4,752 linear feet; 3,871 feet were installed across two days against 881 feet over the whole preceding period. Tracker assembly completed 33 rows against the 61 per day now required to hold 30 August, all of them from a single crew: completed rows stand at 1,205 of 2,486 (48.5%), of which 296 are released by the Owner's quality process, and 1,281 remain. All 23 inverter stations are set, welded and repaired, and none is yet terminated — termination is the measure that counts toward mechanical completion.",
     "note": null
   },
   "gates": [
@@ -675,39 +675,39 @@ window.MURCH_REPORT = {
   "civil": [
     {
       "activity": "Bulk earthworks — cut and fill",
-      "done": 94,
-      "status": "Active",
-      "note": "Areas A to F complete July 17. Area G cut/fill remains and follows completion of the Area G sediment basins."
+      "done": 100,
+      "status": "Complete",
+      "note": "Complete on 17 July 2026 across the whole project. Confirmed again on the 5 August civil control sheet at 100%, with the full quantity executed."
     },
     {
       "activity": "Perimeter fence",
       "done": 95,
       "status": "On track",
-      "note": "Areas A to F complete. Area G remainder and gates outstanding."
+      "note": "Areas A to F complete. The Area G remainder and the gates are outstanding, and completion is held by the outstanding drain-commissioning signature rather than by production."
     },
     {
       "activity": "Sediment basins / environmental controls",
-      "done": 83,
+      "done": 95,
       "status": "On Track",
-      "note": "Area G basins must finish before Area G cut/fill starts."
+      "note": "The remaining 5% is the Area G and Area F basin tail; the planned end date has passed. This is now the only open civil line other than the fence."
     },
     {
       "activity": "Internal access roads",
-      "done": 72,
-      "status": "Active",
-      "note": "Target completion end of July. The road network now supports the material distribution plan."
+      "done": 100,
+      "status": "Complete",
+      "note": "Complete on 4 August 2026, four days after the end-July target. The road network now supports material distribution to every area, including the pile workfront opened on 5 August."
     },
     {
       "activity": "Inverter station foundations",
-      "done": 96,
-      "status": "Active",
-      "note": "22 of 23 station foundations complete; 13 stations carry their inverters, set and welded, pending terminations. The remaining foundation follows the opening of the second-phase area. Welding procedure approved July 21."
+      "done": 100,
+      "status": "Complete",
+      "note": "Complete on 24 July 2026. All 23 station foundations are finished and all 23 stations are set, anchored and welded on them. Welding procedure approved 21 July."
     },
     {
       "activity": "Substation (overall)",
       "done": 24.7,
       "status": "Active",
-      "note": "Overall substation progress 23.7%, up from 21.7% on July 28 — civil 73.1%, structural 10.8%, electrical 6.0%. Piers complete including concrete: 11 of 17, with all 17 planned complete in the first week of August. Main power transformer set on its foundation July 24. Civil advanced 7.5 points on the pier run; the structural percentage is unchanged and is governed by steel fabrication and delivery."
+      "note": "Overall substation progress 24.7% on the 31 July tracker — civil 76.8%, structural 10.8%, electrical 6.0%. Piers are now complete at 17 of 17, the last poured on 5 August, so every substation foundation is finished: control building, containment berm, main power transformer foundation and all piers. Grounding excavation around the perimeter started the same day. The overall percentage still reflects the 31 July cut and understates the civil position; an updated tracker cut is required. The structural percentage is unchanged and is governed by steel fabrication and delivery."
     }
   ],
   "safety": {
@@ -811,26 +811,28 @@ window.MURCH_REPORT = {
     {
       "period": "Aug 6 – Aug 8",
       "items": [
-        "Both pile workfronts to run in parallel and a revised pile completion date to be issued on the two-workfront rate now demonstrated; the newly opened area holds 1,420 of the 2,259 remaining piles.",
+        "A revised pile completion date issued together with the resourcing plan of the single contractor that now holds every outstanding pile; the newly opened area carries 1,420 of the 2,259 remaining.",
+        "Both pile workfronts running in parallel, plus the 36-pile closeout in the third area transferred with the consolidated scope.",
         "Tracker assembly to recover to 61 completed rows per day; the principal area is 71 rows from completion and the smaller area needs only two rows to close.",
         "The third assembly area, which produced 800 torque-tube sections and 72 aligned rows on 5 August but has not completed a row in seven working days, to convert that volume into completed rows.",
         "A third module workfront to open; two areas at 98% of rate cannot hold 4,216 per day once their released rows are exhausted.",
-        "Quality to file a current release cut with figures and to begin the module release process — the controlling data is still the 30 July cut.",
+        "Quality to file a current release cut with figures and to begin the module release process.",
         "The wetland directional bore to be completed, the pipe installed and the plough returned to the ten open segments.",
         "Cable installation to add a second gang; two days at fifteen personnel have produced the same footage each time.",
-        "An updated substation tracker cut, now that every foundation is complete, and the revised structural steel delivery programme."
+        "An updated substation tracker cut, now that every foundation is complete, and the revised structural steel delivery programme.",
+        "The drain-commissioning signature, which is the only item holding the final 5% of the perimeter fence."
       ]
     },
     {
       "period": "Aug 8 – Aug 15",
       "items": [
         "Pile installation to complete on the re-forecast basis, releasing the remaining tracker workfronts.",
+        "Sediment basins closed out, completing the civil scope other than the fence.",
         "Substation structural steel erection start, subject to the revised delivery programme — with all foundations complete, steel is the sole outstanding item.",
         "Tracker assembly at full multi-crew rate across four areas, with partial-row credit resumed once ladder-level reporting has been consistent for several days.",
         "Module installation at sustained full-field rate across three workfronts, with released rows kept ahead of the installation front.",
         "LV cabling extending from the first pulled sections into the adjacent areas, and the first inverter terminations reported.",
-        "MV plowing restarted on the ten open segments and insulation resistance testing completed on the final feeder.",
-        "Area G cut/fill following completion of the Area G basins, and the outstanding drain-commissioning signature to release the remaining perimeter fence."
+        "MV plowing restarted on the ten open segments and insulation resistance testing completed on the final feeder."
       ]
     }
   ],
@@ -1261,12 +1263,12 @@ window.MURCH_REPORT = {
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "2,259 piles remain. The access constraint that had held this front to a single area for eight working days was resolved on 5 August: three additional pile-driving machines were mobilised to the remaining untouched area and the first 48 piles were driven there, alongside 52 in the previously active area, together with 47 tension piles and 8 combiner-box piles that sit outside the 31,352 scope. The two open areas now stand at 3.3% (1,420 remaining) and 83.1% (568 remaining) respectively, so the newly opened area holds the majority of the outstanding work and will govern the completion date. The rate remains the exposure: 100 piles were driven against the 1,130 per day that a completion around 7 August would now require, a required rate that has risen from 446 to 535 to 617 to 786 to 1,130 within eight days. That date can no longer be defended by rate and should be re-forecast on the two-workfront basis now demonstrated. A second pile crew has remained at two personnel for a fifth consecutive day, leaving one area 36 piles from completion — under a single shift of work. Remaining piles are covered from quantities already received on site; a delivery reconciliation remains open."
+      "note": "2,259 piles remain. The access constraint that had held this front to a single area for eight working days was resolved on 5 August: three additional pile-driving machines were mobilised to the remaining untouched area and the first 48 piles were driven there, alongside 52 in the previously active area, together with 47 tension piles and 8 combiner-box piles that sit outside the 31,352 scope. The two open areas now stand at 3.3% (1,420 remaining) and 83.1% (568 remaining) respectively, so the newly opened area holds the majority of the outstanding work and will govern the completion date. The pile scope has also been consolidated: the subcontract covering the final 36 piles in one area was ended and that work transferred to the contractor already driving piles, which now holds every outstanding pile on the project across four workfronts — two pile areas, one area closeout and the tracker assembly ramp in a third area. Its resourcing is the determining factor in any revised completion date and will be presented with it. The rate remains the exposure: 100 piles were driven against the 1,130 per day that a completion around 7 August would now require, a required rate that has risen from 446 to 535 to 617 to 786 to 1,130 within eight days. That date can no longer be defended by rate and is being re-forecast on the two-workfront basis now demonstrated. Remaining piles are covered from quantities already received on site; a delivery reconciliation remains open."
     },
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "24.7% overall against the 25 September mechanical completion date — the widest variance on the project, and one of the four fronts inside the electrical total, weighted at 15%, so it is not counted twice. Every substation foundation is now complete: the last outstanding pier was poured on 5 August and the pier front stands at 17 of 17, alongside the control building, the containment berm and the main power transformer foundation. Grounding excavation around the substation perimeter started the same day. The overall percentage still reflects the 31 July tracker cut and understates this; an updated tracker cut is required so the figure can move. With the civil scope closed, structural steel is the sole outstanding item and the structural percentage has not moved. It remains governed by fabrication and delivery, and a revised delivery programme has been requested from the fabricator and is outstanding."
+      "note": "24.7% overall against the 25 September mechanical completion date — the widest variance on the project, and one of the four fronts inside the electrical total, weighted at 15%, so it is not counted twice. Every substation foundation is now complete: the last outstanding pier was poured on 5 August and the pier front stands at 17 of 17, alongside the control building, the containment berm and the main power transformer foundation. Grounding excavation around the substation perimeter started the same day, and the inverter station foundations closed on 24 July. The overall percentage still reflects the 31 July tracker cut and understates this; an updated tracker cut is required so the figure can move. With the civil scope closed, structural steel is the sole outstanding item and the structural percentage has not moved. It remains governed by fabrication and delivery, and a revised delivery programme has been requested from the fabricator and is outstanding."
     },
     {
       "title": "Electrical — all fronts",
@@ -1393,30 +1395,33 @@ window.MURCH_REPORT = {
     }
   ],
   "civilOverrides": {
-    "Bulk earthworks — cut and fill": {
-      "done": 94,
-      "status": "Active",
-      "note": "Areas A to F complete July 17. Area G cut/fill remains and follows completion of the Area G sediment basins.",
-      "why": "internal sheet reports 100% against released areas only; Area G is still outstanding"
-    },
     "Perimeter fence": {
       "done": 95,
       "status": "On track",
-      "note": "Areas A to F complete. Area G remainder and gates outstanding.",
+      "note": "Areas A to F complete. The Area G remainder and the gates are outstanding, and completion is held by the outstanding drain-commissioning signature rather than by production.",
       "why": "source note is fully redacted (carries the fencing subcontractor name)"
     },
     "Internal access roads": {
-      "note": "Target completion end of July. The road network now supports the material distribution plan.",
+      "done": 100,
+      "status": "Complete",
+      "note": "Complete on 4 August 2026, four days after the end-July target. The road network now supports material distribution to every area, including the pile workfront opened on 5 August.",
       "why": "source note quotes an internal week-number baseline"
     },
     "Inverter station foundations": {
-      "done": 96,
-      "note": "22 of 23 station foundations complete; 13 stations carry their inverters, set and welded, pending terminations. The remaining foundation follows the opening of the second-phase area. Welding procedure approved July 21.",
-      "why": "internal 86% is the broader PS-foundation package; the station count is the measure the Owner tracks (station matrix, Jul 30)"
+      "done": 100,
+      "status": "Complete",
+      "note": "Complete on 24 July 2026. All 23 station foundations are finished and all 23 stations are set, anchored and welded on them. Welding procedure approved 21 July.",
+      "why": "source note names the installing subcontractor"
     },
     "Substation (overall)": {
-      "note": "Overall substation progress 23.7%, up from 21.7% on July 28 — civil 73.1%, structural 10.8%, electrical 6.0%. Piers complete including concrete: 11 of 17, with all 17 planned complete in the first week of August. Main power transformer set on its foundation July 24. Civil advanced 7.5 points on the pier run; the structural percentage is unchanged and is governed by steel fabrication and delivery.",
-      "why": "clarifies that the 11-of-17 ratio is the pier front, not overall substation progress"
+      "note": "Overall substation progress 24.7% on the 31 July tracker — civil 76.8%, structural 10.8%, electrical 6.0%. Piers are now complete at 17 of 17, the last poured on 5 August, so every substation foundation is finished: control building, containment berm, main power transformer foundation and all piers. Grounding excavation around the perimeter started the same day. The overall percentage still reflects the 31 July cut and understates the civil position; an updated tracker cut is required. The structural percentage is unchanged and is governed by steel fabrication and delivery.",
+      "why": "the internal note carries pier-front detail and subcontractor names; the published wording states the substation position"
+    },
+    "Bulk earthworks — cut and fill": {
+      "done": 100,
+      "status": "Complete",
+      "note": "Complete on 17 July 2026 across the whole project. Confirmed again on the 5 August civil control sheet at 100%, with the full quantity executed.",
+      "why": "source note was fully redacted by the subcontractor-name rule"
     }
   },
   "workforce": {
