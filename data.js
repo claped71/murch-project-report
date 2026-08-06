@@ -70,25 +70,25 @@ window.MURCH_REPORT = {
     }
   ],
   "earnedProgress": {
-    "asOf": "Jul 30, 2026",
+    "asOf": "Aug 5, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "946 / 2,486",
-        "gatePct": 38.1,
-        "inProgress": "85 rows part-built, all at step 3 of 5",
-        "earnedPct": 40.4,
-        "detail": "Areas E, EW and F all standing at step 3 of 5 — purlins installed, with damper, actuator, drive line and final torque outstanding."
+        "gate": "1,205 / 2,486",
+        "gatePct": 48.5,
+        "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
+        "earnedPct": 48.5,
+        "detail": "Earned equals the completed-row figure. Credit for part-built rows was suspended on 4 August while the assembly crews are trained to report against the fixed five-step ladder; it resumes once step-level reporting is consistent."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "16.7% of scope",
-        "gatePct": 16.7,
-        "inProgress": "MV 59.7% · 13 of 23 inverter stations set · 78 of 419 boxes",
-        "earnedPct": 23.3,
-        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined."
+        "gate": "17.6% of scope",
+        "gatePct": 17.6,
+        "inProgress": "MV 59.7% · 23 of 23 inverter stations set · 110 of 419 boxes · 4,752 lf of cable",
+        "earnedPct": 27.5,
+        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
     "ladder": "Tracker steps: saddles 15 · tube 30 · purlins 25 · damper 20 · torque 10.",
@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Sep 20 – 25, 2026",
       "status": "On target",
-      "note": "Supported by the current construction sequence: trackers complete Aug 30, modules Sep 6, LV/DC cable Sep 18. Holding the date requires the pile front to close in early August and the module installation front to reach full field rate."
+      "note": "Supported by the current construction sequence: trackers complete 30 August, modules 6 September, LV/DC cable 18 September. Holding the date requires the pile completion date to be re-forecast and met on the two-workfront basis now demonstrated, and the module installation front to reach full field rate."
     },
     {
       "name": "Provisional Interconnection",
@@ -711,7 +711,7 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
-    "headline": "Zero recordable injuries in 321 days. One first-aid case on 4 August, treated on site with no lost time.",
+    "headline": "Zero recordable injuries in 323 days. One first-aid case on 4 August, treated on site with no lost time.",
     "tiles": [
       {
         "label": "Recordable accidents",
@@ -720,8 +720,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Days without recordable",
-        "value": "321",
-        "note": "286 at the June close, plus 35 days to 4 August with no recordable reported."
+        "value": "323",
+        "note": "286 at the June close, plus 37 days to 6 August with no recordable reported."
       },
       {
         "label": "Lost days",
@@ -754,7 +754,7 @@ window.MURCH_REPORT = {
         "note": "Cumulative site inductions and training to the June close."
       }
     ],
-    "note": "The injury record is clean: 321 days with no recordable, no lost time and no restricted work. The recurring hazard on this site is ground and vegetation rather than the work itself — most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain. This is the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, and the corrective action is being handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
+    "note": "The injury record is clean: 323 days with no recordable, no lost time and no restricted work. The recurring hazard on this site is ground and vegetation rather than the work itself — most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain. This is the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, and the corrective action is being handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
   },
   "quality": {
     "headline": "Quality approval stands at 85.1% of executed piles, and 296 of 1,205 completed tracker rows are released by the Owner's quality process. An updated cut was prepared on 3 August but no figures have yet been filed; the module release process begins this week.",
@@ -762,17 +762,17 @@ window.MURCH_REPORT = {
       {
         "label": "Piles executed",
         "value": "29,093",
-        "note": "Current executed basis, 91.5% of project scope."
+        "note": "Current executed basis, 92.8% of project scope."
       },
       {
         "label": "Piles approved",
         "value": "24,751",
-        "note": "86.3% of executed piles. The latest approval cut is dated July 27 and predates the five most recent production days; a refreshed cut is due."
+        "note": "85.1% of executed piles. The latest approval cut is dated 27 July and predates the most recent production days; a refreshed cut is due."
       },
       {
         "label": "Awaiting approval",
-        "value": "3,927",
-        "note": "Open inspection fronts follow the active production areas. The main remaining pile area carries the bulk of the outstanding inspections."
+        "value": "4,342",
+        "note": "Open inspection fronts follow the active production areas. A second pile area opened on 5 August with no inspection line yet established for it."
       },
       {
         "label": "Owner approved — piles",
@@ -787,7 +787,7 @@ window.MURCH_REPORT = {
       {
         "label": "Pile refusals recorded",
         "value": "242",
-        "note": "0.9% of executed piles. Reinstallation and tap-down corrections are complete or in progress."
+        "note": "0.8% of executed piles. Reinstallation and tap-down corrections are complete or in progress."
       }
     ],
     "note": "Release is reported on the Owner-approved measure: rows are counted as released only once they have passed the Owner's quality process, not on internal approval alone. Damper replacement work is currently holding rows back from release in the second area, and a proposal to combine the racking and module inspections into a single release is with the Owner for decision. Inspection records are submitted for Owner review as areas close out. Module spacing is verified by measurement during tightening rather than assumed from the purlin."
@@ -837,14 +837,14 @@ window.MURCH_REPORT = {
     }
   ],
   "ownerActions": {
-    "asOf": "Jul 30, 2026",
+    "asOf": "Aug 6, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
         "ref": "OA-01",
         "item": "Area G sequencing confirmation",
         "since": "Jul 3, 2026",
-        "days": 27,
+        "days": 34,
         "status": "Open",
         "blocks": "Programming of Area G cut and fill, which in turn releases the last pile workfront.",
         "detail": "Area G is released for pile driving and material distribution. Confirmation of the sediment basin completion sequence is required to programme the cut and fill."
@@ -853,7 +853,7 @@ window.MURCH_REPORT = {
         "ref": "OA-02",
         "item": "Refreshed defect count",
         "since": "Jul 6, 2026",
-        "days": 24,
+        "days": 31,
         "status": "Answered",
         "blocks": "Nothing further.",
         "detail": "RESOLVED — the July 30 quality sheet restates the defect position at 242, equal to 0.9% of executed piles, against the current executed basis. No further action is required unless the position changes."
@@ -862,7 +862,7 @@ window.MURCH_REPORT = {
         "ref": "OA-03",
         "item": "Owner approval log for inspected work",
         "since": "Jul 13, 2026",
-        "days": 17,
+        "days": 24,
         "status": "In progress",
         "blocks": "Certification of inspected work; the EPC record remains ahead of the approved position.",
         "detail": "MOVED THIS WEEK — the Owner approval log advanced for the first time since the early-July snapshot, from 6,682 to 6,836 piles and from 107 to 296 tracker rows. It still stands well behind the EPC record of 24,751 approved piles, so continued updating is required for the quality record to close out with production."
@@ -871,7 +871,7 @@ window.MURCH_REPORT = {
         "ref": "OA-04",
         "item": "Substation equipment delivery dates",
         "since": "Jul 17, 2026",
-        "days": 13,
+        "days": 20,
         "status": "Open",
         "blocks": "Firming the substation erection sequence on the interconnection path.",
         "detail": "Breakers and structural steel are the remaining controlling substation items. Delivery dates are requested so the sequence can be fixed against the pre-commissioning window."
@@ -880,7 +880,7 @@ window.MURCH_REPORT = {
         "ref": "OA-05",
         "item": "Interconnection readiness coordination",
         "since": "Jul 20, 2026",
-        "days": 10,
+        "days": 17,
         "status": "Open",
         "blocks": "Alignment of the October pre-commissioning programme.",
         "detail": "Utility witness testing and energization windows to be aligned with the pre-commissioning programme running September 14 to October 15."
@@ -889,7 +889,7 @@ window.MURCH_REPORT = {
         "ref": "OA-06",
         "item": "Area G change order signature",
         "since": "Jul 28, 2026",
-        "days": 2,
+        "days": 9,
         "status": "Open",
         "blocks": "Full release of the Area G pile workfront, the largest remaining pile quantity at 1,779.",
         "detail": "Signature is outstanding on the Area G change order. Piling is proceeding in the released portion; full release requires the signed instrument."
@@ -898,7 +898,7 @@ window.MURCH_REPORT = {
         "ref": "OA-07",
         "item": "Pile inspection records for review",
         "since": "Jul 6, 2026",
-        "days": 24,
+        "days": 31,
         "status": "In progress",
         "blocks": "Nothing at present; submitted progressively by area.",
         "detail": "EPC pile approval stands at 24,751 records, 87.3% of executed piles. The latest cut is dated July 27 and predates the three most recent production days. Records are submitted area by area for Owner review so the quality record closes with production."
@@ -907,7 +907,7 @@ window.MURCH_REPORT = {
         "ref": "OA-08",
         "item": "Decision on a combined racking and module quality release",
         "since": "Jul 30, 2026",
-        "days": 0,
+        "days": 7,
         "status": "Open",
         "blocks": "The module installation front, which is currently limited by release cadence rather than by installation capacity.",
         "detail": "A proposal has been submitted to carry out a single quality release covering both the racking and the module installation on a row, in place of two separate inspections. The EPC would retain full responsibility for the racking and would remove and reinstall modules at its own cost if a racking defect were identified afterwards. A decision is requested so that release cadence can keep pace with the build rate."
@@ -1281,13 +1281,13 @@ window.MURCH_REPORT = {
       "item": "Foundation piles",
       "delivered": "31,352",
       "pct": 100,
-      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding. 3,011 piles stand in stock against the 3,011 still to place, so material does not constrain the pile front at any point to the early-August finish."
+      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding. 2,259 piles stand in stock against the 2,259 still to place, so material does not constrain the pile front."
     },
     {
       "item": "PV modules",
       "delivered": "171,470",
       "pct": 100,
-      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding. 131,323 modules in stock above the installed quantity, so material does not constrain the installation front through to the September 6 date."
+      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding. 113,826 modules in stock above the installed quantity, so material does not constrain the installation front through to the 6 September date."
     },
     {
       "item": "Tracker structures",
@@ -1297,9 +1297,9 @@ window.MURCH_REPORT = {
     },
     {
       "item": "Inverters",
-      "delivered": "13 stations set",
-      "pct": null,
-      "note": "13 of 23 inverter stations set and welded on their foundations, with serial numbers logged. Deliveries continuing; LV and MV terminations follow placement and none has yet started."
+      "delivered": "23 stations set",
+      "pct": 100,
+      "note": "All 23 inverter stations are delivered, set, anchored and welded on their foundations, and the corrective works on every one were completed on 4 August. LV and MV terminations follow, and none has yet started."
     },
     {
       "item": "Main power transformer",

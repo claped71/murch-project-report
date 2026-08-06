@@ -49,6 +49,10 @@ function note(list, msg) { list.push(msg); }
 function fmt(n) { return Number(n).toLocaleString('en-US'); }
 function pctStr(x) { return (x * 100).toFixed(1) + '%'; }
 
+/* ---------- 0. previous basis, captured before anything is overwritten ---------- */
+const prevBasis = {};
+for (const g of (C.gates || [])) { if (g.key && typeof g.installed === 'number') prevBasis[g.key] = g.installed; }
+
 /* ---------- 1. meta ---------- */
 const prevAsOf = C.meta.asOf;
 C.meta.asOf = longDate(I.control.asOf);
@@ -377,6 +381,78 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
       })
     };
     changed.push(`workforce mix -> ${C.workforce.mix.total} people across ${C.workforce.mix.rows.length} disciplines`);
+  }
+}
+
+/* ---------- 8c. earnedProgress — DERIVED, so it can never drift from the dashboard ---------- */
+// This block used to be curated. It silently froze at the Jul 30 basis while the gates
+// moved on, and the Owner saw two different tracker percentages on the same page.
+// The numbers are now derived every run; only `detail` and `note` stay editorial.
+if (C.earnedProgress && Array.isArray(C.earnedProgress.scopes)) {
+  const trk = I.control.trackers;
+  const et  = I.electricalTotal || {};
+  const inv = I.inverterProgress || {};
+  const lv  = I.control.electrical || {};
+  const boxes = (() => {
+    const c = ((I.lvComposite || {}).components || []).find(x => /box mounting/i.test(x.component || ''));
+    const m = c && String(c.note || '').match(/(\d+)\s+boxes mounted/i);
+    return m ? Number(m[1]) : null;
+  })();
+  const pct1 = n => Math.round(Number(n) * 10) / 10;
+  const trkGatePct = pct1(trk.installed / trk.total * 100);
+
+  C.earnedProgress.asOf = I.control.asOf;
+  for (const sc of C.earnedProgress.scopes) {
+    const before = `${sc.gatePct}/${sc.earnedPct}`;
+    if (/tracker/i.test(sc.scope)) {
+      sc.gate = `${fmt(trk.installed)} / ${fmt(trk.total)}`;
+      sc.gatePct = trkGatePct;
+      sc.earnedPct = pct1(trk.earnedPct != null ? trk.earnedPct : trkGatePct);
+      sc.inProgress = (trk.earnedPct != null && pct1(trk.earnedPct) === trkGatePct)
+        ? 'Partial-row credit suspended — open rows reported by ladder step, not credited'
+        : sc.inProgress;
+    } else if (/electrical/i.test(sc.scope)) {
+      sc.gate = `${pct1(et.gatePct)}% of scope`;
+      sc.gatePct = pct1(et.gatePct);
+      sc.earnedPct = pct1(et.earnedPct);
+      sc.inProgress = `MV ${pct1((I.mvProgress || {}).compositePct)}% · ${inv.stationsSet} of ${inv.totalStations} inverter stations set`
+        + (boxes ? ` · ${boxes} of 419 boxes` : '')
+        + (lv.installed ? ` · ${fmt(lv.installed)} lf of cable` : '');
+    }
+    if (before !== `${sc.gatePct}/${sc.earnedPct}`) {
+      changed.push(`earnedProgress "${sc.scope}" ${before} -> ${sc.gatePct}/${sc.earnedPct}`);
+      note(review, `earnedProgress."${sc.scope}": numbers re-derived — re-read its "detail" sentence, which is still editorial`);
+    }
+  }
+}
+
+/* ---------- 8d. cross-check: the report must agree with the dashboard ---------- */
+// Hard consistency check. Curated prose quotes headline quantities in words
+// ("296 of 1,172 rows built") and those sentences do not move when the derived
+// blocks do — that is how the Owner ended up reading two different tracker
+// percentages on one page. Any RECENT-BUT-SUPERSEDED cumulative value still
+// present anywhere in the report is flagged.
+{
+  // Curated prose only — the derived blocks legitimately carry historical values
+  // (series points, gate quantities), and scanning them produces pure noise.
+  const CURATED = ['headline', 'focus', 'lookahead', 'ownerActions', 'material', 'quality',
+                   'safety', 'milestones', 'earnedProgress', 'clientQueries', 'photos', 'civilOverrides'];
+  const hay = JSON.stringify(CURATED.reduce((o, k) => (o[k] = C[k], o), {}));
+  const LABEL = { piles: 'piles installed', trackers: 'tracker rows built', modules: 'modules installed' };
+  for (const key of Object.keys(LABEL)) {
+    const cur = I.control[key] && I.control[key].installed;
+    if (cur == null) continue;
+    const pts = (C.series && C.series[key]) || [];
+    // Only thousands-formatted values: a bare 3-digit number collides with unrelated
+    // quantities in the prose (881 lf of cable vs 881 tracker rows) and is pure noise.
+    const recent = pts.slice(-8).map(p => p.c).filter(v => typeof v === 'number' && v !== cur && v >= 1000);
+    const seen = new Set();
+    for (const v of recent) {
+      const str = fmt(v);
+      if (seen.has(str) || !hay.includes(str)) continue;
+      seen.add(str);
+      note(review, `CONSISTENCY: the report quotes ${str} (a superseded ${LABEL[key]} figure) in curated text — the dashboard now reads ${fmt(cur)}. Find it and fix it before publishing.`);
+    }
   }
 }
 
