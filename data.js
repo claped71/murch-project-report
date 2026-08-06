@@ -1425,7 +1425,7 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to July 20, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 6, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",

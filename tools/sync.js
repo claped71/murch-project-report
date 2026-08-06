@@ -499,7 +499,31 @@ if (!WRITE) { console.log('\n(dry run — pass --write to update data.js)\n'); p
 
 /* ---------- 12. write ---------- */
 const header = `'use strict';\n/* Murch Solar Project — Owner Project Report. Physical progress dataset.\n   Generated ${C.meta.asOf} by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */\n`;
-fs.writeFileSync(CLIENT, header + 'window.MURCH_REPORT = ' + stringify(C) + ';\n');
-console.log('\nwrote ' + CLIENT + '\n');
+const payload = header + 'window.MURCH_REPORT = ' + stringify(C) + ';\n';
+fs.writeFileSync(CLIENT, payload);
+console.log('\nwrote ' + CLIENT);
+
+// ---------- cache buster ----------
+// index.html used to load data.js with no version string. GitHub Pages serves it
+// with a long max-age, so a returning reader kept seeing the PREVIOUS dataset
+// while the server already held the new one — the report looked like it
+// disagreed with the dashboard when in fact only the browser copy was stale.
+// The stamp is a content hash, so it changes exactly when the data changes.
+{
+  const idxPath = path.join(__dirname, '..', 'index.html');
+  if (fs.existsSync(idxPath)) {
+    const stamp = require('crypto').createHash('sha1').update(payload).digest('hex').slice(0, 10);
+    const idx = fs.readFileSync(idxPath, 'utf8');
+    const next = idx.replace(/<script src="data\.js(?:\?v=[^"]*)?"><\/script>/,
+                             `<script src="data.js?v=${stamp}"><\/script>`);
+    if (next !== idx) {
+      fs.writeFileSync(idxPath, next);
+      console.log('cache buster -> data.js?v=' + stamp);
+    } else if (!idx.includes('data.js?v=')) {
+      console.log('WARNING: could not stamp the data.js script tag in index.html — readers may cache a stale dataset');
+    }
+  }
+}
+console.log('');
 
 function stringify(o) { return JSON.stringify(o, null, 2); }
