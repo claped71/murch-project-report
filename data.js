@@ -1328,6 +1328,36 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-46.jpg",
+      "date": "August 3, 2026",
+      "title": "Aerial view of the facility — module blocks and racking fronts",
+      "note": "High-altitude drone view from the August 3 site survey: fully moduled blocks to the north, erected tracker rows advancing across the southern areas, with the stormwater basins and perimeter road in frame. Pile, racking and module fronts are each visible at their respective stages."
+    },
+    {
+      "src": "assets/photo-49.jpg",
+      "date": "August 3, 2026",
+      "title": "Final inverter stations set — 23 of 23 in place",
+      "note": "One of the last inverter stations being lowered onto its welded pile foundation on August 3, the day the full complement of 23 stations was completed. All stations now await low-voltage and medium-voltage terminations."
+    },
+    {
+      "src": "assets/photo-47.jpg",
+      "date": "August 3, 2026",
+      "title": "Module block completed edge to edge",
+      "note": "A block fully fitted with modules, photographed during the August 3 drone survey, with material staged along the access road for the adjacent rows. The module front follows quality-released tracker rows toward the September 6 module milestone."
+    },
+    {
+      "src": "assets/photo-50.jpg",
+      "date": "August 3, 2026",
+      "title": "Substation — transformer on its foundation, pier work continuing",
+      "note": "Close aerial of the substation pad on August 3: the main power transformer on its completed foundation (set July 24), drilling in progress on the remaining pier group, anchor-bolt assemblies staged, and the control building in place. Structural steel is scheduled to arrive August 15."
+    },
+    {
+      "src": "assets/photo-51.jpg",
+      "date": "August 3, 2026",
+      "title": "Pile installation advancing on the newly opened area",
+      "note": "Fresh rows of foundation piles behind the installation equipment on the recently opened workfront, served by the completed internal road network (roads finished August 4). Pile installation stood at 29,308 of 31,352 (93.5%) at the August 6 reporting basis."
+    },
+    {
       "src": "assets/photo-45.jpg",
       "date": "July 29, 2026",
       "title": "Inverter station lowered onto its welded pile foundation",
@@ -1374,18 +1404,6 @@ window.MURCH_REPORT = {
       "date": "July 14, 2026",
       "title": "Module installation front advancing across completed tracker rows",
       "note": "Installed modules in the foreground with bare trackers awaiting release beyond — the block-by-block sequence from Area A into Area C."
-    },
-    {
-      "src": "assets/photo-30.jpg",
-      "date": "July 9, 2026",
-      "title": "Foundation piles being driven in Area E",
-      "note": "A pile driver setting foundations in Area E with the site team checking line and level against the string. Piles are the largest single quantity on the project at 31,352, and closing this front is what releases the tracker and module work behind it."
-    },
-    {
-      "src": "assets/photo-32.jpg",
-      "date": "July 9, 2026",
-      "title": "Damper replacement on erected tracker rows, Area A",
-      "note": "GreenSol crews replacing dampers on rows already erected. This is the work that currently governs how quickly completed rows can be presented for the Owner’s quality release, and it is carried out at GreenSol’s own cost."
     },
     {
       "src": "assets/photo-28.jpg",
