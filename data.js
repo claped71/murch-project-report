@@ -41,9 +41,9 @@ window.MURCH_REPORT = {
       "installed": 1234,
       "total": 2486,
       "unit": "rows",
-      "earned": 1234,
-      "earnedPct": 49.6,
-      "earnedLabel": "49.6% earned incl. rows in progress (1,234 row-equivalents)",
+      "earned": 1287.8,
+      "earnedPct": 51.8,
+      "earnedLabel": "51.8% earned incl. rows in progress (1,288 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
@@ -77,9 +77,9 @@ window.MURCH_REPORT = {
         "unit": "rows",
         "gate": "1,234 / 2,486",
         "gatePct": 49.6,
-        "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 49.6,
-        "detail": "Earned equals the completed-row figure. Credit for part-built rows was suspended on 4 August while the assembly crews are trained to report against the fixed five-step ladder; it resumes once step-level reporting is consistent."
+        "inProgress": "107 open rows credited by ladder step (53.8 row-equivalents)",
+        "earnedPct": 51.8,
+        "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
@@ -1260,7 +1260,7 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "1,234 rows complete of 2,486 (49.6%) — the measure that governs the 30 August date — of which 296 are released through the Owner's quality process. 1,252 remain and 63 completed rows per day are required. 6 August completed 29 rows, again all from the single crew in the principal assembly area, which now stands at 632 of 674 rows (93.8%) and 42 rows from completion — roughly a week at the current rate. When it closes, the third area becomes the entire assembly programme: it now carries 881 torque-tube sections set and 68 rows aligned, but has not completed a row in eight working days, and converting that standing work into completed rows is the single decision that determines the 30 August date. Partial rows are reported by ladder step but not credited; the step-level reporting has now come back cleanly for two consecutive days, which is the precondition for resuming partial credit. Release cadence remains the second constraint: the controlling quality cut is still 30 July."
+      "note": "1,234 rows complete of 2,486 (49.6%) — the measure that governs the 30 August date — of which 296 are released through the Owner's quality process; earned progress including rows in build stands at 51.8%. 1,252 remain and 63 completed rows per day are required. 6 August completed 29 rows, again all from the single crew in the principal assembly area, now 632 of 674 rows (93.8%) and 42 rows from completion. When it closes, the third area becomes the entire assembly programme: it carries 881 torque-tube sections set and 68 rows aligned — now visible in the earned measure as work in build — but has not completed a row in eight working days, and converting that standing work into completed rows determines the 30 August date. Partial-row credit resumed on 7 August after two consecutive days of clean step-level reporting; the completion gate is unchanged. Release cadence remains the second constraint: the controlling quality cut is still 30 July."
     },
     {
       "title": "Module installation rate",
