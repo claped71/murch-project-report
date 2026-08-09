@@ -65,6 +65,19 @@ function longDate(s) {
   return String(s).replace(/^([A-Z][a-z]{2})\b/, (m, a) => M[a] || a);
 }
 
+/* A completion date that has already passed with scope outstanding must not be
+   reported as merely "Below rate" — the Owner reads that as on-programme-but-slow.
+   Derive it from the gate's own forecast text so it stays true without hand-editing. */
+function datePassed(g, asOf) {
+  if (!g || !g.forecast || !asOf) return false;
+  const P = t => { const m = String(t).match(/([A-Z][a-z]{2})\w*\s+(\d{1,2}),?\s*(\d{4})/);
+    if (!m) return null;
+    const i = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].indexOf(m[1]);
+    return i < 0 ? null : new Date(+m[3], i, +m[2]); };
+  const f = P(g.forecast), a = P(asOf);
+  return !!(f && a && f < a);
+}
+
 /* ---------- 2. gates ---------- */
 // Forecast dates live in the client file (they are a reporting decision, not an
 // internal gate). Only quantities are pulled through.
@@ -89,7 +102,7 @@ for (const g of C.gates) {
         if (mix && mix !== g.mix) { g.mix = mix; changed.push(`gate ${g.key} mix refreshed`); }
       }
     }
-    g.status = g.gatePct >= 100 ? 'Complete' : (g.gatePct > 0 ? 'Below rate' : 'Not started');
+    g.status = g.gatePct >= 100 ? 'Complete' : (datePassed(g, C.meta && C.meta.asOf) ? 'Date passed' : (g.gatePct > 0 ? 'Below rate' : 'Not started'));
     continue;
   }
   const before = g.installed + '/' + g.total;
@@ -108,7 +121,7 @@ for (const g of C.gates) {
   }
   // pace status: below required rate unless the discipline is finished
   const pct = g.total ? g.installed / g.total : 0;
-  g.status = pct >= 1 ? 'Complete' : (g.installed === 0 ? 'Not started' : 'Below rate');
+  g.status = pct >= 1 ? 'Complete' : (datePassed(g, C.meta && C.meta.asOf) ? 'Date passed' : (g.installed === 0 ? 'Not started' : 'Below rate'));
 }
 
 /* ---------- 3. overall completion ---------- */

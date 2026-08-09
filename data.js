@@ -32,8 +32,8 @@ window.MURCH_REPORT = {
       "installed": 29586,
       "total": 31352,
       "unit": "piles",
-      "forecast": "Aug 7, 2026",
-      "status": "Below rate"
+      "forecast": "Aug 7, 2026 \u2014 passed, revised date pending",
+      "status": "Date passed"
     },
     {
       "key": "trackers",
@@ -1387,7 +1387,7 @@ window.MURCH_REPORT = {
       "src": "assets/photo-51.jpg",
       "date": "August 3, 2026",
       "title": "Pile installation advancing on the newly opened area",
-      "note": "Fresh rows of foundation piles behind the installation equipment on the recently opened workfront, served by the completed internal road network (roads finished August 4). Pile installation stood at 29,308 of 31,352 (93.5%) at the August 6 reporting basis."
+      "note": "Fresh rows of foundation piles behind the installation equipment on the recently opened workfront, served by the completed internal road network (roads finished August 4). Pile installation stood at 29,308 of 31,352 (93.5%) when the photograph was taken on 3 August; the current basis is 29,586 (94.4%)."
     },
     {
       "src": "assets/photo-45.jpg",
