@@ -1,13 +1,13 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 6, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 8, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 6, 2026",
+    "asOf": "August 8, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
@@ -33,7 +33,7 @@ window.MURCH_REPORT = {
       "total": 31352,
       "unit": "piles",
       "forecast": "Aug 7, 2026 — passed, revised date pending",
-      "status": "Below rate"
+      "status": "Date passed"
     },
     {
       "key": "trackers",
@@ -70,7 +70,7 @@ window.MURCH_REPORT = {
     }
   ],
   "earnedProgress": {
-    "asOf": "Aug 6, 2026",
+    "asOf": "Aug 8, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
@@ -1506,8 +1506,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "117,800",
-        "note": "Total manhours worked from the start of construction on April 1 through August 6, at 10 h/day, Monday to Saturday."
+        "value": "121,500",
+        "note": "Total manhours worked from the start of construction on April 1 through August 8, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1663,8 +1663,8 @@ window.MURCH_REPORT = {
         "c": 108039
       },
       {
-        "d": "Aug 6",
-        "c": 117799
+        "d": "Aug 8",
+        "c": 121479
       }
     ],
     "mix": {
