@@ -734,7 +734,7 @@ window.MURCH_REPORT = {
       "activity": "Sediment basins / environmental controls",
       "done": 95,
       "status": "On Track",
-      "note": "The remaining 5% is the Area G and Area F basin tail; the planned end date has passed. This is now the only open civil line other than the fence."
+      "note": "Construction FINISHED. Remaining 5% is seeding in Area F only."
     },
     {
       "activity": "Internal access roads",
@@ -749,10 +749,34 @@ window.MURCH_REPORT = {
       "note": "Complete on 24 July 2026. All 23 station foundations are finished and all 23 stations are set, anchored and welded on them. Welding procedure approved 21 July."
     },
     {
-      "activity": "Substation (overall)",
+      "activity": "Pad SET",
+      "done": 100,
+      "status": "Complete",
+      "note": "100% (Jan 5 – May 20). Substation scope — excluded from the civil roll-up."
+    },
+    {
+      "activity": "Main Foundation SET",
+      "done": 100,
+      "status": "Complete",
+      "note": "100% (to Jul 10). Substation scope — excluded from the roll-up."
+    },
+    {
+      "activity": "Small Foundation SET",
+      "done": 100,
+      "status": "Complete",
+      "note": "100% Aug 6 — the last foundation line to close. Substation scope."
+    },
+    {
+      "activity": "O&M Building",
+      "done": 100,
+      "status": "Complete",
+      "note": ""
+    },
+    {
+      "activity": "Foundation SET (composite)",
       "done": 24.7,
       "status": "Active",
-      "note": "Overall substation progress 24.7% on the 31 July tracker — civil 76.8%, structural 10.8%, electrical 6.0%. Piers are now complete at 17 of 17, the last poured on 5 August, so every substation foundation is finished: control building, containment berm, main power transformer foundation and all piers. Grounding excavation around the perimeter started the same day. The overall percentage still reflects the 31 July cut and understates the civil position; an updated tracker cut is required. The structural percentage is unchanged and is governed by steel fabrication and delivery."
+      "note": "24.7% — the 76.8% civil component is STALE; substation civil is finished. Structural 10.8% is the blocker."
     }
   ],
   "safety": {
@@ -959,7 +983,7 @@ window.MURCH_REPORT = {
     ]
   },
   "clientQueries": {
-    "asOf": "Aug 9, 2026",
+    "asOf": "Aug 10, 2026",
     "routing": {
       "byRole": {
         "QA/QC lead": [
@@ -1079,6 +1103,16 @@ window.MURCH_REPORT = {
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
       {
+        "ref": "MQ-20260731-0822",
+        "subject": "Progressive red-line and as-built updating during construction, starting with the completed MV directional bores",
+        "area": "Programme and milestones",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-31",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
         "ref": "MQ-20260804-0936",
         "subject": "Containment for the fuel cell carried on a site vehicle",
         "area": "Environmental",
@@ -1097,7 +1131,7 @@ window.MURCH_REPORT = {
         "dueISO": "2026-08-11",
         "status": "Open",
         "assignedTo": "Engineering lead",
-        "respondedISO": "2026-08-04"
+        "respondedISO": "2026-08-07"
       },
       {
         "ref": "MQ-20260804-0728",
@@ -1491,8 +1525,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "130",
-        "note": "Latest site-board headcount (Aug 8). Field labor plus management, quality and HSE."
+        "value": "244",
+        "note": "Latest site-board headcount (Aug 10). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1501,7 +1535,7 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "196",
+        "value": "198",
         "note": "Mean headcount across the construction period to date."
       },
       {
@@ -1623,6 +1657,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 8",
         "v": 130
+      },
+      {
+        "d": "Aug 10",
+        "v": 244
       }
     ],
     "manhours": [
@@ -1668,32 +1706,32 @@ window.MURCH_REPORT = {
       }
     ],
     "mix": {
-      "day": "August 7, 2026",
-      "total": 238,
+      "day": "August 10, 2026",
+      "total": 244,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 130,
+          "people": 129,
           "color": "#0f7a52"
         },
         {
           "trade": "Module installation",
-          "people": 60,
+          "people": 62,
           "color": "#2769a8"
         },
         {
           "trade": "Electrical and substation",
-          "people": 21,
+          "people": 27,
           "color": "#b96f18"
         },
         {
           "trade": "Civil and fencing",
-          "people": 2,
+          "people": 0,
           "color": "#7b4fa8"
         },
         {
           "trade": "EPC management, quality and HSE",
-          "people": 24,
+          "people": 25,
           "color": "#66716d"
         },
         {
