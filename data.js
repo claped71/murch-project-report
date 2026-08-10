@@ -1394,6 +1394,12 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-52.jpg",
+      "date": "August 10, 2026",
+      "title": "SET Structure.",
+      "note": "Substation structural steel fabricated and hot-dip galvanized at the fabrication facility: box sections, cross-braced base plates and the 34.5 kV members, staged for loading. The consignment departs Monday 10 August for delivery to site on Saturday 15 August. Structural steel is the binding item on the substation, so this delivery is what allows erection to begin."
+    },
+    {
       "src": "assets/photo-46.jpg",
       "date": "August 3, 2026",
       "title": "Aerial view of the facility — module blocks and racking fronts",
