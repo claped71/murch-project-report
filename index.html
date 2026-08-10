@@ -98,7 +98,8 @@ section{padding:38px 0 6px}
 .g2{grid-template-columns:repeat(2,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.g4{grid-template-columns:1fr}.gate .nm,.gate .sub,.gate .meta{min-height:0}.gate .sub{-webkit-line-clamp:3}}
 
 /* ---- headline ---- */
 .headwrap{display:grid;grid-template-columns:230px 1fr;gap:20px;align-items:center}
@@ -109,13 +110,25 @@ section{padding:38px 0 6px}
 .statement{font-size:15px;color:var(--ink2);line-height:1.65}
 
 /* ---- gate tiles ---- */
-.gate{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.gate .nm{font-size:12px;font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em}
-.gate .big{font-size:27px;font-weight:700;letter-spacing:-.02em;margin-top:6px}
-.gate .big small{font-size:13px;font-weight:500;color:var(--muted)}
+.grid.g4{align-items:stretch}
+.gate{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;
+  display:flex;flex-direction:column;height:100%}
+.gate .nm{font-size:11.5px;font-weight:700;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em;
+  line-height:1.3;min-height:2.6em}
+.gate .big{font-size:clamp(22px,2.3vw,29px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-top:2px}
+.gate .sub{font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:4px;min-height:2.7em;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gate .meta{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+  font-size:11.5px;color:var(--muted);line-height:1.35;min-height:2.5em}
+.gate .meta span{text-transform:uppercase;letter-spacing:.05em;font-weight:700;font-size:10px;flex:0 0 auto}
+.gate .meta span em{font-style:normal;font-weight:600;color:#9aa8a1;letter-spacing:.04em}
+.gate .meta b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.gate .meta b{font-weight:600;color:var(--ink2);text-align:right}
+.gate .foot .dt em{font-style:normal;text-transform:uppercase;letter-spacing:.05em;font-size:10px;font-weight:700;color:#9aa8a1;margin-right:4px}
 .bar{height:7px;background:var(--line2);border-radius:4px;overflow:hidden;margin:10px 0 8px}
 .bar i{display:block;height:100%;border-radius:4px}
-.gate .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--muted);white-space:nowrap}
+.gate .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--muted);
+  white-space:nowrap;margin-top:auto;padding-top:10px;border-top:1px solid var(--line2)}
 .pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px}
 .p-good{background:#e6f3ec;color:var(--good)} .p-watch{background:#fdf3e0;color:var(--warn)}
 .p-behind{background:#fbeee7;color:var(--serious)} .p-ns{background:#eef1ef;color:var(--muted)}
@@ -166,6 +179,15 @@ svg{display:block;width:100%;overflow:visible}
 .ph .cap p{margin:0;font-size:12.5px;color:var(--ink2)}
 
 footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+
+/* .grid.g4 outranks the bare .g4 in the 1100px block below, which was forcing
+   two cramped columns onto a 390px phone. */
+@media(max-width:620px){
+  .grid.g4{grid-template-columns:1fr}
+  .gate .nm,.gate .sub,.gate .meta{min-height:0}
+  .gate .sub{-webkit-line-clamp:3}
+  .gate .big{font-size:26px}
+}
 
 /* ---- horizontally scrollable chart shell (daily bars) ---- */
 .hscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -557,14 +579,30 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   document.getElementById('overallNote').textContent = D.headline.overallNote;
 
   var colors={piles:'#0f7a52',trackers:'#2769a8',modules:'#b96f18',electrical:'#7b4fa8'};
+  /* Every gate card renders the SAME skeleton so the four read as one row:
+     label / value / basis / bar / earned / footer. Rows that do not apply show
+     an em-dash rather than collapsing, and the footer is pinned to the bottom
+     so the dates and status pills line up across all four cards. */
   document.getElementById('gateGrid').innerHTML = D.gates.map(function(g){
-    var pct = g.pctOnly ? g.gatePct : (g.total ? (g.installed/g.total*100) : 0);
-    var sub = g.pctOnly ? esc(g.mix||'') : fmt(g.installed)+' / '+fmt(g.total);
-    return '<div class="gate"><div class="nm">'+esc(g.name)+'</div>'+
-      '<div class="big">'+pct.toFixed(1)+'% <small>'+sub+'</small></div>'+
-      '<div class="bar">'+(g.earnedPct? '<i style="width:'+Math.max(g.earnedPct,0.6)+'%;background:#9fc4b0"></i>':'')+'<i style="width:'+Math.max(pct,0.6)+'%;background:'+(colors[g.key]||'#0f7a52')+'"></i></div>'+
-      (g.earnedLabel? '<div class="foot" style="border:0;padding-top:4px"><span style="font-size:11px;color:#4a5b53">'+esc(g.earnedLabel)+'</span></div>':'')+
-      '<div class="foot"><span>'+(/passed/i.test(g.forecast||'')?'Required completion ':'Forecast ')+esc(g.forecast)+'</span><span class="pill '+pillCls(g.status)+'">'+esc(g.status)+'</span></div></div>';
+    var pct  = g.pctOnly ? g.gatePct : (g.total ? (g.installed/g.total*100) : 0);
+    var unit = g.pctOnly ? '' : (' ' + (g.unit || ''));
+    var basis = g.pctOnly ? 'Weighted composite of four fronts'
+                          : fmt(g.installed) + ' / ' + fmt(g.total) + unit;
+    var earned = (typeof g.earnedPct === 'number') ? g.earnedPct.toFixed(1) + '%' : '\u2014';
+    var date = String(g.forecast || '\u2014').split(/\s+\u2014\s+/)[0];
+    var dateLabel = 'Target';  // one label on every card - the pill carries the passed/behind state
+    return '<div class="gate">' +
+      '<div class="nm">' + esc(g.name) + '</div>' +
+      '<div class="big">' + pct.toFixed(1) + '%</div>' +
+      '<div class="sub"' + (g.mix ? ' title="' + esc(g.mix) + '"' : '') + '>' + esc(basis) + '</div>' +
+      '<div class="bar">' +
+        (g.earnedPct ? '<i style="width:' + Math.max(g.earnedPct, 0.6) + '%;background:#9fc4b0"></i>' : '') +
+        '<i style="width:' + Math.max(pct, 0.6) + '%;background:' + (colors[g.key] || '#0f7a52') + '"></i>' +
+      '</div>' +
+      '<div class="meta"><span>Earned <em>incl. WIP</em></span><b>' + esc(earned) + '</b></div>' +
+      '<div class="foot"><span class="dt"><em>' + dateLabel + '</em> ' + esc(date) + '</span>' +
+        '<span class="pill ' + pillCls(g.status) + '">' + esc(g.status) + '</span></div>' +
+    '</div>';
   }).join('');
 
   /* milestones */
