@@ -795,7 +795,7 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
-    "headline": "Zero recordable injuries in 323 days. One first-aid case on 4 August, treated on site with no lost time.",
+    "headline": "Zero recordable injuries in 328 days. Two first-aid cases in August, neither recordable. The 7 August case — a worker struck by a slipping torque tube during racking installation — is internally rated Serious for its potential, and its corrective actions are open.",
     "tiles": [
       {
         "label": "Recordable accidents",
@@ -804,8 +804,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Days without recordable",
-        "value": "323",
-        "note": "286 at the June close, plus 37 days to 6 August with no recordable reported."
+        "value": "328",
+        "note": "286 at the June close, plus 42 days to 11 August with no recordable reported."
       },
       {
         "label": "Lost days",
@@ -814,8 +814,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "First-aid cases",
-        "value": "1",
-        "note": "4 August: an operative sprained an ankle while carrying modules; tall grass concealed uneven ground. Treated on site, no lost time."
+        "value": "2",
+        "note": "4 August: an ankle sprain where tall grass concealed uneven ground; treated on site. 7 August (rated Serious): during racking installation a torque tube slipped while being placed onto its pile support and struck the worker on the helmet and shoulder. First aid on site, then hospital evaluation including a CT scan: minor injuries, cleared to return to work, and sent home for the remainder of the day as a precaution. Notification 20260807_ACC_001 was issued within 48 hours."
       },
       {
         "label": "Man-hours to date",
@@ -838,7 +838,7 @@ window.MURCH_REPORT = {
         "note": "Cumulative site inductions and training to the June close."
       }
     ],
-    "note": "The injury record is clean: 323 days with no recordable, no lost time and no restricted work. The recurring hazard on this site is ground and vegetation rather than the work itself — most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain. This is the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, and the corrective action is being handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
+    "note": "The injury record is clean: 328 days with no recordable, no lost time and no restricted work. The 7 August first-aid case is nonetheless treated as significant: a torque tube slipping out of control onto a worker's helmet during racking installation is a work-method event with serious potential, and it is rated accordingly — the investigation and tube-handling corrective actions are open with the racking crews, whose manning is currently increasing. The background hazard remains ground and vegetation: most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, with the corrective action handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
   },
   "quality": {
     "headline": "Quality approval stands at 83.7% of executed piles, and 296 of 1,354 completed tracker rows are released by the Owner's quality process. No approval figures have been filed since 30 July — seven working days — and the assembly programme has moved 78 rows in a single day since. Opening the release line remains the controlling quality action.",
