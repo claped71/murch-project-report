@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 61.4,
+    "overall": 61.6,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Monday 10 August; Sunday 9 August was a non-working day. The defining result is on tracker assembly: the largest remaining assembly area produced its FIRST 40 completed rows \u2014 the standing work at the final assembly stage converted in a single day \u2014 and a further 38 rows were completed elsewhere, giving 78 completed rows against the 67 per day the 30 August date requires: the first above-rate assembly day since 3 August. Tracker assembly stands at 1,354 of 2,486 rows (54.5%) and overall completion moves to 61.4% from 60.3%. On the medium-voltage network the directional bore under the wetland crossing was completed, taking MV bores to 18 of 20 and the collection composite to 65.2%; the remaining ten plow segments will be completed by excavator. Module installation added 2,254 (cumulative 69,103, 40.3%); the module contractor for the eastern areas begins installation on Wednesday 12 August. Two matters require attention. Pile installation was SUSPENDED on 10 August pending delivery of a specific pile type; 1,766 piles remain and the reconciliation quantifying the shortage is being finalised for the supplier as the priority action. And the substation structural steel consignment now departs the fabrication facility on Wednesday 12 August, which compresses the programme to the planned Saturday 15 August site delivery.",
+    "statement": "The reporting period covers Monday 10 August; Sunday 9 August was a non-working day. The defining result is on tracker assembly: the largest remaining assembly area produced its FIRST 40 completed rows — the standing work at the final assembly stage converted in a single day — and a further 38 rows were completed elsewhere, giving 78 completed rows against the 67 per day the 30 August date requires: the first above-rate assembly day since 3 August. Tracker assembly stands at 1,354 of 2,486 rows (54.5%) and overall completion moves to 61.4% from 60.3%. On the medium-voltage network the directional bore under the wetland crossing was completed, taking MV bores to 18 of 20 and the collection composite to 65.2%; the remaining ten plow segments will be completed by excavator. Module installation added 2,254 (cumulative 69,103, 40.3%); the module contractor for the eastern areas begins installation on Wednesday 12 August. Two matters require attention. Pile installation was SUSPENDED on 10 August pending delivery of a specific pile type; 1,766 piles remain and the reconciliation quantifying the shortage is being finalised for the supplier as the priority action. And the substation structural steel consignment now departs the fabrication facility on Wednesday 12 August, which compresses the programme to the planned Saturday 15 August site delivery.",
     "note": null
   },
   "gates": [
@@ -60,10 +60,10 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 19.6,
-      "earnedPct": 29.2,
+      "gatePct": 20.4,
+      "earnedPct": 29.7,
       "unit": "%",
-      "earnedLabel": "29.2% earned incl. work in progress",
+      "earnedLabel": "29.7% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
@@ -84,10 +84,10 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "19.6% of scope",
-        "gatePct": 19.6,
-        "inProgress": "MV 65.2% · 23 of 23 inverter stations set · 110 of 419 boxes · 9,281 lf of cable",
-        "earnedPct": 29.2,
+        "gate": "20.4% of scope",
+        "gatePct": 20.4,
+        "inProgress": "MV 66.7% · 23 of 23 inverter stations set · 110 of 419 boxes · 12,412 lf of cable",
+        "earnedPct": 29.7,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Sep 25, 2026 — conditional",
       "status": "At risk",
-      "note": "RE-RATED from On target on this basis. The date is not supported by any rate yet demonstrated. Against the interim dates that build it: tracker rows are running at a ten-day average of 40 per day against the 67 required, which extrapolates to mid-September rather than 30 August; modules are running at 3,300 per day against 4,359 required, extrapolating to mid-September rather than 6 September; and LV/DC cable is the binding constraint — 9,281 of 274,720 linear feet placed, with the single installation crew averaging around 2,100 feet per day against the 7,584 required for 18 September. Three conditions must all be met to hold 25 September: the cable crew multiplied roughly threefold from the week commencing 10 August, the largest tracker area converting its standing work into completed rows, and the revised pile completion date issued and met. A revised forecast will be issued once the resourcing plans behind those three conditions are received."
+      "note": "RE-RATED from On target on 9 August, held under review. Two of the three conditions set then are now moving: tracker assembly produced 78 completed rows on 10 August against the 67 per day required \u2014 the first above-rate day since 3 August, with the largest remaining area finally converting \u2014 and the cable crew grew from 15 to 20 and set a project-record 3,131 linear feet, taking cumulative LV to 12,412 of 274,720 feet. The date is not yet supported: even the record cable day is 41% of the roughly 7,600 feet per day the 18 September electrical date requires, module installation must transition to the eastern contractor without losing rate, and pile installation is suspended pending delivery of a specific pile type. The rating returns to On target when the cable crew growth continues, the module transition holds above 4,000 per day, and piling resumes with a dated completion."
     },
     {
       "name": "Provisional Interconnection",
@@ -1341,7 +1341,7 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "1,354 rows complete of 2,486 (54.5%) \u2014 the measure that governs the 30 August date \u2014 of which 296 are released through the Owner's quality process; earned progress including rows in build stands at 54.9%. Monday 10 August was the strongest assembly day since 3 August: 78 completed rows against 67 required, including the first 40 rows completed in the largest remaining area. The remaining 1,132 rows decompose across three crews at 29, 27 and 11 rows per day \u2014 the first two rates were both met on 10 August. Outstanding: the quality release line, unmoved since 30 July, and the first completed row from the third crew."
+      "note": "1,354 rows complete of 2,486 (54.5%) — the measure that governs the 30 August date — of which 296 are released through the Owner's quality process; earned progress including rows in build stands at 54.9%. Monday 10 August was the strongest assembly day since 3 August: 78 completed rows against 67 required, including the first 40 rows completed in the largest remaining area. The remaining 1,132 rows decompose across three crews at 29, 27 and 11 rows per day — the first two rates were both met on 10 August. Outstanding: the quality release line, unmoved since 30 July, and the first completed row from the third crew."
     },
     {
       "title": "Module installation rate",
@@ -1351,7 +1351,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation — the pull has started",
       "level": "Priority",
-      "note": "7 August added 1,969 linear feet — 1,730 feet of homerun on one combiner box of the first inverter plus 239 feet of DC trunk across three more — a fourth consecutive strong day. Four working days have now produced 8,400 linear feet against 881 feet for the whole project before them, and cumulative installation stands at 9,281 of 274,720 linear feet. 8 August produced nothing, because the crew was not on site. That is the exposure stated plainly: the entire low-voltage programme rests on a single fifteen-person gang that has now saturated at roughly 2,000 feet per day against 7,584 feet per day required for 18 September. Mobilising a second cable crew is the only available multiplier."
+      "note": "10 August set a project record: 3,131 linear feet of homerun DC cable across two combiner boxes, and the installation crew grew from 15 to 20 including 10 electricians \u2014 the first material step toward the second-crew capacity the programme requires. Cumulative installation stands at 12,412 of 274,720 linear feet (4.5%). The requirement remains roughly 7,600 feet per day to 18 September, so even the record day is 41% of rate: continued crew growth is the single lever on this front."
     },
     {
       "title": "Pile completion",
