@@ -1542,17 +1542,17 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 6, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 11, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "244",
-        "note": "Latest site-board headcount (Aug 10). Field labor plus management, quality and HSE."
+        "value": "258",
+        "note": "Latest site-board headcount (Aug 11) — the highest of the project to date. Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
-        "value": "253",
-        "note": "Highest headcount on site to date (July 15)."
+        "value": "258",
+        "note": "Highest headcount on site to date (August 11)."
       },
       {
         "label": "Average headcount",
@@ -1561,8 +1561,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "123,900",
-        "note": "Total manhours worked from the start of construction on April 1 through August 10, at 10 h/day, Monday to Saturday."
+        "value": "126,500",
+        "note": "Total manhours worked from the start of construction on April 1 through August 11, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1682,6 +1682,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 10",
         "v": 244
+      },
+      {
+        "d": "Aug 11",
+        "v": 258
       }
     ],
     "manhours": [
@@ -1724,15 +1728,19 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 10",
         "c": 123919
+      },
+      {
+        "d": "Aug 11",
+        "c": 126499
       }
     ],
     "mix": {
-      "day": "August 10, 2026",
-      "total": 244,
+      "day": "August 11, 2026",
+      "total": 258,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 129,
+          "people": 137,
           "color": "#0f7a52"
         },
         {
@@ -1742,12 +1750,12 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "Electrical and substation",
-          "people": 27,
+          "people": 24,
           "color": "#b96f18"
         },
         {
-          "trade": "Civil and fencing",
-          "people": 0,
+          "trade": "Survey and crane support",
+          "people": 9,
           "color": "#7b4fa8"
         },
         {
