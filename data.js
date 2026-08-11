@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Sep 25, 2026 — conditional",
       "status": "At risk",
-      "note": "RE-RATED from On target on 9 August, held under review. Two of the three conditions set then are now moving: tracker assembly produced 78 completed rows on 10 August against the 67 per day required \u2014 the first above-rate day since 3 August, with the largest remaining area finally converting \u2014 and the cable crew grew from 15 to 20 and set a project-record 3,131 linear feet, taking cumulative LV to 12,412 of 274,720 feet. The date is not yet supported: even the record cable day is 41% of the roughly 7,600 feet per day the 18 September electrical date requires, module installation must transition to the eastern contractor without losing rate, and pile installation is suspended pending delivery of a specific pile type. The rating returns to On target when the cable crew growth continues, the module transition holds above 4,000 per day, and piling resumes with a dated completion."
+      "note": "RE-RATED from On target on 9 August, held under review. Two of the three conditions set then are now moving: tracker assembly produced 78 completed rows on 10 August against the 67 per day required — the first above-rate day since 3 August, with the largest remaining area finally converting — and the cable crew grew from 15 to 20 and set a project-record 3,131 linear feet, taking cumulative LV to 12,412 of 274,720 feet. The date is not yet supported: even the record cable day is 41% of the roughly 7,600 feet per day the 18 September electrical date requires, module installation must transition to the eastern contractor without losing rate, and pile installation is suspended pending delivery of a specific pile type. The rating returns to On target when the cable crew growth continues, the module transition holds above 4,000 per day, and piling resumes with a dated completion."
     },
     {
       "name": "Provisional Interconnection",
@@ -1351,7 +1351,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation — the pull has started",
       "level": "Priority",
-      "note": "10 August set a project record: 3,131 linear feet of homerun DC cable across two combiner boxes, and the installation crew grew from 15 to 20 including 10 electricians \u2014 the first material step toward the second-crew capacity the programme requires. Cumulative installation stands at 12,412 of 274,720 linear feet (4.5%). The requirement remains roughly 7,600 feet per day to 18 September, so even the record day is 41% of rate: continued crew growth is the single lever on this front."
+      "note": "10 August set a project record: 3,131 linear feet of homerun DC cable across two combiner boxes, and the installation crew grew from 15 to 20 including 10 electricians — the first material step toward the second-crew capacity the programme requires. Cumulative installation stands at 12,412 of 274,720 linear feet (4.5%). The requirement remains roughly 7,600 feet per day to 18 September, so even the record day is 41% of rate: continued crew growth is the single lever on this front."
     },
     {
       "title": "Pile completion",
