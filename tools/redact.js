@@ -39,7 +39,11 @@ const TERMS = [
   'POD', 'PODs', 'BOL', 'unit rate',
   're-cascaded', 'recascaded', 'float', 'silent since', 'logs owed', 'not yet mapped',
   'block-map', 'self-report', 'rig', 'rigs', 'breakdown', 'damaged', 'refusal pile',
-  'Section 5.5', 'internal sequence', 'internal basis', 'scorecard', 'criterion'
+  'Section 5.5', 'internal sequence', 'internal basis', 'scorecard', 'criterion',
+  // Supplier-relationship vocabulary — certification gaps, connector supply and
+  // shipment condition are internal supply-chain matters, never Owner-facing.
+  'UL certificate', 'UL certification', 'UL listing', 'piercing connector', 'IPC',
+  'short shipped', 'short shipment', 'shortfall'
 ];
 
 // Words to soften on the way through (applied by sync.js to derived prose).

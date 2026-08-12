@@ -108,7 +108,7 @@ window.MURCH_REPORT = {
       "forecast": "Oct 16, 2026 — conditional",
       "pin": true,
       "status": "At risk",
-      "note": "RE-RATED from On target. The date follows mechanical completion, which is itself at risk, and carries three independent constraints of its own: the substation stands at 24.7% overall with structural at 10.8% and its steel not due on site until 15 August; the switchgear breakers are still awaited with several committed dates falling after the gate; and the 138 medium-voltage terminations stand at zero against coupling lead times quoted at around 40 weeks by every supplier approached. Insulation-resistance testing on 8 August was a genuine advance — 19 passes from 21 sections including all four feeders into the substation — but testing is not termination. Pre-commissioning remains programmed to complete by 13 October."
+      "note": "RE-RATED from On target. The date follows mechanical completion, which is itself at risk, and carries three independent constraints of its own: the substation stands at 25.9% overall with structural at 10.8% and its steel not due on site until 15 August; the switchgear breakers are still awaited with several committed dates falling after the gate; and the 138 medium-voltage terminations stand at zero against coupling lead times quoted at around 40 weeks by every supplier approached. Insulation-resistance testing on 8 August was a genuine advance — 19 passes from 21 sections including all four feeders into the substation — but testing is not termination. Pre-commissioning remains programmed to complete by 13 October."
     },
     {
       "name": "Commercial Operation Date",
@@ -804,9 +804,9 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Foundation SET (composite)",
-      "done": 24.7,
+      "done": 25.9,
       "status": "Active",
-      "note": "24.7% — the 76.8% civil component is STALE; substation civil is finished. Structural 10.8% is the blocker."
+      "note": "25.9% overall on the 11 August tracker cut — civil 81.6%, structural 10.8%. The substation civil works are complete in the field; erection of the structural steel is the controlling item."
     }
   ],
   "safety": {
@@ -1401,7 +1401,7 @@ window.MURCH_REPORT = {
       "item": "Tracker structures",
       "delivered": "Complete",
       "pct": 100,
-      "note": "The tracker bill of material was confirmed complete on July 24 with one exception: 16 torque tubes identified as a short shipment, scheduled for delivery and awaiting confirmation of site receipt."
+      "note": "The tracker bill of material was confirmed complete on July 24 with one exception: 16 torque tubes scheduled for a follow-on delivery, awaiting confirmation of site receipt."
     },
     {
       "item": "Inverters",
