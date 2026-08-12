@@ -806,7 +806,7 @@ window.MURCH_REPORT = {
       "activity": "Foundation SET (composite)",
       "done": 25.9,
       "status": "Active",
-      "note": "25.9% overall on the 11 August tracker cut — civil 81.6%, structural 10.8%. The substation civil works are complete in the field; erection of the structural steel is the controlling item."
+      "note": "25.9% (Aug 11 cut) — civil 81.6%, structural 10.8%. Field civil is complete; structural is the blocker."
     }
   ],
   "safety": {
