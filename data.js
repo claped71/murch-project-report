@@ -1547,7 +1547,7 @@ window.MURCH_REPORT = {
       {
         "label": "Personnel on site",
         "value": "258",
-        "note": "Latest site-board headcount (Aug 11) — the highest of the project to date. Field labor plus management, quality and HSE."
+        "note": "Latest site-board headcount (Aug 11). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1556,13 +1556,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "198",
+        "value": "201",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "126,500",
-        "note": "Total manhours worked from the start of construction on April 1 through August 11, at 10 h/day, Monday to Saturday."
+        "value": "123,900",
+        "note": "Total manhours worked from the start of construction on April 1 through August 10, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1728,10 +1728,6 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 10",
         "c": 123919
-      },
-      {
-        "d": "Aug 11",
-        "c": 126499
       }
     ],
     "mix": {
@@ -1754,7 +1750,7 @@ window.MURCH_REPORT = {
           "color": "#b96f18"
         },
         {
-          "trade": "Survey and crane support",
+          "trade": "Survey & Crane",
           "people": 9,
           "color": "#7b4fa8"
         },
