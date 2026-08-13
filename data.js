@@ -1562,7 +1562,7 @@ window.MURCH_REPORT = {
       {
         "label": "Personnel on site",
         "value": "257",
-        "note": "Latest site-board headcount (Aug 12), one below the August 11 project peak. Field labor plus management, quality and HSE."
+        "note": "Latest site-board headcount (Aug 12). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1571,13 +1571,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "201",
+        "value": "203",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "129,100",
-        "note": "Total manhours worked from the start of construction on April 1 through August 12, at 10 h/day, Monday to Saturday."
+        "value": "126,500",
+        "note": "Total manhours worked from the start of construction on April 1 through August 11, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1747,10 +1747,6 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 11",
         "c": 126499
-      },
-      {
-        "d": "Aug 12",
-        "c": 129069
       }
     ],
     "mix": {
