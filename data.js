@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 64,
+    "overall": 64.2,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Wednesday 12 August, and it was the strongest production day of the project. Tracker assembly completed 89 rows against the 66 per day required — the largest single day recorded, with all three assembly crews converting: 49 rows in one central area, 30 in the largest remaining area (95 there in three days) and 10 by the third crew, taking assembly to 1,503 of 2,486 rows (60.5%). LV cable installation set its second record in three days at 4,735 linear feet across five feeder lines on the first inverter, taking the cumulative to 17,147 feet (6.2%) — the programme now targets the first medium-voltage line complete and connected by the end of August. Module installation placed 3,878: the most productive western crew set its own record at 3,018 and is being retained on the project to reinforce the eastern areas, while the eastern contractor's ramp-up continued at 820 and remains under close management review. On the medium-voltage network a further distribution duct bore was completed, taking the count to 7 of 10 and the collection composite to 68.2%. The substation structural steel consignment departed the fabrication facility on the evening of 12 August and is in transit; site delivery is expected early-to-mid next week, and the erection sequence is being prepared. Pile installation remains suspended pending the specific pile type, with restart preparations in place. Overall completion moves to 64.0% from 62.4%.",
+    "statement": "The reporting period covers Wednesday 12 August for the mechanical scopes — the strongest production day of the project — with the electrical scopes updated through Thursday 13 August. Mechanical, 12 August: tracker assembly completed 89 rows against 66 required, the largest single day recorded, with all three assembly crews converting (1,503 of 2,486 rows, 60.5%); module installation placed 3,878, including a record 3,018 by the most productive western crew, which is being retained to reinforce the eastern areas; the eastern contractor's ramp-up continued under close management review. Electrical, 13 August: the distribution duct-bore scope COMPLETED — all 10 approved bores are drilled, taking the medium-voltage composite to 72.7% — and LV cable installation added 2,550 feet of homerun, opening the second inverter on the first line; cumulative installation stands at 19,697 of 274,720 linear feet (7.2%), and additional LV installation capacity is being contracted with mobilization planned within the week. Cable plowing shows its first active segment after a fifteen-day pause. The substation structural steel is in transit with site delivery expected early-to-mid next week. Pile installation remains suspended pending the specific pile type. Overall completion moves to 64.2%. Thursday's mechanical quantities will be incorporated on receipt of the field reports.",
     "note": null
   },
   "gates": [
@@ -60,10 +60,10 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 21.7,
-      "earnedPct": 31,
+      "gatePct": 23.2,
+      "earnedPct": 32.5,
       "unit": "%",
-      "earnedLabel": "31% earned incl. work in progress",
+      "earnedLabel": "32.5% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
@@ -84,10 +84,10 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "21.7% of scope",
-        "gatePct": 21.7,
-        "inProgress": "MV 68.2% · 23 of 23 inverter stations set · 110 of 419 boxes · 17,147 lf of cable",
-        "earnedPct": 31,
+        "gate": "23.2% of scope",
+        "gatePct": 23.2,
+        "inProgress": "MV 72.7% · 23 of 23 inverter stations set · 110 of 419 boxes · 19,697 lf of cable",
+        "earnedPct": 32.5,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -1401,7 +1401,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation — the pull has started",
       "level": "Priority",
-      "note": "The record has broken twice in three days: 3,131 linear feet on 10 August, then 4,735 on 12 August — homerun and trunk DC across five feeder lines on the first inverter — taking the cumulative to 17,147 of 274,720 linear feet (6.2%). The requirement stands at approximately 8,050 feet per day to 18 September, so the best day is 59% of rate. The programme has been re-framed around a nearer target: the first medium-voltage line complete and connected by the end of August, with daily reporting of feet hung, harnesses installed and boxes mounted. Support-pile installation for the aerial system also advanced (45 tension piles)."
+      "note": "Cumulative installation stands at 19,697 of 274,720 linear feet (7.2%). The record broke twice in three days — 3,131 then 4,735 feet — and 13 August added 2,550 feet of homerun, opening the second inverter on the first medium-voltage line; the first line's disconnect boxes are already complete. The requirement stands at approximately 8,200 feet per day to 18 September, so additional installation capacity is being contracted for the LV scope with mobilization planned within the week, and the programme targets the first medium-voltage line complete and connected by the end of August, with daily reporting of feet hung, harnesses installed and boxes mounted."
     },
     {
       "title": "Pile completion",
@@ -1416,7 +1416,7 @@ window.MURCH_REPORT = {
     {
       "title": "Electrical — all fronts",
       "level": "Watch",
-      "note": "Electrical progress is reported as one total across four fronts: 22.1% on completed units and 31.4% including verified work in progress. The LV and DC pull holds its record pace — 17,147 feet cumulative — and additional installation capacity for the LV scope is being contracted, with mobilization planned within the week. MV collection advanced to 69.7%: an eighth distribution duct bore is complete (8 of 10), both final trunk bores are in work, and cable plowing holds at 36 of 46 segments. The inverter setting scope is complete; terminations follow the cable pull, and the manufacturer has confirmed in writing that the station support condition is acceptable, with a formal technical letter being obtained."
+      "note": "Electrical progress is reported as one total across four fronts: 23.2% on completed units and 32.5% including verified work in progress. The distribution duct-bore scope is COMPLETE — all 10 approved bores drilled, with the final two culminating on 13 August — and MV collection advanced to 72.7%. The two trunk bores under the wetland are the remaining drilling scope, one in progress and one pending, and cable plowing shows its first active segment after a fifteen-day pause, with nine segments behind it. The inverter setting scope is complete; terminations follow the cable pull, and the manufacturer has confirmed in writing that the station support condition is acceptable, with a formal technical letter being obtained."
     }
   ],
   "material": [
@@ -1606,13 +1606,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "203",
+        "value": "205",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "131,500",
-        "note": "Total manhours worked from the start of construction on April 1 through August 13, at 10 h/day, Monday to Saturday."
+        "value": "129,100",
+        "note": "Total manhours worked from the start of construction on April 1 through August 12, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1786,10 +1786,6 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 12",
         "c": 129069
-      },
-      {
-        "d": "Aug 13",
-        "c": 131539
       }
     ],
     "mix": {
@@ -1812,7 +1808,7 @@ window.MURCH_REPORT = {
           "color": "#b96f18"
         },
         {
-          "trade": "Survey and crane support",
+          "trade": "Survey & Crane",
           "people": 0,
           "color": "#7b4fa8"
         },
@@ -1822,7 +1818,7 @@ window.MURCH_REPORT = {
           "color": "#66716d"
         },
         {
-          "trade": "Support and environmental",
+          "trade": "Support / environmental",
           "people": 2,
           "color": "#0f7a52"
         }
