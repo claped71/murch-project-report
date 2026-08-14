@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-/* Applies an audited Owner-query register to data.js, and corrects three defects
-   in the register renderer in index.html.
+/* Applies an audited Owner-query register to data.js, and corrects the register
+   renderer and the cache buster in index.html.
 
    The register is a curated block: tools/sync.js never rewrites clientQueries, so
    this is the only thing that moves it. Run from the repo root:
@@ -14,6 +14,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
 const payloadPath = process.argv[2] || path.join(ROOT, 'tools/rfi-payload.json');
@@ -93,7 +94,18 @@ EDITS.forEach(function (e) {
   console.log('  applied: ' + e.what);
 });
 
-/* ---------- 3. write ---------- */
+/* ---------- 3. cache buster ---------- */
+
+// index.html loads data.js with a ?v= tag derived from the file's own hash. If the
+// data moves and the tag does not, every returning browser — the Owner's included —
+// keeps serving the previous register from cache and the publish looks like a no-op.
+const stamp = crypto.createHash('sha1').update(data).digest('hex').slice(0, 10);
+const tag = /data\.js\?v=[a-f0-9]+/;
+if (!tag.test(html)) { console.error('ABORT: data.js cache-buster tag not found in index.html.'); process.exit(1); }
+html = html.replace(tag, 'data.js?v=' + stamp);
+console.log('  cache buster: ' + stamp);
+
+/* ---------- 4. write ---------- */
 
 fs.writeFileSync(dataPath, data);
 fs.writeFileSync(htmlPath, html);
