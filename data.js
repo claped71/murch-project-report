@@ -1572,12 +1572,12 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 12, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 13, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "257",
-        "note": "Latest site-board headcount (Aug 12). Field labor plus management, quality and HSE."
+        "value": "247",
+        "note": "Latest site-board headcount (Aug 13). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1591,8 +1591,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "129,100",
-        "note": "Total manhours worked from the start of construction on April 1 through August 12, at 10 h/day, Monday to Saturday."
+        "value": "131,500",
+        "note": "Total manhours worked from the start of construction on April 1 through August 13, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1720,6 +1720,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 12",
         "v": 257
+      },
+      {
+        "d": "Aug 13",
+        "v": 247
       }
     ],
     "manhours": [
@@ -1762,20 +1766,24 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 12",
         "c": 129069
+      },
+      {
+        "d": "Aug 13",
+        "c": 131539
       }
     ],
     "mix": {
-      "day": "August 12, 2026",
-      "total": 257,
+      "day": "August 13, 2026",
+      "total": 247,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 144,
+          "people": 135,
           "color": "#0f7a52"
         },
         {
           "trade": "Module installation",
-          "people": 57,
+          "people": 61,
           "color": "#2769a8"
         },
         {
