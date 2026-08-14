@@ -1022,7 +1022,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     });
     var nOpen = items.filter(function(q){ return q._outstanding; }).length;
     var nOver = items.filter(function(q){ return q._overdue; }).length;
-    var answered = items.filter(function(q){ return q.respondedISO; });
+    // A partial reply carries a respondedISO but the item is still Open — it must not
+    // count as answered. Only an issued, closed-out response counts toward the target.
+    var answered = items.filter(function(q){ return q.respondedISO && !q._outstanding; });
     var onTime = answered.filter(function(q){ return iso(q.respondedISO) <= iso(q.dueISO); }).length;
     var turn = answered.filter(function(q){ return typeof q.turnaroundDays === 'number'; });
     var avgTurn = turn.length ? (turn.reduce(function(a,q){ return a+q.turnaroundDays; },0)/turn.length).toFixed(1) : null;
@@ -1044,7 +1046,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     // closed    the Owner accepted it, or the physical condition was met
     var VIEWS = {
       out:       function(q){ return q._outstanding; },
-      responded: function(q){ return !!q.respondedISO && q.status !== 'Closed'; },
+      responded: function(q){ return (!!q.respondedISO || q.status === 'Answered') && q.status !== 'Closed'; },
       closed:    function(q){ return q.status === 'Closed'; },
       all:       function(){ return true; }
     };
