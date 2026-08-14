@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Wednesday 12 August, and it was the strongest production day of the project. Tracker assembly completed 89 rows against the 66 per day required — the largest single day recorded, with all three assembly crews converting: 49 rows in one central area, 30 in the largest remaining area (95 there in three days) and 10 by the third crew, taking assembly to 1,503 of 2,486 rows (60.5%). LV cable installation set its second record in three days at 4,735 linear feet across five feeder lines on the first inverter, taking the cumulative to 17,147 feet (6.2%) — the programme now targets the first medium-voltage line complete and connected by the end of August. Module installation placed 3,878: the most productive western crew set its own record at 3,018 and is being retained on the project to reinforce the eastern areas, while the eastern contractor's ramp-up continued at 820 and remains under close management review. On the medium-voltage network a further distribution duct bore was completed, taking the count to 7 of 10 and the collection composite to 68.2%. The substation structural steel consignment departed the fabrication facility on the evening of 12 August and is in transit under continuous tracking; site delivery is expected early-to-mid next week, and the erection sequence is being prepared. Pile installation remains suspended pending the specific pile type, with the supplier reconciliation now the priority action. Overall completion moves to 64.0% from 62.4%.",
+    "statement": "The reporting period covers Wednesday 12 August, and it was the strongest production day of the project. Tracker assembly completed 89 rows against the 66 per day required — the largest single day recorded, with all three assembly crews converting: 49 rows in one central area, 30 in the largest remaining area (95 there in three days) and 10 by the third crew, taking assembly to 1,503 of 2,486 rows (60.5%). LV cable installation set its second record in three days at 4,735 linear feet across five feeder lines on the first inverter, taking the cumulative to 17,147 feet (6.2%) — the programme now targets the first medium-voltage line complete and connected by the end of August. Module installation placed 3,878: the most productive western crew set its own record at 3,018 and is being retained on the project to reinforce the eastern areas, while the eastern contractor's ramp-up continued at 820 and remains under close management review. On the medium-voltage network a further distribution duct bore was completed, taking the count to 7 of 10 and the collection composite to 68.2%. The substation structural steel consignment departed the fabrication facility on the evening of 12 August and is in transit; site delivery is expected early-to-mid next week, and the erection sequence is being prepared. Pile installation remains suspended pending the specific pile type, with restart preparations in place. Overall completion moves to 64.0% from 62.4%.",
     "note": null
   },
   "gates": [
@@ -925,6 +925,26 @@ window.MURCH_REPORT = {
     {
       "period": "Aug 10 – Aug 15",
       "items": [
+      {
+        "ref": "MQ-20260813-0922",
+        "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
+        "area": "LV and DC electrical",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-13",
+        "dueISO": "2026-08-20",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260813-0733",
+        "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-13",
+        "dueISO": "2026-08-20",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
         "The revised pile completion date issued — the demonstrated rate of 215 piles per day in the newly opened area now supports a defensible date, and it is fourteen days outstanding.",
         "The freed tracker assembly crew redeployed, and a dated commitment given for the first completed row in the largest remaining assembly area — 40 rows there already stand at the damper, motor and drive stage.",
         "The damper change-out cleared on the affected module rows so the second module crew returns to production rather than rework.",
@@ -1386,17 +1406,17 @@ window.MURCH_REPORT = {
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "1,766 piles remain and installation is suspended for a third day pending delivery of a specific pile type. The 12 August delivery record restates the delivered quantity at 28,343 of 31,352, so the supplier reconciliation — the priority action — now also carries the delivery basis; until it is filed, the front has neither a restart date nor a closed material record. Survey support remains on site, and the demonstrated rate of 215 piles per day in the newly opened area supports a defensible revised completion date the moment material lands."
+      "note": "1,766 piles remain and installation is suspended pending delivery of a specific pile type; restart preparations are in place. Survey support remobilises on material arrival, and the demonstrated rate of 215 piles per day in the newly opened area supports a defensible revised completion date the moment installation resumes."
     },
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "25.9% overall against the 25 September mechanical completion date — still the widest variance on the project, with civil at 81.6% and structural at 10.8% the controlling line. The structural steel consignment departed the fabrication facility on the evening of 12 August and is in transit under continuous location tracking via the border crossing; site delivery is expected early-to-mid next week, and the erection sequence (ground assembly with telescopic handler support) is being prepared so erection begins on arrival. Connector fabrication is advancing, and an alternative source for the support poles is under evaluation with a decision meeting held 13 August."
+      "note": "26.3% overall on the 14 August tracker cut, against the 25 September mechanical completion date — still the widest variance on the project, with civil at 82.7% and structural at 11.1% the controlling line. The structural steel consignment is in transit; site delivery is expected early-to-mid next week, and the erection sequence (ground assembly with telescopic handler support) is being prepared so erection begins on arrival. Connector fabrication is advancing, and an alternative source for the support poles remains under evaluation."
     },
     {
       "title": "Electrical — all fronts",
       "level": "Watch",
-      "note": "Electrical progress is reported as one total across four fronts: 21.7% on completed units and 31.0% including verified work in progress. The LV and DC pull is finally moving the composite — two records in three days and 17,147 feet cumulative. MV collection advanced to 68.2%: a further distribution duct bore completed 12 August (7 of 10 live), both final trunk bores are in work, and cable plowing holds at 36 of 46 segments with the completion plan for the final ten being re-set. The inverter setting scope is complete (all 23 stations); terminations stand at zero and follow the cable pull."
+      "note": "Electrical progress is reported as one total across four fronts: 22.1% on completed units and 31.4% including verified work in progress. The LV and DC pull holds its record pace — 17,147 feet cumulative — and additional installation capacity for the LV scope is being contracted, with mobilization planned within the week. MV collection advanced to 69.7%: an eighth distribution duct bore is complete (8 of 10), both final trunk bores are in work, and cable plowing holds at 36 of 46 segments. The inverter setting scope is complete; terminations follow the cable pull, and the manufacturer has confirmed in writing that the station support condition is acceptable, with a formal technical letter being obtained."
     }
   ],
   "material": [

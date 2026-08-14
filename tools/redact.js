@@ -43,7 +43,11 @@ const TERMS = [
   // Supplier-relationship vocabulary — certification gaps, connector supply and
   // shipment condition are internal supply-chain matters, never Owner-facing.
   'UL certificate', 'UL certification', 'UL listing', 'piercing connector', 'IPC',
-  'short shipped', 'short shipment', 'shortfall'
+  'short shipped', 'short shipment', 'shortfall',
+  // Shipment-location tracking and delivery-count reconciliation are internal
+  // supply-chain matters (Jose, Aug 14) - never Owner-facing.
+  'AirTag', 'Juarez', 'Ju\u00e1rez', 'galvaniz', 'location tracking', 'border crossing',
+  'undelivered', '28,343', 'recount', 're-count'
 ];
 
 // Words to soften on the way through (applied by sync.js to derived prose).
