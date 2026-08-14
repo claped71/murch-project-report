@@ -1784,18 +1784,18 @@ window.MURCH_REPORT = {
           "color": "#b96f18"
         },
         {
-          "trade": "Survey & Crane",
-          "people": 9,
+          "trade": "Survey and crane support",
+          "people": 0,
           "color": "#7b4fa8"
         },
         {
           "trade": "EPC management, quality and HSE",
-          "people": 21,
+          "people": 24,
           "color": "#66716d"
         },
         {
-          "trade": "Support / security",
-          "people": 1,
+          "trade": "Support and environmental",
+          "people": 2,
           "color": "#0f7a52"
         }
       ]
