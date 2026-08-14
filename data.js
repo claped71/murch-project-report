@@ -925,26 +925,6 @@ window.MURCH_REPORT = {
     {
       "period": "Aug 10 – Aug 15",
       "items": [
-      {
-        "ref": "MQ-20260813-0922",
-        "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
-        "area": "LV and DC electrical",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-13",
-        "dueISO": "2026-08-20",
-        "status": "In review",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260813-0733",
-        "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
-        "area": "Quality and inspection",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-13",
-        "dueISO": "2026-08-20",
-        "status": "Open",
-        "assignedTo": "QA/QC lead"
-      },
         "The revised pile completion date issued — the demonstrated rate of 215 piles per day in the newly opened area now supports a defensible date, and it is fourteen days outstanding.",
         "The freed tracker assembly crew redeployed, and a dated commitment given for the first completed row in the largest remaining assembly area — 40 rows there already stand at the damper, motor and drive stage.",
         "The damper change-out cleared on the affected module rows so the second module crew returns to production rather than rework.",
@@ -1163,10 +1143,30 @@ window.MURCH_REPORT = {
     "responseCutoff": "17:00 site time (Eastern)",
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
-    "openingNote": "Nineteen queries logged to date; none new since 4 August. One item — the torque-wrench calibration query of 30 July — has passed its response date and its answer is being issued as a priority. The easement-staking query falls due today; the five items of 4 August remain inside their window.",
+    "openingNote": "Twenty-two queries logged to date. Two new items were received on 13 August — the orientation of the load-break disconnect boxes and the installation-depth records for the cable installations — both due 20 August. Several earlier items have passed their response dates and their answers are being issued as a priority.",
     "responseNote": "There is no sign-in and no account. Sending the query is all that is required — you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
+      {
+        "ref": "MQ-20260813-0922",
+        "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
+        "area": "LV and DC electrical",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-13",
+        "dueISO": "2026-08-20",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260813-0733",
+        "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-13",
+        "dueISO": "2026-08-20",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
       {
         "ref": "MQ-20260731-0822",
         "subject": "Progressive red-line and as-built updating during construction, starting with the completed MV directional bores",
