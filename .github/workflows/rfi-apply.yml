@@ -1,0 +1,74 @@
+name: Apply Owner query register
+
+# The register (clientQueries) is a curated block — tools/sync.js never rewrites
+# it, so it only moves when someone applies an audited payload. This runs the
+# applier whenever a new payload lands, gates on the publish guard, and pushes.
+#
+# The guard is a hard gate: if it fails, nothing is committed or published.
+
+on:
+  push:
+    paths:
+      - 'tools/rfi-payload.json'
+      - 'tools/rfi-apply.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Apply the audited register
+        id: apply
+        run: |
+          node tools/rfi-apply.js tools/rfi-payload.json | tee /tmp/rfi.log
+          COUNT=$(node -e "process.stdout.write(String(require('./tools/rfi-payload.json').items.length))")
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+      - name: Publish guard
+        run: node tools/guard.js
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Register already matches the payload — nothing to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Owner query register — ${{ steps.apply.outputs.count }} queries, applied from the audited payload"
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Mirror to gh-pages
+        if: steps.commit.outputs.changed == 'true'
+        run: git push --force origin main:gh-pages
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Owner query register"
+            echo ""
+            echo '```'
+            cat /tmp/rfi.log 2>/dev/null || echo "(applier log unavailable)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
