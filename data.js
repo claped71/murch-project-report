@@ -1640,12 +1640,12 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 13, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 14, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "247",
-        "note": "Latest site-board headcount (Aug 13). Field labor plus management, quality and HSE."
+        "value": "225",
+        "note": "Latest site-board headcount (Aug 14). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1654,12 +1654,12 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "205",
+        "value": "206",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "134,000",
+        "value": "133,800",
         "note": "Total manhours worked from the start of construction on April 1 through August 14, at 10 h/day, Monday to Saturday."
       },
       {
@@ -1792,6 +1792,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 13",
         "v": 247
+      },
+      {
+        "d": "Aug 14",
+        "v": 225
       }
     ],
     "manhours": [
@@ -1833,26 +1837,26 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Aug 14",
-        "c": 134009
+        "c": 133789
       }
     ],
     "mix": {
-      "day": "August 13, 2026",
-      "total": 247,
+      "day": "August 14, 2026",
+      "total": 225,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 135,
+          "people": 134,
           "color": "#0f7a52"
         },
         {
           "trade": "Module installation",
-          "people": 61,
+          "people": 38,
           "color": "#2769a8"
         },
         {
           "trade": "Electrical and substation",
-          "people": 25,
+          "people": 24,
           "color": "#b96f18"
         },
         {
@@ -1867,7 +1871,7 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "Support / environmental",
-          "people": 2,
+          "people": 1,
           "color": "#0f7a52"
         }
       ]
