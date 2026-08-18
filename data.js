@@ -1538,6 +1538,18 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-53.jpg",
+      "date": "August 18, 2026",
+      "title": "High-voltage breaker equipment received at the substation",
+      "note": "Delivery of high-voltage breaker equipment at the substation on 18 August \u2014 three poles with bushings on their support frame and the mechanism cabinet, photographed on arrival. Breaker availability has been a controlling item for the energization path, so this receipt is a material step; the remaining substation electrical equipment is committed for delivery by 30 August."
+    },
+    {
+      "src": "assets/photo-54.jpg",
+      "date": "August 15, 2026",
+      "title": "Precast cable trench delivered \u2014 substation",
+      "note": "Precast cable-trench units and cover slabs staged inside the substation fence beside the control building, received 15 August. These form the feeder cable-trench runs and arrive ahead of the structural steel, allowing trench installation to proceed as erection begins."
+    },
+    {
       "src": "assets/photo-52.jpg",
       "date": "August 10, 2026",
       "title": "SET Structure.",
