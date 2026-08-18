@@ -1671,12 +1671,12 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and is current to August 14, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and the EHS headcount record, current to August 17, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "225",
-        "note": "Latest site-board headcount (Aug 14). Field labor plus management, quality and HSE."
+        "value": "217",
+        "note": "Latest site-board headcount (Aug 17). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1690,7 +1690,7 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "138,300",
+        "value": "138,200",
         "note": "Total manhours worked from the start of construction on April 1 through August 17, at 10 h/day, Monday to Saturday."
       },
       {
@@ -1827,6 +1827,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 14",
         "v": 225
+      },
+      {
+        "d": "Aug 17",
+        "v": 217
       }
     ],
     "manhours": [
@@ -1868,16 +1872,16 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Aug 15",
-        "c": 136039
+        "c": 136012
       },
       {
         "d": "Aug 17",
-        "c": 138289
+        "c": 138182
       }
     ],
     "mix": {
-      "day": "August 14, 2026",
-      "total": 225,
+      "day": "August 17, 2026",
+      "total": 217,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
@@ -1886,12 +1890,12 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "Module installation",
-          "people": 38,
+          "people": 36,
           "color": "#2769a8"
         },
         {
           "trade": "Electrical and substation",
-          "people": 24,
+          "people": 20,
           "color": "#b96f18"
         },
         {
@@ -1901,12 +1905,12 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "EPC management, quality and HSE",
-          "people": 24,
+          "people": 25,
           "color": "#66716d"
         },
         {
           "trade": "Support / environmental",
-          "people": 1,
+          "people": 2,
           "color": "#0f7a52"
         }
       ]
