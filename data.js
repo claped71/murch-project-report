@@ -983,32 +983,32 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Aug 10 – Aug 15",
+      "period": "Aug 17 \u2013 Aug 22",
       "items": [
-        "The revised pile completion date issued — the demonstrated rate of 215 piles per day in the newly opened area now supports a defensible date, and it is fourteen days outstanding.",
-        "The freed tracker assembly crew redeployed, and a dated commitment given for the first completed row in the largest remaining assembly area — 40 rows there already stand at the damper, motor and drive stage.",
-        "The damper change-out cleared on the affected module rows so the second module crew returns to production rather than rework.",
-        "The quality release line opened on the 674 rows completed in the principal assembly area — no approval figures have been filed since 30 July.",
-        "A second LV cable crew mobilised; the existing crew is proven and saturated at roughly 2,000 feet per day.",
-        "Survey support restored to the newly opened pile area, which has 993 piles still to be set out.",
-        "Substation structural steel departing the fabricator Monday 10 August for delivery to site Saturday 15 August; the alternative pole supplier's quotation evaluated so the erection sequence can be fixed.",
-        "The wetland directional bore closed and the crew split so cable plowing restarts on the ten open segments.",
-        "The two sections that failed insulation-resistance testing fault-located while test equipment is on site.",
-        "The outstanding pile quantity reconciliation, by quantity and colour, filed with the tracker supplier — open since 29 July against a multi-week replacement lead time."
+        "Module installation held at or above the required ~4,900 per day, with the eastern contractor sustaining its daily threshold \u2014 first achieved Monday with 2,730 \u2014 and the western crew completing its western scope and transitioning east to reinforce.",
+        "Tracker assembly accelerated to the 70 rows per day the 30 August completion now requires, with both crews converting daily in the largest remaining area.",
+        "Receipt of the required pile-type delivery confirmed, survey support remobilised, and pile installation restarted \u2014 the remaining rows in the northern areas depend on it.",
+        "Substation deliveries converted into erection: the structural steel received and the ground-assembly erection sequence begun, following the high-voltage breaker equipment received 18 August and the precast cable trench received 15 August.",
+        "Additional LV installation capacity mobilised and producing, with daily per-line reporting of feet hung, harnesses and boxes; the first medium-voltage line requires approximately 3,250 feet per day to be complete and connected by the end of August.",
+        "The two remaining trunk bores advanced to closure and cable plowing held at a minimum of one segment per day across the eight remaining segments.",
+        "Monday\u2019s quality releases converted into Owner acceptance, and the release cadence held weekly.",
+        "Responses issued to the queries falling due this week (18\u201321 August), including the engineer-of-record confirmation for the inverter-pile shim remediation."
       ]
     },
     {
-      "period": "Aug 17 – Aug 22",
+      "period": "Aug 24 \u2013 Aug 29",
       "items": [
-        "Tracker assembly at multi-crew rate in both remaining areas, converting standing work into completed rows against the 64 per day required for 30 August.",
-        "Substation steel erection under way with foundations already complete.",
-        "Module installation back at two released fronts, with released rows kept ahead of installation.",
-        "LV cabling at two-crew rate from Monday's mobilisation, extending beyond the first line's areas, with daily reporting of feet hung, supports and boxes per line.",
-        "Pile installation restarted on the Monday delivery of the required pile type, closing out the remaining areas and releasing the last tracker workfronts.",
-        "Sediment basin and perimeter fence remainders closed, subject to the outstanding drainage commissioning signature."
+        "Tracker assembly closing on the 30 August completion \u2014 the remaining balance concentrated in the largest area and in the northern areas released by the pile restart.",
+        "Pile installation completed, or carrying a dated finish inside the month \u2014 1,766 piles represent roughly nine working days at the demonstrated installation rate.",
+        "Module installation sustained at or above the required rate with both installation crews concentrated in the eastern areas.",
+        "Substation steel erection in full sequence, precast trench installation progressing, and the remaining substation electrical equipment \u2014 station-service transformer, grounding reactor and metering transformers \u2014 received against the 30 August commitment.",
+        "LV installation at multi-crew rate: the first medium-voltage line cable complete and connected, harness installation scaling as material deliveries land, and the second line\u2019s cable opened.",
+        "The trunk-bore scope closed and the plowing tail reduced toward completion, with the termination investigation on the tested cable section concluded.",
+        "Quality releases and Owner acceptance progressing week on week across piles, tracker rows and modules ahead of the September completion dates."
       ]
     }
   ],
+
   "ownerActions": {
     "asOf": "Aug 8, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
