@@ -983,32 +983,31 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Aug 17 \u2013 Aug 22",
+      "period": "Aug 17 – Aug 22",
       "items": [
-        "Module installation held at or above the required ~4,900 per day, with the eastern contractor sustaining its daily threshold \u2014 first achieved Monday with 2,730 \u2014 and the western crew completing its western scope and transitioning east to reinforce.",
+        "Module installation held at or above the required ~4,900 per day, with the eastern contractor sustaining its daily threshold — first achieved Monday with 2,730 — and the western crew completing its western scope and transitioning east to reinforce.",
         "Tracker assembly accelerated to the 70 rows per day the 30 August completion now requires, with both crews converting daily in the largest remaining area.",
-        "Receipt of the required pile-type delivery confirmed, survey support remobilised, and pile installation restarted \u2014 the remaining rows in the northern areas depend on it.",
+        "Receipt of the required pile-type delivery confirmed, survey support remobilised, and pile installation restarted — the remaining rows in the northern areas depend on it.",
         "Substation deliveries converted into erection: the structural steel received and the ground-assembly erection sequence begun, following the high-voltage breaker equipment received 18 August and the precast cable trench received 15 August.",
         "Additional LV installation capacity mobilised and producing, with daily per-line reporting of feet hung, harnesses and boxes; the first medium-voltage line requires approximately 3,250 feet per day to be complete and connected by the end of August.",
         "The two remaining trunk bores advanced to closure and cable plowing held at a minimum of one segment per day across the eight remaining segments.",
-        "Monday\u2019s quality releases converted into Owner acceptance, and the release cadence held weekly.",
-        "Responses issued to the queries falling due this week (18\u201321 August), including the engineer-of-record confirmation for the inverter-pile shim remediation."
+        "Monday’s quality releases converted into Owner acceptance, and the release cadence held weekly.",
+        "Responses issued to the queries falling due this week (18–21 August), including the engineer-of-record confirmation for the inverter-pile shim remediation."
       ]
     },
     {
-      "period": "Aug 24 \u2013 Aug 29",
+      "period": "Aug 24 – Aug 29",
       "items": [
-        "Tracker assembly closing on the 30 August completion \u2014 the remaining balance concentrated in the largest area and in the northern areas released by the pile restart.",
-        "Pile installation completed, or carrying a dated finish inside the month \u2014 1,766 piles represent roughly nine working days at the demonstrated installation rate.",
+        "Tracker assembly closing on the 30 August completion — the remaining balance concentrated in the largest area and in the northern areas released by the pile restart.",
+        "Pile installation completed, or carrying a dated finish inside the month — 1,766 piles represent roughly nine working days at the demonstrated installation rate.",
         "Module installation sustained at or above the required rate with both installation crews concentrated in the eastern areas.",
-        "Substation steel erection in full sequence, precast trench installation progressing, and the remaining substation electrical equipment \u2014 station-service transformer, grounding reactor and metering transformers \u2014 received against the 30 August commitment.",
-        "LV installation at multi-crew rate: the first medium-voltage line cable complete and connected, harness installation scaling as material deliveries land, and the second line\u2019s cable opened.",
+        "Substation steel erection in full sequence, precast trench installation progressing, and the remaining substation electrical equipment — station-service transformer, grounding reactor and metering transformers — received against the 30 August commitment.",
+        "LV installation at multi-crew rate: the first medium-voltage line cable complete and connected, harness installation scaling as material deliveries land, and the second line’s cable opened.",
         "The trunk-bore scope closed and the plowing tail reduced toward completion, with the termination investigation on the tested cable section concluded.",
         "Quality releases and Owner acceptance progressing week on week across piles, tracker rows and modules ahead of the September completion dates."
       ]
     }
   ],
-
   "ownerActions": {
     "asOf": "Aug 8, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
@@ -1541,12 +1540,12 @@ window.MURCH_REPORT = {
       "src": "assets/photo-53.jpg",
       "date": "August 18, 2026",
       "title": "High-voltage breaker equipment received at the substation",
-      "note": "Delivery of high-voltage breaker equipment at the substation on 18 August \u2014 three poles with bushings on their support frame and the mechanism cabinet, photographed on arrival. Breaker availability has been a controlling item for the energization path, so this receipt is a material step; the remaining substation electrical equipment is committed for delivery by 30 August."
+      "note": "Delivery of high-voltage breaker equipment at the substation on 18 August — three poles with bushings on their support frame and the mechanism cabinet, photographed on arrival. Breaker availability has been a controlling item for the energization path, so this receipt is a material step; the remaining substation electrical equipment is committed for delivery by 30 August."
     },
     {
       "src": "assets/photo-54.jpg",
       "date": "August 15, 2026",
-      "title": "Precast cable trench delivered \u2014 substation",
+      "title": "Precast cable trench delivered — substation",
       "note": "Precast cable-trench units and cover slabs staged inside the substation fence beside the control building, received 15 August. These form the feeder cable-trench runs and arrive ahead of the structural steel, allowing trench installation to proceed as erection begins."
     },
     {
