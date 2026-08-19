@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 17, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 18, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 17, 2026",
+    "asOf": "August 18, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 68.2,
+    "overall": 69.6,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Saturday 15 and Monday 17 August. Monday was the strongest module day of the project: 5,590 modules placed, above the required rate — the eastern contractor installed 2,730, exceeding its required daily threshold for the first time, alongside 2,860 from the western crew, whose remaining western scope closes this week. The quality release process also advanced materially on Monday: 2,540 foundation piles, all 67 tracker rows of one assembly area (closing that area complete), and 4,446 modules were released through the EPC quality process. Tracker assembly added 54 rows on Monday and stands at 1,719 of 2,486 (69.2%); the required rate has risen to 70 per day, so assembly must accelerate this week. Cable plowing closed its first two segments since late July (38 of 46). On LV, Saturday added 2,805 feet on the first medium-voltage line together with the first harness installations (13 trackers), 207 support brackets and 471 hangers — all three daily control measures now produce — taking the cumulative to 24,375 of 274,720 linear feet (8.9%); additional installation capacity remains in mobilisation. The substation structural steel completed its road transit and was expected on site Monday afternoon, with erection mobilisation being confirmed. Pile installation remains suspended; confirmation of the scheduled pile-type delivery is being obtained, and a first release of 2,540 piles was issued in the northern area. Overall completion moves to 68.2% from 66.7%.",
+    "statement": "The reporting period covers Tuesday 18 August, and two controlling fronts moved decisively. At the substation, structural erection is underway: the discipline advanced from 11.1% to 18.4% as the received steel is assembled, the high-voltage breaker equipment was received and unloaded, and the substation composite moved from 26.3% to 30.7% — the widest variance on the project is closing for the first time. Module installation placed 4,904 against 4,899 required — the second consecutive day above the required rate, with the eastern contractor at 2,847, over its daily threshold both days; the western crew's remaining scope is down to roughly 1,100 modules and its transition east is being scheduled. Tracker assembly added 62 rows with all three crews closing — 1,781 of 2,486 (71.6%) against 71 per day now required — and one crew has completed its entire share of the largest area, so the remaining assembly balance increasingly depends on completion of the outstanding pile positions; confirmation of the pile-type delivery is being pursued as the priority action, with installation suspended an eighth day. The approved MV insulation-resistance test reports were formally transmitted to the Owner (GS-US-MURCH-TMT-Q-0019), and the first MV cable pull into an inverter station began. LV cable reporting for 16-18 August is being restored; the cumulative stands at 24,375 linear feet. Overall completion moves to 69.6% from 68.2%.",
     "note": null
   },
   "gates": [
@@ -38,19 +38,19 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 1719,
+      "installed": 1781,
       "total": 2486,
       "unit": "rows",
-      "earned": 1723.5,
-      "earnedPct": 69.3,
-      "earnedLabel": "69.3% earned incl. rows in progress (1,724 row-equivalents)",
+      "earned": 1785.5,
+      "earnedPct": 71.8,
+      "earnedLabel": "71.8% earned incl. rows in progress (1,786 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 88197,
+      "installed": 93101,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -60,34 +60,34 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 24.4,
-      "earnedPct": 33.6,
+      "gatePct": 25,
+      "earnedPct": 34.2,
       "unit": "%",
-      "earnedLabel": "33.6% earned incl. work in progress",
+      "earnedLabel": "34.2% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Aug 17, 2026",
+    "asOf": "Aug 18, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "1,719 / 2,486",
-        "gatePct": 69.1,
+        "gate": "1,781 / 2,486",
+        "gatePct": 71.6,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 69.3,
+        "earnedPct": 71.8,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "24.4% of scope",
-        "gatePct": 24.4,
+        "gate": "25% of scope",
+        "gatePct": 25,
         "inProgress": "MV 74.7% · 23 of 23 inverter stations set · 120 of 419 boxes · 24,375 lf of cable",
-        "earnedPct": 33.6,
+        "earnedPct": 34.2,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -366,6 +366,11 @@ window.MURCH_REPORT = {
         "d": "Aug 17",
         "v": 0,
         "c": 29586
+      },
+      {
+        "d": "Aug 18",
+        "v": 0,
+        "c": 29586
       }
     ],
     "trackers": [
@@ -603,6 +608,11 @@ window.MURCH_REPORT = {
         "d": "Aug 17",
         "v": 54,
         "c": 1719
+      },
+      {
+        "d": "Aug 18",
+        "v": 62,
+        "c": 1781
       }
     ],
     "modules": [
@@ -789,7 +799,12 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 17",
         "v": 5590,
-        "c": 88197
+        "c": 88431
+      },
+      {
+        "d": "Aug 18",
+        "v": 4904,
+        "c": 93101
       }
     ]
   },
@@ -955,8 +970,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 1,719",
-        "note": "11.9% of the 2,486 rows in scope and 17.2% of the 1,719 built. Released rows feed the module installation front."
+        "value": "296 / 1,781",
+        "note": "11.9% of the 2,486 rows in scope and 16.6% of the 1,781 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1202,10 +1217,20 @@ window.MURCH_REPORT = {
     "responseCutoff": "17:00 site time (Eastern)",
     "subjectConvention": "MURCH QUERY <ref> - <subject>",
     "responseTarget": "Response due within 5 working days (Monday to Friday) of receipt, by 17:00 site time",
-    "openingNote": "Twenty-four queries logged to date. The shim-remediation item of 15 August received an interim response on 17 August — laboratory weld inspections are scheduled this week, with repairs and coating to follow — and remains open pending the engineer-of-record confirmation, due 21 August. The two items of 13 August are due 20 August. Several earlier items have passed their response dates and their answers are being issued as a priority.",
+    "openingNote": "Twenty-five queries logged to date. A new item of 18 August — utility fiber and secondary power services to the control building — is in review with the engineering and utility-coordination leads, due 25 August. On the cable-records item due 20 August, the approved MV insulation-resistance test reports were formally transmitted on 18 August (GS-US-MURCH-TMT-Q-0019) with the balance of records following. The shim-remediation item remains open pending the engineer-of-record confirmation, due 21 August.",
     "responseNote": "There is no sign-in and no account. Sending the query is all that is required — you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
+      {
+        "ref": "MQ-20260818-0955",
+        "subject": "Utility fiber and secondary power services to the control building \u2014 design, utility coordination and construction responsibility",
+        "area": "Substation and inverters",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-18",
+        "dueISO": "2026-08-25",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
       {
         "ref": "MQ-20260815-0700",
         "subject": "Engineer-of-record confirmation for the inverter-pile shim remediation, weld coating preparation, and pile leveling tolerance",
@@ -1234,6 +1259,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-13",
         "dueISO": "2026-08-20",
+        "respondedISO": "2026-08-18",
         "status": "Open",
         "assignedTo": "QA/QC lead"
       },
@@ -1469,32 +1495,32 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "1,719 rows complete of 2,486 (69.2%) — the measure that governs the 30 August date — of which 296 carry Owner acceptance; earned progress stands at 69.3%. Monday added 54 rows and one assembly area closed complete (67 of 67, released whole through the EPC quality process). The required rate has risen to 70 per day over the 11 working days remaining, so assembly must accelerate: the largest remaining area holds both crews converting daily, and the following areas depend on completion of the remaining pile positions. The delivery of the required pile type is being confirmed, and the EPC release of Monday must now convert into Owner acceptance, which stands at the 30 July cut."
+      "note": "1,781 rows complete of 2,486 (71.6%) — the measure that governs the 30 August date — of which 296 carry Owner acceptance; earned progress stands at 71.8%. Tuesday added 62 rows with all three crews closing, against 71 per day required over the 10 working days remaining. The largest remaining area has passed its halfway point, and one crew has completed its entire share there — the remaining balance is therefore increasingly concentrated in the northern areas, which depend on completion of the outstanding pile positions. Confirmation of the pile-type delivery is the controlling action; Owner acceptance remains at the 30 July cut and converting the EPC releases is the parallel priority."
     },
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "83,273 modules remain, with 4,899 per day required to hold 6 September. Monday 17 August placed 5,590 — the strongest day of the project and the first above the required rate since it rose: the eastern contractor installed 2,730, exceeding its required daily threshold for the first time, and the western crew added 2,860 with its western scope closing this week, after which it reinforces the eastern areas. Saturday was weather-shortened (632, with modules secured in protective position). The requirement now is consistency: the eastern rate must hold daily through the handover. A first module release of 4,446 was issued through the EPC quality process."
+      "note": "78,369 modules remain, with 4,899 per day required to hold 6 September. Tuesday placed 4,904 — the second consecutive day above the required rate — with the eastern contractor at 2,847, over its daily threshold both days, and the western crew adding 2,028 with its remaining scope down to roughly 1,100 modules. The immediate management action is the western crew's transition east, being scheduled so no installation capacity idles as the western scope completes. The first panels were also placed in the northern areas (29, on newly completed rows)."
     },
     {
       "title": "LV and DC installation — the pull has started",
       "level": "Priority",
-      "note": "Cumulative installation stands at 24,375 of 274,720 linear feet (8.9%). Saturday 15 August added 2,805 feet on the first medium-voltage line together with the first harness installations — 13 trackers — plus 207 support brackets and 471 hangers: all three daily control measures now produce. The requirement stands at approximately 8,900 feet per day to 18 September, well above the single-crew capacity, so the additional installation capacity contracted for the LV scope remains the controlling action, with its mobilisation being confirmed this week. The programme targets the first medium-voltage line complete and connected by the end of August."
+      "note": "Cumulative installation stands at 24,375 of 274,720 linear feet (8.9%), last reported Saturday 15 August — when the line produced 2,805 feet together with the first harness installations (13 trackers), 207 support brackets and 471 hangers. <strong>Restoring the daily reporting for 16-18 August is the immediate action</strong>, alongside the mobilisation of the additional contracted installation capacity: the requirement now stands at approximately 9,300 feet per day to 18 September, well above single-crew capacity. The programme continues to target the first medium-voltage line complete and connected by the end of August."
     },
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "1,766 piles remain and installation is suspended pending delivery of a specific pile type; confirmation of the scheduled delivery is being obtained and restart preparations are in place, with survey support remobilising on material arrival. A first quality release of 2,540 piles was issued in the northern area on 17 August. The demonstrated rate of 215 piles per day supports a defensible revised completion date the moment installation resumes; a number of tracker row positions require this pile type, so a prompt restart also protects the assembly completion."
+      "note": "1,766 piles remain and installation is suspended an eighth working day pending delivery of a specific pile type; obtaining written confirmation of that delivery is the priority action, with survey support remobilising on material arrival. The dependency has widened: one assembly crew has completed its share of the largest area and its remaining rows sit in the northern areas, which require these piles — so the pile restart now directly protects the 30 August assembly completion. A first quality release of 2,540 piles was issued in the northern area on 17 August."
     },
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "26.3% overall, against the 25 September mechanical completion date — still the widest variance on the project, with civil at 82.7% and structural at 11.1% the controlling line. The structural steel completed its road transit and was expected on site Monday afternoon; erection mobilisation is being confirmed so that erection begins immediately on receipt, using the prepared ground-assembly sequence. Surge arresters and the precast cable trench have been received, and the remaining substation equipment — station-service transformer, grounding reactor and metering transformers — is committed for delivery by 30 August. An alternative source for the support poles remains under evaluation, with a supplier meeting scheduled Friday."
+      "note": "30.7% overall on the 19 August cut — and the variance is closing for the first time: <strong>structural erection is underway, advancing from 11.1% to 18.4%</strong> as the received steel is assembled, with electrical at 9.1% following receipt of the high-voltage breaker equipment on 18 August. Civil stands at 86.3%. The remaining substation equipment — station-service transformer, grounding reactor and metering transformers — holds its 30 August delivery commitment, and an alternative source for the support poles remains under evaluation with a supplier meeting Friday. The focus is now sustaining a daily erection rhythm through month-end."
     },
     {
       "title": "Electrical — all fronts",
       "level": "Watch",
-      "note": "Electrical progress is reported as one total across four fronts: 24.4% on completed units and 33.6% including verified work in progress. Cable plowing closed its first two segments since late July — 38 of 46 complete, 121,632 feet installed — and MV collection stands at 74.7%. The two trunk bores are the remaining drilling scope, one drilling and one in progress; insulation-resistance testing continued Saturday on a completed feeder run, and the verification excavation on the section that failed earlier testing has found no physical damage, so that investigation moves to the terminations. The inverter setting scope is complete; the manufacturer's formal technical letter on the support condition is being obtained."
+      "note": "Electrical progress is reported as one total across four fronts: 25.0% on completed units and 34.2% including verified work in progress. The approved MV insulation-resistance test reports were formally transmitted to the Owner on 18 August (GS-US-MURCH-TMT-Q-0019, with the updated master list), and the first MV cable pull into an inverter station began. Cable plowing holds 38 of 46 segments and the two trunk bores remain the drilling scope; the verification excavation on the earlier failed test section found no physical damage, moving that investigation to the terminations. The inverter setting scope is complete; the manufacturer's formal technical letter on the support condition is being obtained."
     }
   ],
   "material": [
@@ -1686,8 +1712,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "217",
-        "note": "Latest site-board headcount (Aug 17). Field labor plus management, quality and HSE."
+        "value": "215",
+        "note": "Latest site-board headcount (Aug 18). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1701,8 +1727,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "138,200",
-        "note": "Total manhours worked from the start of construction on April 1 through August 17, at 10 h/day, Monday to Saturday."
+        "value": "140,300",
+        "note": "Total manhours worked from the start of construction on April 1 through August 18, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1842,6 +1868,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 17",
         "v": 217
+      },
+      {
+        "d": "Aug 18",
+        "v": 215
       }
     ],
     "manhours": [
@@ -1886,27 +1916,27 @@ window.MURCH_REPORT = {
         "c": 136012
       },
       {
-        "d": "Aug 17",
-        "c": 138182
+        "d": "Aug 18",
+        "c": 140332
       }
     ],
     "mix": {
-      "day": "August 17, 2026",
-      "total": 217,
+      "day": "August 18, 2026",
+      "total": 215,
       "rows": [
         {
           "trade": "Tracker assembly and piling",
-          "people": 134,
+          "people": 131,
           "color": "#0f7a52"
         },
         {
           "trade": "Module installation",
-          "people": 36,
+          "people": 38,
           "color": "#2769a8"
         },
         {
           "trade": "Electrical and substation",
-          "people": 20,
+          "people": 21,
           "color": "#b96f18"
         },
         {
@@ -1916,12 +1946,12 @@ window.MURCH_REPORT = {
         },
         {
           "trade": "EPC management, quality and HSE",
-          "people": 25,
+          "people": 24,
           "color": "#66716d"
         },
         {
           "trade": "Support / environmental",
-          "people": 2,
+          "people": 1,
           "color": "#0f7a52"
         }
       ]
