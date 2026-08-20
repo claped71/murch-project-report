@@ -1223,7 +1223,7 @@ window.MURCH_REPORT = {
     "items": [
       {
         "ref": "MQ-20260818-0955",
-        "subject": "Utility fiber and secondary power services to the control building \u2014 design, utility coordination and construction responsibility",
+        "subject": "Utility fiber and secondary power services to the control building — design, utility coordination and construction responsibility",
         "area": "Substation and inverters",
         "raisedBy": "James Burnett",
         "raisedISO": "2026-08-18",
