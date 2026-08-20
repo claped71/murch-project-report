@@ -373,27 +373,13 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
   changed.push(`workforce manhours -> ${fmt(round100(cum))} to date`);
   note(review, `workforce: manhours recomputed on the ${HRS} h/day Mon-Sat basis — confirm the shift basis still matches site practice, and re-read the tile notes if the headcount record start date moved`);
 
-  // Discipline mix, with trade labels made client-facing.
-  const TRADE = {
-    'Trackers & Piling': 'Tracker assembly and piling',
-    'Module Installation': 'Module installation',
-    'Electrical & SET': 'Electrical and substation',
-    'Civil & Fencing': 'Civil and fencing',
-    'GreenSol EPC': 'EPC management, quality and HSE'
-  };
-  const mixSrc = I.manpowerMixToday;
-  if (mixSrc && Array.isArray(mixSrc.mix)) {
-    const palette = ['#0f7a52', '#2769a8', '#b96f18', '#7b4fa8', '#66716d'];
-    C.workforce.mix = {
-      day: longDate(String(mixSrc.day).replace(/,\s*\d{4}$/, '')) + ', ' + YEAR,
-      total: Number(mixSrc.total) || 0,
-      rows: mixSrc.mix.map((m, i) => {
-        const label = TRADE[m.trade];
-        if (!label) note(review, `workforce: unmapped trade "${m.trade}" — add it to TRADE in tools/sync.js`);
-        return { trade: label || scrub(m.trade), people: Number(m.people) || 0, color: palette[i % palette.length] };
-      })
-    };
-    changed.push(`workforce mix -> ${C.workforce.mix.total} people across ${C.workforce.mix.rows.length} disciplines`);
+  // CLIENT-FACING POLICY (Jose Romero, Aug 20 2026): the report shows TOTAL personnel,
+  // daily manhours and cumulative manhours ONLY. The workforce split by specialty /
+  // discipline (civil, electrical, etc.) is internal and must NEVER appear in the
+  // client report. This block DELETES any mix so a future edit cannot re-add it.
+  if (C.workforce.mix) {
+    delete C.workforce.mix;
+    changed.push('workforce mix REMOVED (client-facing policy: totals only, no discipline split)');
   }
 }
 

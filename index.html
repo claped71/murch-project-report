@@ -440,12 +440,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
         <div id="mhChart"></div>
       </div>
     </div>
-    <div style="height:14px"></div>
-    <div class="card">
-      <h3 style="margin:0 0 3px;font-size:15px;font-weight:700">Workforce by discipline</h3>
-      <p class="csub" style="margin:0 0 14px;font-size:12.5px;color:var(--muted)" id="mixSub"></p>
-      <div id="mixBars"></div>
-    </div>
   </section>
 
   <section id="material">
@@ -546,7 +540,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=2f174292ff"></script>
+<script src="data.js?v=914af945e1"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -1166,16 +1160,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     renderWorkforce();
     window.addEventListener('resize', function(){ clearTimeout(window.__wfT); window.__wfT = setTimeout(renderWorkforce, 200); });
 
-    var mix = W.mix;
-    document.getElementById('mixSub').textContent = 'Site board of ' + mix.day + ' — ' + mix.total + ' people. Disciplines, not individual contractors.';
-    document.getElementById('mixBars').innerHTML = mix.rows.map(function(r){
-      var p = (r.people/mix.total*100);
-      return '<div style="margin-bottom:11px">'
-        + '<div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:4px">'
-        +   '<span style="font-weight:600">'+esc(r.trade)+'</span>'
-        +   '<span class="n" style="color:var(--ink2)">'+r.people+' <span style="color:var(--muted)">· '+p.toFixed(0)+'%</span></span></div>'
-        + '<div class="bar" style="margin:0"><i style="width:'+p.toFixed(1)+'%;background:'+r.color+'"></i></div></div>';
-    }).join('');
   })();
 
   /* photos */
