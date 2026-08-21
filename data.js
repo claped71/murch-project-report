@@ -1744,12 +1744,12 @@ window.MURCH_REPORT = {
     }
   },
   "workforce": {
-    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and the EHS headcount record, current to August 20, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+    "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and the EHS headcount record, current to August 21, 2026. Days on which the site was fully stopped are excluded from the manhours.",
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "239",
-        "note": "Latest site-board headcount (Aug 20). Field labor plus management, quality and HSE."
+        "value": "228",
+        "note": "Latest site-board headcount (Aug 21). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1764,7 +1764,7 @@ window.MURCH_REPORT = {
       {
         "label": "Manhours to date",
         "value": "145,000",
-        "note": "Total manhours worked from the start of construction on April 1 through August 20, at 10 h/day, Monday to Saturday."
+        "note": "Total manhours worked from the start of construction on April 1 through August 21, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1912,6 +1912,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 20",
         "v": 239
+      },
+      {
+        "d": "Aug 21",
+        "v": 228
       }
     ],
     "manhours": [
