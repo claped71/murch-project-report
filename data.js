@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 22, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 24, 2026 (15:48 field cut - partial day) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 22, 2026",
+    "asOf": "August 24, 2026 (15:48 field cut - partial day)",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 74,
+    "overall": 75.1,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Saturday 22 August; Sunday is not a working day. At the substation the composite advanced from 34.3% to 38.9%, with structural erection moving from 24.1% to 36.6% \u2014 the largest single-cut advance any element of the works has recorded on this project \u2014 and completed activities rising from 53 to 61 of 187. This is the direct result of the extended-hours shift introduced on 21 August under a reviewed job safety analysis, and of working Saturday; the variance to plan-to-date has narrowed from 10.7 points to 6.1. Module installation placed 768 in the western closeout, the only module production of the day, reducing the western balance to 1,643 and taking cumulative installation to 109,350 of 171,470, or 63.8%; the requirement rises to 5,177 per day to 6 September. LV and DC cable installation recorded no cable footage: the shift was devoted entirely to harness installation \u2014 25 lines and 75 strings, the highest recorded \u2014 and to correcting the previous day's work, and the Contractor confirms every affected harness line was corrected in field and now stands fully in conformity with the approved arrangement. Circuits were also passed through the Area A to Area C crossing. Cumulative LV installation holds at 38,124 linear feet (13.9%) against approximately 10,290 per day required to 18 September. Tracker assembly recorded no completed rows, holding at 1,942 of 2,486 (78.1%); against the 30 August date this now implies 91 rows per day over six working days, above any rate the project has demonstrated, and the Contractor will bring forward a revised date for that element rather than restate the current one. Pile installation remains suspended; the specific pile type required for the two outstanding areas was received on 21 and 22 August and installation resumes in the northern area, with grading still to be completed in the remaining area. Overall completion moves to 74.0% from 73.8%.",
+    "statement": "The reporting period covers Monday 24 August, reported at a 15:48 field cut, so the day is partial. Production restarted across the mechanical fronts. Tracker assembly completed 60 rows \u2014 the first completions since 21 August \u2014 taking the total to 2,002 of 2,486 (80.5%, or 80.8% including verified work in progress). Module installation placed 4,095, and materially it was placed in the eastern area whose racking bearings had been found outside tolerance: that area is producing again following remediation, and cumulative installation stands at 113,445 of 171,470, or 66.2%. Against the 30 August tracker date the requirement is now 97 rows per day over the five working days remaining, and against 6 September the module requirement is 5,275 per day over eleven; the Contractor will bring forward a revised, dated forecast for the tracker element rather than restate the current date. On the LV and DC front the day set a harness record of 39 lines and 117 strings, and approximately 17,000 feet of conductor was installed; however only 185 feet of that counts toward the cable measure, the remainder being harness conductor, which is measured in assemblies. <strong>The cable measure has been re-based this period to cable only \u2014 269,748 linear feet of homerun and trunk cable \u2014 with the 4,972 harness assemblies reported separately in their own unit.</strong> Cumulative cable stands at 38,309 feet (14.2%) against 10,520 per day required to 18 September, and harness at 134 of 4,972 assemblies (2.7%) against 220 per day. Pile installation has still not resumed in quantity: only minimal work was reported in one area and no quantity was filed, and the installation machines and lifting support are not yet back on site. At the substation the composite holds at 38.9% following the 12.5-point structural advance recorded on 24 August. Overall completion moves to 75.1% from 74.0%.",
     "note": null
   },
   "gates": [
@@ -38,19 +38,19 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 1942,
+      "installed": 2002,
       "total": 2486,
       "unit": "rows",
-      "earned": 1949.2,
-      "earnedPct": 78.4,
-      "earnedLabel": "78.4% earned incl. rows in progress (1,949 row-equivalents)",
+      "earned": 2009.2,
+      "earnedPct": 80.8,
+      "earnedLabel": "80.8% earned incl. rows in progress (2,009 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 109350,
+      "installed": 113445,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -60,7 +60,7 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 28.5,
+      "gatePct": 28.6,
       "earnedPct": 36.7,
       "unit": "%",
       "earnedLabel": "36.7% earned incl. work in progress",
@@ -70,23 +70,23 @@ window.MURCH_REPORT = {
     }
   ],
   "earnedProgress": {
-    "asOf": "Aug 22, 2026",
+    "asOf": "Aug 24, 2026 (15:48 field cut - partial day)",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "1,942 / 2,486",
-        "gatePct": 78.1,
+        "gate": "2,002 / 2,486",
+        "gatePct": 80.5,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 78.4,
+        "earnedPct": 80.8,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "28.5% of scope",
-        "gatePct": 28.5,
-        "inProgress": "MV 74.7% · 23 of 23 inverter stations set · 120 of 419 boxes · 38,124 lf of cable",
+        "gate": "28.6% of scope",
+        "gatePct": 28.6,
+        "inProgress": "MV 74.7% · 23 of 23 inverter stations set · 120 of 419 boxes · 38,309 lf of cable",
         "earnedPct": 36.7,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Sep 25, 2026 — conditional",
       "status": "At risk",
-      "note": "RE-RATED from On target on 9 August, held under review. Two of the three conditions set then are now moving: tracker assembly produced 78 completed rows on 10 August against the 67 per day required — the first above-rate day since 3 August, with the largest remaining area finally converting — and the cable crew grew from 15 to 20 and set a project-record 3,131 linear feet, taking cumulative LV to 12,412 of 274,720 feet. The date is not yet supported: even the record cable day is 41% of the roughly 7,600 feet per day the 18 September electrical date requires, module installation must transition to the eastern contractor without losing rate, and pile installation is suspended pending delivery of a specific pile type. The rating returns to On target when the cable crew growth continues, the module transition holds above 4,000 per day, and piling resumes with a dated completion."
+      "note": "Held under review. The mechanical fronts restarted on 24 August \u2014 60 tracker rows and 4,095 modules, with the eastern area whose racking bearings were outside tolerance producing again after remediation \u2014 and the substation has recorded its largest single advance of the project. The date is nonetheless not supported on the current arithmetic. Tracker assembly requires 97 rows per day over five working days to 30 August, the highest rate the element has ever carried; <strong>a revised, dated forecast for that element will be brought forward this week rather than the current date restated</strong>. LV and DC cable stands at 38,309 of 269,748 feet with 10,520 per day required to 18 September against a best recorded day of 3,610, and that date \u2014 not the tracker date \u2014 is what governs mechanical completion. Pile installation has not resumed in quantity and the installation machines are not back on site. The rating improves when the additional cable crew is in production, the tracker forecast is issued and piling resumes with a dated completion."
     },
     {
       "name": "Provisional Interconnection",
@@ -108,7 +108,7 @@ window.MURCH_REPORT = {
       "forecast": "Oct 16, 2026 — conditional",
       "pin": true,
       "status": "At risk",
-      "note": "RE-RATED from On target. The date follows mechanical completion, which is itself at risk, and carries three independent constraints of its own: the substation stands at 25.9% overall with structural at 10.8% and its steel not due on site until 15 August; the switchgear breakers are still awaited with several committed dates falling after the gate; and the 138 medium-voltage terminations stand at zero against coupling lead times quoted at around 40 weeks by every supplier approached. Insulation-resistance testing on 8 August was a genuine advance — 19 passes from 21 sections including all four feeders into the substation — but testing is not termination. Pre-commissioning remains programmed to complete by 13 October."
+      "note": "Held under review. The date follows mechanical completion, which is itself under review. The substation position has improved materially: 38.9% overall with structural at 36.6% after a 12.5-point advance, and the circuit breaker is set on its foundation, so the switchgear constraint previously carried here is discharged on the equipment side. Two constraints remain. The 138 medium-voltage terminations stand at zero, and termination \u2014 not testing \u2014 is the measure that counts; coupling lead times quoted by every supplier approached remain long. Electromechanical assembly at the substation, planned for 17 August, has not started, and steel delivery is still recorded in progress. Pre-commissioning remains programmed to complete by 13 October."
     },
     {
       "name": "Commercial Operation Date",
@@ -391,6 +391,11 @@ window.MURCH_REPORT = {
         "d": "Aug 22",
         "v": 0,
         "c": 29586
+      },
+      {
+        "d": "Aug 24",
+        "v": 0,
+        "c": 29586
       }
     ],
     "trackers": [
@@ -653,6 +658,11 @@ window.MURCH_REPORT = {
         "d": "Aug 22",
         "v": 0,
         "c": 1942
+      },
+      {
+        "d": "Aug 24",
+        "v": 60,
+        "c": 2002
       }
     ],
     "modules": [
@@ -864,7 +874,12 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 22",
         "v": 768,
-        "c": 109350
+        "c": 109584
+      },
+      {
+        "d": "Aug 24",
+        "v": 4095,
+        "c": 113445
       }
     ]
   },
@@ -1006,7 +1021,7 @@ window.MURCH_REPORT = {
     "note": "The injury record is clean: 328 days with no recordable, no lost time and no restricted work. The 7 August first-aid case is nonetheless treated as significant: a torque tube slipping out of control onto a worker's helmet during racking installation is a work-method event with serious potential, and it is rated accordingly — the investigation and tube-handling corrective actions are open with the racking crews, whose manning is currently increasing. The background hazard remains ground and vegetation: most of June's property damage involved plant or loads moving over uneven or obstructed ground, a mower struck a fence concealed in vegetation, and the 4 August first-aid case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, with the corrective action handled as one item with that response. The July monthly report is being compiled; June remains the audited basis."
   },
   "quality": {
-    "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 1,942 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
+    "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 2,002 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
     "tiles": [
       {
         "label": "Piles executed",
@@ -1030,8 +1045,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 1,942",
-        "note": "11.9% of the 2,486 rows in scope and 15.2% of the 1,942 built. Released rows feed the module installation front."
+        "value": "296 / 2,002",
+        "note": "11.9% of the 2,486 rows in scope and 14.8% of the 2,002 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1058,28 +1073,28 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Aug 24 – Aug 29",
+      "period": "Aug 25 – Aug 29",
       "items": [
-        "Pile installation restarted in the northern area, the released installation machines returned to site, lifting support remobilised, and a dated completion brought forward for the 1,766 outstanding positions \u2014 approximately nine working days at the demonstrated rate.",
-        "<strong>A revised, dated forecast issued for the tracker assembly element in place of the 30 August date, together with the recovery sequence supporting it</strong> \u2014 91 rows per day over six working days is above any rate demonstrated on this project.",
-        "The out-of-tolerance racking bearings in the two eastern blocks surveyed, quantified and a correction programme issued, so that both the assembly count and the 27,018 modules behind them are released.",
-        "Grading completed in the remaining pile area so that installation can continue there, and racking started in the northern area to open a module front against its 18,486 balance.",
-        "Module installation returned to the required 5,177 per day with the western balance of 1,643 completed in a single pass, and the reconciliation figure issued to the installing contractor for the area installed on its behalf.",
-        "The additional contracted LV installation capacity mobilised within the stated week and the self-perform crew fielded, with fixing material replenished Monday and Tuesday so harness output is not capped by consumables.",
+        "Pile installation resumed in quantity with the released installation machines returned to site and lifting support remobilised, and a dated completion issued for the 1,766 outstanding positions \u2014 approximately nine working days at the demonstrated rate.",
+        "<strong>A revised, dated forecast issued for the tracker assembly element in place of the 30 August date, with the recovery sequence supporting it</strong> \u2014 97 rows per day over five working days is the highest rate this element has ever carried.",
+        "The racking-bearing remediation in the two eastern blocks completed and quantified, consolidating the return to module production in the area carrying the largest remaining balance.",
+        "Grading completed in the second pile area, and racking started in the northern area so that its 18,486-module balance has a front.",
+        "Module installation held at or above 5,275 per day, the western balance of 1,643 completed in a single pass, and the reconciliation figure issued to the installing contractor.",
+        "The additional contracted LV installation capacity mobilised within the stated week and the self-perform crew fielded; cable and harness reported separately each day, with homerun and trunk shown against their own required rates.",
         "Substation erection sustained at the rate the extended-hours shift has demonstrated, steel delivery closed out, electromechanical assembly started, and the remaining substation equipment received against the 30 August commitment.",
-        "Installed length recorded against the two remaining trunk crossings, and cable plowing restarted at a minimum of one segment per day across the eight outstanding segments with a start date and daily rate confirmed.",
-        "<strong>Responses issued to the twenty-one queries that remain open, and in particular to the nine on which no response has yet been provided</strong>, together with the query falling due on 25 August."
+        "Installed length recorded against the two remaining trunk crossings, and cable plowing restarted at a minimum of one segment per day with a start date and daily rate confirmed.",
+        "<strong>Responses issued to the twenty-one queries that remain open, and in particular to the nine on which no response has yet been provided.</strong>"
       
       ]
     },
     {
       "period": "Aug 31 – Sep 5",
       "items": [
-        "Tracker assembly closed out or carrying its revised dated forecast, with the corrected racking bearings released back to the module front.",
+        "Tracker assembly closed out or carrying its revised dated forecast, with the remediated racking released back to the module front.",
         "Pile installation complete, releasing the remaining northern and eastern assembly blocks.",
         "Module installation sustained at or above the required rate with both installation crews in the eastern areas and the western scope closed.",
-        "Substation structural erection in full sequence, electromechanical assembly progressing, cable-trench installation behind it and the received equipment set.",
-        "LV installation at multi-crew rate: the first medium-voltage line cable complete and connected, harness installation scaling as material lands, and the second line's cable opened.",
+        "Substation structural erection in full sequence, electromechanical assembly progressing, and the received equipment set.",
+        "LV installation at multi-crew rate: the first medium-voltage line cable complete and connected, harness scaling as material lands, and the second line's cable opened.",
         "The trunk-crossing scope closed and the plowing balance reduced toward completion, with the termination investigation on the tested cable section concluded.",
         "Quality releases and Owner acceptance progressing week on week across piles, tracker rows and modules ahead of the September completion dates."
       
@@ -1558,32 +1573,32 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "1,942 rows complete of 2,486 (78.1%), of which 296 carry Owner acceptance; earned progress stands at 78.4%. Saturday recorded no completed rows on any crew. Against the 30 August date this implies 91 rows per day over the six working days remaining \u2014 higher than any rate the project has demonstrated, the best single day on record being 97 and a normal day 46 to 60. <strong>The Contractor's position is that this date should be re-forecast with a dated replacement rather than restated, and a revised date will be brought forward this week.</strong> Three matters sit behind this and none is yet resolved: one assembly crew has not filed a completed row since 18 August and has been reduced in size; a second halved its output in the northern area before the weekend; and racking bearings in two blocks of the eastern area have been found out of tolerance, which is remedial work on rows already counted complete and is separately preventing module installation in those blocks. Most of the racking in the northern area is not yet installed, and the remaining rows in the pile-dependent block still await pile installation. Owner acceptance remains at the 30 July cut."
+      "note": "2,002 rows complete of 2,486 (80.5%), of which 296 carry Owner acceptance; earned progress stands at 80.8%. Monday returned 60 completed rows after two days without any \u2014 30 in the eastern area and 30 in the northern area, both crews back at the rate they have previously demonstrated. Against the 30 August date the requirement is now <strong>97 rows per day over the five working days remaining</strong>, which is the highest daily rate this element has ever carried and equals the best single day on record. <strong>The Contractor's position is unchanged and is stated here plainly: this date should be re-forecast with a dated replacement rather than restated, and that forecast will be brought forward this week.</strong> Two dependencies remain outside the crews' control: the rows in the pile-dependent block cannot start until pile installation resumes, and most of the racking in the northern area is not yet installed. Separately, racking bearings found outside tolerance in two eastern blocks are being remediated \u2014 that work is on rows already counted complete, and it is progressing, since the area returned to module production on 24 August. Owner acceptance remains at the 30 July cut."
     },
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "62,120 modules remain, with 5,177 per day required to hold 6 September; cumulative installation stands at 63.8%. Saturday placed 768 in the western closeout \u2014 the only module production of the day \u2014 reducing the western balance to 1,643, with one western area now down to 116. The eastern areas carry 60,477 of the remaining balance and both of the large blocks there are currently constrained for identified reasons. In the first, which alone carries 27,018 modules, <strong>racking bearings in two blocks have been found out of tolerance and are preventing module installation</strong> pending correction. In the second, carrying 18,486, most of the racking is not yet installed and that racking is in turn dependent on the outstanding pile positions. The installing contractor reports a current rate of 3,500 per day with a plan to reach 4,000, and has requested the quantity installed on its behalf by others in one area so that the two records can be reconciled; that figure is being issued."
+      "note": "58,025 modules remain, with 5,275 per day required to hold 6 September; cumulative installation stands at 66.2%. Monday placed 4,095, and where it was placed matters more than the quantity: <strong>the eastern area whose racking bearings were found outside tolerance is producing again following remediation.</strong> That area carries the single largest remaining balance on the project, so its return is the most significant development on this front this period. The western closeout balance stands at 1,643 across four areas and is now the older of the two open items. The second eastern area, carrying 18,486 modules, still has no module front because most of its racking is not yet installed and that racking depends in turn on the outstanding pile positions. The installing contractor reports a current rate of 3,500 per day with a plan to reach 4,000, and the reconciliation figure it requested for the area installed on its behalf by others is being issued."
     },
     {
       "title": "LV and DC installation — reporting restored",
       "level": "Priority",
-      "note": "Cumulative installation holds at 38,124 of 274,720 linear feet (13.9%); Saturday recorded no cable footage and the requirement accordingly rises to approximately 10,290 feet per day to 18 September. The shift was devoted to harness installation and to correcting the previous day's work. <strong>The non-conformity reported on 21 August is closed: the Contractor's electrical supervisor confirms every affected harness line was corrected in field and the installation now stands fully in conformity with the approved arrangement</strong>, and the arrangement is being written into the inspection and test plan before further crews mobilise. Harness installation reached 25 lines and 75 strings, the highest recorded. Circuits were passed through the Area A to Area C crossing, which is the crossing the outstanding inverter trunk run required. Two constraints now bind this front: installation capacity, where the additional contracted crew is under signed instruction with mobilisation stated at one week and the further self-perform crew is not yet fielded; and consumables, with fixing material exhausted and replenishment due Monday and Tuesday, which caps harness output this week."
+      "note": "<strong>The cable measure has been re-based this period at the Contractor's instruction to cable only: 269,748 linear feet, comprising homerun feeders (229,435) and trunk cable (40,313). The 4,972 harness assemblies previously carried inside that linear-foot total are now reported separately in assemblies.</strong> The two are different units and are no longer combined in any published figure. Cumulative cable stands at 38,309 feet (14.2%) against approximately 10,520 per day required to 18 September; harness stands at 134 of 4,972 assemblies (2.7%) against 220 per day. On 24 August the crew set a harness record of 39 lines and 117 strings and installed approximately 17,000 feet of conductor, of which 185 feet was trunk cable counting toward the cable measure. Reporting now separates the two cable types as well: homerun requires 8,905 feet per day and trunk 1,615, and the daily record shows the crew alternating between them rather than running both. The non-conformity reported on 21 August is closed \u2014 every affected harness line was corrected in field and the installation stands fully in conformity with the approved arrangement, which is being written into the inspection and test plan. Installation capacity remains the governing constraint: the additional contracted crew is under signed instruction with mobilisation stated at one week, and the further self-perform crew is not yet fielded."
     },
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "1,766 piles remain and installation is suspended. The position has been clarified by the installing contractor in writing: <strong>the specific pile type required to complete the two outstanding areas was not available and was received on 21 and 22 August</strong>, so the material constraint is only now discharged; <strong>four installation machines were released from site while they stood idle</strong>, and returning them is now the governing constraint. The contractor further reports that grading in the northern area was outside the tolerance required for pile installation for approximately three weeks and that grading works began on 20 August, and that the remaining area still requires grading before installation can continue there. Installation therefore resumes in the northern area only. Survey support has returned to site to set out the remaining positions; lifting support has not. The remaining quantity represents approximately nine working days at the demonstrated rate, and the tracker rows in the pile-dependent block remain contingent on it."
+      "note": "1,766 piles remain and installation has still not resumed in quantity. Only minimal work was reported in one of the two outstanding areas on 24 August and <strong>no quantity was filed</strong>, so the position is unchanged in measured terms. The material constraint is discharged \u2014 the specific pile type was received on 21 and 22 August \u2014 but the installation machines released from site while they stood idle have not returned, and lifting support is still not on site; survey support has returned. Grading in the second area remains outstanding before installation can continue there. The remaining quantity represents approximately nine working days at the demonstrated rate, so the arithmetic still closes if the machines return promptly; it does not close if the front stays as it is. The tracker rows in the pile-dependent block and most of the racking in the northern area remain contingent on this front."
     },
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "38.9% overall on the 24 August cut, from 34.3% \u2014 civil 89.6%, structural 36.6% and electrical 13.8%, with 61 of 187 scheduled activities complete. Structural erection advanced 12.5 points in a single cut, the largest single-cut advance recorded by any element of the works, following the introduction of an extended-hours shift on 21 August under a reviewed job safety analysis and supplementary lighting, and Saturday working. The circuit breaker is set on its foundation. The variance to plan-to-date has narrowed from 10.7 points to 6.1, and the erection workforce is being rebuilt after the reduction recorded last week. Two items remain upstream: steel delivery is still recorded in progress against a planned completion of 1 July, and electromechanical assembly, planned for 17 August, has not yet started. The remaining substation equipment \u2014 station-service transformer, grounding reactor and metering transformers \u2014 holds its 30 August delivery commitment. The tracker carries 54 days to the 17 October energization date."
+      "note": "38.9% overall, holding after the 12.5-point structural advance recorded on the 24 August cut \u2014 civil 89.6%, structural 36.6% and electrical 13.8%, with 61 of 187 scheduled activities complete. That advance was the largest single-cut movement any element of the works has recorded on this project and followed the introduction of an extended-hours shift on 21 August under a reviewed job safety analysis, together with Saturday working. The circuit breaker is set on its foundation. The variance to plan-to-date has narrowed from 10.7 points to 6.1. Two items remain upstream: steel delivery is still recorded in progress against a planned completion of 1 July, and electromechanical assembly, planned for 17 August, has not yet started. The remaining substation equipment \u2014 station-service transformer, grounding reactor and metering transformers \u2014 holds its 30 August delivery commitment. The tracker carries 54 days to the 17 October energization date."
     },
     {
       "title": "Electrical — all fronts",
       "level": "Watch",
-      "note": "Electrical progress is reported as one total across four fronts: 28.5% on completed units and 36.7% including verified work in progress, the advance carried by the substation. On the civil-electrical interface the road crossing carrying medium-voltage cable to the sixth inverter station was excavated, ducted and reinstated within the day, the cable was landed inside that station's medium-voltage cabinet, the grounding ring was installed at the fifth and sixth stations, and all cabinet penetrations were completed at a further station in the eastern area. Cable plowing holds at 38 of 46 segments, now seventeen working days without a completed segment, and a start date and daily rate for the remaining eight are still to be confirmed. <strong>Two trunk crossings remain the whole of the drilling scope and the contractor's own tracker records no installed length against either of them</strong>, notwithstanding fifteen personnel working the location on Saturday; environmental monitoring for the day was recorded as satisfactory. Terminations remain 0 of 138. The inverter setting scope is complete; the manufacturer's formal technical letter on the support condition is still being obtained."
+      "note": "Electrical progress is reported as one total across four fronts: 28.6% on completed units and 36.7% including verified work in progress. The substation carries the advance this period. On the civil-electrical interface, trench backfill was completed at the first three inverter stations, the road crossing at the sixth was ducted and reinstated, and cabinet penetrations were completed at two further stations. Cable plowing holds at 38 of 46 segments and a start date and daily rate for the remaining eight are still to be confirmed. Two trunk crossings remain the whole of the drilling scope and <strong>the contractor's own tracker records no installed length against either of them</strong>. Terminations remain 0 of 138 and remain the measure that counts toward mechanical completion. The inverter setting scope is complete; the manufacturer's formal technical letter on the support condition is still being obtained."
     }
   ],
   "material": [
@@ -1766,7 +1781,7 @@ window.MURCH_REPORT = {
       "why": "source note names the installing subcontractor"
     },
     "Substation (overall)": {
-      "note": "Overall substation progress 24.7% on the 31 July tracker — civil 76.8%, structural 10.8%, electrical 6.0%. Piers are now complete at 17 of 17, the last poured on 5 August, so every substation foundation is finished: control building, containment berm, main power transformer foundation and all piers. Grounding excavation around the perimeter started the same day. The overall percentage still reflects the 31 July cut and understates the civil position; an updated tracker cut is required. The structural percentage is unchanged and is governed by steel fabrication and delivery.",
+      "note": "Overall substation progress 38.9% on the 24 August tracker \u2014 civil 89.6%, structural 36.6%, electrical 13.8%, with 61 of 187 scheduled activities complete. Structural advanced 12.5 points in a single cut, the largest single-cut movement recorded by any element of the works, following the introduction of an extended-hours shift on 21 August and Saturday working; the circuit breaker is set on its foundation. Piers are now complete at 17 of 17, the last poured on 5 August, so every substation foundation is finished: control building, containment berm, main power transformer foundation and all piers. Grounding excavation around the perimeter started the same day. The overall percentage still reflects the 31 July cut and understates the civil position; an updated tracker cut is required. The structural percentage is unchanged and is governed by steel fabrication and delivery.",
       "why": "the internal note carries pier-front detail and subcontractor names; the published wording states the substation position"
     },
     "Bulk earthworks — cut and fill": {
@@ -1796,8 +1811,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "149,600",
-        "note": "Total manhours worked from the start of construction on April 1 through August 22, at 10 h/day, Monday to Saturday."
+        "value": "151,800",
+        "note": "Total manhours worked from the start of construction on April 1 through August 24, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -1993,8 +2008,8 @@ window.MURCH_REPORT = {
         "c": 136012
       },
       {
-        "d": "Aug 22",
-        "c": 149552
+        "d": "Aug 24",
+        "c": 151832
       }
     ]
   }
