@@ -7,7 +7,7 @@ window.MURCH_REPORT = {
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 26, 2026 — production basis Tuesday 25 August",
+    "asOf": "August 25, 2026 — production report (16:13 executive summary) · Aug 26 MV escalation",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
