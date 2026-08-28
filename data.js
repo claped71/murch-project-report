@@ -1684,6 +1684,18 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-62.jpg",
+      "date": "August 27, 2026",
+      "title": "Pile driving resumed in the eastern zone",
+      "note": "A newly driven line of tracker foundation piles standing on 27 August in the eastern zone, with the piling machine at the head of the row and the adjacent row already set. Pile installation stands at 29,895 of 31,352, and this area carries clear access, which is why the remaining production has been concentrated here."
+    },
+    {
+      "src": "assets/photo-63.jpg",
+      "date": "August 27, 2026",
+      "title": "Medium-voltage terminations started at the first inverter station",
+      "note": "The first medium-voltage termination being made up at the inverter station in Area A on 27 August, with the incoming cables dressed into the station and the termination compartment open. Terminations are the final electrical operation before an inverter block can be energised, so this marks the transition of the medium-voltage front from trenching and cable installation into connection work."
+    },
+    {
       "src": "assets/photo-55.jpg",
       "date": "August 21, 2026",
       "title": "34.5 kV equipment stands erected at the substation",
@@ -1791,18 +1803,6 @@ window.MURCH_REPORT = {
       "title": "Underground electrical trench alongside erected trackers",
       "note": "Cable trench open beside completed tracker rows, with the access road built out for material distribution — the sequence that feeds the LV and DC cable installation."
     },
-    {
-      "src": "assets/photo-35.jpg",
-      "date": "July 14, 2026",
-      "title": "Tracker assembly crews working the rows in Area C",
-      "note": "Assembly crews spread across the Area C workfront with completed torque tubes in the foreground. The scale of the tracker front sets the pace for module installation behind it."
-    },
-    {
-      "src": "assets/photo-34.jpg",
-      "date": "July 14, 2026",
-      "title": "Module installation front advancing across completed tracker rows",
-      "note": "Installed modules in the foreground with bare trackers awaiting release beyond — the block-by-block sequence from Area A into Area C."
-    }
   ],
   "civilOverrides": {
     "Perimeter fence": {
