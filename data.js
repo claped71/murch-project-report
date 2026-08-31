@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 27, 2026 — daily executive reports of Aug 26 and Aug 27 · board Aug 27 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 30, 2026 — daily executive reports of Aug 28 and Aug 29, field notes Aug 30 · EHS board Aug 28 (228) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 27, 2026 — daily executive reports of Aug 26 and Aug 27 · board Aug 27",
+    "asOf": "August 30, 2026 — daily executive reports of Aug 28 and Aug 29, field notes Aug 30 · EHS board Aug 28 (228)",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 78.5,
+    "overall": 79.9,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -29,7 +29,7 @@ window.MURCH_REPORT = {
     {
       "key": "piles",
       "name": "Foundation piles",
-      "installed": 29895,
+      "installed": 30230,
       "total": 31352,
       "unit": "piles",
       "forecast": "Aug 7, 2026 — passed, revised date pending",
@@ -38,19 +38,19 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 2069,
+      "installed": 2134,
       "total": 2486,
       "unit": "rows",
-      "earned": 2098.7,
-      "earnedPct": 84.4,
-      "earnedLabel": "84.4% earned incl. rows in progress (2,099 row-equivalents)",
+      "earned": 2170.6,
+      "earnedPct": 87.3,
+      "earnedLabel": "87.3% earned incl. rows in progress (2,171 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Below rate"
     },
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 127098,
+      "installed": 129945,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -60,34 +60,34 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 31.3,
-      "earnedPct": 39.3,
+      "gatePct": 32.2,
+      "earnedPct": 40.5,
       "unit": "%",
-      "earnedLabel": "39.3% earned incl. work in progress",
+      "earnedLabel": "40.5% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Aug 27, 2026 — daily executive reports of Aug 26 and Aug 27 · board Aug 27",
+    "asOf": "Aug 30, 2026 — daily executive reports of Aug 28 and Aug 29, field notes Aug 30 · EHS board Aug 28 (228)",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "2,069 / 2,486",
-        "gatePct": 83.2,
+        "gate": "2,134 / 2,486",
+        "gatePct": 85.8,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 84.4,
+        "earnedPct": 87.3,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "31.3% of scope",
-        "gatePct": 31.3,
-        "inProgress": "MV 76.3% · 23 of 23 inverter stations set · 167 of 419 boxes · 43,837 lf of cable",
-        "earnedPct": 39.3,
+        "gate": "32.2% of scope",
+        "gatePct": 32.2,
+        "inProgress": "MV 76.8% · 23 of 23 inverter stations set · 207 of 419 boxes · 47,934 lf of cable",
+        "earnedPct": 40.5,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -130,287 +130,297 @@ window.MURCH_REPORT = {
       {
         "d": "Jun 18",
         "v": 20,
-        "c": 15796
+        "c": 15898
       },
       {
         "d": "Jun 19",
         "v": 79,
-        "c": 15875
+        "c": 15977
       },
       {
         "d": "Jun 22",
         "v": 251,
-        "c": 16126
+        "c": 16228
       },
       {
         "d": "Jun 23",
         "v": 101,
-        "c": 16227
+        "c": 16329
       },
       {
         "d": "Jun 25",
         "v": 370,
-        "c": 16597
+        "c": 16699
       },
       {
         "d": "Jun 26",
         "v": 340,
-        "c": 16937
+        "c": 17039
       },
       {
         "d": "Jun 29",
         "v": 261,
-        "c": 17198
+        "c": 17300
       },
       {
         "d": "Jun 30",
         "v": 234,
-        "c": 17432
+        "c": 17534
       },
       {
         "d": "Jul 1",
         "v": 252,
-        "c": 17684
+        "c": 17786
       },
       {
         "d": "Jul 2",
         "v": 274,
-        "c": 17958
+        "c": 18060
       },
       {
         "d": "Jul 3",
         "v": 134,
-        "c": 18092
+        "c": 18194
       },
       {
         "d": "Jul 6",
         "v": 307,
-        "c": 18399
+        "c": 18501
       },
       {
         "d": "Jul 7",
         "v": 399,
-        "c": 18798
+        "c": 18900
       },
       {
         "d": "Jul 8",
         "v": 646,
-        "c": 19444
+        "c": 19546
       },
       {
         "d": "Jul 9",
         "v": 669,
-        "c": 20113
+        "c": 20215
       },
       {
         "d": "Jul 10",
         "v": 680,
-        "c": 20793
+        "c": 20895
       },
       {
         "d": "Jul 11",
         "v": 680,
-        "c": 21473
+        "c": 21575
       },
       {
         "d": "Jul 13",
         "v": 608,
-        "c": 22081
+        "c": 22183
       },
       {
         "d": "Jul 14",
         "v": 695,
-        "c": 22776
+        "c": 22878
       },
       {
         "d": "Jul 15",
         "v": 481,
-        "c": 23257
+        "c": 23359
       },
       {
         "d": "Jul 16",
         "v": 504,
-        "c": 23761
+        "c": 23863
       },
       {
         "d": "Jul 17",
         "v": 472,
-        "c": 24233
+        "c": 24335
       },
       {
         "d": "Jul 18",
         "v": 608,
-        "c": 24841
+        "c": 24943
       },
       {
         "d": "Jul 20",
         "v": 622,
-        "c": 25463
+        "c": 25565
       },
       {
         "d": "Jul 21",
         "v": 253,
-        "c": 25716
+        "c": 25818
       },
       {
         "d": "Jul 22",
         "v": 202,
-        "c": 25918
+        "c": 26020
       },
       {
         "d": "Jul 23",
         "v": 284,
-        "c": 26202
+        "c": 26304
       },
       {
         "d": "Jul 24",
         "v": 364,
-        "c": 26566
+        "c": 26668
       },
       {
         "d": "Jul 25",
         "v": 236,
-        "c": 26802
+        "c": 26904
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 26802
+        "c": 26904
       },
       {
         "d": "Jul 28",
         "v": 439,
-        "c": 27241
+        "c": 27343
       },
       {
         "d": "Jul 29",
         "v": 539,
-        "c": 27780
+        "c": 27882
       },
       {
         "d": "Jul 30",
         "v": 627,
-        "c": 28407
+        "c": 28509
       },
       {
         "d": "Jul 31",
         "v": 337,
-        "c": 28744
+        "c": 28846
       },
       {
         "d": "Aug 1",
         "v": 0,
-        "c": 28744
+        "c": 28846
       },
       {
         "d": "Aug 3",
         "v": 205,
-        "c": 28949
+        "c": 29051
       },
       {
         "d": "Aug 4",
         "v": 110,
-        "c": 29059
+        "c": 29161
       },
       {
         "d": "Aug 5",
         "v": 100,
-        "c": 29159
+        "c": 29261
       },
       {
         "d": "Aug 6",
         "v": 149,
-        "c": 29308
+        "c": 29410
       },
       {
         "d": "Aug 7",
         "v": 63,
-        "c": 29371
+        "c": 29473
       },
       {
         "d": "Aug 8",
         "v": 215,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 10",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 11",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 12",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 13",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 14",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 15",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 17",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 18",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 19",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 20",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 21",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 22",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 24",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 25",
         "v": 0,
-        "c": 29586
+        "c": 29688
       },
       {
         "d": "Aug 26",
         "v": 211,
-        "c": 29797
+        "c": 29899
       },
       {
         "d": "Aug 27",
         "v": 98,
-        "c": 29895
+        "c": 29997
+      },
+      {
+        "d": "Aug 28",
+        "v": 233,
+        "c": 30230
+      },
+      {
+        "d": "Aug 29",
+        "v": 0,
+        "c": 30230
       }
     ],
     "trackers": [
@@ -693,6 +703,16 @@ window.MURCH_REPORT = {
         "d": "Aug 27",
         "v": 0,
         "c": 2069
+      },
+      {
+        "d": "Aug 28",
+        "v": 65,
+        "c": 2134
+      },
+      {
+        "d": "Aug 29",
+        "v": 0,
+        "c": 2134
       }
     ],
     "modules": [
@@ -924,7 +944,17 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 27",
         "v": 4654,
-        "c": 127098
+        "c": 127332
+      },
+      {
+        "d": "Aug 28",
+        "v": 2847,
+        "c": 129945
+      },
+      {
+        "d": "Aug 29",
+        "v": 0,
+        "c": 129945
       }
     ]
   },
@@ -935,7 +965,7 @@ window.MURCH_REPORT = {
       "color": "#0f7a52",
       "planStart": "Jun 18",
       "planEnd": "Aug 7",
-      "planStartVal": 15796,
+      "planStartVal": 15898,
       "unit": "piles"
     },
     "trackers": {
@@ -1070,7 +1100,7 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Piles executed",
-        "value": "29,895",
+        "value": "30,230",
         "note": "Current executed basis, 94.4% of project scope."
       },
       {
@@ -1090,8 +1120,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 2,069",
-        "note": "11.9% of the 2,486 rows in scope and 14.3% of the 2,069 built. Released rows feed the module installation front."
+        "value": "296 / 2,134",
+        "note": "11.9% of the 2,486 rows in scope and 13.9% of the 2,134 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1102,6 +1132,12 @@ window.MURCH_REPORT = {
     "note": "Release is reported on the Owner-approved measure: rows are counted as released only once they have passed the Owner's quality process, not on internal approval alone. Damper replacement work is currently holding rows back from release in the second area, and a proposal to combine the racking and module inspections into a single release is with the Owner for decision. Inspection records are submitted for Owner review as areas close out. Module spacing is verified by measurement during tightening rather than assumed from the purlin."
   },
   "weatherLog": [
+    {
+      "date": "Aug 29, 2026",
+      "type": "To confirm",
+      "impact": "Full stop — all fronts",
+      "detail": "Zero production recorded on every front. Confirm the cause and wording before publishing."
+    },
     {
       "date": "Jul 27, 2026 (Mon)",
       "type": "Rain",
@@ -1839,8 +1875,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "241",
-        "note": "Latest site-board headcount (Aug 27). Field labor plus management, quality and HSE."
+        "value": "228",
+        "note": "Latest site-board headcount (Aug 28). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1854,8 +1890,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "158,900",
-        "note": "Total manhours worked from the start of construction on April 1 through August 27, at 10 h/day, Monday to Saturday."
+        "value": "161,200",
+        "note": "Total manhours worked from the start of construction on April 1 through August 30, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2019,6 +2055,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 27",
         "v": 241
+      },
+      {
+        "d": "Aug 28",
+        "v": 228
       }
     ],
     "manhours": [
@@ -2063,8 +2103,8 @@ window.MURCH_REPORT = {
         "c": 136012
       },
       {
-        "d": "Aug 27",
-        "c": 158899
+        "d": "Aug 30",
+        "c": 161179
       }
     ]
   }
