@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 67.9,
+    "overall": 81.4,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
