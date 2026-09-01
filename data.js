@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 30, 2026 — daily executive reports of Aug 28 and Aug 29, field notes Aug 30 · EHS board Aug 28 (228) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 30, 2026 — daily executive reports of Aug 28 and Aug 29, field notes Aug 30 · EHS board Aug 28 (228)",
+    "asOf": "August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230)",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 79.9,
+    "overall": 67.9,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -29,7 +29,7 @@ window.MURCH_REPORT = {
     {
       "key": "piles",
       "name": "Foundation piles",
-      "installed": 30230,
+      "installed": 30261,
       "total": 31352,
       "unit": "piles",
       "forecast": "Aug 7, 2026 — passed, revised date pending",
@@ -38,19 +38,19 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 2134,
+      "installed": 2199,
       "total": 2486,
       "unit": "rows",
-      "earned": 2170.6,
-      "earnedPct": 87.3,
-      "earnedLabel": "87.3% earned incl. rows in progress (2,171 row-equivalents)",
+      "earned": 2218.4,
+      "earnedPct": 89.2,
+      "earnedLabel": "89.2% earned incl. rows in progress (2,218 row-equivalents)",
       "forecast": "Aug 30, 2026",
-      "status": "Below rate"
+      "status": "Date passed"
     },
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 129945,
+      "installed": 135511,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -60,34 +60,34 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 32.2,
-      "earnedPct": 40.5,
+      "gatePct": 32.4,
+      "earnedPct": 40.7,
       "unit": "%",
-      "earnedLabel": "40.5% earned incl. work in progress",
+      "earnedLabel": "40.7% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Aug 30, 2026 — daily executive reports of Aug 28 and Aug 29, field notes Aug 30 · EHS board Aug 28 (228)",
+    "asOf": "Aug 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230)",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "2,134 / 2,486",
-        "gatePct": 85.8,
+        "gate": "2,199 / 2,486",
+        "gatePct": 88.5,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 87.3,
+        "earnedPct": 89.2,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "32.2% of scope",
-        "gatePct": 32.2,
-        "inProgress": "MV 76.8% · 23 of 23 inverter stations set · 207 of 419 boxes · 47,934 lf of cable",
-        "earnedPct": 40.5,
+        "gate": "32.4% of scope",
+        "gatePct": 32.4,
+        "inProgress": "MV 76.9% · 23 of 23 inverter stations set · 217 of 419 boxes · 47,934 lf of cable",
+        "earnedPct": 40.7,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -421,6 +421,11 @@ window.MURCH_REPORT = {
         "d": "Aug 29",
         "v": 0,
         "c": 30230
+      },
+      {
+        "d": "Aug 31",
+        "v": 31,
+        "c": 30261
       }
     ],
     "trackers": [
@@ -713,6 +718,11 @@ window.MURCH_REPORT = {
         "d": "Aug 29",
         "v": 0,
         "c": 2134
+      },
+      {
+        "d": "Aug 31",
+        "v": 65,
+        "c": 2199
       }
     ],
     "modules": [
@@ -949,12 +959,17 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 28",
         "v": 2847,
-        "c": 129945
+        "c": 130179
       },
       {
         "d": "Aug 29",
         "v": 0,
-        "c": 129945
+        "c": 130179
+      },
+      {
+        "d": "Aug 31",
+        "v": 5566,
+        "c": 135511
       }
     ]
   },
@@ -1044,9 +1059,9 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Foundation SET (composite)",
-      "done": 41.7,
+      "done": 50,
       "status": "Active",
-      "note": "41.7% (Aug 25 cut) — civil 92.2%, structural 44.6%, electrical 13.7%, 66 of 187 activities complete."
+      "note": "50.0% (Aug 31 cut) — civil 95.0%, structural 65.2%, electrical 17.3%, 79 of 187 activities complete."
     }
   ],
   "safety": {
@@ -1100,7 +1115,7 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Piles executed",
-        "value": "30,230",
+        "value": "30,261",
         "note": "Current executed basis, 94.4% of project scope."
       },
       {
@@ -1120,8 +1135,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 2,134",
-        "note": "11.9% of the 2,486 rows in scope and 13.9% of the 2,134 built. Released rows feed the module installation front."
+        "value": "296 / 2,199",
+        "note": "11.9% of the 2,486 rows in scope and 13.5% of the 2,199 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1875,8 +1890,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "228",
-        "note": "Latest site-board headcount (Aug 28). Field labor plus management, quality and HSE."
+        "value": "230",
+        "note": "Latest site-board headcount (Aug 31). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1885,13 +1900,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "211",
+        "value": "212",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "161,200",
-        "note": "Total manhours worked from the start of construction on April 1 through August 30, at 10 h/day, Monday to Saturday."
+        "value": "163,500",
+        "note": "Total manhours worked from the start of construction on April 1 through August 31, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2059,6 +2074,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 28",
         "v": 228
+      },
+      {
+        "d": "Aug 31",
+        "v": 230
       }
     ],
     "manhours": [
@@ -2103,8 +2122,8 @@ window.MURCH_REPORT = {
         "c": 136012
       },
       {
-        "d": "Aug 30",
-        "c": 161179
+        "d": "Aug 31",
+        "c": 163479
       }
     ]
   }
