@@ -1,6 +1,6 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
- Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
@@ -1168,44 +1168,44 @@ window.MURCH_REPORT = {
   ],
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
-  {
-    "period": "Sep 1 – Sep 6",
-    "items": [
-      "Module installation sustained at or above the required 7,192 per day toward the 6 September date, with the western closeout balance assigned to a crew and completed.",
-      "The revised, dated tracker completion schedule issued in place of the 30 August date, reconciled to a single remaining-quantity figure, with the single-contractor racking sequence and the holiday-week absence carried in it.",
-      "Pile installation resumed in the final area on 1 September and sustained daily, releasing the remaining racking blocks.",
-      "The additional medium-voltage termination crew productive at the established rate from 1 September, recovering the accumulated position against the 11-per-day control.",
-      "Harness installation raised to the required daily rate by the contracted crew, with the requested electrician mobilisation confirmed; cable and harness reported separately each day.",
-      "The cable pull through the completed wetland crossing conduit, and recovery of the jammed conduit at the affected bore.",
-      "The racking-bearing correction report, re-inspection and formal release issued on rows already counted complete.",
-      "Responses issued to the open Owner queries, in particular those without any response on record."
-    ]
-  },
-  {
-    "period": "Sep 7 – Sep 12",
-    "items": [
-      "Tracker assembly closing against its revised dated schedule, with remediated racking released back to the module front.",
-      "Pile installation complete, and module installation closing the eastern balances at the multi-crew rate.",
-      "Substation electrical works scaled — control cabling, terminations and the auxiliary-power connection progressing against the energization sequence.",
-      "LV installation at multi-crew rate with the first line's cable complete and the second line opened; plowing restarted on the remaining segments with a confirmed daily rate.",
-      "Perimeter fence closure mobilised for the confirmed window, with both closing areas ready.",
-      "Quality releases and Owner acceptance progressing week on week across piles, tracker rows and modules."
-    ]
-  }
-],
+    {
+      "period": "Sep 1 – Sep 6",
+      "items": [
+        "Module installation sustained at or above the required 7,192 per day toward the 6 September date, with the western closeout balance assigned to a crew and completed.",
+        "The revised, dated tracker completion schedule issued in place of the 30 August date, reconciled to a single remaining-quantity figure, with the single-contractor racking sequence and the holiday-week absence carried in it.",
+        "Pile installation resumed in the final area on 1 September and sustained daily, releasing the remaining racking blocks.",
+        "The additional medium-voltage termination crew productive at the established rate from 1 September, recovering the accumulated position against the 11-per-day control.",
+        "Harness installation raised to the required daily rate by the contracted crew, with the requested electrician mobilisation confirmed; cable and harness reported separately each day.",
+        "The cable pull through the completed wetland crossing conduit, and recovery of the jammed conduit at the affected bore.",
+        "The racking-bearing correction report, re-inspection and formal release issued on rows already counted complete.",
+        "Responses issued to the open Owner queries, in particular those without any response on record."
+      ]
+    },
+    {
+      "period": "Sep 7 – Sep 12",
+      "items": [
+        "Tracker assembly closing against its revised dated schedule, with remediated racking released back to the module front.",
+        "Pile installation complete, and module installation closing the eastern balances at the multi-crew rate.",
+        "Substation electrical works scaled — control cabling, terminations and the auxiliary-power connection progressing against the energization sequence.",
+        "LV installation at multi-crew rate with the first line's cable complete and the second line opened; plowing restarted on the remaining segments with a confirmed daily rate.",
+        "Perimeter fence closure mobilised for the confirmed window, with both closing areas ready.",
+        "Quality releases and Owner acceptance progressing week on week across piles, tracker rows and modules."
+      ]
+    }
+  ],
   "ownerActions": {
     "asOf": "Sep 1, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
-  "ref": "OA-09",
-  "item": "Additional module quantity — order confirmation",
-  "since": "Jul 2026",
-  "days": null,
-  "status": "Open",
-  "blocks": "Closure of the final installation blocks without a material wait.",
-  "detail": "Confirmation is requested of the status and expected delivery date of the additional module quantity requested in July to cover installation attrition; the request was followed up in writing on 30 August."
-},
+        "ref": "OA-09",
+        "item": "Additional module quantity — order confirmation",
+        "since": "Jul 2026",
+        "days": null,
+        "status": "Open",
+        "blocks": "Closure of the final installation blocks without a material wait.",
+        "detail": "Confirmation is requested of the status and expected delivery date of the additional module quantity requested in July to cover installation attrition; the request was followed up in writing on 30 August."
+      },
       {
         "ref": "OA-01",
         "item": "Area G sequencing confirmation",
