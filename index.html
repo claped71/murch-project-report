@@ -544,6 +544,16 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 <script>
 (function(){
   var D = window.MURCH_REPORT;
+  /* Dataset text is rendered as plain text. Strip any inline markup
+     (e.g. <strong>) so tags can never surface as literal characters. */
+  (function stripTags(o){
+    if(!o || typeof o!=='object') return;
+    Object.keys(o).forEach(function(k){
+      var v=o[k];
+      if(typeof v==='string'){ o[k]=v.replace(/<\/?(strong|b|em|i|u|span)\s*>/gi,'').replace(/[ \t]{2,}/g,' '); }
+      else if(v && typeof v==='object'){ stripTags(v); }
+    });
+  })(D);
   var tt = document.getElementById('tt');
   function showTT(html,x,y){ tt.innerHTML=html; tt.style.opacity=1; tt.style.left=(x+14)+'px'; tt.style.top=(y-10)+'px'; }
   function hideTT(){ tt.style.opacity=0; }
