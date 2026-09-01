@@ -1,0 +1,81 @@
+name: Clean report narrative
+
+# One-shot cleanup requested by the Owner-side reader: the published report was
+# printing literal <strong> tags inside sentences (index.html renders those
+# fields as plain text), and the period statement had grown to ~470 words.
+#
+# tools/clean-narrative.js strips the markup, installs a render-time strip in
+# index.html so it can never come back, and shortens the statement. The publish
+# guard is a hard gate: if it fails, nothing is committed.
+#
+# Pages deploys on workflow_run for named workflows only, and a GITHUB_TOKEN
+# commit does not raise a push event, so this dispatches the deploy explicitly.
+
+on:
+  push:
+    paths:
+      - 'tools/clean-narrative.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Apply the cleanup
+        run: node tools/clean-narrative.js | tee /tmp/clean.log
+
+      - name: Publish guard
+        run: node tools/guard.js
+
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Narrative already clean — nothing to publish."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Owner report: shorter period statement, inline markup removed"
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Mirror to gh-pages
+        if: steps.commit.outputs.changed == 'true'
+        run: git push --force origin main:gh-pages
+
+      - name: Deploy to Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages.yml --ref main
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Report narrative cleanup"
+            echo ""
+            echo '```'
+            cat /tmp/clean.log 2>/dev/null || echo "(cleanup log unavailable)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
