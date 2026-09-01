@@ -1259,7 +1259,7 @@ window.MURCH_REPORT = {
     ]
   },
   "clientQueries": {
-    "asOf": "Aug 31, 2026",
+    "asOf": "Sep 1, 2026",
     "routing": {
       "byRole": {
         "QA/QC lead": [
