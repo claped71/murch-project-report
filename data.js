@@ -1,6 +1,6 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+ Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
@@ -1108,7 +1108,7 @@ window.MURCH_REPORT = {
    "note": "Year-to-date site inductions and training; 148 trained in July."
   }
  ],
- "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 173,278 hours, with all three incidence rates at 0.00. <strong>The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed</strong>, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
+ "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 173,278 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
 },
   "quality": {
     "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 2,069 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
