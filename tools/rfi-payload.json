@@ -1,6 +1,37 @@
 {
- "asOf": "Aug 14, 2026",
+ "asOf": "Sep 2, 2026",
  "items": [
+  {
+   "ref": "MQ-20260901-0718",
+   "subject": "Operations site inspection findings — tracker slope tolerance and conformance of installed work with the issued drawings",
+   "area": "Other",
+   "raisedBy": "James Burnett",
+   "raisedISO": "2026-09-01",
+   "dueISO": "2026-09-08",
+   "status": "In review",
+   "assignedTo": "Engineering lead"
+  },
+  {
+   "ref": "MQ-20260818-0955",
+   "subject": "Utility fiber and secondary power services to the control building — design, utility coordination and construction responsibility",
+   "area": "Substation and inverters",
+   "raisedBy": "James Burnett",
+   "raisedISO": "2026-08-18",
+   "dueISO": "2026-08-25",
+   "status": "In review",
+   "assignedTo": "Engineering lead"
+  },
+  {
+   "ref": "MQ-20260815-0700",
+   "subject": "Engineer-of-record confirmation for the inverter-pile shim remediation, weld coating preparation, and pile leveling tolerance",
+   "area": "Piles and foundations",
+   "raisedBy": "James Burnett",
+   "raisedISO": "2026-08-15",
+   "dueISO": "2026-08-21",
+   "respondedISO": "2026-08-17",
+   "status": "Open",
+   "assignedTo": "Engineering lead"
+  },
   {
    "ref": "MQ-20260813-0922",
    "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
@@ -18,6 +49,7 @@
    "raisedBy": "James Burnett",
    "raisedISO": "2026-08-13",
    "dueISO": "2026-08-20",
+   "respondedISO": "2026-08-18",
    "status": "Open",
    "assignedTo": "QA/QC lead"
   },
