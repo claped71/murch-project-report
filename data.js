@@ -1,6 +1,6 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
- Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
@@ -1065,51 +1065,51 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
- "headline": "Zero recordable injuries across 173,278 hours worked — 320 days without accident at 31 August. The July monthly HSE report has been issued and July is now the audited basis. The investigation into the 7 August first-aid case is concluded and CLOSED, with its corrective actions implemented.",
- "tiles": [
-  {
-   "label": "Recordable accidents",
-   "value": "0",
-   "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 173,278 hours."
+    "headline": "Zero recordable injuries across 173,278 hours worked — 320 days without accident at 31 August. The July monthly HSE report has been issued and July is now the audited basis. The investigation into the 7 August first-aid case is concluded and CLOSED, with its corrective actions implemented.",
+    "tiles": [
+      {
+        "label": "Recordable accidents",
+        "value": "0",
+        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 173,278 hours."
+      },
+      {
+        "label": "Days without accident",
+        "value": "320",
+        "note": "Per the site register at 31 August, maintained daily from subcontractor returns."
+      },
+      {
+        "label": "Lost days",
+        "value": "0",
+        "note": "Frequency, incidence and severity rates remain zero. Zero hours lost to weather in the last reporting week."
+      },
+      {
+        "label": "First-aid cases — August",
+        "value": "2",
+        "note": "4 August: an ankle sprain where tall grass concealed uneven ground; treated on site. 7 August: during racking installation a torque tube slipped onto the worker's helmet and shoulder; first aid, hospital evaluation with CT scan, minor injuries, cleared to return. Notification 20260807_ACC_001 was issued within 48 hours. THE INVESTIGATION IS CONCLUDED AND CLOSED: the tube-handling corrective actions — personnel excluded from the slide line and the revised placement method — are implemented with the racking crews and held in the daily briefings."
+      },
+      {
+        "label": "Man-hours to date",
+        "value": "173,278",
+        "note": "Register maintained to 31 August. July alone: 52,464 hours across 224 personnel — the July monthly report is issued and July is the audited basis."
+      },
+      {
+        "label": "Safety events — July",
+        "value": "39",
+        "note": "24 unsafe conditions and 14 unsafe acts or behaviours identified and corrected, with 1 near miss. Proactive identification is the intent of the leading programme; the monthly trend is published in the report."
+      },
+      {
+        "label": "Toolbox talks — July",
+        "value": "32",
+        "note": "32 sessions in July, 64 year to date; the tube-handling and ground-condition subjects are standing items."
+      },
+      {
+        "label": "Personnel trained",
+        "value": "426",
+        "note": "Year-to-date site inductions and training; 148 trained in July."
+      }
+    ],
+    "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 173,278 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
   },
-  {
-   "label": "Days without accident",
-   "value": "320",
-   "note": "Per the site register at 31 August, maintained daily from subcontractor returns."
-  },
-  {
-   "label": "Lost days",
-   "value": "0",
-   "note": "Frequency, incidence and severity rates remain zero. Zero hours lost to weather in the last reporting week."
-  },
-  {
-   "label": "First-aid cases — August",
-   "value": "2",
-   "note": "4 August: an ankle sprain where tall grass concealed uneven ground; treated on site. 7 August: during racking installation a torque tube slipped onto the worker's helmet and shoulder; first aid, hospital evaluation with CT scan, minor injuries, cleared to return. Notification 20260807_ACC_001 was issued within 48 hours. THE INVESTIGATION IS CONCLUDED AND CLOSED: the tube-handling corrective actions — personnel excluded from the slide line and the revised placement method — are implemented with the racking crews and held in the daily briefings."
-  },
-  {
-   "label": "Man-hours to date",
-   "value": "173,278",
-   "note": "Register maintained to 31 August. July alone: 52,464 hours across 224 personnel — the July monthly report is issued and July is the audited basis."
-  },
-  {
-   "label": "Safety events — July",
-   "value": "39",
-   "note": "24 unsafe conditions and 14 unsafe acts or behaviours identified and corrected, with 1 near miss. Proactive identification is the intent of the leading programme; the monthly trend is published in the report."
-  },
-  {
-   "label": "Toolbox talks — July",
-   "value": "32",
-   "note": "32 sessions in July, 64 year to date; the tube-handling and ground-condition subjects are standing items."
-  },
-  {
-   "label": "Personnel trained",
-   "value": "426",
-   "note": "Year-to-date site inductions and training; 148 trained in July."
-  }
- ],
- "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 173,278 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
-},
   "quality": {
     "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 2,069 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
     "tiles": [
