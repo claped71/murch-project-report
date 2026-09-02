@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated September 1, 2026 — daily executive report of Tue Sep 1 · NO EHS board filed (report-basis crews ~208) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "August 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230)",
+    "asOf": "September 1, 2026 — daily executive report of Tue Sep 1 · NO EHS board filed (report-basis crews ~208)",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 81.4,
+    "overall": 82.2,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Tuesday 1 September. Tracker assembly completed a further 22 rows, taking the cumulative to 2,221 of 2,486 (89.3%); the remaining 265 rows are held by a single crew and a revised, dated completion schedule for this element is being issued. Module installation added 3,398 for a cumulative 138,909 of 171,470 (81.0%); a new installation front was opened in the north-east area, and the rate required to the 6 September date is 8,140 per day over four working days, above the best day yet recorded, so a second simultaneous front is being arranged. Piling stands at 30,261 of 31,352 (96.5%) with the machines positioned to enter the remaining area. On the electrical works every low-voltage front produced on the same day for the first time: cable advanced to 49,484 feet (18.3%) with the first trunk-cable production of the month, and harness assembly recorded its best combined day \u2014 75 assemblies across three crews, including the start of the contracted aerial crew \u2014 for a cumulative 408 of 4,972. Medium-voltage terminations advanced to 24 of 264 with the additional termination crew now in production and being brought up to its full rate. The substation composite advanced to 51.6% \u2014 civil 95.0%, structural 66.1%, electrical 20.2%, the largest single-day electrical advance recorded \u2014 with 46 days to energization. A lightning stand-down suspended field work from 13:27, in line with the site weather procedure. The works completed 321 days without accident and more than 173,278 hours worked. Overall completion moves to 82.2% from 81.4%.",
+    "statement": "The reporting period covers Tuesday 1 September. Tracker assembly completed a further 22 rows, taking the cumulative to 2,221 of 2,486 (89.3%); the remaining 265 rows are held by a single crew and a revised, dated completion schedule for this element is being issued. Module installation added 3,398 for a cumulative 138,909 of 171,470 (81.0%); a new installation front was opened in the north-east area, and the rate required to the 6 September date is 8,140 per day over four working days, above the best day yet recorded, so a second simultaneous front is being arranged. Piling stands at 30,261 of 31,352 (96.5%) with the machines positioned to enter the remaining area. On the electrical works every low-voltage front produced on the same day for the first time: cable advanced to 49,484 feet (18.3%) with the first trunk-cable production of the month, and harness assembly recorded its best combined day — 75 assemblies across three crews, including the start of the contracted aerial crew — for a cumulative 408 of 4,972. Medium-voltage terminations advanced to 24 of 264 with the additional termination crew now in production and being brought up to its full rate. The substation composite advanced to 51.6% — civil 95.0%, structural 66.1%, electrical 20.2%, the largest single-day electrical advance recorded — with 46 days to energization. A lightning stand-down suspended field work from 13:27, in line with the site weather procedure. The works completed 321 days without accident and more than 173,278 hours worked. Overall completion moves to 82.2% from 81.4%.",
     "note": null
   },
   "gates": [
@@ -38,19 +38,19 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 2199,
+      "installed": 2221,
       "total": 2486,
       "unit": "rows",
-      "earned": 2218.4,
-      "earnedPct": 89.2,
-      "earnedLabel": "89.2% earned incl. rows in progress (2,218 row-equivalents)",
+      "earned": 2230.5,
+      "earnedPct": 89.7,
+      "earnedLabel": "89.7% earned incl. rows in progress (2,231 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Date passed"
     },
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 135511,
+      "installed": 138909,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -60,34 +60,34 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 32.4,
-      "earnedPct": 40.7,
+      "gatePct": 33,
+      "earnedPct": 41.4,
       "unit": "%",
-      "earnedLabel": "40.7% earned incl. work in progress",
+      "earnedLabel": "41.4% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Aug 31, 2026 — daily executive report of Mon Aug 31 · EHS board Aug 31 (230)",
+    "asOf": "Sep 1, 2026 — daily executive report of Tue Sep 1 · NO EHS board filed (report-basis crews ~208)",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "2,199 / 2,486",
-        "gatePct": 88.5,
+        "gate": "2,221 / 2,486",
+        "gatePct": 89.3,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 89.2,
+        "earnedPct": 89.7,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "32.4% of scope",
-        "gatePct": 32.4,
-        "inProgress": "MV 76.9% · 23 of 23 inverter stations set · 217 of 419 boxes · 47,934 lf of cable",
-        "earnedPct": 40.7,
+        "gate": "33% of scope",
+        "gatePct": 33,
+        "inProgress": "MV 77.3% · 23 of 23 inverter stations set · 217 of 419 boxes · 49,484 lf of cable",
+        "earnedPct": 41.4,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -426,6 +426,11 @@ window.MURCH_REPORT = {
         "d": "Aug 31",
         "v": 31,
         "c": 30261
+      },
+      {
+        "d": "Sep 1",
+        "v": 0,
+        "c": 30261
       }
     ],
     "trackers": [
@@ -723,6 +728,11 @@ window.MURCH_REPORT = {
         "d": "Aug 31",
         "v": 65,
         "c": 2199
+      },
+      {
+        "d": "Sep 1",
+        "v": 22,
+        "c": 2221
       }
     ],
     "modules": [
@@ -969,7 +979,12 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 31",
         "v": 5566,
-        "c": 135511
+        "c": 135745
+      },
+      {
+        "d": "Sep 1",
+        "v": 3398,
+        "c": 138909
       }
     ]
   },
@@ -1059,9 +1074,9 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Foundation SET (composite)",
-      "done": 50,
+      "done": 51.6,
       "status": "Active",
-      "note": "50.0% (Aug 31 cut) — civil 95.0%, structural 65.2%, electrical 17.3%, 79 of 187 activities complete."
+      "note": "51.6% (Sep 1 cut) — civil 95.0%, structural 66.1%, electrical 20.2%. Lightning stand-down at 13:27."
     }
   ],
   "safety": {
@@ -1135,8 +1150,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 2,199",
-        "note": "11.9% of the 2,486 rows in scope and 13.5% of the 2,199 built. Released rows feed the module installation front."
+        "value": "296 / 2,221",
+        "note": "11.9% of the 2,486 rows in scope and 13.3% of the 2,221 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1400,294 +1415,294 @@ window.MURCH_REPORT = {
     "responseNote": "There is no sign-in and no account. Sending the query is all that is required — you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
-          {
-                "ref": "MQ-20260902-0706",
-                "subject": "Consolidated field conformance item list, extending the Golden Row inspection to other areas of the project \u2014 remediation requested",
-                "area": "Quality and inspection",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-09-02",
-                "dueISO": "2026-09-09",
-                "status": "Open",
-                "assignedTo": "QA/QC lead"
-          },
-          {
-                "ref": "MQ-20260901-0718",
-                "subject": "Operations site inspection findings — tracker slope tolerance and conformance of installed work with the issued drawings",
-                "area": "Other",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-09-01",
-                "dueISO": "2026-09-08",
-                "status": "In review",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260818-0955",
-                "subject": "Utility fiber and secondary power services to the control building — design, utility coordination and construction responsibility",
-                "area": "Substation and inverters",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-18",
-                "dueISO": "2026-08-25",
-                "status": "In review",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260815-0700",
-                "subject": "Engineer-of-record confirmation for the inverter-pile shim remediation, weld coating preparation, and pile leveling tolerance",
-                "area": "Piles and foundations",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-15",
-                "dueISO": "2026-08-21",
-                "respondedISO": "2026-08-17",
-                "status": "Open",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260813-0922",
-                "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
-                "area": "LV and DC electrical",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-13",
-                "dueISO": "2026-08-20",
-                "status": "In review",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260813-0733",
-                "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
-                "area": "Quality and inspection",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-13",
-                "dueISO": "2026-08-20",
-                "respondedISO": "2026-08-18",
-                "status": "Open",
-                "assignedTo": "QA/QC lead"
-          },
-          {
-                "ref": "MQ-20260812-1226",
-                "subject": "Sequencing of racking installation on pile rows flagged by quality control, and readiness of rows presented for Owner inspection",
-                "area": "Piles and foundations",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-12",
-                "dueISO": "2026-08-19",
-                "respondedISO": "2026-08-12",
-                "status": "Open",
-                "assignedTo": "QA/QC lead"
-          },
-          {
-                "ref": "MQ-20260804-0936",
-                "subject": "Containment for the fuel cell carried on a site vehicle",
-                "area": "Environmental",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-04",
-                "dueISO": "2026-08-11",
-                "status": "Open",
-                "assignedTo": "Environmental lead"
-          },
-          {
-                "ref": "MQ-20260804-0732",
-                "subject": "Inverter station foundations",
-                "area": "Substation and inverters",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-04",
-                "dueISO": "2026-08-11",
-                "status": "Open",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260804-0728",
-                "subject": "Medium-voltage trench crossings at site roads",
-                "area": "MV collection",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-04",
-                "dueISO": "2026-08-11",
-                "status": "In review",
-                "assignedTo": "Electrical lead (MV)"
-          },
-          {
-                "ref": "MQ-20260804-0726",
-                "subject": "Erosion control devices",
-                "area": "Environmental",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-04",
-                "dueISO": "2026-08-11",
-                "status": "Answered",
-                "assignedTo": "Environmental lead",
-                "respondedISO": "2026-08-05",
-                "turnaroundDays": 1
-          },
-          {
-                "ref": "MQ-20260804-0724",
-                "subject": "Protective caps on conduit ends",
-                "area": "LV and DC electrical",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-04",
-                "dueISO": "2026-08-11",
-                "status": "In review",
-                "assignedTo": "Electrical lead"
-          },
-          {
-                "ref": "MQ-20260803-0752",
-                "subject": "Formal RFI process between the subcontractors and the EPC, and Owner participation in engineering and land RFIs",
-                "area": "Programme and milestones",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-03",
-                "dueISO": "2026-08-10",
-                "status": "Open",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260803-0745",
-                "subject": "Vehicle speeds on 48th Street on the approach to the substation",
-                "area": "Health and safety",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-03",
-                "dueISO": "2026-08-10",
-                "respondedISO": "2026-08-03",
-                "turnaroundDays": 0,
-                "status": "Open",
-                "assignedTo": "Health and safety lead"
-          },
-          {
-                "ref": "MQ-20260803-0743",
-                "subject": "Compaction of the substation grading platform",
-                "area": "Substation and inverters",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-03",
-                "dueISO": "2026-08-10",
-                "respondedISO": "2026-08-03",
-                "turnaroundDays": 0,
-                "status": "Answered",
-                "assignedTo": "Construction Manager"
-          },
-          {
-                "ref": "MQ-20260803-0739",
-                "subject": "Standing water in the excavations around the control-building piers, and the stabilisation measures planned ahead of freeze-thaw",
-                "area": "Substation and inverters",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-03",
-                "dueISO": "2026-08-10",
-                "respondedISO": "2026-08-03",
-                "turnaroundDays": 0,
-                "status": "Open",
-                "assignedTo": "Construction Manager"
-          },
-          {
-                "ref": "MQ-20260803-0736",
-                "subject": "Subcontractor working hours and rest days, and the fatigue management arrangements applied on site",
-                "area": "Health and safety",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-03",
-                "dueISO": "2026-08-10",
-                "status": "Open",
-                "assignedTo": "Health and safety lead"
-          },
-          {
-                "ref": "MQ-20260801-0802",
-                "subject": "Protective caps on module connectors to keep dust and debris out of unmated connections",
-                "area": "Module installation",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-01",
-                "dueISO": "2026-08-07",
-                "respondedISO": "2026-08-03",
-                "turnaroundDays": 1,
-                "status": "Answered",
-                "assignedTo": "QA/QC lead"
-          },
-          {
-                "ref": "MQ-20260801-0752",
-                "subject": "Supplier recommendation for treating vacated tap-screw holes in torque tubes, and confirmation of saddle-bracket fastener counts by slope",
-                "area": "Tracker assembly",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-01",
-                "dueISO": "2026-08-07",
-                "status": "In review",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260801-0749",
-                "subject": "Securing of tracker control unit charging modules and the timing of node controller connection for battery charging",
-                "area": "Module installation",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-01",
-                "dueISO": "2026-08-07",
-                "respondedISO": "2026-08-03",
-                "status": "Open",
-                "assignedTo": "Construction Manager"
-          },
-          {
-                "ref": "MQ-20260801-0736",
-                "subject": "Surface water drainage within the Area A arrays and vegetation management to support ongoing installation and operation",
-                "area": "Environmental",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-08-01",
-                "dueISO": "2026-08-07",
-                "respondedISO": "2026-08-03",
-                "status": "Open",
-                "assignedTo": "Environmental lead"
-          },
-          {
-                "ref": "MQ-20260731-0843",
-                "subject": "Verification that the installed PV and game fence meet the authority’s requirements, with drawings redlined where the installation differs",
-                "area": "Quality and inspection",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-07-31",
-                "dueISO": "2026-08-07",
-                "respondedISO": "2026-07-31",
-                "status": "Open",
-                "assignedTo": "Engineering lead"
-          },
-          {
-                "ref": "MQ-20260731-0822",
-                "subject": "Progressive red-line and as-built updating during construction, starting with the completed MV directional bores",
-                "area": "Programme and milestones",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-07-31",
-                "dueISO": "2026-08-07",
-                "status": "Open",
-                "assignedTo": "Engineering lead",
-                "respondedISO": "2026-07-31"
-          },
-          {
-                "ref": "MQ-20260731-0759",
-                "subject": "Easement staking on the MV route east of the substation, and confirmation that cable is installed within that easement",
-                "area": "MV collection",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-07-31",
-                "dueISO": "2026-08-07",
-                "status": "Open",
-                "assignedTo": "Construction Manager",
-                "respondedISO": "2026-07-31"
-          },
-          {
-                "ref": "MQ-20260730-1325",
-                "subject": "Calibration status of the torque wrenches in use on tracker assembly, with certificates",
-                "area": "Tracker assembly",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-07-30",
-                "dueISO": "2026-08-06",
-                "status": "Open",
-                "assignedTo": "QA/QC lead"
-          },
-          {
-                "ref": "MQ-20260730-1251",
-                "subject": "Protective watertight caps on cable ends at the inverters",
-                "area": "MV collection",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-07-30",
-                "dueISO": "2026-08-06",
-                "status": "Open",
-                "assignedTo": "Electrical lead (MV)"
-          },
-          {
-                "ref": "MQ-20260730-0710",
-                "subject": "Site office wireless network availability",
-                "area": "Other",
-                "raisedBy": "James Burnett",
-                "raisedISO": "2026-07-30",
-                "dueISO": "2026-08-06",
-                "status": "Answered",
-                "assignedTo": "Construction Manager"
-          }
+      {
+        "ref": "MQ-20260902-0706",
+        "subject": "Consolidated field conformance item list, extending the Golden Row inspection to other areas of the project — remediation requested",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-09-02",
+        "dueISO": "2026-09-09",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
+      {
+        "ref": "MQ-20260901-0718",
+        "subject": "Operations site inspection findings — tracker slope tolerance and conformance of installed work with the issued drawings",
+        "area": "Other",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-09-01",
+        "dueISO": "2026-09-08",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260818-0955",
+        "subject": "Utility fiber and secondary power services to the control building — design, utility coordination and construction responsibility",
+        "area": "Substation and inverters",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-18",
+        "dueISO": "2026-08-25",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260815-0700",
+        "subject": "Engineer-of-record confirmation for the inverter-pile shim remediation, weld coating preparation, and pile leveling tolerance",
+        "area": "Piles and foundations",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-15",
+        "dueISO": "2026-08-21",
+        "respondedISO": "2026-08-17",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260813-0922",
+        "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
+        "area": "LV and DC electrical",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-13",
+        "dueISO": "2026-08-20",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260813-0733",
+        "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-13",
+        "dueISO": "2026-08-20",
+        "respondedISO": "2026-08-18",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
+      {
+        "ref": "MQ-20260812-1226",
+        "subject": "Sequencing of racking installation on pile rows flagged by quality control, and readiness of rows presented for Owner inspection",
+        "area": "Piles and foundations",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-12",
+        "dueISO": "2026-08-19",
+        "respondedISO": "2026-08-12",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
+      {
+        "ref": "MQ-20260804-0936",
+        "subject": "Containment for the fuel cell carried on a site vehicle",
+        "area": "Environmental",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Open",
+        "assignedTo": "Environmental lead"
+      },
+      {
+        "ref": "MQ-20260804-0732",
+        "subject": "Inverter station foundations",
+        "area": "Substation and inverters",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260804-0728",
+        "subject": "Medium-voltage trench crossings at site roads",
+        "area": "MV collection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "In review",
+        "assignedTo": "Electrical lead (MV)"
+      },
+      {
+        "ref": "MQ-20260804-0726",
+        "subject": "Erosion control devices",
+        "area": "Environmental",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "Answered",
+        "assignedTo": "Environmental lead",
+        "respondedISO": "2026-08-05",
+        "turnaroundDays": 1
+      },
+      {
+        "ref": "MQ-20260804-0724",
+        "subject": "Protective caps on conduit ends",
+        "area": "LV and DC electrical",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-04",
+        "dueISO": "2026-08-11",
+        "status": "In review",
+        "assignedTo": "Electrical lead"
+      },
+      {
+        "ref": "MQ-20260803-0752",
+        "subject": "Formal RFI process between the subcontractors and the EPC, and Owner participation in engineering and land RFIs",
+        "area": "Programme and milestones",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260803-0745",
+        "subject": "Vehicle speeds on 48th Street on the approach to the substation",
+        "area": "Health and safety",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "respondedISO": "2026-08-03",
+        "turnaroundDays": 0,
+        "status": "Open",
+        "assignedTo": "Health and safety lead"
+      },
+      {
+        "ref": "MQ-20260803-0743",
+        "subject": "Compaction of the substation grading platform",
+        "area": "Substation and inverters",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "respondedISO": "2026-08-03",
+        "turnaroundDays": 0,
+        "status": "Answered",
+        "assignedTo": "Construction Manager"
+      },
+      {
+        "ref": "MQ-20260803-0739",
+        "subject": "Standing water in the excavations around the control-building piers, and the stabilisation measures planned ahead of freeze-thaw",
+        "area": "Substation and inverters",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "respondedISO": "2026-08-03",
+        "turnaroundDays": 0,
+        "status": "Open",
+        "assignedTo": "Construction Manager"
+      },
+      {
+        "ref": "MQ-20260803-0736",
+        "subject": "Subcontractor working hours and rest days, and the fatigue management arrangements applied on site",
+        "area": "Health and safety",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-03",
+        "dueISO": "2026-08-10",
+        "status": "Open",
+        "assignedTo": "Health and safety lead"
+      },
+      {
+        "ref": "MQ-20260801-0802",
+        "subject": "Protective caps on module connectors to keep dust and debris out of unmated connections",
+        "area": "Module installation",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "respondedISO": "2026-08-03",
+        "turnaroundDays": 1,
+        "status": "Answered",
+        "assignedTo": "QA/QC lead"
+      },
+      {
+        "ref": "MQ-20260801-0752",
+        "subject": "Supplier recommendation for treating vacated tap-screw holes in torque tubes, and confirmation of saddle-bracket fastener counts by slope",
+        "area": "Tracker assembly",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "status": "In review",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260801-0749",
+        "subject": "Securing of tracker control unit charging modules and the timing of node controller connection for battery charging",
+        "area": "Module installation",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "respondedISO": "2026-08-03",
+        "status": "Open",
+        "assignedTo": "Construction Manager"
+      },
+      {
+        "ref": "MQ-20260801-0736",
+        "subject": "Surface water drainage within the Area A arrays and vegetation management to support ongoing installation and operation",
+        "area": "Environmental",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-08-01",
+        "dueISO": "2026-08-07",
+        "respondedISO": "2026-08-03",
+        "status": "Open",
+        "assignedTo": "Environmental lead"
+      },
+      {
+        "ref": "MQ-20260731-0843",
+        "subject": "Verification that the installed PV and game fence meet the authority’s requirements, with drawings redlined where the installation differs",
+        "area": "Quality and inspection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-31",
+        "dueISO": "2026-08-07",
+        "respondedISO": "2026-07-31",
+        "status": "Open",
+        "assignedTo": "Engineering lead"
+      },
+      {
+        "ref": "MQ-20260731-0822",
+        "subject": "Progressive red-line and as-built updating during construction, starting with the completed MV directional bores",
+        "area": "Programme and milestones",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-31",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Engineering lead",
+        "respondedISO": "2026-07-31"
+      },
+      {
+        "ref": "MQ-20260731-0759",
+        "subject": "Easement staking on the MV route east of the substation, and confirmation that cable is installed within that easement",
+        "area": "MV collection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-31",
+        "dueISO": "2026-08-07",
+        "status": "Open",
+        "assignedTo": "Construction Manager",
+        "respondedISO": "2026-07-31"
+      },
+      {
+        "ref": "MQ-20260730-1325",
+        "subject": "Calibration status of the torque wrenches in use on tracker assembly, with certificates",
+        "area": "Tracker assembly",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-30",
+        "dueISO": "2026-08-06",
+        "status": "Open",
+        "assignedTo": "QA/QC lead"
+      },
+      {
+        "ref": "MQ-20260730-1251",
+        "subject": "Protective watertight caps on cable ends at the inverters",
+        "area": "MV collection",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-30",
+        "dueISO": "2026-08-06",
+        "status": "Open",
+        "assignedTo": "Electrical lead (MV)"
+      },
+      {
+        "ref": "MQ-20260730-0710",
+        "subject": "Site office wireless network availability",
+        "area": "Other",
+        "raisedBy": "James Burnett",
+        "raisedISO": "2026-07-30",
+        "dueISO": "2026-08-06",
+        "status": "Answered",
+        "assignedTo": "Construction Manager"
+      }
     ]
   },
   "focus": [
@@ -1932,8 +1947,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "163,500",
-        "note": "Total manhours worked from the start of construction on April 1 through August 31, at 10 h/day, Monday to Saturday."
+        "value": "165,800",
+        "note": "Total manhours worked from the start of construction on April 1 through September 1, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2149,8 +2164,8 @@ window.MURCH_REPORT = {
         "c": 136012
       },
       {
-        "d": "Aug 31",
-        "c": 163479
+        "d": "Sep 1",
+        "c": 165779
       }
     ]
   }
