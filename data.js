@@ -1281,7 +1281,7 @@ window.MURCH_REPORT = {
     ]
   },
   "clientQueries": {
-    "asOf": "Sep 1, 2026",
+    "asOf": "Sep 2, 2026",
     "routing": {
       "byRole": {
         "QA/QC lead": [
@@ -1400,274 +1400,284 @@ window.MURCH_REPORT = {
     "responseNote": "There is no sign-in and no account. Sending the query is all that is required — you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
-      {
-        "ref": "MQ-20260818-0955",
-        "subject": "Utility fiber and secondary power services to the control building — design, utility coordination and construction responsibility",
-        "area": "Substation and inverters",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-18",
-        "dueISO": "2026-08-25",
-        "status": "In review",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260815-0700",
-        "subject": "Engineer-of-record confirmation for the inverter-pile shim remediation, weld coating preparation, and pile leveling tolerance",
-        "area": "Piles and foundations",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-15",
-        "dueISO": "2026-08-21",
-        "respondedISO": "2026-08-17",
-        "status": "Open",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260813-0922",
-        "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
-        "area": "LV and DC electrical",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-13",
-        "dueISO": "2026-08-20",
-        "status": "In review",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260813-0733",
-        "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
-        "area": "Quality and inspection",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-13",
-        "dueISO": "2026-08-20",
-        "respondedISO": "2026-08-18",
-        "status": "Open",
-        "assignedTo": "QA/QC lead"
-      },
-      {
-        "ref": "MQ-20260812-1226",
-        "subject": "Sequencing of racking installation on pile rows flagged by quality control, and readiness of rows presented for Owner inspection",
-        "area": "Piles and foundations",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-12",
-        "dueISO": "2026-08-19",
-        "respondedISO": "2026-08-12",
-        "status": "Open",
-        "assignedTo": "QA/QC lead"
-      },
-      {
-        "ref": "MQ-20260804-0936",
-        "subject": "Containment for the fuel cell carried on a site vehicle",
-        "area": "Environmental",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-04",
-        "dueISO": "2026-08-11",
-        "status": "Open",
-        "assignedTo": "Environmental lead"
-      },
-      {
-        "ref": "MQ-20260804-0732",
-        "subject": "Inverter station foundations",
-        "area": "Substation and inverters",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-04",
-        "dueISO": "2026-08-11",
-        "status": "Open",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260804-0728",
-        "subject": "Medium-voltage trench crossings at site roads",
-        "area": "MV collection",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-04",
-        "dueISO": "2026-08-11",
-        "status": "In review",
-        "assignedTo": "Electrical lead (MV)"
-      },
-      {
-        "ref": "MQ-20260804-0726",
-        "subject": "Erosion control devices",
-        "area": "Environmental",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-04",
-        "dueISO": "2026-08-11",
-        "status": "Answered",
-        "assignedTo": "Environmental lead",
-        "respondedISO": "2026-08-05",
-        "turnaroundDays": 1
-      },
-      {
-        "ref": "MQ-20260804-0724",
-        "subject": "Protective caps on conduit ends",
-        "area": "LV and DC electrical",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-04",
-        "dueISO": "2026-08-11",
-        "status": "In review",
-        "assignedTo": "Electrical lead"
-      },
-      {
-        "ref": "MQ-20260803-0752",
-        "subject": "Formal RFI process between the subcontractors and the EPC, and Owner participation in engineering and land RFIs",
-        "area": "Programme and milestones",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-03",
-        "dueISO": "2026-08-10",
-        "status": "Open",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260803-0745",
-        "subject": "Vehicle speeds on 48th Street on the approach to the substation",
-        "area": "Health and safety",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-03",
-        "dueISO": "2026-08-10",
-        "respondedISO": "2026-08-03",
-        "turnaroundDays": 0,
-        "status": "Open",
-        "assignedTo": "Health and safety lead"
-      },
-      {
-        "ref": "MQ-20260803-0743",
-        "subject": "Compaction of the substation grading platform",
-        "area": "Substation and inverters",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-03",
-        "dueISO": "2026-08-10",
-        "respondedISO": "2026-08-03",
-        "turnaroundDays": 0,
-        "status": "Answered",
-        "assignedTo": "Construction Manager"
-      },
-      {
-        "ref": "MQ-20260803-0739",
-        "subject": "Standing water in the excavations around the control-building piers, and the stabilisation measures planned ahead of freeze-thaw",
-        "area": "Substation and inverters",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-03",
-        "dueISO": "2026-08-10",
-        "respondedISO": "2026-08-03",
-        "turnaroundDays": 0,
-        "status": "Open",
-        "assignedTo": "Construction Manager"
-      },
-      {
-        "ref": "MQ-20260803-0736",
-        "subject": "Subcontractor working hours and rest days, and the fatigue management arrangements applied on site",
-        "area": "Health and safety",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-03",
-        "dueISO": "2026-08-10",
-        "status": "Open",
-        "assignedTo": "Health and safety lead"
-      },
-      {
-        "ref": "MQ-20260801-0802",
-        "subject": "Protective caps on module connectors to keep dust and debris out of unmated connections",
-        "area": "Module installation",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-01",
-        "dueISO": "2026-08-07",
-        "respondedISO": "2026-08-03",
-        "turnaroundDays": 1,
-        "status": "Answered",
-        "assignedTo": "QA/QC lead"
-      },
-      {
-        "ref": "MQ-20260801-0752",
-        "subject": "Supplier recommendation for treating vacated tap-screw holes in torque tubes, and confirmation of saddle-bracket fastener counts by slope",
-        "area": "Tracker assembly",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-01",
-        "dueISO": "2026-08-07",
-        "status": "In review",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260801-0749",
-        "subject": "Securing of tracker control unit charging modules and the timing of node controller connection for battery charging",
-        "area": "Module installation",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-01",
-        "dueISO": "2026-08-07",
-        "respondedISO": "2026-08-03",
-        "status": "Open",
-        "assignedTo": "Construction Manager"
-      },
-      {
-        "ref": "MQ-20260801-0736",
-        "subject": "Surface water drainage within the Area A arrays and vegetation management to support ongoing installation and operation",
-        "area": "Environmental",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-08-01",
-        "dueISO": "2026-08-07",
-        "respondedISO": "2026-08-03",
-        "status": "Open",
-        "assignedTo": "Environmental lead"
-      },
-      {
-        "ref": "MQ-20260731-0843",
-        "subject": "Verification that the installed PV and game fence meet the authority’s requirements, with drawings redlined where the installation differs",
-        "area": "Quality and inspection",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-31",
-        "dueISO": "2026-08-07",
-        "respondedISO": "2026-07-31",
-        "status": "Open",
-        "assignedTo": "Engineering lead"
-      },
-      {
-        "ref": "MQ-20260731-0822",
-        "subject": "Progressive red-line and as-built updating during construction, starting with the completed MV directional bores",
-        "area": "Programme and milestones",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-31",
-        "dueISO": "2026-08-07",
-        "status": "Open",
-        "assignedTo": "Engineering lead",
-        "respondedISO": "2026-07-31"
-      },
-      {
-        "ref": "MQ-20260731-0759",
-        "subject": "Easement staking on the MV route east of the substation, and confirmation that cable is installed within that easement",
-        "area": "MV collection",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-31",
-        "dueISO": "2026-08-07",
-        "status": "Open",
-        "assignedTo": "Construction Manager",
-        "respondedISO": "2026-07-31"
-      },
-      {
-        "ref": "MQ-20260730-1325",
-        "subject": "Calibration status of the torque wrenches in use on tracker assembly, with certificates",
-        "area": "Tracker assembly",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-30",
-        "dueISO": "2026-08-06",
-        "status": "Open",
-        "assignedTo": "QA/QC lead"
-      },
-      {
-        "ref": "MQ-20260730-1251",
-        "subject": "Protective watertight caps on cable ends at the inverters",
-        "area": "MV collection",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-30",
-        "dueISO": "2026-08-06",
-        "status": "Open",
-        "assignedTo": "Electrical lead (MV)"
-      },
-      {
-        "ref": "MQ-20260730-0710",
-        "subject": "Site office wireless network availability",
-        "area": "Other",
-        "raisedBy": "James Burnett",
-        "raisedISO": "2026-07-30",
-        "dueISO": "2026-08-06",
-        "status": "Answered",
-        "assignedTo": "Construction Manager"
-      }
+          {
+                "ref": "MQ-20260901-0718",
+                "subject": "Operations site inspection findings — tracker slope tolerance and conformance of installed work with the issued drawings",
+                "area": "Other",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-09-01",
+                "dueISO": "2026-09-08",
+                "status": "In review",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260818-0955",
+                "subject": "Utility fiber and secondary power services to the control building — design, utility coordination and construction responsibility",
+                "area": "Substation and inverters",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-18",
+                "dueISO": "2026-08-25",
+                "status": "In review",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260815-0700",
+                "subject": "Engineer-of-record confirmation for the inverter-pile shim remediation, weld coating preparation, and pile leveling tolerance",
+                "area": "Piles and foundations",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-15",
+                "dueISO": "2026-08-21",
+                "respondedISO": "2026-08-17",
+                "status": "Open",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260813-0922",
+                "subject": "Orientation of load-break disconnect boxes relative to the inverter stations, for O&M access",
+                "area": "LV and DC electrical",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-13",
+                "dueISO": "2026-08-20",
+                "status": "In review",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260813-0733",
+                "subject": "Installation-depth and marker-tape records for the MV and DC cable installations",
+                "area": "Quality and inspection",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-13",
+                "dueISO": "2026-08-20",
+                "respondedISO": "2026-08-18",
+                "status": "Open",
+                "assignedTo": "QA/QC lead"
+          },
+          {
+                "ref": "MQ-20260812-1226",
+                "subject": "Sequencing of racking installation on pile rows flagged by quality control, and readiness of rows presented for Owner inspection",
+                "area": "Piles and foundations",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-12",
+                "dueISO": "2026-08-19",
+                "respondedISO": "2026-08-12",
+                "status": "Open",
+                "assignedTo": "QA/QC lead"
+          },
+          {
+                "ref": "MQ-20260804-0936",
+                "subject": "Containment for the fuel cell carried on a site vehicle",
+                "area": "Environmental",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-04",
+                "dueISO": "2026-08-11",
+                "status": "Open",
+                "assignedTo": "Environmental lead"
+          },
+          {
+                "ref": "MQ-20260804-0732",
+                "subject": "Inverter station foundations",
+                "area": "Substation and inverters",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-04",
+                "dueISO": "2026-08-11",
+                "status": "Open",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260804-0728",
+                "subject": "Medium-voltage trench crossings at site roads",
+                "area": "MV collection",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-04",
+                "dueISO": "2026-08-11",
+                "status": "In review",
+                "assignedTo": "Electrical lead (MV)"
+          },
+          {
+                "ref": "MQ-20260804-0726",
+                "subject": "Erosion control devices",
+                "area": "Environmental",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-04",
+                "dueISO": "2026-08-11",
+                "status": "Answered",
+                "assignedTo": "Environmental lead",
+                "respondedISO": "2026-08-05",
+                "turnaroundDays": 1
+          },
+          {
+                "ref": "MQ-20260804-0724",
+                "subject": "Protective caps on conduit ends",
+                "area": "LV and DC electrical",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-04",
+                "dueISO": "2026-08-11",
+                "status": "In review",
+                "assignedTo": "Electrical lead"
+          },
+          {
+                "ref": "MQ-20260803-0752",
+                "subject": "Formal RFI process between the subcontractors and the EPC, and Owner participation in engineering and land RFIs",
+                "area": "Programme and milestones",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-03",
+                "dueISO": "2026-08-10",
+                "status": "Open",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260803-0745",
+                "subject": "Vehicle speeds on 48th Street on the approach to the substation",
+                "area": "Health and safety",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-03",
+                "dueISO": "2026-08-10",
+                "respondedISO": "2026-08-03",
+                "turnaroundDays": 0,
+                "status": "Open",
+                "assignedTo": "Health and safety lead"
+          },
+          {
+                "ref": "MQ-20260803-0743",
+                "subject": "Compaction of the substation grading platform",
+                "area": "Substation and inverters",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-03",
+                "dueISO": "2026-08-10",
+                "respondedISO": "2026-08-03",
+                "turnaroundDays": 0,
+                "status": "Answered",
+                "assignedTo": "Construction Manager"
+          },
+          {
+                "ref": "MQ-20260803-0739",
+                "subject": "Standing water in the excavations around the control-building piers, and the stabilisation measures planned ahead of freeze-thaw",
+                "area": "Substation and inverters",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-03",
+                "dueISO": "2026-08-10",
+                "respondedISO": "2026-08-03",
+                "turnaroundDays": 0,
+                "status": "Open",
+                "assignedTo": "Construction Manager"
+          },
+          {
+                "ref": "MQ-20260803-0736",
+                "subject": "Subcontractor working hours and rest days, and the fatigue management arrangements applied on site",
+                "area": "Health and safety",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-03",
+                "dueISO": "2026-08-10",
+                "status": "Open",
+                "assignedTo": "Health and safety lead"
+          },
+          {
+                "ref": "MQ-20260801-0802",
+                "subject": "Protective caps on module connectors to keep dust and debris out of unmated connections",
+                "area": "Module installation",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-01",
+                "dueISO": "2026-08-07",
+                "respondedISO": "2026-08-03",
+                "turnaroundDays": 1,
+                "status": "Answered",
+                "assignedTo": "QA/QC lead"
+          },
+          {
+                "ref": "MQ-20260801-0752",
+                "subject": "Supplier recommendation for treating vacated tap-screw holes in torque tubes, and confirmation of saddle-bracket fastener counts by slope",
+                "area": "Tracker assembly",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-01",
+                "dueISO": "2026-08-07",
+                "status": "In review",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260801-0749",
+                "subject": "Securing of tracker control unit charging modules and the timing of node controller connection for battery charging",
+                "area": "Module installation",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-01",
+                "dueISO": "2026-08-07",
+                "respondedISO": "2026-08-03",
+                "status": "Open",
+                "assignedTo": "Construction Manager"
+          },
+          {
+                "ref": "MQ-20260801-0736",
+                "subject": "Surface water drainage within the Area A arrays and vegetation management to support ongoing installation and operation",
+                "area": "Environmental",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-08-01",
+                "dueISO": "2026-08-07",
+                "respondedISO": "2026-08-03",
+                "status": "Open",
+                "assignedTo": "Environmental lead"
+          },
+          {
+                "ref": "MQ-20260731-0843",
+                "subject": "Verification that the installed PV and game fence meet the authority’s requirements, with drawings redlined where the installation differs",
+                "area": "Quality and inspection",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-07-31",
+                "dueISO": "2026-08-07",
+                "respondedISO": "2026-07-31",
+                "status": "Open",
+                "assignedTo": "Engineering lead"
+          },
+          {
+                "ref": "MQ-20260731-0822",
+                "subject": "Progressive red-line and as-built updating during construction, starting with the completed MV directional bores",
+                "area": "Programme and milestones",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-07-31",
+                "dueISO": "2026-08-07",
+                "status": "Open",
+                "assignedTo": "Engineering lead",
+                "respondedISO": "2026-07-31"
+          },
+          {
+                "ref": "MQ-20260731-0759",
+                "subject": "Easement staking on the MV route east of the substation, and confirmation that cable is installed within that easement",
+                "area": "MV collection",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-07-31",
+                "dueISO": "2026-08-07",
+                "status": "Open",
+                "assignedTo": "Construction Manager",
+                "respondedISO": "2026-07-31"
+          },
+          {
+                "ref": "MQ-20260730-1325",
+                "subject": "Calibration status of the torque wrenches in use on tracker assembly, with certificates",
+                "area": "Tracker assembly",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-07-30",
+                "dueISO": "2026-08-06",
+                "status": "Open",
+                "assignedTo": "QA/QC lead"
+          },
+          {
+                "ref": "MQ-20260730-1251",
+                "subject": "Protective watertight caps on cable ends at the inverters",
+                "area": "MV collection",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-07-30",
+                "dueISO": "2026-08-06",
+                "status": "Open",
+                "assignedTo": "Electrical lead (MV)"
+          },
+          {
+                "ref": "MQ-20260730-0710",
+                "subject": "Site office wireless network availability",
+                "area": "Other",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-07-30",
+                "dueISO": "2026-08-06",
+                "status": "Answered",
+                "assignedTo": "Construction Manager"
+          }
     ]
   },
   "focus": [
