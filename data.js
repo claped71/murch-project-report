@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Friday 28 to Monday 31 August, with limited weekend working. Tracker assembly recorded its two strongest days since 13 August — 65 rows on the 28th and 65 on the 31st — taking cumulative assembly to 2,199 of 2,486 rows (88.5%). The 30 August completion date for this element was not achieved and a revised, dated schedule is being issued; one installing contractor has finished its contracted racking scope, so the remaining 287 rows now sit with a single crew. Module installation reached its second-highest day of the works on 31 August (5,566), with cumulative installation at 135,511 of 171,470 (79.0%) against 7,192 per day required to 6 September. Piling stands at 30,261 of 31,352 (96.5%), the balance concentrated in one area where the machines enter on 1 September. On the medium-voltage network the wetland-crossing conduit was completed on 30 August, closing that environmental exposure; terminations remain at 18 of 264 and additional crews are being mobilised. The substation composite advanced to 50.0% — civil 95.0%, structural 65.2%, electrical 17.3% — with the electrical element governing energization. LV cable stands at 47,934 feet (17.8%) against 13,863 feet per day required to 18 September; harness assembly set a project record of 45 assemblies in a day (333 of 4,972) and box mounting reached 217 of 419. Additional electrician mobilisation has been formally requested. The works completed 320 days without accident and 173,278 hours worked. Overall completion moves to 81.4% from 78.5%.",
+    "statement": "The reporting period covers Tuesday 1 September. Tracker assembly completed a further 22 rows, taking the cumulative to 2,221 of 2,486 (89.3%); the remaining 265 rows are held by a single crew and a revised, dated completion schedule for this element is being issued. Module installation added 3,398 for a cumulative 138,909 of 171,470 (81.0%); a new installation front was opened in the north-east area, and the rate required to the 6 September date is 8,140 per day over four working days, above the best day yet recorded, so a second simultaneous front is being arranged. Piling stands at 30,261 of 31,352 (96.5%) with the machines positioned to enter the remaining area. On the electrical works every low-voltage front produced on the same day for the first time: cable advanced to 49,484 feet (18.3%) with the first trunk-cable production of the month, and harness assembly recorded its best combined day \u2014 75 assemblies across three crews, including the start of the contracted aerial crew \u2014 for a cumulative 408 of 4,972. Medium-voltage terminations advanced to 24 of 264 with the additional termination crew now in production and being brought up to its full rate. The substation composite advanced to 51.6% \u2014 civil 95.0%, structural 66.1%, electrical 20.2%, the largest single-day electrical advance recorded \u2014 with 46 days to energization. A lightning stand-down suspended field work from 13:27, in line with the site weather procedure. The works completed 321 days without accident and more than 173,278 hours worked. Overall completion moves to 82.2% from 81.4%.",
     "note": null
   },
   "gates": [
@@ -1400,6 +1400,16 @@ window.MURCH_REPORT = {
     "responseNote": "There is no sign-in and no account. Sending the query is all that is required — you keep a copy in your own Sent items and the reference is your record. Each query is added to this register at the next daily publication. Responses are issued by email; the register records the date a response was issued and the working days taken, and an item shows as answered once that response has been made. If an item here says open and you have already had an answer, tell us and it will be corrected.",
     "noticeNote": "This register supports day-to-day information flow. It does not replace or vary the formal correspondence provisions of the Agreement.",
     "items": [
+          {
+                "ref": "MQ-20260902-0706",
+                "subject": "Consolidated field conformance item list, extending the Golden Row inspection to other areas of the project \u2014 remediation requested",
+                "area": "Quality and inspection",
+                "raisedBy": "James Burnett",
+                "raisedISO": "2026-09-02",
+                "dueISO": "2026-09-09",
+                "status": "Open",
+                "assignedTo": "QA/QC lead"
+          },
           {
                 "ref": "MQ-20260901-0718",
                 "subject": "Operations site inspection findings — tracker slope tolerance and conformance of installed work with the issued drawings",
