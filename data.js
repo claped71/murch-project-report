@@ -1422,7 +1422,7 @@ window.MURCH_REPORT = {
         "raisedBy": "James Burnett",
         "raisedISO": "2026-09-02",
         "dueISO": "2026-09-09",
-        "status": "Open",
+        "status": "In review",
         "assignedTo": "QA/QC lead"
       },
       {
