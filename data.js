@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated September 1, 2026 — daily executive report of Tue Sep 1 · NO EHS board filed (report-basis crews ~208) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated September 2, 2026 \u2014 daily executive report of Wed Sep 2 \u00b7 crews 203 (EHS: 322 days without accident, 177,057.5 h) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "September 1, 2026 — daily executive report of Tue Sep 1 · NO EHS board filed (report-basis crews ~208)",
+    "asOf": "September 2, 2026 \\u2014 daily executive report of Wed Sep 2 \\u00b7 crews 203 (EHS: 322 days without accident, 177,057.5 h)",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 82.2,
+    "overall": 83.2,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,14 +22,14 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Tuesday 1 September. Tracker assembly completed a further 22 rows, taking the cumulative to 2,221 of 2,486 (89.3%); the remaining 265 rows are held by a single crew and a revised, dated completion schedule for this element is being issued. Module installation added 3,398 for a cumulative 138,909 of 171,470 (81.0%); a new installation front was opened in the north-east area, and the rate required to the 6 September date is 8,140 per day over four working days, above the best day yet recorded, so a second simultaneous front is being arranged. Piling stands at 30,261 of 31,352 (96.5%) with the machines positioned to enter the remaining area. On the electrical works every low-voltage front produced on the same day for the first time: cable advanced to 49,484 feet (18.3%) with the first trunk-cable production of the month, and harness assembly recorded its best combined day — 75 assemblies across three crews, including the start of the contracted aerial crew — for a cumulative 408 of 4,972. Medium-voltage terminations advanced to 24 of 264 with the additional termination crew now in production and being brought up to its full rate. The substation composite advanced to 51.6% — civil 95.0%, structural 66.1%, electrical 20.2%, the largest single-day electrical advance recorded — with 46 days to energization. A lightning stand-down suspended field work from 13:27, in line with the site weather procedure. The works completed 321 days without accident and more than 173,278 hours worked. Overall completion moves to 82.2% from 81.4%.",
+    "statement": "The reporting period covers Wednesday 2 September. Tracker assembly completed a further 22 rows, taking the cumulative to 2,243 of 2,486 (90.2%); the remaining 243 rows are held by a single crew with a planned crew break from 4 to 8 September, and a revised, dated completion schedule for this element is being issued. Module installation added 4,056 for a cumulative 142,965 of 171,470 (83.4%); the rate required to the 6 September date is 9,502 per day over the three working days remaining, and additional simultaneous fronts are being arranged. Piling added the first 70 positions in the remaining area, for 30,331 of 31,352 (96.7%). The electrical works recorded their best cable day to date: 7,411 feet installed across the trunk and homerun lines, taking cable to 56,895 feet (21.1%), and harness assembly continued across both contracted crews with the aerial-crew ramp still building toward its committed strength. Medium-voltage terminations advanced by nine, the best day recorded, to 33 of 264; the full committed termination crew is still being brought to site and remains a controlling item. The substation composite advanced to 52.5% — civil 95.4%, structural 66.5%, electrical 21.6% — with 45 days to energization. The works completed 322 days without accident and more than 177,057 hours worked. Overall completion moves to 83.2% from 82.2%.",
     "note": null
   },
   "gates": [
     {
       "key": "piles",
       "name": "Foundation piles",
-      "installed": 30261,
+      "installed": 30331,
       "total": 31352,
       "unit": "piles",
       "forecast": "Aug 7, 2026 — passed, revised date pending",
@@ -38,19 +38,19 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 2221,
+      "installed": 2243,
       "total": 2486,
       "unit": "rows",
-      "earned": 2230.5,
-      "earnedPct": 89.7,
-      "earnedLabel": "89.7% earned incl. rows in progress (2,231 row-equivalents)",
+      "earned": 2252.5,
+      "earnedPct": 90.6,
+      "earnedLabel": "90.6% earned incl. rows in progress (2,253 row-equivalents)",
       "forecast": "Aug 30, 2026",
       "status": "Date passed"
     },
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 138909,
+      "installed": 142965,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -60,34 +60,34 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 33,
-      "earnedPct": 41.4,
+      "gatePct": 34.5,
+      "earnedPct": 42.3,
       "unit": "%",
-      "earnedLabel": "41.4% earned incl. work in progress",
+      "earnedLabel": "42.3% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Sep 1, 2026 — daily executive report of Tue Sep 1 · NO EHS board filed (report-basis crews ~208)",
+    "asOf": "Sep 2, 2026 \\u2014 daily executive report of Wed Sep 2 \\u00b7 crews 203 (EHS: 322 days without accident, 177,057.5 h)",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "2,221 / 2,486",
-        "gatePct": 89.3,
+        "gate": "2,243 / 2,486",
+        "gatePct": 90.2,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
-        "earnedPct": 89.7,
+        "earnedPct": 90.6,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
       },
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "33% of scope",
-        "gatePct": 33,
-        "inProgress": "MV 77.3% · 23 of 23 inverter stations set · 217 of 419 boxes · 49,484 lf of cable",
-        "earnedPct": 41.4,
+        "gate": "34.5% of scope",
+        "gatePct": 34.5,
+        "inProgress": "MV 77.8% · 23 of 23 inverter stations set · 217 of 419 boxes · 56,895 lf of cable",
+        "earnedPct": 42.3,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -431,6 +431,11 @@ window.MURCH_REPORT = {
         "d": "Sep 1",
         "v": 0,
         "c": 30261
+      },
+      {
+        "d": "Sep 2",
+        "v": 70,
+        "c": 30331
       }
     ],
     "trackers": [
@@ -733,6 +738,11 @@ window.MURCH_REPORT = {
         "d": "Sep 1",
         "v": 22,
         "c": 2221
+      },
+      {
+        "d": "Sep 2",
+        "v": 22,
+        "c": 2243
       }
     ],
     "modules": [
@@ -984,7 +994,12 @@ window.MURCH_REPORT = {
       {
         "d": "Sep 1",
         "v": 3398,
-        "c": 138909
+        "c": 139143
+      },
+      {
+        "d": "Sep 2",
+        "v": 4056,
+        "c": 142965
       }
     ]
   },
@@ -1076,16 +1091,16 @@ window.MURCH_REPORT = {
       "activity": "Foundation SET (composite)",
       "done": 51.6,
       "status": "Active",
-      "note": "51.6% (Sep 1 cut) — civil 95.0%, structural 66.1%, electrical 20.2%. Lightning stand-down at 13:27."
+      "note": "52.5% (Sep 2 cut) — civil 95.4%, structural 66.5%, electrical 21.6%."
     }
   ],
   "safety": {
-    "headline": "Zero recordable injuries across 173,278 hours worked — 320 days without accident at 31 August. The July monthly HSE report has been issued and July is now the audited basis. The investigation into the 7 August first-aid case is concluded and CLOSED, with its corrective actions implemented.",
+    "headline": "Zero recordable injuries across 177,058 hours worked — 322 days without accident at 2 September. The July monthly HSE report has been issued and July is now the audited basis. The investigation into the 7 August first-aid case is concluded and CLOSED, with its corrective actions implemented.",
     "tiles": [
       {
         "label": "Recordable accidents",
         "value": "0",
-        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 173,278 hours."
+        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 177,058 hours."
       },
       {
         "label": "Days without accident",
@@ -1104,7 +1119,7 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Man-hours to date",
-        "value": "173,278",
+        "value": "177,058",
         "note": "Register maintained to 31 August. July alone: 52,464 hours across 224 personnel — the July monthly report is issued and July is the audited basis."
       },
       {
@@ -1123,14 +1138,14 @@ window.MURCH_REPORT = {
         "note": "Year-to-date site inductions and training; 148 trained in July."
       }
     ],
-    "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 173,278 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
+    "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 177,058 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
   },
   "quality": {
-    "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 2,069 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
+    "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 2,243 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
     "tiles": [
       {
         "label": "Piles executed",
-        "value": "30,261",
+        "value": "30,331",
         "note": "Current executed basis, 94.4% of project scope."
       },
       {
@@ -1150,8 +1165,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 2,221",
-        "note": "11.9% of the 2,486 rows in scope and 13.3% of the 2,221 built. Released rows feed the module installation front."
+        "value": "296 / 2,243",
+        "note": "11.9% of the 2,486 rows in scope and 13.2% of the 2,243 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1186,10 +1201,10 @@ window.MURCH_REPORT = {
     {
       "period": "Sep 1 – Sep 6",
       "items": [
-        "Module installation sustained at or above the required 7,192 per day toward the 6 September date, with the western closeout balance assigned to a crew and completed.",
+        "Module installation raised toward the required 9,502 per day for the 6 September date, with additional simultaneous fronts opened and the western closeout balance assigned to a crew.",
         "The revised, dated tracker completion schedule issued in place of the 30 August date, reconciled to a single remaining-quantity figure, with the single-contractor racking sequence and the holiday-week absence carried in it.",
-        "Pile installation resumed in the final area on 1 September and sustained daily, releasing the remaining racking blocks.",
-        "The additional medium-voltage termination crew productive at the established rate from 1 September, recovering the accumulated position against the 11-per-day control.",
+        "Pile installation sustained daily in the final area following the 2 September restart, releasing the remaining racking blocks.",
+        "The full committed medium-voltage termination crew productive at its established rate, recovering the accumulated position (33 of 264) against the 11-per-day control.",
         "Harness installation raised to the required daily rate by the contracted crew, with the requested electrician mobilisation confirmed; cable and harness reported separately each day.",
         "The cable pull through the completed wetland crossing conduit, and recovery of the jammed conduit at the affected bore.",
         "The racking-bearing correction report, re-inspection and formal release issued on rows already counted complete.",
@@ -1209,7 +1224,7 @@ window.MURCH_REPORT = {
     }
   ],
   "ownerActions": {
-    "asOf": "Sep 1, 2026",
+    "asOf": "Sep 2, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -1709,27 +1724,27 @@ window.MURCH_REPORT = {
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "2,199 rows complete of 2,486 (88.5%), of which 296 carry Owner acceptance; earned progress stands at 89.2%. The period produced 130 completed rows across its two working days — the strongest production since 13 August — and the step-reporting method proved itself: rows credited at torque-tube-and-purlin stage on Saturday converted to complete on Monday. The 30 August date was not achieved; a revised, dated completion schedule is being issued. Racking now proceeds with a single installing contractor, which concentrates the remaining 287 rows on one crew; 43 rows stand in progress at torque-tube stage. The racking-bearing correction report and re-inspection remain due on rows already counted complete."
+      "note": "2,243 rows complete of 2,486 (90.2%), of which 296 carry Owner acceptance; earned progress stands at 90.6%. The 2nd completed 22 rows, the third consecutive day at that rate. The remaining 243 rows are held by a single crew with a planned break from 4 to 8 September; a revised completion date for this element is being issued, and the release of the remaining foundation area governs the crew's continuity."
     },
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "135,511 of 171,470 (79.0%) after the second-highest installation day of the works (5,566 on 31 August). The requirement to the 6 September date is 7,192 per day over five working days, and the holiday week reduces available crews mid-window. The remaining western closeout balance of 1,527 modules requires a crew assignment; the eastern areas carry the principal balance and follow the racking release."
+      "note": "142,965 of 171,470 (83.4%) after 4,056 on the 2nd. The requirement to the 6 September date is 9,502 per day over the three working days remaining, above the best day yet recorded, so the date is exposed and additional simultaneous fronts are being arranged, with the balance concentrated in the eastern areas."
     },
     {
       "title": "LV and DC installation — reporting restored",
       "level": "Priority",
-      "note": "Cumulative cable stands at 47,934 feet (17.8%) against 13,863 feet per day required to 18 September. The 28th and 29th installed 2,633 and 1,464 feet of homerun; the 31st was given to reconfiguration and quality work on two inverter feeders with no new footage. Harness assembly recorded its highest single day of the works — 45 assemblies — demonstrating the required rate is achievable with a properly crewed front; cumulative harness stands at 333 of 4,972. Box mounting reached 217 of 419. Additional electrician mobilisation has been formally requested from the contracted crew, with a recovery plan and daily rate confirmation."
+      "note": "Cumulative cable stands at 56,895 feet (21.1%) against 15,204 feet per day required to 18 September. The 2nd installed 7,411 feet — the best cable day of the works, across the trunk and homerun lines — and harness assembly continued on both contracted crews. Sustaining this rate requires the full committed electrical strength on site."
     },
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "30,261 of 31,352 (96.5%). The 28th drove 233 positions and the ledger reconciliation closed two further areas complete; the balance is now concentrated in one area (782 positions) with two smaller tails (181 and 128). Surface restoration in the final area is being completed and installation machines enter its first block on 1 September. Completion of this element also releases the remaining racking workfront."
+      "note": "30,331 of 31,352 (96.7%). The 2nd drove the first 70 positions in the remaining area; the balance of 1,021 is concentrated there (712 positions) plus two closing areas, and its release governs the continuity of the racking crew."
     },
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "50.0% overall — civil 95.0%, structural 65.2%, electrical 17.3%, with 79 of 187 activities complete and 47 days to the energization date. The electrical element is the governing line: medium-voltage terminations stand at 18 of 264 against an established rate of 11 per day, and additional termination resources are being mobilised. An application for the permanent auxiliary-power connection to the control building has been initiated with the local distribution company."
+      "note": "52.5% overall — civil 95.4%, structural 66.5%, electrical 21.6%, with 45 days to the energization date. The electrical element is the governing line: medium-voltage terminations stand at 33 of 264 after the best day recorded (nine), and the full committed termination crew is still being brought to site."
     },
     {
       "title": "Electrical — all fronts",
@@ -1932,8 +1947,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "230",
-        "note": "Latest site-board headcount (Aug 31). Field labor plus management, quality and HSE."
+        "value": "203",
+        "note": "Latest site-board headcount (Sep 2). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1942,13 +1957,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "212",
+        "value": "211",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "165,800",
-        "note": "Total manhours worked from the start of construction on April 1 through September 1, at 10 h/day, Monday to Saturday."
+        "value": "167,700",
+        "note": "Total manhours worked from the start of construction on April 1 through September 2, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2120,6 +2135,10 @@ window.MURCH_REPORT = {
       {
         "d": "Aug 31",
         "v": 230
+      },
+      {
+        "d": "Sep 2",
+        "v": 203
       }
     ],
     "manhours": [
@@ -2165,7 +2184,11 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Sep 1",
-        "c": 165779
+        "c": 165644
+      },
+      {
+        "d": "Sep 2",
+        "c": 167674
       }
     ]
   }
