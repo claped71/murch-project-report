@@ -1089,9 +1089,9 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Foundation SET (composite)",
-      "done": 51.6,
+      "done": 52.5,
       "status": "Active",
-      "note": "52.5% (Sep 2 cut) — civil 95.4%, structural 66.5%, electrical 21.6%."
+      "note": "52.5% (Sep 2 cut) — civil 95.4%, structural 66.5%, electrical 21.6%; 45 days to energization. MV terminations 33 of 264 (deficit 44)."
     }
   ],
   "safety": {
