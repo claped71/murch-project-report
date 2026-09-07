@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated September 3, 2026 — daily executive report of Thu Sep 3 · crews 206 · localized safety stand-down at INV-1 (09:50, pending Safety release) by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated September 7, 2026 — executed basis through Saturday Sep 5 (daily executive production reports, corrected version) + the Sep 7 workbook re-cut. Sunday Sep 6 was a non-production day. Monday Sep 7 field note: the INV-11 trench is closed and ready for terminations by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "September 3, 2026 — daily executive report of Thu Sep 3 · crews 206 · localized safety stand-down at INV-1 (09:50, pending Safety release)",
+    "asOf": "September 7, 2026 — executed basis through Saturday Sep 5 (daily executive production reports, corrected version) + the Sep 7 workbook re-cut. Sunday Sep 6 was a non-production day. Monday Sep 7 field note: the INV-11 trench is closed and ready for terminations",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 83.9,
+    "overall": 85.5,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,14 +22,14 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "The reporting period covers Thursday 3 September. Tracker assembly completed a further 30 rows — the fourth consecutive completion day and the best since late August — taking the cumulative to 2,273 of 2,486 (91.4%); the north-east assembly area is now complete on the working allocation, the remaining 213 rows are held by a single crew with a planned break from 4 to 8 September, and a revised, dated completion schedule is being issued. Module installation added 1,560 for a cumulative 144,525 of 171,470 (84.3%); the arithmetic requirement to the 6 September date now exceeds any recorded daily rate, so a revised module completion date is being issued together with the tracker date. Piling holds at 30,331 of 31,352 (96.7%). Harness assembly recorded its best day — 115 assemblies, with the contracted aerial crew reaching 33 of its 40 committed electricians — and cable advanced to 61,177 feet (22.7%). Medium-voltage terminations advanced by nine for a second consecutive day, to 42 of 264; the full committed termination crew remains the controlling item. The substation composite advanced to 57.0% — civil 96.2%, structural 66.9%, electrical 30.5%, the largest single-day electrical advance recorded — with 44 days to energization. The meteorological-station installation began with the SCADA subcontractor on site. A localized preventive safety stand-down was taken at one inverter station and the works completed 323 days without accident. Overall completion moves to 83.9% from 83.2%.",
+    "statement": "The reporting period covers Friday 4 and Saturday 5 September; Sunday 6 September was not a production day. Tracker assembly completed a further 15 rows on the 4th and, with the current workbook reconciliation of two areas included, the cumulative stands at 2,311 of 2,486 (93.0%); 175 rows remain and the assembly crew returns to site on 8 September. Module installation added 4,353 across the two days and the reconciliation, for a cumulative 148,878 of 171,470 (86.8%). The 6 September module date has passed and is being replaced together with the revised tracker date; the balance of 22,592 is concentrated in the eastern areas, where racking readiness in one area is presently limiting how many installation fronts can run at once. Piling holds at 30,617 of 31,352 (97.7%) with the north-east area now closed, and the balance of 735 is concentrated in a single area whose release governs racking continuity. Cable advanced 7,680 feet to 68,857 (25.5%) and harness assembly added 164 assemblies for a cumulative 770. Medium-voltage terminations stand at 45 of 264 with no advance recorded across the two days; bringing the full committed termination crew to site remains the controlling item. The substation composite advanced to 59.7% - civil 97.1%, structural 65.5%, electrical 36.6% - with 40 days to energization. The works completed 323 days without a lost-time accident. Overall completion moves to 85.5% from 83.9%.",
     "note": null
   },
   "gates": [
     {
       "key": "piles",
       "name": "Foundation piles",
-      "installed": 30331,
+      "installed": 30617,
       "total": 31352,
       "unit": "piles",
       "forecast": "Aug 7, 2026 — passed, revised date pending",
@@ -38,7 +38,7 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 2273,
+      "installed": 2311,
       "total": 2486,
       "unit": "rows",
       "earned": 2282.5,
@@ -50,33 +50,33 @@ window.MURCH_REPORT = {
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 144525,
+      "installed": 148878,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
-      "status": "Below rate"
+      "status": "Date passed"
     },
     {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 36,
-      "earnedPct": 43.4,
+      "gatePct": 37.7,
+      "earnedPct": 44.9,
       "unit": "%",
-      "earnedLabel": "43.4% earned incl. work in progress",
+      "earnedLabel": "44.9% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Sep 3, 2026 — daily executive report of Thu Sep 3 · crews 206 · localized safety stand-down at INV-1 (09:50, pending Safety release)",
+    "asOf": "Sep 7, 2026 — executed basis through Saturday Sep 5 (daily executive production reports, corrected version) + the Sep 7 workbook re-cut. Sunday Sep 6 was a non-production day. Monday Sep 7 field note: the INV-11 trench is closed and ready for terminations",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "2,273 / 2,486",
-        "gatePct": 91.4,
+        "gate": "2,311 / 2,486",
+        "gatePct": 93,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
         "earnedPct": 91.8,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
@@ -84,10 +84,10 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "36% of scope",
-        "gatePct": 36,
-        "inProgress": "MV 78.3% · 23 of 23 inverter stations set · 217 of 419 boxes · 61,177 lf of cable",
-        "earnedPct": 43.4,
+        "gate": "37.7% of scope",
+        "gatePct": 37.7,
+        "inProgress": "MV 78.5% · 23 of 23 inverter stations set · 217 of 419 boxes · 68,857 lf of cable",
+        "earnedPct": 44.9,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -130,891 +130,911 @@ window.MURCH_REPORT = {
       {
         "d": "Jun 18",
         "v": 20,
-        "c": 15898
+        "c": 16184
       },
       {
         "d": "Jun 19",
         "v": 79,
-        "c": 15977
+        "c": 16263
       },
       {
         "d": "Jun 22",
         "v": 251,
-        "c": 16228
+        "c": 16514
       },
       {
         "d": "Jun 23",
         "v": 101,
-        "c": 16329
+        "c": 16615
       },
       {
         "d": "Jun 25",
         "v": 370,
-        "c": 16699
+        "c": 16985
       },
       {
         "d": "Jun 26",
         "v": 340,
-        "c": 17039
+        "c": 17325
       },
       {
         "d": "Jun 29",
         "v": 261,
-        "c": 17300
+        "c": 17586
       },
       {
         "d": "Jun 30",
         "v": 234,
-        "c": 17534
+        "c": 17820
       },
       {
         "d": "Jul 1",
         "v": 252,
-        "c": 17786
+        "c": 18072
       },
       {
         "d": "Jul 2",
         "v": 274,
-        "c": 18060
+        "c": 18346
       },
       {
         "d": "Jul 3",
         "v": 134,
-        "c": 18194
+        "c": 18480
       },
       {
         "d": "Jul 6",
         "v": 307,
-        "c": 18501
+        "c": 18787
       },
       {
         "d": "Jul 7",
         "v": 399,
-        "c": 18900
+        "c": 19186
       },
       {
         "d": "Jul 8",
         "v": 646,
-        "c": 19546
+        "c": 19832
       },
       {
         "d": "Jul 9",
         "v": 669,
-        "c": 20215
+        "c": 20501
       },
       {
         "d": "Jul 10",
         "v": 680,
-        "c": 20895
+        "c": 21181
       },
       {
         "d": "Jul 11",
         "v": 680,
-        "c": 21575
+        "c": 21861
       },
       {
         "d": "Jul 13",
         "v": 608,
-        "c": 22183
+        "c": 22469
       },
       {
         "d": "Jul 14",
         "v": 695,
-        "c": 22878
+        "c": 23164
       },
       {
         "d": "Jul 15",
         "v": 481,
-        "c": 23359
+        "c": 23645
       },
       {
         "d": "Jul 16",
         "v": 504,
-        "c": 23863
+        "c": 24149
       },
       {
         "d": "Jul 17",
         "v": 472,
-        "c": 24335
+        "c": 24621
       },
       {
         "d": "Jul 18",
         "v": 608,
-        "c": 24943
+        "c": 25229
       },
       {
         "d": "Jul 20",
         "v": 622,
-        "c": 25565
+        "c": 25851
       },
       {
         "d": "Jul 21",
         "v": 253,
-        "c": 25818
+        "c": 26104
       },
       {
         "d": "Jul 22",
         "v": 202,
-        "c": 26020
+        "c": 26306
       },
       {
         "d": "Jul 23",
         "v": 284,
-        "c": 26304
+        "c": 26590
       },
       {
         "d": "Jul 24",
         "v": 364,
-        "c": 26668
+        "c": 26954
       },
       {
         "d": "Jul 25",
         "v": 236,
-        "c": 26904
+        "c": 27190
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 26904
+        "c": 27190
       },
       {
         "d": "Jul 28",
         "v": 439,
-        "c": 27343
+        "c": 27629
       },
       {
         "d": "Jul 29",
         "v": 539,
-        "c": 27882
+        "c": 28168
       },
       {
         "d": "Jul 30",
         "v": 627,
-        "c": 28509
+        "c": 28795
       },
       {
         "d": "Jul 31",
         "v": 337,
-        "c": 28846
+        "c": 29132
       },
       {
         "d": "Aug 1",
         "v": 0,
-        "c": 28846
+        "c": 29132
       },
       {
         "d": "Aug 3",
         "v": 205,
-        "c": 29051
+        "c": 29337
       },
       {
         "d": "Aug 4",
         "v": 110,
-        "c": 29161
+        "c": 29447
       },
       {
         "d": "Aug 5",
         "v": 100,
-        "c": 29261
+        "c": 29547
       },
       {
         "d": "Aug 6",
         "v": 149,
-        "c": 29410
+        "c": 29696
       },
       {
         "d": "Aug 7",
         "v": 63,
-        "c": 29473
+        "c": 29759
       },
       {
         "d": "Aug 8",
         "v": 215,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 10",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 11",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 12",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 13",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 14",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 15",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 17",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 18",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 19",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 20",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 21",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 22",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 24",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 25",
         "v": 0,
-        "c": 29688
+        "c": 29974
       },
       {
         "d": "Aug 26",
         "v": 211,
-        "c": 29899
+        "c": 30185
       },
       {
         "d": "Aug 27",
         "v": 98,
-        "c": 29997
+        "c": 30283
       },
       {
         "d": "Aug 28",
         "v": 233,
-        "c": 30230
+        "c": 30516
       },
       {
         "d": "Aug 29",
         "v": 0,
-        "c": 30230
+        "c": 30516
       },
       {
         "d": "Aug 31",
         "v": 31,
-        "c": 30261
+        "c": 30547
       },
       {
         "d": "Sep 1",
         "v": 0,
-        "c": 30261
+        "c": 30547
       },
       {
         "d": "Sep 2",
         "v": 70,
-        "c": 30331
+        "c": 30617
       },
       {
         "d": "Sep 3",
         "v": 0,
-        "c": 30331
+        "c": 30617
+      },
+      {
+        "d": "Sep 4",
+        "v": 0,
+        "c": 30617
+      },
+      {
+        "d": "Sep 5",
+        "v": 0,
+        "c": 30617
       }
     ],
     "trackers": [
       {
         "d": "Jun 17",
         "v": 15,
-        "c": 142
+        "c": 165
       },
       {
         "d": "Jun 18",
         "v": 35,
-        "c": 177
+        "c": 200
       },
       {
         "d": "Jun 19",
         "v": 26,
-        "c": 203
+        "c": 226
       },
       {
         "d": "Jun 20",
         "v": 31,
-        "c": 234
+        "c": 257
       },
       {
         "d": "Jun 21",
         "v": 0,
-        "c": 234
+        "c": 257
       },
       {
         "d": "Jun 22",
         "v": 48,
-        "c": 282
+        "c": 305
       },
       {
         "d": "Jun 23",
         "v": 31,
-        "c": 313
+        "c": 336
       },
       {
         "d": "Jun 24",
         "v": 0,
-        "c": 313
+        "c": 336
       },
       {
         "d": "Jun 25",
         "v": 57,
-        "c": 370
+        "c": 393
       },
       {
         "d": "Jun 26",
         "v": 26,
-        "c": 396
+        "c": 419
       },
       {
         "d": "Jun 29",
         "v": 29,
-        "c": 425
+        "c": 448
       },
       {
         "d": "Jun 30",
         "v": 30,
-        "c": 455
+        "c": 478
       },
       {
         "d": "Jul 1",
         "v": 51,
-        "c": 506
+        "c": 529
       },
       {
         "d": "Jul 7",
         "v": 29,
-        "c": 535
+        "c": 558
       },
       {
         "d": "Jul 8",
         "v": 0,
-        "c": 535
+        "c": 558
       },
       {
         "d": "Jul 9",
         "v": 0,
-        "c": 535
+        "c": 558
       },
       {
         "d": "Jul 10",
         "v": 0,
-        "c": 535
+        "c": 558
       },
       {
         "d": "Jul 13",
         "v": 29,
-        "c": 564
+        "c": 587
       },
       {
         "d": "Jul 14",
         "v": 49,
-        "c": 613
+        "c": 636
       },
       {
         "d": "Jul 15",
         "v": 35,
-        "c": 648
+        "c": 671
       },
       {
         "d": "Jul 16",
         "v": 35,
-        "c": 683
+        "c": 706
       },
       {
         "d": "Jul 17",
         "v": 25,
-        "c": 708
+        "c": 731
       },
       {
         "d": "Jul 18",
         "v": 0,
-        "c": 708
+        "c": 731
       },
       {
         "d": "Jul 20",
         "v": 21,
-        "c": 729
+        "c": 752
       },
       {
         "d": "Jul 21",
         "v": 25,
-        "c": 754
+        "c": 777
       },
       {
         "d": "Jul 22",
         "v": 39,
-        "c": 793
+        "c": 816
       },
       {
         "d": "Jul 23",
         "v": 28,
-        "c": 821
+        "c": 844
       },
       {
         "d": "Jul 24",
         "v": 30,
-        "c": 851
+        "c": 874
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 851
+        "c": 874
       },
       {
         "d": "Jul 28",
         "v": 30,
-        "c": 881
+        "c": 904
       },
       {
         "d": "Jul 29",
         "v": 35,
-        "c": 916
+        "c": 939
       },
       {
         "d": "Jul 30",
         "v": 30,
-        "c": 946
+        "c": 969
       },
       {
         "d": "Jul 31",
         "v": 40,
-        "c": 986
+        "c": 1009
       },
       {
         "d": "Aug 1",
         "v": 40,
-        "c": 1026
+        "c": 1049
       },
       {
         "d": "Aug 3",
         "v": 86,
-        "c": 1112
+        "c": 1135
       },
       {
         "d": "Aug 4",
         "v": 60,
-        "c": 1172
+        "c": 1195
       },
       {
         "d": "Aug 5",
         "v": 33,
-        "c": 1205
+        "c": 1228
       },
       {
         "d": "Aug 6",
         "v": 29,
-        "c": 1234
+        "c": 1257
       },
       {
         "d": "Aug 7",
         "v": 42,
-        "c": 1276
+        "c": 1299
       },
       {
         "d": "Aug 8",
         "v": 0,
-        "c": 1276
+        "c": 1299
       },
       {
         "d": "Aug 10",
         "v": 78,
-        "c": 1354
+        "c": 1377
       },
       {
         "d": "Aug 11",
         "v": 60,
-        "c": 1414
+        "c": 1437
       },
       {
         "d": "Aug 12",
         "v": 89,
-        "c": 1503
+        "c": 1526
       },
       {
         "d": "Aug 13",
         "v": 97,
-        "c": 1600
+        "c": 1623
       },
       {
         "d": "Aug 14",
         "v": 65,
-        "c": 1665
+        "c": 1688
       },
       {
         "d": "Aug 15",
         "v": 0,
-        "c": 1665
+        "c": 1688
       },
       {
         "d": "Aug 17",
         "v": 54,
-        "c": 1719
+        "c": 1742
       },
       {
         "d": "Aug 18",
         "v": 62,
-        "c": 1781
+        "c": 1804
       },
       {
         "d": "Aug 19",
         "v": 55,
-        "c": 1836
+        "c": 1859
       },
       {
         "d": "Aug 20",
         "v": 60,
-        "c": 1896
+        "c": 1919
       },
       {
         "d": "Aug 21",
         "v": 46,
-        "c": 1942
+        "c": 1965
       },
       {
         "d": "Aug 22",
         "v": 0,
-        "c": 1942
+        "c": 1965
       },
       {
         "d": "Aug 24",
         "v": 60,
-        "c": 2002
+        "c": 2025
       },
       {
         "d": "Aug 25",
         "v": 67,
-        "c": 2069
+        "c": 2092
       },
       {
         "d": "Aug 26",
         "v": 0,
-        "c": 2069
+        "c": 2092
       },
       {
         "d": "Aug 27",
         "v": 0,
-        "c": 2069
+        "c": 2092
       },
       {
         "d": "Aug 28",
         "v": 65,
-        "c": 2134
+        "c": 2157
       },
       {
         "d": "Aug 29",
         "v": 0,
-        "c": 2134
+        "c": 2157
       },
       {
         "d": "Aug 31",
         "v": 65,
-        "c": 2199
+        "c": 2222
       },
       {
         "d": "Sep 1",
         "v": 22,
-        "c": 2221
+        "c": 2244
       },
       {
         "d": "Sep 2",
         "v": 22,
-        "c": 2243
+        "c": 2266
       },
       {
         "d": "Sep 3",
         "v": 30,
-        "c": 2273
+        "c": 2296
+      },
+      {
+        "d": "Sep 4",
+        "v": 15,
+        "c": 2311
+      },
+      {
+        "d": "Sep 5",
+        "v": 0,
+        "c": 2311
       }
     ],
     "modules": [
       {
         "d": "Jul 3",
         "v": 234,
-        "c": 234
+        "c": 4353
       },
       {
         "d": "Jul 6",
         "v": 780,
-        "c": 1014
+        "c": 5133
       },
       {
         "d": "Jul 7",
         "v": 156,
-        "c": 1170
+        "c": 5289
       },
       {
         "d": "Jul 8",
         "v": 936,
-        "c": 2106
+        "c": 6225
       },
       {
         "d": "Jul 9",
         "v": 1308,
-        "c": 3414
+        "c": 7533
       },
       {
         "d": "Jul 10",
         "v": 1802,
-        "c": 5216
+        "c": 9335
       },
       {
         "d": "Jul 11",
         "v": 517,
-        "c": 5733
+        "c": 9852
       },
       {
         "d": "Jul 13",
         "v": 2922,
-        "c": 8655
+        "c": 12774
       },
       {
         "d": "Jul 14",
         "v": 2335,
-        "c": 10990
+        "c": 15109
       },
       {
         "d": "Jul 15",
         "v": 780,
-        "c": 11770
+        "c": 15889
       },
       {
         "d": "Jul 16",
         "v": 858,
-        "c": 12628
+        "c": 16747
       },
       {
         "d": "Jul 17",
         "v": 2226,
-        "c": 14854
+        "c": 18973
       },
       {
         "d": "Jul 18",
         "v": 0,
-        "c": 14854
+        "c": 18973
       },
       {
         "d": "Jul 20",
         "v": 3601,
-        "c": 18455
+        "c": 22574
       },
       {
         "d": "Jul 21",
         "v": 3082,
-        "c": 21537
+        "c": 25656
       },
       {
         "d": "Jul 22",
         "v": 2887,
-        "c": 24424
+        "c": 28543
       },
       {
         "d": "Jul 23",
         "v": 3456,
-        "c": 27880
+        "c": 31999
       },
       {
         "d": "Jul 24",
         "v": 3134,
-        "c": 31014
+        "c": 35133
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 31014
+        "c": 35133
       },
       {
         "d": "Jul 28",
         "v": 3100,
-        "c": 34114
+        "c": 38233
       },
       {
         "d": "Jul 29",
         "v": 3109,
-        "c": 37223
+        "c": 41342
       },
       {
         "d": "Jul 30",
         "v": 3158,
-        "c": 40381
+        "c": 44500
       },
       {
         "d": "Jul 31",
         "v": 4136,
-        "c": 44517
+        "c": 48636
       },
       {
         "d": "Aug 1",
         "v": 1780,
-        "c": 46297
+        "c": 50416
       },
       {
         "d": "Aug 3",
         "v": 4279,
-        "c": 50576
+        "c": 54695
       },
       {
         "d": "Aug 4",
         "v": 3168,
-        "c": 53744
+        "c": 57863
       },
       {
         "d": "Aug 5",
         "v": 4134,
-        "c": 57878
+        "c": 61997
       },
       {
         "d": "Aug 6",
         "v": 3848,
-        "c": 61726
+        "c": 65845
       },
       {
         "d": "Aug 7",
         "v": 4030,
-        "c": 65756
+        "c": 69875
       },
       {
         "d": "Aug 8",
         "v": 1327,
-        "c": 67083
+        "c": 71202
       },
       {
         "d": "Aug 10",
         "v": 2254,
-        "c": 69337
+        "c": 73456
       },
       {
         "d": "Aug 11",
         "v": 2298,
-        "c": 71635
+        "c": 75754
       },
       {
         "d": "Aug 12",
         "v": 3878,
-        "c": 75513
+        "c": 79632
       },
       {
         "d": "Aug 13",
         "v": 3508,
-        "c": 79021
+        "c": 83140
       },
       {
         "d": "Aug 14",
         "v": 3188,
-        "c": 82209
+        "c": 86328
       },
       {
         "d": "Aug 15",
         "v": 632,
-        "c": 82841
+        "c": 86960
       },
       {
         "d": "Aug 17",
         "v": 5590,
-        "c": 88431
+        "c": 92550
       },
       {
         "d": "Aug 18",
         "v": 4904,
-        "c": 93335
+        "c": 97454
       },
       {
         "d": "Aug 19",
         "v": 5577,
-        "c": 98912
+        "c": 103031
       },
       {
         "d": "Aug 20",
         "v": 4210,
-        "c": 103122
+        "c": 107241
       },
       {
         "d": "Aug 21",
         "v": 5694,
-        "c": 108816
+        "c": 112935
       },
       {
         "d": "Aug 22",
         "v": 768,
-        "c": 109584
+        "c": 113703
       },
       {
         "d": "Aug 24",
         "v": 4095,
-        "c": 113679
+        "c": 117798
       },
       {
         "d": "Aug 25",
         "v": 5593,
-        "c": 119272
+        "c": 123391
       },
       {
         "d": "Aug 26",
         "v": 3406,
-        "c": 122678
+        "c": 126797
       },
       {
         "d": "Aug 27",
         "v": 4654,
-        "c": 127332
+        "c": 131451
       },
       {
         "d": "Aug 28",
         "v": 2847,
-        "c": 130179
+        "c": 134298
       },
       {
         "d": "Aug 29",
         "v": 0,
-        "c": 130179
+        "c": 134298
       },
       {
         "d": "Aug 31",
         "v": 5566,
-        "c": 135745
+        "c": 139864
       },
       {
         "d": "Sep 1",
         "v": 3398,
-        "c": 139143
+        "c": 143262
       },
       {
         "d": "Sep 2",
         "v": 4056,
-        "c": 143199
+        "c": 147318
       },
       {
         "d": "Sep 3",
         "v": 1560,
-        "c": 144525
+        "c": 148878
       }
     ]
   },
@@ -1025,7 +1045,7 @@ window.MURCH_REPORT = {
       "color": "#0f7a52",
       "planStart": "Jun 18",
       "planEnd": "Aug 7",
-      "planStartVal": 15898,
+      "planStartVal": 16184,
       "unit": "piles"
     },
     "trackers": {
@@ -1034,7 +1054,7 @@ window.MURCH_REPORT = {
       "color": "#2769a8",
       "planStart": "Jun 17",
       "planEnd": "Aug 30",
-      "planStartVal": 142,
+      "planStartVal": 165,
       "unit": "rows"
     },
     "modules": {
@@ -1043,7 +1063,7 @@ window.MURCH_REPORT = {
       "color": "#b96f18",
       "planStart": "Jul 3",
       "planEnd": "Sep 6",
-      "planStartVal": 234,
+      "planStartVal": 4353,
       "unit": "modules"
     }
   },
@@ -1104,28 +1124,28 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Foundation SET (composite)",
-      "done": 57,
+      "done": 59.7,
       "status": "Active",
-      "note": "57.0% (Sep 3 cut) — civil 96.2%, structural 66.9%, electrical 30.5% (+8.9); 44 days to energization. MV terminations 42 of 264 (deficit 46)."
+      "note": "59.7% (Sep 7 cut) — civil 97.1%, structural 65.5%, electrical 36.6%. Substation scope — excluded from the civil roll-up."
     }
   ],
   "safety": {
-    "headline": "Zero recordable injuries across 177,058 hours worked — 323 days without accident at 3 September. The July monthly HSE report has been issued and July is now the audited basis. The investigation into the 7 August first-aid case is concluded and CLOSED, with its corrective actions implemented.",
+    "headline": "Zero lost-time injuries across 181,581 hours worked - 323 days without accident at 4 September. Two first-aid cases were notified on 4 September, covering events of 2 and 4 September; both were first aid only, neither is recordable and neither involved lost time. July remains the audited monthly basis and the August report is under review. Weather was the dominant production loss in the period, with 697.5 hours lost on 3 September.",
     "tiles": [
       {
         "label": "Recordable accidents",
         "value": "0",
-        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 177,058 hours."
+        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 181,581 hours."
       },
       {
         "label": "Days without accident",
-        "value": "320",
-        "note": "Per the site register at 31 August, maintained daily from subcontractor returns."
+        "value": "323",
+        "note": "Per the site register at 4 September, maintained daily from subcontractor returns."
       },
       {
         "label": "Lost days",
         "value": "0",
-        "note": "Frequency, incidence and severity rates remain zero. Zero hours lost to weather in the last reporting week."
+        "note": "Frequency, incidence and severity rates remain zero. Weather-related lost hours in the period: 697.5 on 3 September, the largest single-day weather loss recorded on the project."
       },
       {
         "label": "First-aid cases — August",
@@ -1156,11 +1176,11 @@ window.MURCH_REPORT = {
     "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 177,058 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
   },
   "quality": {
-    "headline": "The quality release process moved substantially on 17 August: 2,540 foundation piles, 67 tracker rows (closing one assembly area complete) and 4,446 modules were released through the EPC quality process — the first release cut in twelve working days. EPC pile approval now stands at 92.2% of executed. Owner acceptance stands at 296 of 2,273 completed tracker rows; converting EPC releases into Owner acceptance is the controlling quality action.",
+    "headline": "Owner acceptance stands at 296 of 2,311 completed tracker rows and converting EPC releases into Owner acceptance remains the controlling quality action. Two Owner queries on installed-work conformance fall due on 8 and 9 September and a single consolidated engineering and quality position is being prepared for both. A per-area reconciliation of tracker completion records is also in progress in one eastern area, where the working allocation and the current workbook cut differ and the readiness of two sub-areas has been reported differently by the assembly and installation crews; completion records for that area are held until it closes.",
     "tiles": [
       {
         "label": "Piles executed",
-        "value": "30,331",
+        "value": "30,617",
         "note": "Current executed basis, 94.4% of project scope."
       },
       {
@@ -1180,8 +1200,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 2,273",
-        "note": "11.9% of the 2,486 rows in scope and 13.0% of the 2,273 built. Released rows feed the module installation front."
+        "value": "296 / 2,311",
+        "note": "11.9% of the 2,486 rows in scope and 12.8% of the 2,311 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1214,32 +1234,31 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Sep 1 – Sep 6",
+      "period": "Sep 8 - Sep 13",
       "items": [
-        "A revised module completion date issued together with the revised tracker date, with additional simultaneous fronts opened and the western closeout balance assigned to a crew.",
-        "The revised, dated tracker completion schedule issued in place of the 30 August date, reconciled to a single remaining-quantity figure, with the single-contractor racking sequence and the holiday-week absence carried in it.",
-        "Pile installation sustained daily in the final area following the 2 September restart, releasing the remaining racking blocks.",
-        "The full committed medium-voltage termination crew productive at its established rate, recovering the accumulated position (42 of 264) against the 11-per-day control.",
-        "Harness installation raised to the required daily rate by the contracted crew, with the requested electrician mobilisation confirmed; cable and harness reported separately each day.",
-        "The cable pull through the completed wetland crossing conduit, and recovery of the jammed conduit at the affected bore.",
-        "The racking-bearing correction report, re-inspection and formal release issued on rows already counted complete.",
-        "Responses issued to the open Owner queries, in particular those without any response on record."
+        "The revised, dated tracker and module completion dates issued together, reconciled to a single remaining-quantity figure per area.",
+        "The per-area tracker completion reconciliation closed in the eastern area where the working allocation and the current workbook cut differ, and the readiness of the two affected sub-areas confirmed in writing before the module crews are redeployed to them.",
+        "The full committed medium-voltage termination crew productive at its established rate, recovering the accumulated position of 54 against the 11-per-day control; 45 of 264 complete at the date of this report.",
+        "Module installation restored to more than one simultaneous front, with the western closeout balance of 520 assigned to a crew.",
+        "Cable installation raised towards the 20,089 feet per day required to the 18 September date, with cable and harness reported separately each day.",
+        "Pile installation resumed in the final area, releasing the remaining racking blocks.",
+        "Responses issued to the two open Owner queries falling due on 8 and 9 September.",
+        "The racking-bearing correction report, re-inspection and formal release issued on rows already counted complete."
       ]
     },
     {
-      "period": "Sep 7 – Sep 12",
+      "period": "Sep 14 - Sep 19",
       "items": [
-        "Tracker assembly closing against its revised dated schedule, with remediated racking released back to the module front.",
-        "Pile installation complete, and module installation closing the eastern balances at the multi-crew rate.",
-        "Substation electrical works scaled — control cabling, terminations and the auxiliary-power connection progressing against the energization sequence.",
-        "LV installation at multi-crew rate with the first line's cable complete and the second line opened; plowing restarted on the remaining segments with a confirmed daily rate.",
-        "Perimeter fence closure mobilised for the confirmed window, with both closing areas ready.",
-        "Quality releases and Owner acceptance progressing week on week across piles, tracker rows and modules."
+        "The remaining medium-voltage plough segments completed and the substation boundary closed.",
+        "Control cable terminations at the substation progressed against the 14 September date.",
+        "LV and DC cable installation completed to the 18 September date, or a revised date issued with the daily rate that supports it.",
+        "Inverter stations progressed from termination-ready to terminated in sequence, beginning with the first station completed on 7 September.",
+        "Tracker assembly closed against its revised dated schedule, with remediated racking released back to the module front."
       ]
     }
   ],
   "ownerActions": {
-    "asOf": "Sep 3, 2026",
+    "asOf": "Sep 7, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -1326,7 +1345,7 @@ window.MURCH_REPORT = {
     ]
   },
   "clientQueries": {
-    "asOf": "Sep 2, 2026",
+    "asOf": "Sep 7, 2026",
     "routing": {
       "byRole": {
         "QA/QC lead": [
@@ -1737,34 +1756,34 @@ window.MURCH_REPORT = {
   },
   "focus": [
     {
-      "title": "Tracker assembly and quality release",
-      "level": "Priority",
-      "note": "2,273 rows complete of 2,486 (91.4%), of which 296 carry Owner acceptance; earned progress stands at 91.8%. The 3rd completed 30 rows — the fourth consecutive completion day — and the north-east assembly area is complete on the working allocation. The remaining 213 rows are held by a single crew with a planned break from 4 to 8 September; a revised completion date is being issued."
-    },
-    {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "144,525 of 171,470 (84.3%) after 1,560 on the 3rd. The arithmetic requirement to the 6 September date now exceeds any recorded daily rate, so the date is being replaced together with the revised tracker date; additional simultaneous fronts are being arranged with the balance concentrated in the eastern areas."
+      "note": "148,878 of 171,470 (86.8%) with 22,592 remaining. The 6 September date has passed and is being replaced together with the revised tracker date. Production over the two days was 768 on the 4th and 2,578 on the 5th, all of it in the eastern areas. Only one installation front is presently productive, because racking readiness in one eastern area is limiting where the module crews can be deployed; opening the western closeout balance of 520 and the 8,623 open in the adjoining eastern area is the action that restores rate."
     },
     {
-      "title": "LV and DC installation — reporting restored",
+      "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "Cumulative cable stands at 61,177 feet (22.7%) against 16,044 feet per day required to 18 September. The 3rd added 4,282 feet across the trunk and homerun lines, and harness assembly recorded its best day — 115 assemblies, with the contracted aerial crew at 33 of its 40 committed electricians."
+      "note": "2,311 rows complete of 2,486 (93.0%), of which 296 carry Owner acceptance; earned progress stands at 93.3%. The 4th completed 15 rows and the assembly crew then took its planned break to 8 September. 175 rows remain. A reconciliation of the per-area completion record is in progress in one eastern area, where the working allocation and the current workbook cut differ; the published figure is being held until that reconciliation closes, and the revised completion date will be issued with it."
+    },
+    {
+      "title": "Medium-voltage terminations",
+      "level": "Priority",
+      "note": "45 of 264 complete. No terminations were recorded on either the 4th or the 5th, while the available weekend resource was deployed on the substation. Against the 11-per-day control the accumulated position is 54. Trenches closed and compacted advanced from 26 to 36 of 181, and the first inverter station reached a closed, compacted and termination-ready condition on the 7th, so the workfront ahead of terminations is being prepared. Bringing the full committed termination crew to site is the single controlling item on energization."
+    },
+    {
+      "title": "LV and DC installation",
+      "level": "Priority",
+      "note": "Cumulative cable stands at 68,857 feet (25.5%) against 20,089 feet per day required to 18 September. The two days added 2,827 and 4,853 feet across the homerun and trunk lines. Harness assembly added 87 and 77 assemblies for a cumulative 770, with a further 13 installed by the EPC's own crew and recorded separately. Box mounting advanced to 244 of 419."
     },
     {
       "title": "Pile completion",
       "level": "Priority",
-      "note": "30,331 of 31,352 (96.7%). No piling production was recorded on the 3rd; the balance of 1,021 is concentrated in one area (712 positions) plus two closing areas, and its release governs the continuity of the racking crew."
+      "note": "30,617 of 31,352 (97.7%). No piling production was recorded on either day; the advance is the workbook reconciliation, which closes the north-east area at full scope. The balance of 735 is concentrated in one area (712 positions) plus 23 closing positions, and its release governs the continuity of the racking crew."
     },
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "57.0% overall — civil 96.2%, structural 66.9%, electrical 30.5% after the largest single-day electrical advance recorded — with 44 days to the energization date. Medium-voltage terminations stand at 42 of 264 after a second consecutive best day, and the full committed termination crew is still being brought to site."
-    },
-    {
-      "title": "Electrical — all fronts",
-      "level": "Watch",
-      "note": "Electrical progress is reported as one total across four fronts: 32.4% on completed units and 40.7% including verified work in progress. Medium-voltage terminations stand at 18 of 264 with the first inverter row complete; the wetland crossing conduit is installed with the cable pull to follow; and the LV front carries the largest remaining balance and governs the mechanical completion date."
+      "note": "59.7% overall - civil 97.1%, structural 65.5%, electrical 36.6% - with 40 days to the energization date. Electrical advanced 6.1 points over the period and civil is close to complete. The structural figure was re-measured downward from 66.9%; the basis for that re-measure has been requested. Against the advanced plan the composite is 9.4 points behind."
     }
   ],
   "material": [
@@ -1806,6 +1825,24 @@ window.MURCH_REPORT = {
     }
   ],
   "photos": [
+    {
+      "src": "assets/photo-64.jpg",
+      "date": "September 7, 2026",
+      "title": "First inverter station closed out and ready for medium-voltage termination",
+      "note": "The inverter station in the eastern area photographed on 7 September with its trench closed, backfilled and compacted, the direct-current combiner compartments open on their bus work and the cable risers dressed up into the station. This is the first station on the project to reach a fully closed, termination-ready condition. Terminations are the final electrical operation before a block can be energised, so this is the point at which the station passes from civil and cabling work to connection work; 45 of the 264 terminations in scope are complete."
+    },
+    {
+      "src": "assets/photo-65.jpg",
+      "date": "September 7, 2026",
+      "title": "Closed and compacted trench run from the station to the array",
+      "note": "The backfilled trench line running from beneath the inverter station out to the tracker rows, compacted over its full length, with spare conduit staged alongside. Closing a trench converts an open excavation from a safety and environmental exposure into a completed interface, and it is the step that has lagged through the period: trenches closed and compacted advanced from 26 to 36 of 181, with 84 open."
+    },
+    {
+      "src": "assets/photo-66.jpg",
+      "date": "September 7, 2026",
+      "title": "Completed inverter block in the eastern area",
+      "note": "The wider view of the same station on 7 September, standing on its pile foundations with the installed array running away on both sides. Carried as the reference condition for a completed inverter block ahead of terminations, and as the sequence the remaining stations follow."
+    },
     {
       "src": "assets/photo-62.jpg",
       "date": "August 27, 2026",
@@ -1962,8 +1999,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "206",
-        "note": "Latest site-board headcount (Sep 3). Field labor plus management, quality and HSE."
+        "value": "146",
+        "note": "Latest site-board headcount (Sep 5). Field labor plus management, quality and HSE."
       },
       {
         "label": "Peak headcount",
@@ -1972,13 +2009,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Average headcount",
-        "value": "211",
+        "value": "209",
         "note": "Mean headcount across the construction period to date."
       },
       {
         "label": "Manhours to date",
-        "value": "169,700",
-        "note": "Total manhours worked from the start of construction on April 1 through September 3, at 10 h/day, Monday to Saturday."
+        "value": "174,600",
+        "note": "Total manhours worked from the start of construction on April 1 through September 7, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2158,6 +2195,14 @@ window.MURCH_REPORT = {
       {
         "d": "Sep 3",
         "v": 206
+      },
+      {
+        "d": "Sep 4",
+        "v": 191
+      },
+      {
+        "d": "Sep 5",
+        "v": 146
       }
     ],
     "manhours": [
@@ -2206,8 +2251,8 @@ window.MURCH_REPORT = {
         "c": 165644
       },
       {
-        "d": "Sep 3",
-        "c": 169734
+        "d": "Sep 7",
+        "c": 174564
       }
     ]
   }
