@@ -371,11 +371,11 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   <section id="milestones">
     <div class="sechead">
       <div class="kicker">Contract milestones</div>
-      <h2>Contract dates versus current forecast</h2>
-      <p>Forecast dates reflect the current construction sequence and the production rates required to hold it.</p>
+      <h2>Contract dates versus the updated project schedule</h2>
+      <p>Plan dates are those of the project schedule issued on 8 September, by collection circuit; the last circuit sets the plant date.</p>
     </div>
     <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th>Milestone</th><th>Contract date</th><th>Current forecast</th><th>Status</th><th>Basis</th></tr></thead>
+      <table><thead><tr><th>Milestone</th><th>Contract date</th><th>Plan (8 Sep)</th><th>Status</th><th>Key fact</th></tr></thead>
       <tbody id="msBody"></tbody></table>
     </div>
   </section>
@@ -540,7 +540,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=e7f013edd7"></script>
+<script src="data.js?v=fc56556255"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -613,9 +613,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   document.getElementById('msBody').innerHTML = D.milestones.map(function(m){
     return '<tr><td data-label="Milestone"><b>'+esc(m.name)+'</b></td>'+
       '<td class="n" data-label="Contract date">'+esc(m.contract)+'</td>'+
-      '<td class="n" data-label="Forecast"><b>'+esc(m.forecast)+'</b></td>'+
+      '<td class="n" data-label="Plan (8 Sep)"><b>'+esc(m.forecast)+'</b>'+(m.circuits?'<br><small>'+esc(m.circuits)+'</small>':'')+'</td>'+
       '<td data-label="Status"><span class="pill '+pillCls(m.status)+'">'+esc(m.status)+'</span></td>'+
-      '<td class="note block" data-label="Basis">'+esc(m.note)+'</td></tr>';
+      '<td class="note" data-label="Key fact">'+esc(m.note)+'</td></tr>';
   }).join('');
 
   /* ---------- earned progress (compact) ---------- */

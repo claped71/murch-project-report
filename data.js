@@ -98,30 +98,34 @@ window.MURCH_REPORT = {
     {
       "name": "Mechanical Completion",
       "contract": "Sep 25, 2026",
-      "forecast": "Sep 8 plan — 11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24 (overall Oct 24)",
+      "forecast": "Oct 24, 2026 (last circuit)",
       "status": "At risk",
-      "note": "The contract date is not supported on the current arithmetic, although Monday 7 September brought the strongest module day of the project (4,204) and the first inverter station closed on its LV side. The updated project schedule issued on 8 September programmes mechanical completion by collection circuit - 2, 10, 17 and 24 October - with the mechanical-completion test window for the first circuit opening 18 September and the Owner review 28 September to 2 October. That schedule is now tracked activity by activity; three of its first dates (first-circuit inverter feeder cable and trunk supports, eastern-circuit tracker completion, second-circuit easement cable pull) have passed with work open, and the next fortnight carries the first-circuit terminations and connections, the second-circuit tracker completion, the last pile area and the eastern-circuit modules."
+      "note": "Contract date not achievable. First-circuit tests open 18 September; three early plan dates (first-circuit feeder cable and supports, eastern-circuit trackers, second-circuit easement pull) have passed with work open.",
+      "circuits": "11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24"
     },
     {
       "name": "Provisional Interconnection",
       "contract": "Oct 16, 2026",
-      "forecast": "Sep 8 plan — Ready to Energize Oct 14 · PIS 11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5",
+      "forecast": "Nov 5, 2026 (last circuit) · Ready to Energize Oct 14",
       "status": "At risk",
-      "note": "The updated schedule carries a plant-level ready-to-energize milestone on 14 October, driven by a single ten-day energization review in the substation block following the substation mechanical-completion tests (11 to 26 September), SCADA integration (19 to 26 September) and utility interface integration (21 to 28 September). Placed-in-service then follows by circuit on 22 and 27 October, 31 October and 5 November. The substation stands at 60.1% and 10.7 points behind its advanced plan with the equipment installation window closing 18 September; medium-voltage terminations stand at 45 of 264 with every junction box still to be terminated."
+      "note": "Gated by the substation (60.1%, 10.7 points behind plan; equipment installation closes 18 September) and by medium-voltage terminations (45 of 264).",
+      "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5"
     },
     {
       "name": "Commercial Operation Date",
       "contract": "Nov 9, 2026",
-      "forecast": "Sep 8 plan — 11A Nov 12 · 11B Nov 18 · 12A Nov 23 · 12B Nov 27",
+      "forecast": "Nov 27, 2026 (last circuit)",
       "status": "At risk",
-      "note": "On the updated schedule commercial operation follows placed-in-service by circuit - 12, 18, 23 and 27 November - after the substantial-completion tests, including eight-day capacity and availability tests per circuit on a continuous calendar. The date inherits the exposure on mechanical completion and interconnection above."
+      "note": "Follows placed-in-service by circuit after the substantial-completion tests (8-day capacity and availability tests per circuit). Inherits the exposure above.",
+      "circuits": "11A Nov 12 · 11B Nov 18 · 12A Nov 23 · 12B Nov 27"
     },
     {
       "name": "Substantial Completion",
       "contract": "Nov 30, 2026",
-      "forecast": "Sep 8 plan — 11A Nov 14 · 11B Nov 20 · 12A Nov 25 · 12B Nov 30",
+      "forecast": "Nov 30, 2026 (last circuit)",
       "status": "Watch",
-      "note": "Substantial completion by circuit on 14, 20, 25 and 30 November on the updated schedule; the last circuit closes on the contract date with no remaining margin, so every day lost on the earlier circuits consumes it directly. Post-test scope is punch and close-out; the exposure is seasonal, and outdoor scopes must close before the weather stop."
+      "note": "Last circuit lands on the contract date with no margin; every day lost upstream consumes it. Outdoor close-out must precede the weather stop.",
+      "circuits": "11A Nov 14 · 11B Nov 20 · 12A Nov 25 · 12B Nov 30"
     }
   ],
   "series": {
