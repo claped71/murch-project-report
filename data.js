@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Sep 8 plan — 11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24 (overall Oct 24)",
       "status": "At risk",
-      "note": "The contract date is not supported on the current arithmetic. The updated project schedule issued on 8 September programmes mechanical completion by collection circuit - 2, 10, 17 and 24 October - with the mechanical-completion test window for the first circuit opening 18 September and the Owner review 28 September to 2 October. That schedule is now tracked activity by activity; three of its first dates (first-circuit inverter feeder cable and trunk supports, eastern-circuit tracker completion, second-circuit easement cable pull) have passed with work open, and the next fortnight carries the first-circuit terminations and connections, the second-circuit tracker remediation, the last pile area and the eastern-circuit modules."
+      "note": "The contract date is not supported on the current arithmetic. The updated project schedule issued on 8 September programmes mechanical completion by collection circuit - 2, 10, 17 and 24 October - with the mechanical-completion test window for the first circuit opening 18 September and the Owner review 28 September to 2 October. That schedule is now tracked activity by activity; three of its first dates (first-circuit inverter feeder cable and trunk supports, eastern-circuit tracker completion, second-circuit easement cable pull) have passed with work open, and the next fortnight carries the first-circuit terminations and connections, the second-circuit tracker completion, the last pile area and the eastern-circuit modules."
     },
     {
       "name": "Provisional Interconnection",
@@ -1175,7 +1175,7 @@ window.MURCH_REPORT = {
     "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 177,058 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
   },
   "quality": {
-    "headline": "Owner acceptance stands at 296 of 2,311 completed tracker rows and converting EPC releases into Owner acceptance remains the controlling quality action. The two Owner queries on installed-work conformance fell due on 8 and 9 September; a single consolidated engineering and quality position is being prepared for both and will be presented at the Owner site meeting on 10 September. The per-area reconciliation of tracker completion records in the north-east zone remains open; the readiness of its two remaining sub-areas has been reported differently by the assembly and installation crews, and completion records for that zone are held until it closes.",
+    "headline": "Owner acceptance stands at 296 of 2,311 completed tracker rows and converting EPC releases into Owner acceptance remains the controlling quality action. The two Owner queries on installed-work conformance fell due on 8 and 9 September; a single consolidated engineering and quality position is being prepared for both and will be presented at the Owner site meeting on 10 September. The per-area reconciliation of tracker completion records in the north-east zone remains open and completion records for that zone are held until it closes.",
     "tiles": [
       {
         "label": "Piles executed",
@@ -1237,8 +1237,8 @@ window.MURCH_REPORT = {
       "items": [
         "First-circuit trunk pull completed to the 12 September date and terminations, box connections and inverter connections started on their 10 to 11 September dates.",
         "First-circuit medium-voltage junction-box terminations started (0 of 30 at the date of this report) against the 11 to 17 September connection window, with the full committed termination crew productive at its established rate.",
-        "Racking completion confirmed in writing in the two open north-east sub-areas so the eastern module crew can be redeployed there; the per-area completion reconciliation closed.",
-        "Tracker remediation in the second circuit in progress against its 14 September date, with the adjustable rows corrected first and the extension method confirmed for the remainder.",
+        "Racking completion confirmed in the two open north-east sub-areas so the eastern module front can resume there; the per-area completion reconciliation closed.",
+        "Second-circuit tracker completion progressed against its 14 September date.",
         "Pile installation resumed in the final area at the 119-per-day rate its 15 September date now requires.",
         "Second-circuit easement medium-voltage cable pull completed (due 4 to 8 September) and the eastern-circuit pull started on 9 September.",
         "Responses issued on the two open Owner queries that fell due on 8 and 9 September, with the consolidated engineering and quality position presented at the site meeting on 10 September.",
@@ -1757,17 +1757,17 @@ window.MURCH_REPORT = {
     {
       "title": "Updated project schedule — fulfilment tracking",
       "level": "Priority",
-      "note": "The schedule issued on 8 September, incorporating the six Owner comments on the Week 34 report, is now the reference for day-to-day tracking. Circuit mechanical completion dates are 2, 10, 17 and 24 October; the plant-level ready-to-energize milestone is 14 October, driven by a single ten-day energization review in the substation block; substantial completion is 30 November on the last circuit. The activities falling due in the next ten days are the first-circuit trunk pull (12 September), terminations, box and inverter connections (10 to 17 September), the first-circuit medium-voltage connection (11 to 17 September), the second-circuit tracker remediation (14 September), the remaining pile area (15 September) and the eastern-circuit modules (18 September). Each is reported against its own date from the next report."
+      "note": "The schedule issued on 8 September, incorporating the six Owner comments on the Week 34 report, is now the reference for day-to-day tracking. Circuit mechanical completion dates are 2, 10, 17 and 24 October; the plant-level ready-to-energize milestone is 14 October, driven by a single ten-day energization review in the substation block; substantial completion is 30 November on the last circuit. The activities falling due in the next ten days are the first-circuit trunk pull (12 September), terminations, box and inverter connections (10 to 17 September), the first-circuit medium-voltage connection (11 to 17 September), the second-circuit tracker completion (14 September), the remaining pile area (15 September) and the eastern-circuit modules (18 September). Each is reported against its own date from the next report."
     },
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "148,878 of 171,470 (86.8%) with 22,592 remaining. The 6 September date has passed; on the updated schedule the eastern-circuit modules are due 18 September and the last circuit 29 September. On 7 September the eastern installation crew mobilised to the two remaining sub-areas of the north-east zone, found the racking not yet ready for panels and was redeployed; the installation rate has fallen as a result. Restoring the eastern front depends on racking completion in those two sub-areas, and the western closeout balance of 520 and the 8,623 open in the adjoining eastern area remain unassigned."
+      "note": "148,878 of 171,470 (86.8%) with 22,592 remaining. The 6 September date has passed; on the updated schedule the eastern-circuit modules are due 18 September and the last circuit 29 September. Racking completion in the two remaining sub-areas of the north-east zone is presently limiting the eastern installation front, and the installation rate has fallen as a result. Restoring that front depends on racking completion in those two sub-areas, and the western closeout balance of 520 and the 8,623 open in the adjoining eastern area remain unassigned."
     },
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "2,311 rows complete of 2,486 (93.0%), of which 296 carry Owner acceptance; earned progress stands at 93.3%. The assembly crew returned to site on 8 September after its planned break, with two concurrent priorities: completion of the two open eastern sub-areas, due 8 September on the updated schedule, and the remediation of rows outside slope tolerance in the second circuit, programmed 1 to 14 September. The per-area reconciliation of completion records in the north-east zone is still open; the workbook cut moved from 120 to 177 rows there on 8 September and the published figure is held until the reconciliation closes."
+      "note": "2,311 rows complete of 2,486 (93.0%), of which 296 carry Owner acceptance; earned progress stands at 93.3%. The assembly crew returned to site on 8 September after its planned break; its first priority is completion of the two open eastern sub-areas, due 8 September on the updated schedule, followed by second-circuit tracker completion due 14 September. The per-area reconciliation of completion records in the north-east zone is still open and the published figure is held until it closes."
     },
     {
       "title": "Medium-voltage terminations",
@@ -1777,7 +1777,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cumulative cable stands at 68,857 feet (25.5%) against 22,321 feet per day now required to 18 September over nine working days; harness assembly stands at 770 with a further 87 assemblies installed at one inverter station by the EPC's own crew and recorded separately. Box mounting stands at 244 of 419. On the first circuit the inverter feeder cable and trunk supports were due 8 September: the first inverter station is still open, the second and third have not started, and no terminations have been made on boxes or inverter cabinets. An action plan and recovery schedule have been requested from the responsible crew, and the EPC's own crew has been assigned to the first circuit to begin closing inverter stations."
+      "note": "Cumulative cable stands at 68,857 feet (25.5%) against 22,321 feet per day now required to 18 September over nine working days; harness assembly stands at 770 with a further 87 assemblies installed at one inverter station by the EPC's own crew and recorded separately. Box mounting stands at 244 of 419. On the first circuit the inverter feeder cable and trunk supports were due 8 September: the first inverter station is still open, the second and third have not started, and no terminations have been made on boxes or inverter cabinets. Additional EPC resources have been assigned to the first circuit to begin closing inverter stations."
     },
     {
       "title": "Pile completion",
