@@ -1133,7 +1133,7 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
-    "headline": "Zero lost-time injuries across 186,352 hours worked - 328 days without accident at 8 September. The two first-aid cases notified on 4 September, covering events of 2 and 4 September, remain first aid only; neither is recordable and neither involved lost time. July remains the audited monthly basis and the August report is under review. Weather was the dominant production loss in the period, with 697.5 hours lost on 3 September and 601.8 on 4 September.",
+    "headline": "On 8 September at about 13:15 a substation worker hand-excavating a trench lost consciousness and fell; co-workers placed him in the recovery position and called 911, emergency services treated him on site and transferred him by ambulance to hospital for evaluation, and work in the immediate area was stopped. The 48-hour immediate notification was issued the same day (event 20260908_ACC_001) and the investigation is open: heat exposure on the worker's second day on site is the working hypothesis, the cause is not yet confirmed and the OSHA classification will be set on the medical outcome. Heat-stress controls on the substation front have been reinforced pending the findings - work-rest cycles, shade and hydration, closer supervision of new starters and a re-issued pre-task briefing across all subcontractors. The response was by the book and the project's record stands behind it: 328 days without a lost-time accident across 186,352 hours worked, zero recordable cases to date, weekly safety walks with every subcontractor, bi-weekly subcontractor safety meetings, monthly general safety meetings and a maintained register of unsafe acts and conditions. The two first-aid cases notified on 4 September (events of 2 and 4 September) remain first aid only.",
     "tiles": [
       {
         "label": "Recordable accidents",
@@ -1143,7 +1143,7 @@ window.MURCH_REPORT = {
       {
         "label": "Days without accident",
         "value": "328",
-        "note": "Per the site register at 8 September, maintained daily from subcontractor returns."
+        "note": "Per the site register at 8 September, maintained daily from subcontractor returns. The counter is held pending the medical outcome and classification of the 8 September event."
       },
       {
         "label": "Lost days",
@@ -1151,14 +1151,14 @@ window.MURCH_REPORT = {
         "note": "Frequency, incidence and severity rates remain zero. Weather-related lost hours: 697.5 on 3 September and 601.8 on 4 September, the two largest single-day weather losses recorded on the project."
       },
       {
-        "label": "First-aid cases — August",
-        "value": "2",
-        "note": "4 August: an ankle sprain where tall grass concealed uneven ground; treated on site. 7 August: during racking installation a torque tube slipped onto the worker's helmet and shoulder; first aid, hospital evaluation with CT scan, minor injuries, cleared to return. Notification 20260807_ACC_001 was issued within 48 hours. THE INVESTIGATION IS CONCLUDED AND CLOSED: the tube-handling corrective actions — personnel excluded from the slide line and the revised placement method — are implemented with the racking crews and held in the daily briefings."
+        "label": "First-aid cases — since August",
+        "value": "5",
+        "note": "4 August: ankle sprain on concealed uneven ground. 7 August: torque tube slipped onto a worker's helmet and shoulder; evaluated in hospital, cleared to return; investigation closed, tube-handling corrective actions retained in the daily briefings. 2 and 4 September: two minor first-aid cases, no treatment beyond first aid. 8 September: substation worker lost consciousness during hand excavation; treated on site by emergency services and transferred to hospital for evaluation; investigation open, classification pending the medical outcome (event 20260908_ACC_001)."
       },
       {
         "label": "Man-hours to date",
-        "value": "177,058",
-        "note": "Register maintained to 31 August. July alone: 52,464 hours across 224 personnel — the July monthly report is issued and July is the audited basis."
+        "value": "186,352",
+        "note": "Register maintained to 8 September. July alone: 52,464 hours across 224 personnel — the July monthly report is issued and July is the audited basis."
       },
       {
         "label": "Safety events — July",
@@ -1176,7 +1176,7 @@ window.MURCH_REPORT = {
         "note": "Year-to-date site inductions and training; 148 trained in July."
       }
     ],
-    "note": "The injury record is clean: zero recordables, zero lost-time and zero restricted-work cases across 177,058 hours, with all three incidence rates at 0.00. The July monthly HSE report has been issued, making July the audited basis, and the investigation into the 7 August first-aid case — treated as significant for its mechanism — is concluded and closed, with the tube-handling corrective actions implemented with the racking crews and retained as a standing briefing subject. The background hazard remains ground and vegetation: the 4 August case occurred where tall grass hid uneven terrain — the same subject raised by the Owner on 1 August under reference MQ-20260801-0736, whose corrective action is handled as one item with that response. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit installation completed on 30 August closes the exposure on that section."
+    "note": "The injury record remains clean at the date of this report: zero recordable, zero lost-time and zero restricted-work cases across 186,352 hours, with all three incidence rates at 0.00 - subject to the classification of the 8 September event once the medical outcome is known. The 8 September response - immediate first aid by co-workers, emergency services on site, hospital transfer, area stopped, notification within the day and investigation opened - followed the site emergency procedure as written. The programme behind that response is documented in the EHS management pack issued on 8 September: workers and man-hours by company and month, orientations given, the full incident register, unsafe acts and conditions by type with the corrective action for each, weekly safety walks with subcontractor supervisors, bi-weekly subcontractor safety meetings and monthly general safety meetings with recorded minutes. Heat-stress controls on the substation front are reinforced pending the findings. The 7 August investigation is closed with its corrective actions retained in the daily briefings. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit completed on 30 August closes the exposure on that section."
   },
   "quality": {
     "headline": "Owner acceptance stands at 296 of 2,311 completed tracker rows and converting EPC releases into Owner acceptance remains the controlling quality action. The two Owner queries on installed-work conformance fell due on 8 and 9 September; a single consolidated engineering and quality position is being prepared for both and will be presented at the Owner site meeting on 10 September. The per-area reconciliation of tracker completion records in the north-east zone remains open and completion records for that zone are held until it closes.",
