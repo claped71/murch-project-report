@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated September 11, 2026 — field production executed through Thursday 10 September; control cuts of 8 September; harness and disconnect-box count by circuit of 11 September; by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated September 11, 2026 — field production executed through Thursday 10 September; control cuts of 8 September; harness, disconnect-box and first-circuit feeder-cable count by circuit of 11 September; by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "September 11, 2026 — field production executed through Thursday 10 September; control cuts of 8 September; harness and disconnect-box count by circuit of 11 September",
+    "asOf": "September 11, 2026 — field production executed through Thursday 10 September; control cuts of 8 September; harness, disconnect-box and first-circuit feeder-cable count by circuit of 11 September",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 86.6,
+    "overall": 86.7,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "This report is issued on Friday 11 September with field production executed through Thursday 10 September. Medium-voltage terminations moved for the first time since 3 September: 12 were completed, taking the count to 57 of 264, and the inverter-side terminations are now complete on both the first and second circuits; every junction-box termination remains to be done. On the first circuit 40 further box connections were made at the first inverter station, for 52 in total, and three inverter feeder runs (2,356 feet of 750 kcmil) were pulled. Harness assembly recorded 175 assemblies, 124 of them at two stations of the last circuit, the first electrical production booked there; the site count by circuit of 11 September puts the ledger at 2,423 of 5,007 (48.4%): the first circuit complete at 1,117 of 1,117 (the circuit total confirmed on that count, superseding the earlier 1,082), the second at 805 of 1,292, the third at 377 of 1,258 and the last at 124 of 1,340, with the 105 assemblies installed by the EPC's own crew now inside the ledger. Harness progress is reported from this count onward, with daily production added to it by circuit. Cable advanced 4,076 feet to 79,356 feet (29.4%); 35 disconnect boxes were set in Area E; the site count of 11 September confirms the disconnect boxes complete on the first three circuits (92, 110 and 110) and 89 of 107 on the last, 401 of 419 in total (95.7%). Tracker correction in Area E started, with 8 rows corrected on the day, and 35 rows in the last area advanced to 75%; no rows reached completion, so trackers hold at 2,311 of 2,486 (93.0%), earned 94.4%. Modules resumed with 1,170 installed on the eastern front; the ledger stands at 154,017 of 171,470 (89.8%) with 17,453 remaining, while the per-area allocation of recent eastern installations is being reconciled. No piles were driven. Trenches closed and compacted stand at 46 of 181 and cable pull-in at 15 of 46. The substation composite advanced to 62.5% with 36 days to the energization date. Site strength was 198 on the report basis. Overall completion stands at 86.6%.",
+    "statement": "This report is issued on Friday 11 September with field production executed through Thursday 10 September. Medium-voltage terminations moved for the first time since 3 September: 12 were completed, taking the count to 57 of 264, and the inverter-side terminations are now complete on both the first and second circuits; every junction-box termination remains to be done. On the first circuit 40 further box connections were made at the first inverter station, for 52 in total, and three inverter feeder runs (2,356 feet of 750 kcmil) were pulled. Harness assembly recorded 175 assemblies, 124 of them at two stations of the last circuit, the first electrical production booked there; the site count by circuit of 11 September puts the ledger at 2,423 of 5,007 (48.4%): the first circuit complete at 1,117 of 1,117 (the circuit total confirmed on that count, superseding the earlier 1,082), the second at 805 of 1,292, the third at 377 of 1,258 and the last at 124 of 1,340, with the 105 assemblies installed by the EPC's own crew now inside the ledger. Harness progress is reported from this count onward, with daily production added to it by circuit. Cable advanced 4,076 feet on 10 September, and the site count of 11 September records the first-circuit inverter feeder cable complete at 60,075 feet (above its 54,644-foot take-off), taking cumulative cable to 85,177 feet (31.6%); 35 disconnect boxes were set in Area E; the site count of 11 September confirms the disconnect boxes complete on the first three circuits (92, 110 and 110) and 89 of 107 on the last, 401 of 419 in total (95.7%). Tracker correction in Area E started, with 8 rows corrected on the day, and 35 rows in the last area advanced to 75%; no rows reached completion, so trackers hold at 2,311 of 2,486 (93.0%), earned 94.4%. Modules resumed with 1,170 installed on the eastern front; the ledger stands at 154,017 of 171,470 (89.8%) with 17,453 remaining, while the per-area allocation of recent eastern installations is being reconciled. No piles were driven. Trenches closed and compacted stand at 46 of 181 and cable pull-in at 15 of 46. The substation composite advanced to 62.5% with 36 days to the energization date. Site strength was 198 on the report basis. Overall completion stands at 86.7%.",
     "note": null
   },
   "gates": [
@@ -60,17 +60,17 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 40,
-      "earnedPct": 48.4,
+      "gatePct": 41,
+      "earnedPct": 48.9,
       "unit": "%",
-      "earnedLabel": "48.4% earned incl. work in progress",
+      "earnedLabel": "48.9% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "Sep 11, 2026 — executed through Thursday Sep 10; harness and box count by circuit of Sep 11",
+    "asOf": "Sep 11, 2026 — executed through Thursday Sep 10; site count by circuit of Sep 11",
     "scopes": [
       {
         "scope": "Tracker rows",
@@ -84,10 +84,10 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "40% of scope",
-        "gatePct": 40,
-        "inProgress": "MV 79.2% · 23 of 23 inverter stations set · 401 of 419 boxes · 79,356 lf of cable",
-        "earnedPct": 48.4,
+        "gate": "41% of scope",
+        "gatePct": 41,
+        "inProgress": "MV 79.2% · 23 of 23 inverter stations set · 401 of 419 boxes · 85,177 lf of cable",
+        "earnedPct": 48.9,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -1831,7 +1831,7 @@ window.MURCH_REPORT = {
     {
       "title": "Updated project schedule — fulfilment tracking",
       "level": "Priority",
-      "note": "The schedule issued on 8 September is the reference for day-to-day tracking: circuit mechanical completion 2, 10, 17 and 24 October; ready-to-energize 14 October; substantial completion 30 November. Four of its dates are open past their day (first-circuit inverter feeder cable and trunk supports, eastern-circuit tracker completion, second-circuit easement pull, eastern-circuit easement pull start). On 10 September four plan activities moved at once: first-circuit box connections (52 of 372), second-circuit tracker correction started (8 rows), second-circuit box installation (68 of 110 on the day; confirmed complete, 110 of 110, by the site count of 11 September) and last-circuit harness started on its planned date (124 assemblies). Falling due in the next week: the first-circuit trunk pull (12 September), inverter connections and medium-voltage connection (11 to 17 September), the second-circuit tracker correction (14 September), the remaining pile area (15 September) and the eastern-circuit modules (18 September)."
+      "note": "The schedule issued on 8 September is the reference for day-to-day tracking: circuit mechanical completion 2, 10, 17 and 24 October; ready-to-energize 14 October; substantial completion 30 November. Three of its dates are open past their day (first-circuit trunk supports, eastern-circuit tracker completion, second-circuit easement pull, eastern-circuit easement pull start); the first-circuit inverter feeder cable, due 8 September, is complete on the site count of 11 September. On 10 September four plan activities moved at once: first-circuit box connections (52 of 372), second-circuit tracker correction started (8 rows), second-circuit box installation (68 of 110 on the day; confirmed complete, 110 of 110, by the site count of 11 September) and last-circuit harness started on its planned date (124 assemblies). Falling due in the next week: the first-circuit trunk pull (12 September), inverter connections and medium-voltage connection (11 to 17 September), the second-circuit tracker correction (14 September), the remaining pile area (15 September) and the eastern-circuit modules (18 September)."
     },
     {
       "title": "Module installation rate",
@@ -1851,7 +1851,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cumulative cable stands at 79,356 feet (29.4%) after 4,076 feet on 10 September: three inverter feeder runs of 750 kcmil on the first circuit (2,356 feet) and 1,720 feet of DC cable at a second-circuit station by the EPC's own crew. Harness assembly stands at 2,423 of 5,007 (48.4%) on the site count by circuit of 11 September — first circuit complete at 1,117 of 1,117 (circuit total confirmed, superseding the earlier 1,082, so the project scope is 5,007 assemblies), second 805 of 1,292, third 377 of 1,258, last 124 of 1,340 — which replaces the daily-report ledger of 1,331 and brings the 105 assemblies installed by the EPC's own crew inside the count; daily production is added to this count by circuit from here on; 10 September produced 175 on the day: 51 on the first and second circuits, reported by inverter station, and 124 at two stations of the last circuit, the first electrical production booked there. Box mounting advanced by 35 in Area E on 10 September, and the site count of 11 September confirms the disconnect boxes complete on the first three circuits (92 of 92, 110 of 110, 110 of 110) with 89 of 107 on the last circuit — 401 of 419 (95.7%); 17 combiner boxes were placed at a second-circuit station. Box connections on the first circuit reached 52 of 372 (40 on the day at the first station); inverter connections are programmed from 11 September."
+      "note": "Cumulative cable stands at 85,177 feet (31.6%): the site count of 11 September records the first-circuit inverter feeder cable complete at 60,075 feet (above its 54,644-foot take-off), which also resolves the feeder runs previously reported without a circuit, and 10 September added 4,076 feet: three inverter feeder runs of 750 kcmil on the first circuit (2,356 feet) and 1,720 feet of DC cable at a second-circuit station by the EPC's own crew. Harness assembly stands at 2,423 of 5,007 (48.4%) on the site count by circuit of 11 September — first circuit complete at 1,117 of 1,117 (circuit total confirmed, superseding the earlier 1,082, so the project scope is 5,007 assemblies), second 805 of 1,292, third 377 of 1,258, last 124 of 1,340 — which replaces the daily-report ledger of 1,331 and brings the 105 assemblies installed by the EPC's own crew inside the count; daily production is added to this count by circuit from here on; 10 September produced 175 on the day: 51 on the first and second circuits, reported by inverter station, and 124 at two stations of the last circuit, the first electrical production booked there. Box mounting advanced by 35 in Area E on 10 September, and the site count of 11 September confirms the disconnect boxes complete on the first three circuits (92 of 92, 110 of 110, 110 of 110) with 89 of 107 on the last circuit — 401 of 419 (95.7%); 17 combiner boxes were placed at a second-circuit station. Box connections on the first circuit reached 52 of 372 (40 on the day at the first station); inverter connections are programmed from 11 September."
     },
     {
       "title": "Pile completion",
