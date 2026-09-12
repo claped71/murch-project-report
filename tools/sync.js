@@ -55,8 +55,20 @@ for (const g of (C.gates || [])) { if (g.key && typeof g.installed === 'number')
 
 /* ---------- 1. meta ---------- */
 const prevAsOf = C.meta.asOf;
-C.meta.asOf = longDate(I.control.asOf);
+// Report date ONLY. control.asOf on the dashboard is the internal day narrative
+// (crew names, held-out figures, test results, open rulings) and must never be
+// copied onto the Owner report — it renders in the page header. Take the machine
+// date (asOfISO) and print it as a long date; fall back to the first date token.
+C.meta.asOf = reportDate(I.control);
 if (C.meta.asOf !== prevAsOf) changed.push(`asOf ${prevAsOf} -> ${C.meta.asOf}`);
+
+function reportDate(ctl) {
+  const M = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const iso = String(ctl.asOfISO || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (iso) return `${M[+iso[2] - 1]} ${+iso[3]}, ${iso[1]}`;
+  const m = String(ctl.asOfShort || ctl.asOf || '').match(/([A-Z][a-z]{2})\w*\s+(\d{1,2}),?\s*(\d{4})/);
+  return m ? longDate(`${m[1]} ${m[2]}, ${m[3]}`) : longDate(ctl.asOf);
+}
 
 function longDate(s) {
   // 'Jul 27, 2026' -> 'July 27, 2026'
@@ -400,7 +412,7 @@ if (C.earnedProgress && Array.isArray(C.earnedProgress.scopes)) {
   const pct1 = n => Math.round(Number(n) * 10) / 10;
   const trkGatePct = pct1(trk.installed / trk.total * 100);
 
-  C.earnedProgress.asOf = I.control.asOf;
+  C.earnedProgress.asOf = C.meta.asOf;
   for (const sc of C.earnedProgress.scopes) {
     const before = `${sc.gatePct}/${sc.earnedPct}`;
     if (/tracker/i.test(sc.scope)) {
@@ -423,6 +435,56 @@ if (C.earnedProgress && Array.isArray(C.earnedProgress.scopes)) {
       note(review, `earnedProgress."${sc.scope}": numbers re-derived — re-read its "detail" sentence, which is still editorial`);
     }
   }
+}
+
+/* ---------- 8c2. electrical installation by circuit — DERIVED (Jose, Sep 12) ---------- */
+// A brief table for the Owner: the dashboard's one electrical ledger (electricalByLine)
+// reduced to quantities per circuit. Neutral labels only — no crews, no counts vs
+// reports, no rulings. Over-count on a circuit is shown as complete (100%).
+if (I.electricalByLine && I.electricalByLine.lineas && I.electricalByLine.alcance) {
+  const eb = I.electricalByLine, L = eb.lineas, A = eb.alcance, M = eb.mvPorLinea || {}, T = eb.proyecto || {};
+  const ids = ['L1', 'L2', 'L3', 'L4'];
+  const NAME = { L1: 'Circuit 11A', L2: 'Circuit 11B', L3: 'Circuit 12A', L4: 'Circuit 12B' };
+  const cell = (done, scope) => ({ done: Number(done) || 0, scope: Number(scope) || 0 });
+  const rows = ids.map(id => {
+    const l = L[id] || {}, a = A[id] || {}, m = M[id] || {};
+    return {
+      circuit: NAME[id],
+      harness: cell(l.harness, a.harness),
+      homerun: cell(l.homerun, a.homerun),
+      trunk: cell(l.trunk, a.trunk),
+      boxes: cell(l.boxes, a.boxes),
+      mvJb: cell(m.jb, m.jbScope),
+      mvTerm: cell(m.inv, m.invScope),
+      lvInv: cell(l.connInv, a.connInv),
+      lvBox: cell(l.connBox, a.connBox)
+    };
+  });
+  const u = L.unstated || {}, um = M.unstated || {};
+  const sum = k => rows.reduce((s, r) => s + r[k].done, 0);
+  const sumS = k => rows.reduce((s, r) => s + r[k].scope, 0);
+  const prev = JSON.stringify(C.electricalByCircuit || null);
+  C.electricalByCircuit = {
+    asOf: C.meta.asOf,
+    basis: 'Executed through ' + (function (iso) { const d = iso ? new Date(iso + 'T12:00:00') : null;
+      return d && !isNaN(d) ? d.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }) : '' })(eb.cableHasta || '') +
+      '. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.',
+    rows,
+    unallocated: { harness: Number(u.harness) || 0, homerun: Number(u.homerun) || 0, trunk: Number(u.trunk) || 0, boxes: Number(u.boxes) || 0, mvTerm: Number(um.inv) || 0 },
+    project: {
+      harness: cell(T.harness != null ? T.harness : sum('harness') + (Number(u.harness) || 0), eb.harnessScope || sumS('harness')),
+      homerun: cell(T.homerun != null ? T.homerun : sum('homerun') + (Number(u.homerun) || 0), T.homerunScope || sumS('homerun')),
+      trunk: cell(T.trunk != null ? T.trunk : sum('trunk') + (Number(u.trunk) || 0), T.trunkScope || sumS('trunk')),
+      boxes: cell(T.boxes != null ? T.boxes : sum('boxes') + (Number(u.boxes) || 0), sumS('boxes')),
+      mvJb: cell(sum('mvJb'), sumS('mvJb')),
+      mvTerm: cell(sum('mvTerm') + (Number(um.inv) || 0), sumS('mvTerm')),
+      mvTermAll: cell(sum('mvTerm') + (Number(um.inv) || 0) + rows.reduce((s, r, i) => s + (Number((M[ids[i]] || {}).jbTerm) || 0), 0),
+                      sumS('mvTerm') + rows.reduce((s, r, i) => s + (Number((M[ids[i]] || {}).jbTermScope) || 0), 0)),
+      lvInv: cell(sum('lvInv'), sumS('lvInv')),
+      lvBox: cell(sum('lvBox'), sumS('lvBox'))
+    }
+  };
+  if (JSON.stringify(C.electricalByCircuit) !== prev) changed.push('electricalByCircuit re-derived from electricalByLine');
 }
 
 /* ---------- 8d. cross-check: the report must agree with the dashboard ---------- */
