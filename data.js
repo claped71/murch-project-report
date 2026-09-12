@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated September 12, 2026 — field production executed through Friday 11 September on the site count by circuit of 11 September; control cuts of 8 September; by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated SEP 12 RULING: Zone E is not complete — re-based on the field punch-list (trackers 674 → 656, modules 46,202 → 43,530; Zone EW not closed). Sep 12, 2026 — executed basis through Friday Sep 11 (daily production report for Sep 11, COMPLETO) on top of the Sep 11 field counts by circuit, + the Sep 8 control cuts. Friday Sep 11: MV terminations +9 to 66 of 264 (not located by line in the report); 138 harness (the main electrical contractor 51 at PB-05 — Line 1, which the field count had at 100%; the racking-side electrical crew 87 with no location, booked to the last circuit by rule); 3,300 ft of homerun/DC (1,960 on five LBDs — two on Line 1, three on Line 2 — plus 1,340 self-perform at INV-12); 8 circuits landed in the INV-12 cabinet (the first LV inverter connections); 2,426 modules by the eastern mechanical contractor (67 in Zone D, 2,359 filed in Zone G — further over its scope); 702 in Zone E by the western module crew held out under the ruling; no piles, no tracker completions, no plowing; SET 62.9%. 137 on site by the report’s own lines (its total line reads 147). LBD 309 failed its positive-cable megger; the eastern electrical crew reports it is running short of trunk cable for LV pulls. by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "September 12, 2026 — field production executed through Friday 11 September on the site count by circuit of 11 September; control cuts of 8 September",
+    "asOf": "SEP 12 RULING: Zone E is not complete — re-based on the field punch-list (trackers 674 → 656, modules 46,202 → 43,530; Zone EW not closed). Sep 12, 2026 — executed basis through Friday Sep 11 (daily production report for Sep 11, COMPLETO) on top of the Sep 11 field counts by circuit, + the Sep 8 control cuts. Friday Sep 11: MV terminations +9 to 66 of 264 (not located by line in the report); 138 harness (the main electrical contractor 51 at PB-05 — Line 1, which the field count had at 100%; the racking-side electrical crew 87 with no location, booked to the last circuit by rule); 3,300 ft of homerun/DC (1,960 on five LBDs — two on Line 1, three on Line 2 — plus 1,340 self-perform at INV-12); 8 circuits landed in the INV-12 cabinet (the first LV inverter connections); 2,426 modules by the eastern mechanical contractor (67 in Zone D, 2,359 filed in Zone G — further over its scope); 702 in Zone E by the western module crew held out under the ruling; no piles, no tracker completions, no plowing; SET 62.9%. 137 on site by the report’s own lines (its total line reads 147). LBD 309 failed its positive-cable megger; the eastern electrical crew reports it is running short of trunk cable for LV pulls.",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 87.2,
+    "overall": 86.6,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "This report is issued on Saturday 12 September with field production executed through Friday 11 September, on top of the site count by circuit taken on 11 September, which is now the basis for harness, disconnect boxes and first-circuit feeder cable. Medium-voltage terminations advanced a second day, 9 more for 66 of 264; the report does not yet place them on a circuit, so they are carried unallocated until the termination control locates them. Harness assembly recorded 138 assemblies: 51 at a first-circuit station, which the same-day count had already shown complete, so the first-circuit total is being reconciled with the count, and 87 by the eastern electrical crew, booked to the last circuit (its front is in Areas F and G); the ledger stands at 2,561 of 5,007 (51.1%). Cable advanced 3,300 feet: 1,960 feet of 500 kcmil feeder on five disconnect boxes (two on the first circuit, three on the second) and 1,340 feet of DC cable at a second-circuit station by the EPC's own crew, taking cumulative cable to 88,477 feet (32.8%). At that station eight circuits were landed in the inverter cabinet, the first LV inverter connections on the project. Five disconnect boxes passed their insulation test and one failed on its positive conductor, to be corrected and retested before connection. Module installation produced 2,426 on the eastern front, the first 67 of them in the last area; the ledger stands at 156,443 of 171,470 (91.2%) with 15,027 remaining, while the per-area allocation of the eastern filings is reconciled and the western crew's Area E installations remain held pending an area count. No piles were driven and no tracker rows reached completion; trenches and cable pull-in are unchanged. The substation composite advanced to 62.9% with 35 days to the energization date. Site strength was 137 on the report's itemised lines. Overall completion stands at 87.2%.",
+    "statement": "This report is issued on Saturday 12 September with field production executed through Friday 11 September, on top of the site count by circuit taken on 11 September, which is now the basis for harness, disconnect boxes and first-circuit feeder cable. Medium-voltage terminations advanced a second day, 9 more for 66 of 264; the report does not yet place them on a circuit, so they are carried unallocated until the termination control locates them. Harness assembly recorded 138 assemblies: 51 at a first-circuit station, which the same-day count had already shown complete, so the first-circuit total is being reconciled with the count, and 87 by the eastern electrical crew, booked to the last circuit (its front is in Areas F and G); the ledger stands at 2,561 of 5,007 (51.1%). Cable advanced 3,300 feet: 1,960 feet of 500 kcmil feeder on five disconnect boxes (two on the first circuit, three on the second) and 1,340 feet of DC cable at a second-circuit station by the EPC's own crew, taking cumulative cable to 88,477 feet (32.8%). At that station eight circuits were landed in the inverter cabinet, the first LV inverter connections on the project. Five disconnect boxes passed their insulation test and one failed on its positive conductor, to be corrected and retested before connection. Module installation produced 2,426 on the eastern front, the first 67 of them in the last area; the ledger stands at 153,771 of 171,470 (89.7%) with 17,699 remaining after the Area E completion record was updated on 12 September, while the per-area allocation of the eastern filings is reconciled and the western crew's Area E installations remain held pending an area count. No piles were driven and no tracker rows reached completion; on the same updated record the tracker ledger stands at 2,293 of 2,486 (92.2%); trenches and cable pull-in are unchanged. The substation composite advanced to 62.9% with 35 days to the energization date. Site strength was 137 on the report's itemised lines. Overall completion stands at 86.6%.",
     "note": null
   },
   "gates": [
@@ -38,7 +38,7 @@ window.MURCH_REPORT = {
     {
       "key": "trackers",
       "name": "Tracker rows (incl. purlins)",
-      "installed": 2311,
+      "installed": 2293,
       "total": 2486,
       "unit": "rows",
       "earned": 2346.8,
@@ -50,7 +50,7 @@ window.MURCH_REPORT = {
     {
       "key": "modules",
       "name": "PV modules installed",
-      "installed": 156443,
+      "installed": 153771,
       "total": 171470,
       "unit": "modules",
       "forecast": "Sep 6, 2026",
@@ -70,13 +70,13 @@ window.MURCH_REPORT = {
     }
   ],
   "earnedProgress": {
-    "asOf": "Sep 12, 2026 — executed through Friday Sep 11",
+    "asOf": "SEP 12 RULING: Zone E is not complete — re-based on the field punch-list (trackers 674 → 656, modules 46,202 → 43,530; Zone EW not closed). Sep 12, 2026 — executed basis through Friday Sep 11 (daily production report for Sep 11, COMPLETO) on top of the Sep 11 field counts by circuit, + the Sep 8 control cuts. Friday Sep 11: MV terminations +9 to 66 of 264 (not located by line in the report); 138 harness (the main electrical contractor 51 at PB-05 — Line 1, which the field count had at 100%; the racking-side electrical crew 87 with no location, booked to the last circuit by rule); 3,300 ft of homerun/DC (1,960 on five LBDs — two on Line 1, three on Line 2 — plus 1,340 self-perform at INV-12); 8 circuits landed in the INV-12 cabinet (the first LV inverter connections); 2,426 modules by the eastern mechanical contractor (67 in Zone D, 2,359 filed in Zone G — further over its scope); 702 in Zone E by the western module crew held out under the ruling; no piles, no tracker completions, no plowing; SET 62.9%. 137 on site by the report’s own lines (its total line reads 147). LBD 309 failed its positive-cable megger; the eastern electrical crew reports it is running short of trunk cable for LV pulls.",
     "scopes": [
       {
         "scope": "Tracker rows",
         "unit": "rows",
-        "gate": "2,311 / 2,486",
-        "gatePct": 93,
+        "gate": "2,293 / 2,486",
+        "gatePct": 92.2,
         "inProgress": "Partial-row credit suspended — open rows reported by ladder step, not credited",
         "earnedPct": 94.4,
         "detail": "Partial-row credit resumed on 7 August after two consecutive days of step-level reporting from the assembly crews. Earned credits open rows at their verified ladder step; the completion gate continues to count finished rows only and no date moves on earned progress."
@@ -485,347 +485,347 @@ window.MURCH_REPORT = {
       {
         "d": "Jun 17",
         "v": 15,
-        "c": 124
+        "c": 106
       },
       {
         "d": "Jun 18",
         "v": 35,
-        "c": 159
+        "c": 141
       },
       {
         "d": "Jun 19",
         "v": 26,
-        "c": 185
+        "c": 167
       },
       {
         "d": "Jun 20",
         "v": 31,
-        "c": 216
+        "c": 198
       },
       {
         "d": "Jun 21",
         "v": 0,
-        "c": 216
+        "c": 198
       },
       {
         "d": "Jun 22",
         "v": 48,
-        "c": 264
+        "c": 246
       },
       {
         "d": "Jun 23",
         "v": 31,
-        "c": 295
+        "c": 277
       },
       {
         "d": "Jun 24",
         "v": 0,
-        "c": 295
+        "c": 277
       },
       {
         "d": "Jun 25",
         "v": 57,
-        "c": 352
+        "c": 334
       },
       {
         "d": "Jun 26",
         "v": 26,
-        "c": 378
+        "c": 360
       },
       {
         "d": "Jun 29",
         "v": 29,
-        "c": 407
+        "c": 389
       },
       {
         "d": "Jun 30",
         "v": 30,
-        "c": 437
+        "c": 419
       },
       {
         "d": "Jul 1",
         "v": 51,
-        "c": 488
+        "c": 470
       },
       {
         "d": "Jul 7",
         "v": 29,
-        "c": 517
+        "c": 499
       },
       {
         "d": "Jul 8",
         "v": 0,
-        "c": 517
+        "c": 499
       },
       {
         "d": "Jul 9",
         "v": 0,
-        "c": 517
+        "c": 499
       },
       {
         "d": "Jul 10",
         "v": 0,
-        "c": 517
+        "c": 499
       },
       {
         "d": "Jul 13",
         "v": 29,
-        "c": 546
+        "c": 528
       },
       {
         "d": "Jul 14",
         "v": 49,
-        "c": 595
+        "c": 577
       },
       {
         "d": "Jul 15",
         "v": 35,
-        "c": 630
+        "c": 612
       },
       {
         "d": "Jul 16",
         "v": 35,
-        "c": 665
+        "c": 647
       },
       {
         "d": "Jul 17",
         "v": 25,
-        "c": 690
+        "c": 672
       },
       {
         "d": "Jul 18",
         "v": 0,
-        "c": 690
+        "c": 672
       },
       {
         "d": "Jul 20",
         "v": 21,
-        "c": 711
+        "c": 693
       },
       {
         "d": "Jul 21",
         "v": 25,
-        "c": 736
+        "c": 718
       },
       {
         "d": "Jul 22",
         "v": 39,
-        "c": 775
+        "c": 757
       },
       {
         "d": "Jul 23",
         "v": 28,
-        "c": 803
+        "c": 785
       },
       {
         "d": "Jul 24",
         "v": 30,
-        "c": 833
+        "c": 815
       },
       {
         "d": "Jul 27",
         "v": 0,
-        "c": 833
+        "c": 815
       },
       {
         "d": "Jul 28",
         "v": 30,
-        "c": 863
+        "c": 845
       },
       {
         "d": "Jul 29",
         "v": 35,
-        "c": 898
+        "c": 880
       },
       {
         "d": "Jul 30",
         "v": 30,
-        "c": 928
+        "c": 910
       },
       {
         "d": "Jul 31",
         "v": 40,
-        "c": 968
+        "c": 950
       },
       {
         "d": "Aug 1",
         "v": 40,
-        "c": 1008
+        "c": 990
       },
       {
         "d": "Aug 3",
         "v": 86,
-        "c": 1094
+        "c": 1076
       },
       {
         "d": "Aug 4",
         "v": 60,
-        "c": 1154
+        "c": 1136
       },
       {
         "d": "Aug 5",
         "v": 33,
-        "c": 1187
+        "c": 1169
       },
       {
         "d": "Aug 6",
         "v": 29,
-        "c": 1216
+        "c": 1198
       },
       {
         "d": "Aug 7",
         "v": 42,
-        "c": 1258
+        "c": 1240
       },
       {
         "d": "Aug 8",
         "v": 0,
-        "c": 1258
+        "c": 1240
       },
       {
         "d": "Aug 10",
         "v": 78,
-        "c": 1336
+        "c": 1318
       },
       {
         "d": "Aug 11",
         "v": 60,
-        "c": 1396
+        "c": 1378
       },
       {
         "d": "Aug 12",
         "v": 89,
-        "c": 1485
+        "c": 1467
       },
       {
         "d": "Aug 13",
         "v": 97,
-        "c": 1582
+        "c": 1564
       },
       {
         "d": "Aug 14",
         "v": 65,
-        "c": 1647
+        "c": 1629
       },
       {
         "d": "Aug 15",
         "v": 0,
-        "c": 1647
+        "c": 1629
       },
       {
         "d": "Aug 17",
         "v": 54,
-        "c": 1701
+        "c": 1683
       },
       {
         "d": "Aug 18",
         "v": 62,
-        "c": 1763
+        "c": 1745
       },
       {
         "d": "Aug 19",
         "v": 55,
-        "c": 1818
+        "c": 1800
       },
       {
         "d": "Aug 20",
         "v": 60,
-        "c": 1878
+        "c": 1860
       },
       {
         "d": "Aug 21",
         "v": 46,
-        "c": 1924
+        "c": 1906
       },
       {
         "d": "Aug 22",
         "v": 0,
-        "c": 1924
+        "c": 1906
       },
       {
         "d": "Aug 24",
         "v": 60,
-        "c": 1984
+        "c": 1966
       },
       {
         "d": "Aug 25",
         "v": 67,
-        "c": 2051
+        "c": 2033
       },
       {
         "d": "Aug 26",
         "v": 0,
-        "c": 2051
+        "c": 2033
       },
       {
         "d": "Aug 27",
         "v": 0,
-        "c": 2051
+        "c": 2033
       },
       {
         "d": "Aug 28",
         "v": 65,
-        "c": 2116
+        "c": 2098
       },
       {
         "d": "Aug 29",
         "v": 0,
-        "c": 2116
+        "c": 2098
       },
       {
         "d": "Aug 31",
         "v": 65,
-        "c": 2181
+        "c": 2163
       },
       {
         "d": "Sep 1",
         "v": 22,
-        "c": 2203
+        "c": 2185
       },
       {
         "d": "Sep 2",
         "v": 22,
-        "c": 2225
+        "c": 2207
       },
       {
         "d": "Sep 3",
         "v": 30,
-        "c": 2255
+        "c": 2237
       },
       {
         "d": "Sep 4",
         "v": 15,
-        "c": 2270
+        "c": 2252
       },
       {
         "d": "Sep 5",
         "v": 0,
-        "c": 2270
+        "c": 2252
       },
       {
         "d": "Sep 7",
         "v": 0,
-        "c": 2270
+        "c": 2252
       },
       {
         "d": "Sep 8",
         "v": 0,
-        "c": 2270
+        "c": 2252
       },
       {
         "d": "Sep 9",
         "v": 41,
-        "c": 2311
+        "c": 2293
       },
       {
         "d": "Sep 10",
         "v": 0,
-        "c": 2311
+        "c": 2293
       },
       {
         "d": "Sep 11",
         "v": 0,
-        "c": 2311
+        "c": 2293
       }
     ],
     "modules": [
@@ -1107,22 +1107,22 @@ window.MURCH_REPORT = {
       {
         "d": "Sep 8",
         "v": 3666,
-        "c": 155975
+        "c": 153771
       },
       {
         "d": "Sep 9",
         "v": 1,
-        "c": 155976
+        "c": 153771
       },
       {
         "d": "Sep 10",
         "v": 1170,
-        "c": 156443
+        "c": 153771
       },
       {
         "d": "Sep 11",
         "v": 2426,
-        "c": 156443
+        "c": 153771
       }
     ]
   },
@@ -1142,7 +1142,7 @@ window.MURCH_REPORT = {
       "color": "#2769a8",
       "planStart": "Jun 17",
       "planEnd": "Aug 30",
-      "planStartVal": 124,
+      "planStartVal": 106,
       "unit": "rows"
     },
     "modules": {
@@ -1264,7 +1264,7 @@ window.MURCH_REPORT = {
     "note": "The injury record remains clean at the date of this report: zero recordable, zero lost-time and zero restricted-work cases across 186,352 hours, with all three incidence rates at 0.00 - subject to the classification of the 8 September event once the medical outcome is known. The 8 September response - immediate first aid by co-workers, emergency services on site, hospital transfer, area stopped, notification within the day and investigation opened - followed the site emergency procedure as written. The programme behind that response is documented in the EHS management pack issued on 8 September: workers and man-hours by company and month, orientations given, the full incident register, unsafe acts and conditions by type with the corrective action for each, weekly safety walks with subcontractor supervisors, bi-weekly subcontractor safety meetings and monthly general safety meetings with recorded minutes. Heat-stress controls on the substation front are reinforced pending the findings. The 7 August investigation is closed with its corrective actions retained in the daily briefings. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit completed on 30 August closes the exposure on that section."
   },
   "quality": {
-    "headline": "Owner acceptance stands at 296 of 2,311 completed tracker rows and converting EPC releases into Owner acceptance remains the controlling quality action. The correction of tracker rows outside tolerance in Area E stands at 8 rows corrected (10 September), each checked with a digital angle gauge on the torque tube, and is carried as a running control in the daily report; the 11 further lines worked on 11 September are not yet counted as corrected rows. Insulation testing of the LV feeder cable is now reported box by box: five disconnect boxes passed on 11 September and one first-circuit box failed on its positive conductor, to be corrected and retested before connection. The two Owner queries on installed-work conformance fell due on 8 and 9 September; the consolidated engineering and quality position was presented at the Owner site meeting on 10 September and the written responses follow it. The 41 rows completed on 9 September in the north-east zone remain under reconciliation with the per-area record before they are added to the published figure.",
+    "headline": "Owner acceptance stands at 296 of 2,293 completed tracker rows and converting EPC releases into Owner acceptance remains the controlling quality action. The correction of tracker rows outside tolerance in Area E stands at 8 rows corrected (10 September), each checked with a digital angle gauge on the torque tube, and is carried as a running control in the daily report; the 11 further lines worked on 11 September are not yet counted as corrected rows. Insulation testing of the LV feeder cable is now reported box by box: five disconnect boxes passed on 11 September and one first-circuit box failed on its positive conductor, to be corrected and retested before connection. The two Owner queries on installed-work conformance fell due on 8 and 9 September; the consolidated engineering and quality position was presented at the Owner site meeting on 10 September and the written responses follow it. The 41 rows completed on 9 September in the north-east zone remain under reconciliation with the per-area record before they are added to the published figure.",
     "tiles": [
       {
         "label": "Piles executed",
@@ -1288,8 +1288,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Tracker rows released",
-        "value": "296 / 2,311",
-        "note": "11.9% of the 2,486 rows in scope and 12.8% of the 2,311 built. Released rows feed the module installation front."
+        "value": "296 / 2,293",
+        "note": "11.9% of the 2,486 rows in scope and 12.9% of the 2,293 built. Released rows feed the module installation front."
       },
       {
         "label": "Pile refusals recorded",
@@ -1853,12 +1853,12 @@ window.MURCH_REPORT = {
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "156,443 of 171,470 (91.2%) with 15,027 remaining on the ledger. 11 September produced 2,426 on the eastern front, the first 67 of them in the last area on the rows racked there, after 1,170 on the 10th; the previous week produced 768, 2,578, 4,204, 3,666 and 0. The per-area allocation of the eastern installations since 4 September is being reconciled against the area counts, and the western crew's Area E installations since late August (702 more on 11 September) remain held pending an area count, so the ledger is conservative on the west and under reconciliation on the east. On the updated schedule the eastern-circuit modules are due 18 September and the last circuit 29 September."
+      "note": "153,771 of 171,470 (89.7%) with 17,699 remaining on the ledger, after the Area E completion record was updated on 12 September (about 2,670 modules returned to remaining). 11 September produced 2,426 on the eastern front, the first 67 of them in the last area on the rows racked there, after 1,170 on the 10th; the previous week produced 768, 2,578, 4,204, 3,666 and 0. The per-area allocation of the eastern installations since 4 September is being reconciled against the area counts, and the western crew's Area E installations are now carried on the updated Area E record, so the ledger is under reconciliation on the east only. On the updated schedule the eastern-circuit modules are due 18 September and the last circuit 29 September."
     },
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "2,311 rows complete of 2,486 (93.0%), of which 296 carry Owner acceptance; earned progress stands at 94.4% with 35 rows in the last area at 75% completion. No rows reached completion on 11 September. The correction of rows outside tolerance in Area E stands at 8 rows corrected (10 September); the 11 further lines worked on 11 September are not yet counted as corrected rows. The 41 rows completed on 9 September in the north-east zone, and 9 rows the western crew reported at E19/E20 on 11 September, remain under reconciliation with the per-area record. The second-circuit tracker completion is due 14 September on the updated schedule."
+      "note": "2,293 rows complete of 2,486 (92.2%) after the Area E completion record was updated on 12 September, of which 296 carry Owner acceptance; earned progress stands at 93.8% with 35 rows in the last area at 75% completion and 16 rows in Area E at the first stage. No rows reached completion on 11 September. The correction of rows outside tolerance in Area E stands at 8 rows corrected (10 September); the 11 further lines worked on 11 September are not yet counted as corrected rows. The 41 rows completed on 9 September in the north-east zone, and 9 rows the western crew reported at E19/E20 on 11 September, remain under reconciliation with the per-area record. The second-circuit tracker completion is due 14 September on the updated schedule."
     },
     {
       "title": "Medium-voltage terminations",
@@ -2121,8 +2121,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "183,000",
-        "note": "Total manhours worked from the start of construction on April 1 through September 12, at 10 h/day, Monday to Saturday."
+        "value": "181,700",
+        "note": "Total manhours worked from the start of construction on April 1 through September 11, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2378,8 +2378,8 @@ window.MURCH_REPORT = {
         "c": 165644
       },
       {
-        "d": "Sep 12",
-        "c": 183034
+        "d": "Sep 11",
+        "c": 181664
       }
     ]
   }
