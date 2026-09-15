@@ -1,0 +1,22 @@
+Owner Project Report — basis September 15, 2026 (executed through Monday 14 September)
+
+Numeric blocks re-derived from the construction dashboard and the curated
+narrative rewritten to the new basis.
+
+Modules 155,310 of 171,470 (90.6%), 16,160 remaining — 1,539 installed on
+Monday 14 September. Piles 30,807 of 31,352 (98.3%), 545 open — 180 driven
+on Monday, the first pile production since 3 September. Trackers hold at
+2,293 of 2,486 (92.2%); cable holds at 88,477 feet (32.8%) and harness at
+2,611 of 5,007 (52.1%).
+
+Medium-voltage terminations 81 of 114 inverter-side (first circuit 24 of 24,
+second 30 of 30, eastern 21 of 30, last 6 of 30); junction-box terminations
+0 of 150 with no junction box installed; SCADA boxes 13 of 23; trenches
+closed 49 of 181; pull-in 18 of 46; horizontal drilling complete at 20 of 20.
+Substation 63.1%. Overall completion 87.1%.
+
+Owner query register unchanged — no new queries received in the last seven
+days; the two queries that fell due on 8 and 9 September remain open.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_015KAr9jqNTjok2S9rB5UN9o
