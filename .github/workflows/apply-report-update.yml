@@ -1,0 +1,107 @@
+name: Apply report update
+
+# Re-derives the report from the construction dashboard and applies the day's
+# CURATED prose (headline statement, focus, lookahead, owner-action date) from
+# scripts in daily-update/. tools/sync.js moves numbers only; the curated blocks
+# go stale silently, so they move here.
+#
+# Output hashes are verified before anything is committed: a wrong anchor or a
+# wrong hash fails the job and commits nothing.
+
+on:
+  push:
+    branches: [main]
+    paths: ['daily-update/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publish-report
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Bail if no pending update
+        id: gate
+        run: |
+          if [ ! -f daily-update/expected.sha256 ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"; echo "No pending report update."; exit 0
+          fi
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          node-version: '20'
+
+      - name: Fetch the construction dashboard
+        if: steps.gate.outputs.run == 'true'
+        run: git clone --quiet --depth 1 https://github.com/claped71/murch-dashboard.git /tmp/dashboard
+
+      - name: Re-derive the numeric blocks
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          set -e
+          sed -e "s/ (zero float)'/'/" -e "s/, zero float)'/)'/" /tmp/dashboard/data.js > /tmp/dash_stripped.js
+          node tools/sync.js /tmp/dash_stripped.js --write | tee /tmp/sync.log
+
+      - name: Apply the curated prose
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          set -e
+          for f in $(ls daily-update/*.js | sort); do
+            echo "== $f"; node "$f"
+          done
+
+      - name: Publish guard
+        if: steps.gate.outputs.run == 'true'
+        run: node tools/guard.js
+
+      - name: Verify output hashes
+        if: steps.gate.outputs.run == 'true'
+        run: sha256sum -c daily-update/expected.sha256
+
+      - name: Commit and push
+        if: steps.gate.outputs.run == 'true'
+        id: commit
+        run: |
+          git config user.name  "murch-report-bot"
+          git config user.email "murch-report-bot@users.noreply.github.com"
+          MSG_FILE=$(mktemp)
+          if [ -f daily-update/commit-message.txt ]; then cp daily-update/commit-message.txt "$MSG_FILE"; else echo "Owner Project Report update" > "$MSG_FILE"; fi
+          git rm -rq daily-update
+          git add -A
+          git commit -F "$MSG_FILE"
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Mirror to gh-pages
+        if: steps.commit.outputs.changed == 'true'
+        run: git push --force origin main:gh-pages
+
+      - name: Deploy to Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages.yml --ref main
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Owner report update"
+            echo ""
+            echo '```'
+            cat /tmp/sync.log 2>/dev/null || echo "(sync log unavailable)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
