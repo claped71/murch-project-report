@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated September 15, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated September 16, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Mechanical installation",
-    "asOf": "September 15, 2026",
+    "asOf": "September 16, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 87.1,
+    "overall": 87.2,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "This report is issued on Tuesday 15 September with field production executed through Monday 14 September, on top of the site count by circuit taken on 11 September, which is the basis for harness, disconnect boxes and first-circuit feeder cable. Monday was a mechanical day. Module installation produced 1,539 panels, taking the ledger to 155,310 of 171,470 (90.6%) with 16,160 remaining. Pile driving resumed in the final area for the first time since 3 September, adding 180 positions: 30,807 of 31,352 (98.3%) with 545 open, 532 of them in that area. No tracker rows reached completion and no cable was pulled, so the tracker ledger holds at 2,293 of 2,486 (92.2%) and cumulative cable at 88,477 feet (32.8%), with harness at 2,611 of 5,007 (52.1%). Medium-voltage terminations advanced to 81 of the 114 inverter-side terminations (first circuit 24 of 24, second 30 of 30, eastern 21 of 30, last 6 of 30); none of the 150 junction-box terminations has started because no medium-voltage junction box has yet been installed. SCADA boxes stand at 13 of 23 mounted, trench closure at 49 of 181 and cable pull-in at 18 of 46. Medium-voltage horizontal drilling is complete at 20 of 20 bores. The substation composite stands at 63.1%. Overall completion stands at 87.1%.",
+    "statement": "This report is issued on Wednesday 16 September with field production executed through Monday 14 September, now including the electrical production of that day, on top of the site count by circuit taken on 11 September, which is the basis for harness, disconnect boxes and first-circuit feeder cable. Module installation produced 1,539 panels, taking the ledger to 155,310 of 171,470 (90.6%) with 16,160 remaining. Pile driving resumed in the final area for the first time since 3 September, adding 180 positions: 30,807 of 31,352 (98.3%) with 545 open, 532 of them in that area. No tracker rows reached completion, so the tracker ledger holds at 2,293 of 2,486 (92.2%). On the electrical side, 3,482 feet of feeder cable on the second circuit take cumulative cable to 91,959 feet (34.1%), and 114 harness assemblies take harness to 2,725 of 5,007 (54.4%). Medium-voltage terminations advanced to 81 of the 114 inverter-side terminations (first circuit 24 of 24, second 30 of 30, eastern 21 of 30, last 6 of 30); the first two medium-voltage junction boxes were installed on 14 September, on the last circuit, and junction-box terminations (150) are still to start. SCADA boxes stand at 13 of 23 mounted, trench closure at 49 of 181 and cable pull-in at 18 of 46. Medium-voltage horizontal drilling is complete at 20 of 20 bores. Material for the substation bus and insulator installation was received on 15 September. The substation composite stands at 63.1%. Overall completion stands at 87.2%.",
     "note": null
   },
   "gates": [
@@ -60,17 +60,17 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 42.2,
-      "earnedPct": 49.9,
+      "gatePct": 42.8,
+      "earnedPct": 50.2,
       "unit": "%",
-      "earnedLabel": "49.9% earned incl. work in progress",
+      "earnedLabel": "50.2% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "September 15, 2026",
+    "asOf": "September 16, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
@@ -84,10 +84,10 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "42.2% of scope",
-        "gatePct": 42.2,
-        "inProgress": "MV 81.8% · 23 of 23 inverter stations set · 401 of 419 boxes · 88,477 lf of cable",
-        "earnedPct": 49.9,
+        "gate": "42.8% of scope",
+        "gatePct": 42.8,
+        "inProgress": "MV 81.8% · 23 of 23 inverter stations set · 401 of 419 boxes · 91,959 lf of cable",
+        "earnedPct": 50.2,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -1898,12 +1898,12 @@ window.MURCH_REPORT = {
     {
       "title": "Medium-voltage terminations",
       "level": "Priority",
-      "note": "81 of 114 inverter-side terminations complete, reported by circuit: first circuit 24 of 24, second 30 of 30, eastern 21 of 30, last 6 of 30 (264 terminations in total with the 150 at junction boxes). Nine terminations were added on the latest control cut, all on the eastern and last circuits. None of the 150 junction-box terminations has started because no medium-voltage junction box has been installed to date; junction-box excavation is the controlling item on this front. Trenches closed and compacted stand at 49 of 181 and cable pull-in at 18 of 46. Medium-voltage horizontal drilling is complete at 20 of 20 bores; cable ploughing holds at 38 of 46 segments."
+      "note": "81 of 114 inverter-side terminations complete, reported by circuit: first circuit 24 of 24, second 30 of 30, eastern 21 of 30, last 6 of 30 (264 terminations in total with the 150 at junction boxes). Nine terminations were added on the latest control cut, all on the eastern and last circuits. The first two of 23 medium-voltage junction boxes were installed on 14 September (last circuit); none of the 150 junction-box terminations has started, and junction-box installation is the controlling item on this front. Trenches closed and compacted stand at 49 of 181 and cable pull-in at 18 of 46. Medium-voltage horizontal drilling is complete at 20 of 20 bores; cable ploughing holds at 38 of 46 segments."
     },
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cumulative cable holds at 88,477 feet (32.8%): no cable was pulled on 12 or 14 September, after 3,300 feet on the 11th. The first-circuit feeder cable is complete (60,075 feet); the second circuit stands at 10,408 of 53,456 feet. Harness holds at 2,611 of 5,007 assemblies (52.1%) — first circuit complete at 1,117, second 855 of 1,292, eastern 377 of 1,258, last 211 of 1,340. Box connections on the first circuit hold at 52 of 372 and inverter connections at 8 of 838. Against the 8 September schedule the LV works are due 17 September on the first circuit, 24 September on the second, 1 October on the eastern and 10 October on the last."
+      "note": "Cumulative cable stands at 91,959 feet (34.1%) after 3,482 feet on 14 September. The first-circuit feeder cable is complete (60,075 feet); the second circuit stands at 13,890 of 53,456 feet. Harness stands at 2,725 of 5,007 assemblies (54.4%) after 114 on 14 September — first circuit complete at 1,117, second 907 of 1,292, eastern 377 of 1,258, last 273 of 1,340. Box connections on the first circuit hold at 52 of 372 and inverter connections at 8 of 838. Against the 8 September schedule the LV works are due 17 September on the first circuit, 24 September on the second, 1 October on the eastern and 10 October on the last."
     },
     {
       "title": "Pile completion",
@@ -1913,7 +1913,7 @@ window.MURCH_REPORT = {
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "63.1% overall — civil 97.6%, structural 67.6%, electrical 42.4% — with electrical the moving discipline. Against an advanced plan that reaches completion at the 25 September date, the front is 19.7 points behind. The equipment-installation window closes on 18 September; control-cable terminations and fibre-optic fusions are the live items, and the fusions still require a dedicated crew."
+      "note": "63.1% overall — civil 97.6%, structural 67.6%, electrical 42.4% — with electrical the moving discipline. Against an advanced plan that reaches completion at the 25 September date, the front is 21.4 points behind. The equipment-installation window closes on 18 September; control-cable terminations and fibre-optic fusions are the live items, and the fusions still require a dedicated crew."
     }
   ],
   "material": [
@@ -1955,6 +1955,18 @@ window.MURCH_REPORT = {
     }
   ],
   "photos": [
+    {
+      "src": "assets/photo-73.jpg",
+      "date": "September 15, 2026",
+      "title": "Substation — insulators, bus and hardware received",
+      "note": "Station-post insulators, insulator units and the aluminium bus tube with its mounting fittings, staged on the substation laydown on 15 September. This material supports the substation bus and structural installation, which stands at 67.6% on the latest substation cut."
+    },
+    {
+      "src": "assets/photo-74.jpg",
+      "date": "September 15, 2026",
+      "title": "Substation laydown — bus tube bundle and cable reels",
+      "note": "The same 15 September delivery: a strapped bundle of aluminium tube, cable reels on pallets and reel stands, and connector and hardware boxes on the substation laydown, received for the bus and control-cable work (substation electrical 42.4%)."
+    },
     {
       "src": "assets/photo-72.jpg",
       "date": "September 10, 2026",
@@ -2156,8 +2168,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "185,400",
-        "note": "Total manhours worked from the start of construction on April 1 through September 15, at 10 h/day, Monday to Saturday."
+        "value": "187,600",
+        "note": "Total manhours worked from the start of construction on April 1 through September 16, at 10 h/day, Monday to Saturday."
       },
       {
         "label": "Recordable incident rate",
@@ -2423,11 +2435,15 @@ window.MURCH_REPORT = {
       {
         "d": "Sep 15",
         "c": 185397
+      },
+      {
+        "d": "Sep 16",
+        "c": 187557
       }
     ]
   },
   "electricalByCircuit": {
-    "asOf": "September 15, 2026",
+    "asOf": "September 16, 2026",
     "basis": "Executed through September 14, 2026. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
     "rows": [
       {
@@ -2468,11 +2484,11 @@ window.MURCH_REPORT = {
       {
         "circuit": "Circuit 11B",
         "harness": {
-          "done": 855,
+          "done": 907,
           "scope": 1292
         },
         "homerun": {
-          "done": 10408,
+          "done": 13890,
           "scope": 53456
         },
         "trunk": {
@@ -2538,7 +2554,7 @@ window.MURCH_REPORT = {
       {
         "circuit": "Circuit 12B",
         "harness": {
-          "done": 211,
+          "done": 273,
           "scope": 1340
         },
         "homerun": {
@@ -2554,7 +2570,7 @@ window.MURCH_REPORT = {
           "scope": 107
         },
         "mvJb": {
-          "done": 0,
+          "done": 2,
           "scope": 6
         },
         "mvTerm": {
@@ -2580,11 +2596,11 @@ window.MURCH_REPORT = {
     },
     "project": {
       "harness": {
-        "done": 2611,
+        "done": 2725,
         "scope": 5007
       },
       "homerun": {
-        "done": 71083,
+        "done": 74565,
         "scope": 229435
       },
       "trunk": {
@@ -2596,7 +2612,7 @@ window.MURCH_REPORT = {
         "scope": 419
       },
       "mvJb": {
-        "done": 0,
+        "done": 2,
         "scope": 23
       },
       "mvTerm": {
