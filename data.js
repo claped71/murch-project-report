@@ -61,9 +61,9 @@ window.MURCH_REPORT = {
       "name": "Electrical — total",
       "pctOnly": true,
       "gatePct": 43.8,
-      "earnedPct": 50.8,
+      "earnedPct": 51.5,
       "unit": "%",
-      "earnedLabel": "50.8% earned incl. work in progress",
+      "earnedLabel": "51.5% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
@@ -87,7 +87,7 @@ window.MURCH_REPORT = {
         "gate": "43.8% of scope",
         "gatePct": 43.8,
         "inProgress": "MV 82.1% · 23 of 23 inverter stations set · 401 of 419 boxes · 97,548 lf of cable",
-        "earnedPct": 50.8,
+        "earnedPct": 51.5,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
       }
     ],
@@ -1375,7 +1375,7 @@ window.MURCH_REPORT = {
     {
       "period": "Sep 15 - Sep 19",
       "items": [
-        "First-circuit LV works closed to the 17 September date: box connections from 52 of 372 (due 16 September), inverter connections from 8 of 838, and the first-circuit trunk pull (due 12 September) completed.",
+        "First-circuit LV works closed to the 17 September date: box connections from 264 of 372 (due 16 September), inverter connections from 8 of 838, and the first-circuit trunk pull (due 12 September) completed.",
         "Medium-voltage junction-box installation started (2 of 23 installed) so that junction-box terminations (0 of 150) can begin inside the first-circuit connection window, with the full committed termination crew productive.",
         "Second-circuit tracker correction taken from 8 rows to completion or a revised date issued; second-circuit inverter feeder cable (10,408 of 53,456 feet, past its 14 September date) progressed or re-dated.",
         "Pile installation in the final area continued at the rate demonstrated on 14 September (545 positions open) and the area closed.",
@@ -1898,7 +1898,7 @@ window.MURCH_REPORT = {
     {
       "title": "Updated project schedule — fulfilment tracking",
       "level": "Priority",
-      "note": "The schedule issued on 8 September is the reference for day-to-day tracking: circuit mechanical completion 2, 10, 17 and 24 October; ready-to-energize 14 October; substantial completion 30 November. Open past their day: first-circuit trunk supports (8 September), first-circuit trunk pull (12 September), eastern-circuit tracker completion (8 September), second-circuit tracker completion and inverter feeder cable (14 September), the second-circuit easement pull (4 to 8 September), the eastern-circuit easement pull start (9 September) and the remaining pile area (15 September), where 327 positions remain. This week: first-circuit box connections (52 of 372), first-circuit inverter and medium-voltage connections (to 17 September) and the eastern-circuit modules (18 September)."
+      "note": "The schedule issued on 8 September is the reference for day-to-day tracking: circuit mechanical completion 2, 10, 17 and 24 October; ready-to-energize 14 October; substantial completion 30 November. Open past their day: first-circuit trunk supports (8 September), first-circuit trunk pull (12 September), eastern-circuit tracker completion (8 September), second-circuit tracker completion and inverter feeder cable (14 September), the second-circuit easement pull (4 to 8 September), the eastern-circuit easement pull start (9 September) and the remaining pile area (15 September), where 327 positions remain. This week: first-circuit box connections (264 of 372), first-circuit inverter and medium-voltage connections (to 17 September) and the eastern-circuit modules (18 September)."
     },
     {
       "title": "Module installation rate",
@@ -1918,7 +1918,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cumulative cable stands at 97,548 feet (36.2%) after 5,589 feet on 15 September. The first-circuit feeder cable is complete (60,075 feet); the second circuit stands at 19,012 of 53,456 feet of feeder cable and 8,098 of 10,409 feet of trunk cable. Harness stands at 2,769 of 5,007 assemblies (55.3%) — first circuit complete at 1,117, second 907 of 1,292, eastern 377 of 1,258, last 317 of 1,340. Box connections on the first circuit stand at 52 of 372 and inverter connections at 8 of 838. Against the 8 September schedule the LV works are due 17 September on the first circuit, 24 September on the second, 1 October on the eastern and 10 October on the last."
+      "note": "Cumulative cable stands at 97,548 feet (36.2%) after 5,589 feet on 15 September. The first-circuit feeder cable is complete (60,075 feet); the second circuit stands at 19,012 of 53,456 feet of feeder cable and 8,098 of 10,409 feet of trunk cable. Harness stands at 2,769 of 5,007 assemblies (55.3%) — first circuit complete at 1,117, second 907 of 1,292, eastern 377 of 1,258, last 317 of 1,340. Box connections on the first circuit stand at 264 of 372 and inverter connections at 8 of 838. Against the 8 September schedule the LV works are due 17 September on the first circuit, 24 September on the second, 1 October on the eastern and 10 October on the last."
     },
     {
       "title": "Pile completion",
@@ -2492,7 +2492,7 @@ window.MURCH_REPORT = {
           "scope": 186
         },
         "lvBox": {
-          "done": 52,
+          "done": 264,
           "scope": 372
         }
       },
@@ -2643,7 +2643,7 @@ window.MURCH_REPORT = {
         "scope": 838
       },
       "lvBox": {
-        "done": 52,
+        "done": 264,
         "scope": 1676
       }
     }
