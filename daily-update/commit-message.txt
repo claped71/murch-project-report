@@ -1,0 +1,8 @@
+Owner Project Report — progress by circuit re-synced to the dashboard (executed through September 21)
+
+The scheduled sync had been refusing every write since the dashboard added float wording
+to a milestone; the table was frozen at September 19. MV junction boxes set with no
+circuit stated are now carried in the unallocated row and the project total (5 of 23).
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01SN2sc98VaYiQgLDpXhdNR4
