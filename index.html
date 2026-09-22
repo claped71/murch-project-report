@@ -555,7 +555,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=9823b510f9"></script>
+<script src="data.js?v=d133548605"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -817,9 +817,9 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     };
     var rows = E.rows.map(function(r){ return '<tr><td data-label="Circuit"><b>' + esc(r.circuit) + '</b></td>' + KEYS.map(function(k){ return cell(r[k]); }).join('') + '</tr>'; });
     var u = E.unallocated || {};
-    if (u.harness || u.homerun || u.trunk || u.boxes || u.mvTerm) {
+    if (u.harness || u.homerun || u.trunk || u.boxes || u.mvJb || u.mvTerm) {
       var uc = function(v){ return '<td class="n">' + (v ? '<b>' + fmt(v) + '</b>' : '&mdash;') + '</td>'; };
-      rows.push('<tr><td data-label="Circuit"><b>Not yet placed on a circuit</b></td>' + uc(u.harness) + uc(u.homerun) + uc(u.trunk) + uc(u.boxes) + '<td class="n">&mdash;</td>' + uc(u.mvTerm) + '<td class="n">&mdash;</td><td class="n">&mdash;</td></tr>');
+      rows.push('<tr><td data-label="Circuit"><b>Not yet placed on a circuit</b></td>' + uc(u.harness) + uc(u.homerun) + uc(u.trunk) + uc(u.boxes) + uc(u.mvJb) + uc(u.mvTerm) + '<td class="n">&mdash;</td><td class="n">&mdash;</td></tr>');
     }
     var P = E.project || {};
     rows.push('<tr style="background:var(--bg2,#f4f6f5);font-weight:600"><td data-label="Circuit"><b>Project</b></td>' + KEYS.map(function(k){ return cell(P[k]); }).join('') + '</tr>');

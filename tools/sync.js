@@ -470,13 +470,13 @@ if (I.electricalByLine && I.electricalByLine.lineas && I.electricalByLine.alcanc
       return d && !isNaN(d) ? d.toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }) : '' })(eb.cableHasta || '') +
       '. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.',
     rows,
-    unallocated: { harness: Number(u.harness) || 0, homerun: Number(u.homerun) || 0, trunk: Number(u.trunk) || 0, boxes: Number(u.boxes) || 0, mvTerm: Number(um.inv) || 0 },
+    unallocated: { harness: Number(u.harness) || 0, homerun: Number(u.homerun) || 0, trunk: Number(u.trunk) || 0, boxes: Number(u.boxes) || 0, mvJb: Number(um.jb) || 0, mvTerm: Number(um.inv) || 0 },
     project: {
       harness: cell(T.harness != null ? T.harness : sum('harness') + (Number(u.harness) || 0), eb.harnessScope || sumS('harness')),
       homerun: cell(T.homerun != null ? T.homerun : sum('homerun') + (Number(u.homerun) || 0), T.homerunScope || sumS('homerun')),
       trunk: cell(T.trunk != null ? T.trunk : sum('trunk') + (Number(u.trunk) || 0), T.trunkScope || sumS('trunk')),
       boxes: cell(T.boxes != null ? T.boxes : sum('boxes') + (Number(u.boxes) || 0), sumS('boxes')),
-      mvJb: cell(sum('mvJb'), sumS('mvJb')),
+      mvJb: cell(sum('mvJb') + (Number(um.jb) || 0), sumS('mvJb')),
       mvTerm: cell(sum('mvTerm') + (Number(um.inv) || 0), sumS('mvTerm')),
       mvTermAll: cell(sum('mvTerm') + (Number(um.inv) || 0) + rows.reduce((s, r, i) => s + (Number((M[ids[i]] || {}).jbTerm) || 0), 0),
                       sumS('mvTerm') + rows.reduce((s, r, i) => s + (Number((M[ids[i]] || {}).jbTermScope) || 0), 0)),
