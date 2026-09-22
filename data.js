@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "This report is issued on Monday 21 September with field production executed through Saturday 19 September, on top of the site count by circuit taken on 11 September. Module installation produced 1,872 panels on Wednesday, 1,196 on Thursday and 580 on Friday, taking the ledger to 159,495 of 171,470 (93.0%) with 11,975 remaining; Saturday was lost to rain. Pile driving in the final area added 205 positions on Wednesday and 14 on Thursday: 31,231 of 31,352 (99.6%) with 121 open. The tracker ledger holds at 2,293 of 2,486 (92.2%), of which 886 rows carry Owner acceptance. On the electrical side, 10,692 feet of inverter feeder cable on the second circuit and 1,835 feet of trunk cable over the three days take cumulative cable to 110,075 feet (40.8%); 188 harness assemblies on the eastern and last circuits take harness to 2,957 of 5,007 (59.1%), and 17 disconnect boxes on the last circuit bring boxes to 418 of 419. Medium-voltage cable ploughing stands at 41 of 46 segments, four of the 23 medium-voltage junction boxes are installed, medium-voltage terminations stand at 87 of 264 and trench closure at 63 of 181. The substation composite stands at 66.3%, with medium-voltage bus cable installation under way. Overall completion stands at 88.7%.",
+    "statement": "This report is issued on Tuesday 22 September. Electrical and civil production is executed through Monday 21 September; mechanical quantities are executed through Friday 18 September, Saturday having been lost to rain. Modules stand at 159,495 of 171,470 (93.0%) with 11,975 remaining, and piles at 31,231 of 31,352 (99.6%) with 121 open in the final area. Tracker rows stand at 2,303 of 2,486 (92.6%), of which 886 carry Owner acceptance. On Monday the electrical crews placed 15,106 feet of cable, the highest single day to date: 12,614 feet of inverter feeder cable and 2,492 feet of trunk cable, including the first cable on the eastern circuit. Cumulative cable stands at 125,181 feet (46.4%). Harness stands at 3,071 of 5,007 assemblies (61.3%) after 74 on the second circuit, and the first 70 LV terminations were made at the inverters of the first circuit, taking inverter connections to 78 of 838; box connections on the first circuit stand at 264 of 372. On the medium-voltage front, five of the 23 junction boxes are installed, terminations stand at 87 of 264, cable ploughing at 42 of 46 segments and trench closure at 78 of 181; horizontal drilling is complete. The substation composite stands at 67.1% (civil 97.7%, structural 72.0%, electrical 48.2%). Overall weighted completion stands at 89.2%.",
     "note": null
   },
   "gates": [
@@ -86,9 +86,9 @@ window.MURCH_REPORT = {
         "unit": "%",
         "gate": "49.9% of scope",
         "gatePct": 49.9,
-        "inProgress": "MV 86% · 23 of 23 inverter stations set · 401 of 419 boxes · 125,181 lf of cable",
+        "inProgress": "MV 86% · 23 of 23 inverter stations set · 418 of 419 boxes · 125,181 lf of cable",
         "earnedPct": 55.9,
-        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; none is terminated, and termination is the measure that counts toward mechanical completion."
+        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded; medium-voltage terminations are complete on the inverter side of the first two circuits, and no station yet has its full termination set closed — the measure that counts toward mechanical completion."
       }
     ],
     "ladder": "Tracker steps: saddles 15 · tube 30 · purlins 25 · damper 20 · torque 10.",
@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Oct 24, 2026 (last circuit)",
       "status": "At risk",
-      "note": "Contract date not achievable. First-circuit tests follow the close of the first-circuit LV connections (box connections 264 of 372); circuit mechanical completion is scheduled 2, 10, 17 and 24 October.",
+      "note": "Contract date not achievable. First-circuit tests follow the close of the first-circuit LV connections (box connections 264 of 372, inverter connections 70 of 186); circuit mechanical completion is scheduled 2, 10, 17 and 24 October.",
       "circuits": "11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24"
     },
     {
@@ -108,7 +108,7 @@ window.MURCH_REPORT = {
       "contract": "Oct 16, 2026",
       "forecast": "Nov 5, 2026 (last circuit) · Ready to Energize Oct 14",
       "status": "At risk",
-      "note": "Gated by the substation (66.3%) and by medium-voltage terminations (87 of 264) and junction boxes (4 of 23 installed).",
+      "note": "Gated by the substation (67.1%) and by medium-voltage terminations (87 of 264) and junction boxes (5 of 23 installed).",
       "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5"
     },
     {
@@ -1369,7 +1369,7 @@ window.MURCH_REPORT = {
     "note": "The injury record remains clean at the date of this report: zero recordable, zero lost-time and zero restricted-work cases across 186,352 hours, with all three incidence rates at 0.00 - subject to the classification of the 8 September event once the medical outcome is known. The 8 September response - immediate first aid by co-workers, emergency services on site, hospital transfer, area stopped, notification within the day and investigation opened - followed the site emergency procedure as written. The programme behind that response is documented in the EHS management pack issued on 8 September: workers and man-hours by company and month, orientations given, the full incident register, unsafe acts and conditions by type with the corrective action for each, weekly safety walks with subcontractor supervisors, bi-weekly subcontractor safety meetings and monthly general safety meetings with recorded minutes. Heat-stress controls on the substation front are reinforced pending the findings. The 7 August investigation is closed with its corrective actions retained in the daily briefings. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit completed on 30 August closes the exposure on that section."
   },
   "quality": {
-    "headline": "Owner acceptance stands at 886 of 2,293 completed tracker rows (38.6%) and 15,434 installed modules, and converting EPC releases into Owner acceptance remains the controlling quality action: 2,068 tracker rows and 53,060 modules carry EPC approval. Inspection records are submitted for Owner review as areas close out. The two Owner queries on installed-work conformance were discussed at the Owner site meeting on 10 September and the written responses follow it.",
+    "headline": "Owner acceptance stands at 886 of 2,303 completed tracker rows (38.5%) and 15,434 installed modules, and converting EPC releases into Owner acceptance remains the controlling quality action: 2,068 tracker rows and 53,060 modules carry EPC approval. Inspection records are submitted for Owner review as areas close out. The two Owner queries on installed-work conformance were discussed at the Owner site meeting on 10 September and the written responses follow it.",
     "tiles": [
       {
         "label": "Piles executed",
@@ -1378,13 +1378,13 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Piles approved",
-        "value": "24,751",
-        "note": "83.7% of executed piles. The latest approval cut is dated 27 July and predates ten production days; a refreshed cut is due."
+        "value": "27,291",
+        "note": "88.0% of the piles executed at the 15 September approval cut."
       },
       {
         "label": "Awaiting approval",
-        "value": "4,557",
-        "note": "Open inspection fronts follow the active production areas. The newly opened pile area is producing with no inspection line yet established for it."
+        "value": "3,721",
+        "note": "Executed at the 15 September cut and not yet approved; open inspection fronts follow the active production areas."
       },
       {
         "label": "Owner approved — piles",
@@ -1439,16 +1439,16 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Sep 21 - Sep 26",
+      "period": "Sep 22 - Sep 26",
       "items": [
-        "First-circuit LV connections completed: box connections from 264 of 372 and inverter connections, so the first-circuit mechanical-completion tests can proceed.",
-        "Medium-voltage junction-box installation continued from 4 of 23 so that junction-box terminations (0 of 150) can start.",
-        "Second-circuit LV works closed to the 24 September date: inverter feeder cable from 29,704 of 53,456 feet and harness from 907 of 1,292.",
+        "First-circuit LV connections completed: box connections from 264 of 372 and inverter connections from 70 of 186, so the first-circuit mechanical-completion tests can proceed.",
+        "Medium-voltage junction-box installation continued from 5 of 23 so that junction-box terminations (0 of 150) can start.",
+        "Second-circuit LV works closed to the 24 September date: inverter feeder cable from 39,190 of 53,456 feet and harness from 981 of 1,292.",
+        "Eastern-circuit cable pull built up from its first 3,916 feet toward the 1 October date.",
         "The final pile area closed (108 positions) and the tracker rows behind it progressed.",
-        "Remaining medium-voltage ploughing segments (5 of 46) completed.",
+        "Remaining medium-voltage ploughing segments (4 of 46) completed.",
         "Module installation sustained on the eastern and last circuits (11,975 remaining).",
-        "Substation bus assembly and insulator mounting resumed as ground conditions allow.",
-        "Harness and cable production reported daily by circuit."
+        "Substation bus assembly and insulator mounting continued."
       ]
     },
     {
@@ -1462,7 +1462,7 @@ window.MURCH_REPORT = {
     }
   ],
   "ownerActions": {
-    "asOf": "Sep 21, 2026",
+    "asOf": "Sep 22, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -1962,27 +1962,27 @@ window.MURCH_REPORT = {
     {
       "title": "Updated project schedule — fulfilment tracking",
       "level": "Priority",
-      "note": "The schedule issued on 8 September is the reference for day-to-day tracking: circuit mechanical completion 2, 10, 17 and 24 October; ready-to-energize 14 October; substantial completion 30 November. Open past their day: the first-circuit LV connections (17 September), with box connections at 264 of 372; the eastern-circuit modules (18 September); the eastern-circuit easement cable pull; and the final pile area (15 September), where 108 positions remain. This week: second-circuit LV works to 24 September and the first-circuit mechanical-completion tests."
+      "note": "The schedule issued on 8 September is the reference for day-to-day tracking: circuit mechanical completion 2, 10, 17 and 24 October; ready-to-energize 14 October; substantial completion 30 November. Open past their day: the first-circuit LV connections (17 September), with box connections at 264 of 372 and inverter connections at 70 of 186; the eastern-circuit modules (18 September); the eastern-circuit easement cable pull; and the final pile area (15 September), where 108 positions remain. This week: second-circuit LV works to 24 September (feeder cable 39,190 of 53,456 feet) and the first-circuit mechanical-completion tests."
     },
     {
       "title": "Module installation rate",
       "level": "Priority",
-      "note": "159,495 of 171,470 (93.0%) with 11,975 remaining on the ledger. Wednesday 16 September produced 1,872 panels, Thursday 1,196 in a rain-shortened day and Friday 580; Saturday 19 September was lost to rain. On the updated schedule the last circuit is due 29 September."
+      "note": "159,495 of 171,470 (93.0%) with 11,975 remaining on the ledger. The latest reported production days are Wednesday 16 September with 1,872 panels, Thursday with 1,196 in a rain-shortened day and Friday with 580; Saturday 19 September was lost to rain. On the updated schedule the last circuit is due 29 September."
     },
     {
       "title": "Tracker assembly and quality release",
       "level": "Priority",
-      "note": "2,293 rows complete of 2,486 (92.2%), of which 886 carry Owner acceptance and 2,068 EPC approval; earned progress stands at 93.8%. No rows reached completion on 16 or 17 September; damper installation continued on 16 September. The remaining rows sit in the last pile area and in the second-circuit correction list."
+      "note": "2,303 rows complete of 2,486 (92.6%), of which 886 carry Owner acceptance and 2,068 EPC approval; earned progress stands at 94.1%. The remaining rows sit in the last pile area and in the final rows of the second circuit."
     },
     {
       "title": "Medium-voltage terminations",
       "level": "Priority",
-      "note": "87 of 114 inverter-side terminations complete, reported by circuit: first circuit 24 of 24, second 30 of 30, eastern 21 of 30, last 12 of 30 (264 terminations in total with the 150 at junction boxes). No terminations were added on 16 or 17 September. Four of 23 medium-voltage junction boxes are installed, two of them on 16 September; junction-box installation remains the controlling item on this front. Trenches closed and compacted stand at 63 of 181. Horizontal drilling is complete at 20 of 20 bores and cable ploughing stands at 41 of 46 segments."
+      "note": "87 of 114 inverter-side terminations complete, reported by circuit: first circuit 24 of 24, second 30 of 30, eastern 21 of 30, last 12 of 30 (264 terminations in total with the 150 at junction boxes). Five of 23 medium-voltage junction boxes are installed, one of them on 21 September; junction-box installation remains the controlling item on this front. Trenches closed and compacted stand at 78 of 181. Horizontal drilling is complete at 20 of 20 bores and cable ploughing stands at 42 of 46 segments."
     },
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cumulative cable stands at 110,075 feet (40.8%) after 8,742 feet on 16 September, 525 feet on 17 September and 3,260 feet on 18 September. The first-circuit feeder cable is complete (60,075 feet); the second circuit stands at 29,704 of 53,456 feet of feeder cable and 8,428 of 10,409 feet of trunk cable. Harness stands at 2,957 of 5,007 assemblies (59.1%) — first circuit complete, second 907 of 1,292, eastern 414 of 1,258, last 468 of 1,340. Disconnect boxes stand at 418 of 419. Box connections on the first circuit stand at 264 of 372 and inverter connections at 8 of 838. On the 8 September schedule the LV works are due 24 September on the second circuit, 1 October on the eastern and 10 October on the last."
+      "note": "Cumulative cable stands at 125,181 feet (46.4%) after 15,106 feet on 21 September, the highest single day to date. The first-circuit feeder cable is complete; the second circuit stands at 39,190 of 53,456 feet of feeder cable with its trunk cable complete; the eastern circuit started on 21 September with 3,128 feet of feeder cable and 788 feet of trunk cable. Harness stands at 3,071 of 5,007 assemblies (61.3%) — first circuit complete, second 981 of 1,292, eastern 414 of 1,258, last 468 of 1,340, with 40 assemblies still to be placed on a circuit. Disconnect boxes stand at 418 of 419. Box connections on the first circuit stand at 264 of 372 and inverter connections at 78 of 838. On the 8 September schedule the LV works are due 24 September on the second circuit, 1 October on the eastern and 10 October on the last."
     },
     {
       "title": "Pile completion",
@@ -1992,7 +1992,7 @@ window.MURCH_REPORT = {
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "66.3% overall — civil 97.7%, structural 69.6%, electrical 48.0%. Medium-voltage bus cable installation is under way on the 34.5 kV structures, with aerial work resumed after the rain stop of 19 September. Control-cable terminations and fibre-optic fusions remain the live electrical items."
+      "note": "67.1% overall — civil 97.7%, structural 72.0%, electrical 48.2%. Medium-voltage bus assembly continues on the 34.5 kV structures. Control-cable terminations and fibre-optic fusions remain the live electrical items."
     }
   ],
   "material": [
@@ -2006,7 +2006,7 @@ window.MURCH_REPORT = {
       "item": "PV modules",
       "delivered": "171,470",
       "pct": 100,
-      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding. 113,826 modules in stock above the installed quantity, so material does not constrain the installation front through to the 6 September date."
+      "note": "DELIVERY COMPLETE — the full project quantity is on site with nothing outstanding; 11,975 modules remain in stock for the installation still to be done."
     },
     {
       "item": "Tracker structures",
@@ -2603,7 +2603,7 @@ window.MURCH_REPORT = {
           "scope": 10409
         },
         "boxes": {
-          "done": 113,
+          "done": 110,
           "scope": 110
         },
         "mvJb": {
@@ -2638,7 +2638,7 @@ window.MURCH_REPORT = {
           "scope": 10274
         },
         "boxes": {
-          "done": 124,
+          "done": 110,
           "scope": 110
         },
         "mvJb": {
@@ -2673,7 +2673,7 @@ window.MURCH_REPORT = {
           "scope": 10907
         },
         "boxes": {
-          "done": 128,
+          "done": 106,
           "scope": 107
         },
         "mvJb": {
@@ -2716,7 +2716,7 @@ window.MURCH_REPORT = {
         "scope": 40313
       },
       "boxes": {
-        "done": 457,
+        "done": 418,
         "scope": 419
       },
       "mvJb": {

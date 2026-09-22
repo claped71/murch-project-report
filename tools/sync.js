@@ -405,6 +405,8 @@ if (C.earnedProgress && Array.isArray(C.earnedProgress.scopes)) {
   const inv = I.inverterProgress || {};
   const lv  = I.control.electrical || {};
   const boxes = (() => {
+    const bf = (I.electricalByLine || {}).boxesFisico;
+    if (bf && bf.total != null) return Number(bf.total);
     const c = ((I.lvComposite || {}).components || []).find(x => /box mounting/i.test(x.component || ''));
     const m = c && String(c.note || '').match(/(\d+)\s+boxes mounted/i);
     return m ? Number(m[1]) : null;
@@ -444,6 +446,9 @@ if (C.earnedProgress && Array.isArray(C.earnedProgress.scopes)) {
 if (I.electricalByLine && I.electricalByLine.lineas && I.electricalByLine.alcance) {
   const eb = I.electricalByLine, L = eb.lineas, A = eb.alcance, M = eb.mvPorLinea || {}, T = eb.proyecto || {};
   const ids = ['L1', 'L2', 'L3', 'L4'];
+  // Physical boxes on site (dashboard boxesFisico) — the ledger may carry boxes reported above the
+  // count pending reconciliation; the Owner sees the physical figure only (Jose, Sep 22).
+  const BF = eb.boxesFisico || null;
   const NAME = { L1: 'Circuit 11A', L2: 'Circuit 11B', L3: 'Circuit 12A', L4: 'Circuit 12B' };
   const cell = (done, scope) => ({ done: Number(done) || 0, scope: Number(scope) || 0 });
   const rows = ids.map(id => {
@@ -453,7 +458,7 @@ if (I.electricalByLine && I.electricalByLine.lineas && I.electricalByLine.alcanc
       harness: cell(l.harness, a.harness),
       homerun: cell(l.homerun, a.homerun),
       trunk: cell(l.trunk, a.trunk),
-      boxes: cell(l.boxes, a.boxes),
+      boxes: cell(BF && BF[id] != null ? BF[id] : l.boxes, a.boxes),
       mvJb: cell(m.jb, m.jbScope),
       mvTerm: cell(m.inv, m.invScope),
       lvInv: cell(l.connInv, a.connInv),
@@ -475,7 +480,7 @@ if (I.electricalByLine && I.electricalByLine.lineas && I.electricalByLine.alcanc
       harness: cell(T.harness != null ? T.harness : sum('harness') + (Number(u.harness) || 0), eb.harnessScope || sumS('harness')),
       homerun: cell(T.homerun != null ? T.homerun : sum('homerun') + (Number(u.homerun) || 0), T.homerunScope || sumS('homerun')),
       trunk: cell(T.trunk != null ? T.trunk : sum('trunk') + (Number(u.trunk) || 0), T.trunkScope || sumS('trunk')),
-      boxes: cell(T.boxes != null ? T.boxes : sum('boxes') + (Number(u.boxes) || 0), sumS('boxes')),
+      boxes: cell(BF && BF.total != null ? BF.total : (T.boxes != null ? T.boxes : sum('boxes') + (Number(u.boxes) || 0)), sumS('boxes')),
       mvJb: cell(sum('mvJb') + (Number(um.jb) || 0), sumS('mvJb')),
       mvTerm: cell(sum('mvTerm') + (Number(um.inv) || 0), sumS('mvTerm')),
       mvTermAll: cell(sum('mvTerm') + (Number(um.inv) || 0) + rows.reduce((s, r, i) => s + (Number((M[ids[i]] || {}).jbTerm) || 0), 0),
