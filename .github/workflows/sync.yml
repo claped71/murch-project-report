@@ -41,7 +41,12 @@ jobs:
       - name: Re-derive the report from the dashboard
         id: sync
         run: |
-          node tools/sync.js /tmp/dashboard/data.js --write | tee /tmp/sync.log
+          set -eo pipefail
+          # Same float-wording strip as apply-report-update.yml. Without it the redaction
+          # rule refuses the write, the exit code was lost in the pipe, and every scheduled
+          # run published nothing while reporting "No change" (Sep 21-22).
+          sed -e "s/ (zero float)'/'/" -e "s/, zero float)'/)'/" /tmp/dashboard/data.js > /tmp/dash_stripped.js
+          node tools/sync.js /tmp/dash_stripped.js --write | tee /tmp/sync.log
           BASIS=$(node -e "global.window={};require('./data.js');process.stdout.write(window.MURCH_REPORT.meta.asOf)")
           echo "basis=$BASIS" >> "$GITHUB_OUTPUT"
 
