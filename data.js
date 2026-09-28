@@ -2074,6 +2074,12 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-79.webp",
+      "date": "September 28, 2026",
+      "title": "Substation — utility interconnection structures erected",
+      "note": "The utility-interconnection poles at the substation, erected over the weekend of 26 and 27 September, with the crew working on the structure from an aerial lift. The substation stands at 78.6% on its earned-value register."
+    },
+    {
       "src": "assets/photo-78.jpg",
       "date": "September 21, 2026",
       "title": "Substation — medium-voltage bus cable installation",
