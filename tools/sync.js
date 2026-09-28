@@ -421,7 +421,9 @@ if (C.earnedProgress && Array.isArray(C.earnedProgress.scopes)) {
       sc.gate = `${fmt(trk.installed)} / ${fmt(trk.total)}`;
       sc.gatePct = trkGatePct;
       sc.earnedPct = pct1(trk.earnedPct != null ? trk.earnedPct : trkGatePct);
-      sc.inProgress = (trk.earnedPct != null && pct1(trk.earnedPct) === trkGatePct)
+      sc.inProgress = trk.installed >= trk.total
+        ? 'All rows complete — no rows in progress'
+        : (trk.earnedPct != null && pct1(trk.earnedPct) === trkGatePct)
         ? 'Partial-row credit suspended — open rows reported by ladder step, not credited'
         : sc.inProgress;
     } else if (/electrical/i.test(sc.scope)) {

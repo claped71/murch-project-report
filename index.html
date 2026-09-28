@@ -390,13 +390,6 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <p>Solid line is installed quantity to date. The dashed line is the straight-line pace required to reach the completion date for each discipline, measured over real working days (Monday to Saturday) and capped at 100%. The completion date is marked on each chart; where it has already passed with scope outstanding it is marked in red and no forward pace is drawn.</p>
     </div>
     <div class="grid g3" id="curveGrid"></div>
-    <div style="height:14px"></div>
-    <div class="chartcard">
-      <h3>Daily installation output</h3>
-      <p class="csub" id="dailySub">Reported daily production. Non-working days and weather stops appear as zero.</p>
-      <div class="legend" id="dailyLegend"></div>
-      <div id="dailyChart"></div>
-    </div>
   </section>
 
   <section id="trackerearned">
@@ -555,7 +548,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=d923bfe9ae"></script>
+<script src="data.js?v=b65a6ae893"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -731,6 +724,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   /* ---------- daily bars ---------- */
   function isNarrow(){ return window.innerWidth < 720; }
   function renderDaily(){
+    if(!document.getElementById('dailyChart')) return;
     var keys=['piles','trackers','modules'];
     document.getElementById('dailyLegend').innerHTML = keys.map(function(k){
       return '<span><i style="background:'+D.seriesMeta[k].color+'"></i>'+esc(D.seriesMeta[k].label)+'</span>';
