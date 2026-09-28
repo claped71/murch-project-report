@@ -1,0 +1,4 @@
+Owner report (Jose, Sep 28): Daily installation output chart removed - mechanical production columns not needed at this phase; tracker earned line reads 'All rows complete' and sync.js keeps it that way
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01LZ3zLUKnx35u1DaGRr88Et
