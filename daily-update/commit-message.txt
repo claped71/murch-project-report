@@ -1,0 +1,4 @@
+Owner report (Jose, Sep 28): Days with recorded production impact - unexplained 'To confirm' days (Aug 29, Sep 12) removed, Sep 19 recorded as rain; sync.js no longer publishes a zero day without its cause
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01LZ3zLUKnx35u1DaGRr88Et
