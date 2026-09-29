@@ -216,7 +216,12 @@ const CIVIL_LABELS = {
   'Sediment basins / environmental controls': 'Sediment basins / environmental controls',
   'Internal roads': 'Internal access roads',
   'PS foundations': 'Inverter station foundations',
-  'Foundation SET': 'Substation (overall)'
+  'Foundation SET': 'Substation (overall)',
+  'Foundation SET (composite)': 'Substation (overall)',
+  'Pad SET': 'Substation — pad',
+  'Main Foundation SET': 'Substation — main equipment foundations',
+  'Small Foundation SET': 'Substation — small equipment foundations',
+  'O&M Building': 'Substation — O&M building'
 };
 // Words that mean "work remains" — a 100%/Complete row carrying one is a contradiction.
 const REMAINS = /\bremain|\bremaining\b|starts after|must finish|outstanding|pending|to be |left\b/i;

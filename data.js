@@ -1327,34 +1327,34 @@ window.MURCH_REPORT = {
       "note": "Complete on 24 July 2026. All 23 station foundations are finished and all 23 stations are set, anchored and welded on them. Welding procedure approved 21 July."
     },
     {
-      "activity": "Pad SET",
+      "activity": "Substation — pad",
       "done": 100,
       "status": "Complete",
-      "note": "100% (Jan 5 – May 20). Substation scope — excluded from the civil roll-up."
+      "note": "Complete (5 January to 20 May 2026)."
     },
     {
-      "activity": "Main Foundation SET",
+      "activity": "Substation — main equipment foundations",
       "done": 100,
       "status": "Complete",
-      "note": "100% (to Jul 10). Substation scope — excluded from the roll-up."
+      "note": "Complete on 10 July 2026."
     },
     {
-      "activity": "Small Foundation SET",
+      "activity": "Substation — small equipment foundations",
       "done": 100,
       "status": "Complete",
-      "note": "100% Aug 6 — the last foundation line to close. Substation scope."
+      "note": "Complete on 6 August 2026, the last substation foundation line to close."
     },
     {
-      "activity": "O&M Building",
+      "activity": "Substation — O&M building",
       "done": 100,
       "status": "Complete",
-      "note": ""
+      "note": "Complete (10 to 11 July 2026)."
     },
     {
-      "activity": "Foundation SET (composite)",
+      "activity": "Substation (overall)",
       "done": 78.6,
       "status": "Active",
-      "note": "78.6% (Sep 26 tracker, six-discipline earned value) — civil 95.6, mechanical 61.2, electrical 79.6, bus 74.0, grounding 92.6, SCADA 44.4. BASIS CHANGE from the three-discipline model. 70.1% (Sep 22 report, superseded model) — structural 80.9%, electrical 49.0%. PRIOR: 67.1% (Sep 21 report) — structural 72.0%, electrical 48.2%. PRIOR: 66.3% (Sep 21 tracker) — electrical 48.0%. PRIOR: 63.3% (Sep 15 report) — electrical 42.9%. PRIOR: 63.1% (Sep 12 report) — civil 97.6%, structural 67.6%, electrical 42.3%. Substation scope — excluded from the civil roll-up."
+      "note": "Substation 78.6% on the 26 September register: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6%, control and communications 44.4%. Substation civil works are complete except three close-out items to be finished by 3 October: reinstatement of a section of the substation perimeter fence, final regrading and the final rock surfacing layer. The utility-interconnection poles were erected over the weekend of 26 and 27 September."
     }
   ],
   "safety": {
@@ -2030,8 +2030,8 @@ window.MURCH_REPORT = {
     {
       "title": "Substation",
       "level": "Watch",
-      "note": "78.6% overall on the 26 September register, measured on a six-discipline earned-value model: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6% and control and communications 44.4%, with 165 of 257 items closed. This basis replaces the three-discipline figure of 70.1% reported through 24 September; the two are not directly comparable. Control and communications is the weakest front.",
-      "detail": "78.6% overall on the 26 September register, measured on a six-discipline earned-value model: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6% and control and communications 44.4%, with 165 of 257 items closed. This basis replaces the three-discipline figure of 70.1% reported through 24 September; the two are not directly comparable. Control and communications is the weakest front."
+      "note": "78.6% overall on the 26 September register, measured on a six-discipline earned-value model: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6% and control and communications 44.4%, with 165 of 257 items closed. This basis replaces the three-discipline figure of 70.1% reported through 24 September; the two are not directly comparable. Substation civil works are complete except three close-out items due by 3 October: reinstatement of a section of the substation perimeter fence, final regrading and the final rock surfacing layer. The utility-interconnection poles were erected over the weekend of 26 and 27 September. Control and communications is the weakest front.",
+      "detail": "78.6% overall on the 26 September register, measured on a six-discipline earned-value model: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6% and control and communications 44.4%, with 165 of 257 items closed. This basis replaces the three-discipline figure of 70.1% reported through 24 September; the two are not directly comparable. Substation civil works are complete except three close-out items due by 3 October: reinstatement of a section of the substation perimeter fence, final regrading and the final rock surfacing layer. The utility-interconnection poles were erected over the weekend of 26 and 27 September. Control and communications is the weakest front."
     }
   ],
   "material": [
@@ -2286,14 +2286,30 @@ window.MURCH_REPORT = {
       "why": "source note names the installing subcontractor"
     },
     "Substation (overall)": {
-      "note": "Overall substation progress 38.9% on the 24 August tracker — civil 89.6%, structural 36.6%, electrical 13.8%, with 61 of 187 scheduled activities complete. Structural advanced 12.5 points in a single cut, the largest single-cut movement recorded by any element of the works, following the introduction of an extended-hours shift on 21 August and Saturday working; the circuit breaker is set on its foundation. Piers are now complete at 17 of 17, the last poured on 5 August, so every substation foundation is finished: control building, containment berm, main power transformer foundation and all piers. Grounding excavation around the perimeter started the same day. The overall percentage still reflects the 31 July cut and understates the civil position; an updated tracker cut is required. The structural percentage is unchanged and is governed by steel fabrication and delivery.",
-      "why": "the internal note carries pier-front detail and subcontractor names; the published wording states the substation position"
+      "why": "Owner wording for the substation rows (Jose, Sep 28)",
+      "note": "Substation 78.6% on the 26 September register: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6%, control and communications 44.4%. Substation civil works are complete except three close-out items to be finished by 3 October: reinstatement of a section of the substation perimeter fence, final regrading and the final rock surfacing layer. The utility-interconnection poles were erected over the weekend of 26 and 27 September."
     },
     "Bulk earthworks — cut and fill": {
       "done": 100,
       "status": "Complete",
       "note": "Complete on 17 July 2026 across the whole project. Confirmed again on the 5 August civil control sheet at 100%, with the full quantity executed.",
       "why": "source note was fully redacted by the subcontractor-name rule"
+    },
+    "Substation — pad": {
+      "why": "Owner wording for the substation rows (Jose, Sep 28)",
+      "note": "Complete (5 January to 20 May 2026)."
+    },
+    "Substation — main equipment foundations": {
+      "why": "Owner wording for the substation rows (Jose, Sep 28)",
+      "note": "Complete on 10 July 2026."
+    },
+    "Substation — small equipment foundations": {
+      "why": "Owner wording for the substation rows (Jose, Sep 28)",
+      "note": "Complete on 6 August 2026, the last substation foundation line to close."
+    },
+    "Substation — O&M building": {
+      "why": "Owner wording for the substation rows (Jose, Sep 28)",
+      "note": "Complete (10 to 11 July 2026)."
     }
   },
   "workforce": {

@@ -1,4 +1,0 @@
-Owner report (Jose, Sep 28): substation civil rows - Owner-facing names, SET civil complete except fence section / regrading / final rock by Oct 3, poles erected, O&M building note restored; sync.js keeps the mapping
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01LZ3zLUKnx35u1DaGRr88Et
