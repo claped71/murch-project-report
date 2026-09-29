@@ -1441,22 +1441,10 @@ window.MURCH_REPORT = {
   },
   "weatherLog": [
     {
-      "date": "Sep 19, 2026",
-      "type": "To confirm",
+      "date": "Sep 19, 2026 (Sat)",
+      "type": "Rain",
       "impact": "Full stop — all fronts",
-      "detail": "Zero production recorded on every front. Confirm the cause and wording before publishing."
-    },
-    {
-      "date": "Sep 12, 2026",
-      "type": "To confirm",
-      "impact": "Full stop — all fronts",
-      "detail": "Zero production recorded on every front. Confirm the cause and wording before publishing."
-    },
-    {
-      "date": "Aug 29, 2026",
-      "type": "To confirm",
-      "impact": "Full stop — all fronts",
-      "detail": "Zero production recorded on every front. Confirm the cause and wording before publishing."
+      "detail": "Rain. No pile, tracker, module or electrical production."
     },
     {
       "date": "Jul 27, 2026 (Mon)",
@@ -2332,7 +2320,7 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "189,500",
+        "value": "192,200",
         "note": "Total manhours worked from the start of construction on April 1 through September 17, at 10 h/day, Monday to Saturday."
       },
       {
@@ -2598,15 +2586,15 @@ window.MURCH_REPORT = {
       },
       {
         "d": "Sep 1",
-        "c": 165644
+        "c": 167931
       },
       {
         "d": "Sep 15",
-        "c": 185397
+        "c": 188084
       },
       {
         "d": "Sep 17",
-        "c": 189507
+        "c": 192194
       }
     ]
   },

@@ -288,9 +288,8 @@ note(review, 'quality: inspection counts (QA inspected / awaiting / refusals) ar
 const zeroDays = zeroProductionDays();
 for (const day of zeroDays) {
   if (!C.weatherLog.some(w => w.date.indexOf(day) === 0 || w.date.indexOf(day + ',') === 0)) {
-    C.weatherLog.unshift({ date: `${day}, ${yearOf()}`, type: 'To confirm', impact: 'Full stop — all fronts',
-      detail: 'Zero production recorded on every front. Confirm the cause and wording before publishing.' });
-    note(review, `weatherLog: new zero-production day ${day} added — set the cause and confirm the weekday`);
+    // Jose, Sep 28: a day is published only with its reason - an unexplained zero day is flagged, never listed.
+    note(review, `weatherLog: zero-production day ${day} NOT published — add it with its cause (type/detail) if it belongs in the log`);
   }
 }
 function zeroProductionDays() {
