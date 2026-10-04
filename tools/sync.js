@@ -467,8 +467,10 @@ if (I.electricalByLine && I.electricalByLine.lineas && I.electricalByLine.alcanc
       boxes: cell(BF && BF[id] != null ? BF[id] : l.boxes, a.boxes),
       mvJb: cell(m.jb, m.jbScope),
       mvTerm: cell(m.inv, m.invScope),
-      lvInv: cell(l.connInv, a.connInv),
-      lvBox: cell(l.connBox, a.connBox)
+      // A circuit whose terminations the Construction Manager has stated as complete but not yet counted
+      // (dashboard lineas.<id>.connPending) is shown as a statement, never as the counted figure (Jose, Oct 4).
+      lvInv: Object.assign(cell(l.connInv, a.connInv), l.connPending ? { note: 'Complete except one inverter station — count to follow' } : {}),
+      lvBox: Object.assign(cell(l.connBox, a.connBox), l.connPending ? { note: 'Complete except one inverter station — count to follow' } : {})
     };
   });
   const u = L.unstated || {}, um = M.unstated || {};

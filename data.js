@@ -1,6 +1,6 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated October 4, 2026 by tools/sync.js from the construction dashboard; curated prose updated the same day. Do not hand-edit derived blocks. */
+   Generated October 4, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
@@ -2692,11 +2692,13 @@ window.MURCH_REPORT = {
         },
         "lvInv": {
           "done": 8,
-          "scope": 220
+          "scope": 220,
+          "note": "Complete except one inverter station — count to follow"
         },
         "lvBox": {
           "done": 9,
-          "scope": 440
+          "scope": 440,
+          "note": "Complete except one inverter station — count to follow"
         }
       },
       {
