@@ -1,19 +1,19 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated October 5, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated October 6, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Electrical installation and mechanical close-out",
-    "asOf": "October 5, 2026",
+    "asOf": "October 6, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 94,
+    "overall": 94.3,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "This report is issued on Monday 5 October with production executed through Saturday 3 October, covering five reporting days, and incorporates the Construction Manager’s confirmation of 3 October on the termination status of the first two circuits. Low-voltage cable advanced 35,127 feet over the five days, including the highest single day recorded on the project (10,245 feet on 2 October), and the cumulative now stands at 200,881 feet of 269,748 (74.5%): feeder cable at 167,707 of 229,435 feet and trunk cable at 33,174 of 40,313. The eastern circuit added 23,424 feet, closing power stations 20 and 21 at all of their boxes, and the last circuit received its first cable, 11,703 feet, with the feeder cable at its first inverter station finished on 3 October. Module series connection ran on each reporting day and stands at 737 tracker rows, with 746 string lines jumpered; harness assemblies reached 3,296 of 5,007 (65.8%). Module installation added 178 panels in the final area, taking the total to 163,142 of 171,470 (95.1%). On the medium-voltage collection system, terminations stand at 144 of 264: the first circuit is complete on both the inverter and the junction-box side, and on the second circuit only the four junction boxes in the easement toward the substation remain. Low-voltage terminations are complete on the first circuit and complete on the second circuit except at one inverter station. Fifteen of the 23 junction boxes are installed, 22 of 23 SCADA boxes are mounted after six on 3 October, trenches closed and compacted stand at 101 of 181, cable pull-in at 35 of 46 and 13 of 46 units are fully closed. Field commissioning has begun: 55 strings on the first circuit passed insulation-resistance testing on 3 October. The substation register of 3 October reads 89.6% on the six-discipline earned-value basis, and the substation testing programme runs from 1 to 15 October ahead of energization. Overall weighted physical completion stands at 94.0% against the gate measure and 94.1% on earned progress.",
+    "statement": "This report is issued on Tuesday 6 October with production executed through Monday 5 October. Low-voltage cable advanced 9,129 feet on the eastern circuit at power station 19, taking the cumulative to 210,010 feet of 269,748 (77.9%): feeder cable at 175,698 of 229,435 feet and trunk cable at 34,312 of 40,313. The eastern circuit stands at 60,006 of 76,120 feet; power station 22 is complete on the inverter side, ten further box terminations were made at power station 21, and insulation testing passed at power stations 21, 22 and 23. Medium-voltage terminations stand at 147 of 264, with the first junction-box terminations recorded on the last circuit. All 23 medium-voltage junction-box bases are complete and 17 of the 23 junction boxes are installed; 22 of 23 SCADA boxes are mounted. Field commissioning continued on the first circuit, where 95 strings have now passed insulation-resistance testing. Series connection stands at 737 tracker rows with 939 string lines jumpered, and harness assemblies at 3,296 of 5,007 (65.8%). Module installation stands at 163,142 of 171,470 (95.1%); piles and trackers are complete. The substation reads 93.3% on the six-discipline earned-value basis in the 5 October production report, and its test programme runs to 15 October ahead of ready-to-energize on 26 October. On 6 October the whole site gathered for an all-hands toolbox talk; the site safety record shows zero lost-time and zero recordable injuries in 2026 across 231,471 hours. Overall weighted physical completion stands at 94.3% on both the gate measure and earned progress.",
     "note": null
   },
   "gates": [
@@ -60,17 +60,17 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 67.5,
-      "earnedPct": 68,
+      "gatePct": 69.6,
+      "earnedPct": 69.6,
       "unit": "%",
-      "earnedLabel": "68% earned incl. work in progress",
+      "earnedLabel": "69.6% earned incl. work in progress",
       "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
       "forecast": "Oct 16, 2026",
       "status": "Below rate"
     }
   ],
   "earnedProgress": {
-    "asOf": "October 5, 2026",
+    "asOf": "October 6, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
@@ -84,11 +84,11 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "67.5% of scope",
-        "gatePct": 67.5,
-        "inProgress": "MV 93.2% · 23 of 23 inverter stations set · 418 of 419 boxes · 200,881 lf of cable",
-        "earnedPct": 68,
-        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded and medium-voltage cable is fully installed and tested; inverter-side terminations are complete on the first three circuits, and the first four of 46 units have their full termination set closed — the measure that counts toward mechanical completion."
+        "gate": "69.6% of scope",
+        "gatePct": 69.6,
+        "inProgress": "MV 93.4% · 23 of 23 inverter stations set · 418 of 419 boxes · 210,010 lf of cable",
+        "earnedPct": 69.6,
+        "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded and medium-voltage cable is fully installed and tested; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 junction-box bases are complete, 17 boxes are installed and 13 of 46 units are fully closed."
       }
     ],
     "ladder": "Tracker steps: saddles 15 · tube 30 · purlins 25 · damper 20 · torque 10.",
@@ -100,7 +100,7 @@ window.MURCH_REPORT = {
       "contract": "Sep 25, 2026",
       "forecast": "Oct 24, 2026 (last circuit) · SET MC Oct 5",
       "status": "At risk",
-      "note": "Contract date not achievable. Circuit mechanical completion dates on the current schedule are 2, 10, 17 and 24 October; substation mechanical completion is carried on 5 October. On the first circuit, LV terminations are complete and series connection is the remaining scope.",
+      "note": "Contract date not achievable. Circuit mechanical completion dates on the current schedule are 2, 10, 17 and 24 October; substation mechanical completion is carried on 5 October. On the first circuit, low-voltage and medium-voltage terminations are complete and the mechanical-completion tests are in progress (95 strings tested).",
       "circuits": "11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24"
     },
     {
@@ -108,7 +108,7 @@ window.MURCH_REPORT = {
       "contract": "Oct 16, 2026",
       "forecast": "Nov 5, 2026 (last circuit) · Ready to Energize Oct 26",
       "status": "At risk",
-      "note": "Ready-to-energize is carried on 26 October on the 1 October schedule revision, which places the Owner review of the substation mechanical completion before energization and the utility review after energization and before export. Gated by the substation at 89.6% and by medium-voltage terminations at 144 of 264 (the first circuit complete, the second open only on its four easement junction boxes); 13 of 46 units are fully closed.",
+      "note": "Ready-to-energize is carried on 26 October on the 1 October schedule revision, which places the Owner review of the substation mechanical completion before energization and the utility review after energization and before export. Gated by the substation at 93.3% and by medium-voltage terminations at 147 of 264; all 23 junction-box bases are complete, 17 of 23 boxes are installed and 13 of 46 units are fully closed.",
       "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5"
     },
     {
@@ -124,7 +124,7 @@ window.MURCH_REPORT = {
       "contract": "Nov 30, 2026",
       "forecast": "Nov 30, 2026 (last circuit)",
       "status": "Watch",
-      "note": "Held at the contract date on the 1 October schedule revision with a seven-day working calendar after energization and no margin; every day lost upstream consumes it. Cable is running at record rates; connections, series connection and the medium-voltage junction-box side are the binding scopes.",
+      "note": "Held at the contract date on the 1 October schedule revision with a seven-day working calendar after energization and no margin; every day lost upstream consumes it. Low-voltage cable, connections, series connection and the medium-voltage junction-box side are the binding scopes.",
       "circuits": "11A Nov 14 · 11B Nov 20 · 12A Nov 25 · 12B Nov 30"
     }
   ],
@@ -1372,38 +1372,38 @@ window.MURCH_REPORT = {
     },
     {
       "activity": "Substation (overall)",
-      "done": 89.6,
+      "done": 93.3,
       "status": "Active",
-      "note": "Substation 78.6% on the 26 September register: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6%, control and communications 44.4%. Substation civil works are complete except three close-out items to be finished by 3 October: reinstatement of a section of the substation perimeter fence, final regrading and the final rock surfacing layer. The utility-interconnection poles were erected over the weekend of 26 and 27 September."
+      "note": "Substation 93.3% on the 5 October production report: civil 96%, mechanical 91%, electrical 93%, bus and connectors 92%, grounding 99%, control and communications 50%. Test programme to 15 October; ready-to-energize carried on 26 October."
     }
   ],
   "safety": {
-    "headline": "The project stands at 337 days without a lost-time accident across 203,862.6 hours worked on the site register at 17 September, with zero recordable cases to date; the register is carried forward pending the next headcount return. The event of 8 September at the substation (20260908_ACC_001), in which a worker lost consciousness during hand excavation and was transferred to hospital for evaluation, remains under investigation; its classification will be set once the medical report is received. Heat-stress controls on the substation front remain in place. Weekly safety walks with every subcontractor, bi-weekly subcontractor safety meetings, monthly general safety meetings and the register of unsafe acts and conditions continue.",
+    "headline": "The site safety record for 1 January to 5 October shows zero lost-time, zero recordable and zero days-away cases in every month of 2026, across 231,471 hours worked; September recorded 46,292 hours with an average of 162 employees, four first-aid cases and one near miss. The 8 September event at the substation is recorded as a first-aid case. On 6 October the whole site — every subcontractor crew, EPC management and site personnel — gathered for an all-hands toolbox talk before the shift. Weekly safety walks with every subcontractor, bi-weekly subcontractor safety meetings, monthly general safety meetings and the register of unsafe acts and conditions continue.",
     "tiles": [
       {
         "label": "Recordable accidents",
         "value": "0",
-        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 203,863 hours."
+        "note": "No fatality, lost-time injury, restricted-work or OSHA-recordable case on the project to date. TRIR, DART and LTIFR all stand at 0.00 across 231,471 hours (1 January – 5 October)."
       },
       {
-        "label": "Days without accident",
-        "value": "337",
-        "note": "Per the site register at 17 September, maintained daily from subcontractor returns. The classification of the 8 September event remains pending the medical report."
+        "label": "Lost-time injuries — 2026",
+        "value": "0",
+        "note": "Zero lost-time, recordable and days-away cases in every month from January to October on the site safety record."
       },
       {
         "label": "Lost days",
         "value": "0",
-        "note": "Frequency, incidence and severity rates remain zero. No weather-related lost hours were registered on 16 September."
+        "note": "Frequency, incidence and severity rates remain zero for 2026."
       },
       {
-        "label": "First-aid cases — since August",
-        "value": "5",
-        "note": "4 August: ankle sprain on concealed uneven ground. 7 August: torque tube slipped onto a worker's helmet and shoulder; evaluated in hospital, cleared to return; investigation closed, tube-handling corrective actions retained in the daily briefings. 2 and 4 September: two minor first-aid cases, no treatment beyond first aid. 8 September: substation worker lost consciousness during hand excavation; treated on site by emergency services and transferred to hospital for evaluation; investigation open, classification pending the medical outcome (event 20260908_ACC_001)."
+        "label": "First-aid cases — September",
+        "value": "4",
+        "note": "Four first-aid cases and one near miss in September, none beyond first aid. The 8 September substation event is recorded as first aid."
       },
       {
         "label": "Man-hours to date",
-        "value": "203,863",
-        "note": "Register maintained to 17 September. July alone: 52,464 hours across 224 personnel — the July monthly report is issued and July is the audited basis."
+        "value": "231,471",
+        "note": "Site safety record, 1 January – 5 October. September: 46,292 hours with an average of 162 employees."
       },
       {
         "label": "Safety events — July",
@@ -1413,7 +1413,7 @@ window.MURCH_REPORT = {
       {
         "label": "Toolbox talks — July",
         "value": "32",
-        "note": "32 sessions in July, 64 year to date; the tube-handling and ground-condition subjects are standing items."
+        "note": "32 sessions in July, 64 year to date at the July close; all-hands toolbox talk with every crew on site on 6 October."
       },
       {
         "label": "Personnel trained",
@@ -1482,14 +1482,13 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Oct 5 - Oct 10",
+      "period": "Oct 6 - Oct 10",
       "items": [
         "Last-circuit LV works to its 10 October date: about 54,700 feet of cable remain over five working days.",
-        "Eastern-circuit LV close-out past its 1 October date: about 25,240 feet of cable remain, with power stations 18, 19 and 22 still open.",
-        "Series connection and jumpering continued on the first and second circuits; take-off by circuit to be issued.",
-        "Second-circuit mechanical completion on 10 October; substation mechanical completion on 5 October and the substation test programme to 15 October.",
-        "Field commissioning of the first circuit continued — string insulation, polarity and continuity — after the first 55 strings passed on 3 October.",
-        "Medium-voltage junction-box terminations on the four second-circuit easement boxes, then the eastern circuits; trench closure on the two eastern circuits."
+        "Eastern-circuit LV close-out past its 1 October date: about 16,110 feet of cable remain at power stations 18, 19 and 22.",
+        "Second-circuit mechanical completion on 10 October; the substation test programme to 15 October.",
+        "Field commissioning of the first circuit — string insulation, polarity and continuity — moving to the second circuit; insulation testing on the eastern circuit.",
+        "Medium-voltage junction-box installation on the remaining six boxes and terminations on the second-circuit easement boxes, then the eastern circuits; trench closure on the two eastern circuits."
       ]
     },
     {
@@ -1498,12 +1497,12 @@ window.MURCH_REPORT = {
         "Eastern-circuit mechanical completion on 17 October.",
         "Substation tests complete by 15 October; Owner review of the substation mechanical completion ahead of ready-to-energize on 26 October.",
         "Field commissioning moves to the second circuit (I-V curves and grounding on the first circuit).",
-        "Remaining module installation in the final area and tracker punch-list close-out."
+        "Remaining module installation in the final area and tracker close-out."
       ]
     }
   ],
   "ownerActions": {
-    "asOf": "Oct 5, 2026",
+    "asOf": "Oct 6, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -2009,8 +2008,8 @@ window.MURCH_REPORT = {
     {
       "title": "Module series connection",
       "level": "Priority",
-      "note": "Series connection stands at 737 tracker rows after four consecutive production days (135, 174 and 256 rows on 29 September, 30 September and 2 October), with 746 string lines jumpered. The activity is reported as a count: the engineering take-off by circuit is still to be issued, after which it will be measured as a percentage. On the first circuit the activity is substantially complete and the circuit is ready for its mechanical-completion tests.",
-      "detail": "Series connection stands at 737 tracker rows after four consecutive production days (135, 174 and 256 rows on 29 September, 30 September and 2 October), with 746 string lines jumpered. The activity is reported as a count: the engineering take-off by circuit is still to be issued, after which it will be measured as a percentage. On the first circuit the activity is substantially complete and the circuit is ready for its mechanical-completion tests."
+      "note": "Series connection stands at 737 tracker rows, with 939 string lines jumpered after a further 193 jumpers on 5 October in the second-circuit and adjoining blocks. The activity is reported as a count: the engineering take-off by circuit is still to be issued, after which it will be measured as a percentage. On the first circuit the activity is substantially complete and the circuit is in its mechanical-completion tests.",
+      "detail": "Series connection stands at 737 tracker rows, with 939 string lines jumpered after a further 193 jumpers on 5 October in the second-circuit and adjoining blocks. The activity is reported as a count: the engineering take-off by circuit is still to be issued, after which it will be measured as a percentage. On the first circuit the activity is substantially complete and the circuit is in its mechanical-completion tests."
     },
     {
       "title": "Module installation rate",
@@ -2027,14 +2026,14 @@ window.MURCH_REPORT = {
     {
       "title": "Medium-voltage terminations",
       "level": "Priority",
-      "note": "Medium-voltage cable is fully installed and tested. Terminations stand at 144 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box), the second circuit is complete on the inverter side (30 of 30) with its junction-box side at 15 of 39 — only the four boxes in the easement toward the substation remain — and the inverter side is open only on the last circuit (12 of 30). Junction boxes installed stand at 15 of 23 and SCADA boxes at 22 of 23; trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed (ten on the first circuit, three on the second).",
-      "detail": "Medium-voltage cable is fully installed and tested. Terminations stand at 144 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box), the second circuit is complete on the inverter side (30 of 30) with its junction-box side at 15 of 39 — only the four boxes in the easement toward the substation remain — and the inverter side is open only on the last circuit (12 of 30). Junction boxes installed stand at 15 of 23 and SCADA boxes at 22 of 23; trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed (ten on the first circuit, three on the second)."
+      "note": "Medium-voltage cable is fully installed and tested. Terminations stand at 147 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box), the second circuit is complete on the inverter side (30 of 30) with its junction-box side at 15 of 39, the eastern circuit is complete on the inverter side (30 of 30), and the last circuit stands at 12 of 30 on the inverter side with its first 3 junction-box terminations recorded. All 23 junction-box bases are complete and 17 of 23 junction boxes are installed; SCADA boxes stand at 22 of 23, trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed.",
+      "detail": "Medium-voltage cable is fully installed and tested. Terminations stand at 147 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box), the second circuit is complete on the inverter side (30 of 30) with its junction-box side at 15 of 39, the eastern circuit is complete on the inverter side (30 of 30), and the last circuit stands at 12 of 30 on the inverter side with its first 3 junction-box terminations recorded. All 23 junction-box bases are complete and 17 of 23 junction boxes are installed; SCADA boxes stand at 22 of 23, trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed."
     },
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cumulative cable stands at 200,881 feet (74.5%) after 35,127 feet over five days: feeder cable at 167,707 of 229,435 feet and trunk cable at 33,174 of 40,313. The eastern circuit stands at 50,877 of 76,120 feet after its 1 October date, with power stations 20 and 21 closed; the last circuit stands at 11,703 feet with its first inverter station’s feeder cable finished and requires about 10,940 feet a day over the five working days to its 10 October date. Harness stands at 3,296 of 5,007 assemblies (65.8%). Low-voltage terminations are complete on the first circuit and complete on the second circuit except at one inverter station; the counted project figures (420 of 1,676 box connections, 196 of 838 inverter connections) will be restated when the second-circuit count is issued.",
-      "detail": "Cumulative cable stands at 200,881 feet (74.5%) after 35,127 feet over five days: feeder cable at 167,707 of 229,435 feet and trunk cable at 33,174 of 40,313. The eastern circuit stands at 50,877 of 76,120 feet after its 1 October date, with power stations 20 and 21 closed; the last circuit stands at 11,703 feet with its first inverter station’s feeder cable finished and requires about 10,940 feet a day over the five working days to its 10 October date. Harness stands at 3,296 of 5,007 assemblies (65.8%). Low-voltage terminations are complete on the first circuit and complete on the second circuit except at one inverter station; the counted project figures (420 of 1,676 box connections, 196 of 838 inverter connections) will be restated when the second-circuit count is issued."
+      "note": "Cumulative cable stands at 210,010 feet (77.9%) after 9,129 feet on 5 October at power station 19: feeder cable at 175,698 of 229,435 feet and trunk cable at 34,312 of 40,313. The eastern circuit stands at 60,006 of 76,120 feet, with power stations 20 and 21 closed and power station 22 complete on the inverter side; the last circuit stands at 11,703 feet and requires about 10,940 feet a day over the five working days to its 10 October date. Harness stands at 3,296 of 5,007 assemblies (65.8%). Counted connections stand at 430 of 1,676 at the boxes and 234 of 838 at the inverters; low-voltage terminations are complete on the first circuit and complete on the second circuit except at one inverter station, and these figures will be restated when the second-circuit count is issued.",
+      "detail": "Cumulative cable stands at 210,010 feet (77.9%) after 9,129 feet on 5 October at power station 19: feeder cable at 175,698 of 229,435 feet and trunk cable at 34,312 of 40,313. The eastern circuit stands at 60,006 of 76,120 feet, with power stations 20 and 21 closed and power station 22 complete on the inverter side; the last circuit stands at 11,703 feet and requires about 10,940 feet a day over the five working days to its 10 October date. Harness stands at 3,296 of 5,007 assemblies (65.8%). Counted connections stand at 430 of 1,676 at the boxes and 234 of 838 at the inverters; low-voltage terminations are complete on the first circuit and complete on the second circuit except at one inverter station, and these figures will be restated when the second-circuit count is issued."
     },
     {
       "title": "Pile completion",
@@ -2045,8 +2044,8 @@ window.MURCH_REPORT = {
     {
       "title": "Substation and commissioning",
       "level": "Watch",
-      "note": "89.6% overall on the 3 October register (six-discipline earned value): civil 95.8%, mechanical 89.1%, electrical 88.5%, bus and connectors 84.2%, grounding 99.2% and control and communications 50.0%. The substation testing programme (transformer, breakers, instrument transformers, buses, grounding, protection and SCADA) runs from 1 to 15 October ahead of energization; final yard surfacing and the grounding tests are the items to close first. Field commissioning of the PV circuits has begun: 55 strings on the first circuit passed insulation-resistance testing on 3 October, and the programme — string polarity, continuity and insulation, I-V curves and grounding checks — proceeds circuit by circuit from the first to the last.",
-      "detail": "89.6% overall on the 3 October register (six-discipline earned value): civil 95.8%, mechanical 89.1%, electrical 88.5%, bus and connectors 84.2%, grounding 99.2% and control and communications 50.0%. The substation testing programme (transformer, breakers, instrument transformers, buses, grounding, protection and SCADA) runs from 1 to 15 October ahead of energization; final yard surfacing and the grounding tests are the items to close first. Field commissioning of the PV circuits has begun: 55 strings on the first circuit passed insulation-resistance testing on 3 October, and the programme — string polarity, continuity and insulation, I-V curves and grounding checks — proceeds circuit by circuit from the first to the last."
+      "note": "93.3% overall on the 5 October production report (six-discipline earned value): civil 96%, mechanical 91%, electrical 93%, bus and connectors 92%, grounding 99% and control and communications 50%. The substation testing programme (transformer, breakers, instrument transformers, buses, grounding, protection and SCADA) runs to 15 October ahead of energization. Field commissioning of the PV circuits continues on the first circuit, where 95 strings have passed insulation-resistance testing; insulation testing by the installing crews also passed at power stations 21, 22 and 23 on the eastern circuit. The programme — string polarity, continuity and insulation, I-V curves and grounding checks — proceeds circuit by circuit from the first to the last.",
+      "detail": "93.3% overall on the 5 October production report (six-discipline earned value): civil 96%, mechanical 91%, electrical 93%, bus and connectors 92%, grounding 99% and control and communications 50%. The substation testing programme (transformer, breakers, instrument transformers, buses, grounding, protection and SCADA) runs to 15 October ahead of energization. Field commissioning of the PV circuits continues on the first circuit, where 95 strings have passed insulation-resistance testing; insulation testing by the installing crews also passed at power stations 21, 22 and 23 on the eastern circuit. The programme — string polarity, continuity and insulation, I-V curves and grounding checks — proceeds circuit by circuit from the first to the last."
     }
   ],
   "material": [
@@ -2088,6 +2087,12 @@ window.MURCH_REPORT = {
     }
   ],
   "photos": [
+    {
+      "src": "assets/photo-80.jpg",
+      "date": "October 6, 2026",
+      "title": "All-hands toolbox talk at the site office",
+      "note": "The whole site in one circle before the shift on 6 October — every subcontractor crew, EPC management and site personnel — for the safety briefing. The site safety record to 5 October shows zero lost-time and zero recordable injuries in 2026 across 231,471 hours."
+    },
     {
       "src": "assets/photo-79.webp",
       "date": "September 28, 2026",
@@ -2302,7 +2307,7 @@ window.MURCH_REPORT = {
     },
     "Substation (overall)": {
       "why": "Owner wording for the substation rows (Jose, Sep 28)",
-      "note": "Substation 78.6% on the 26 September register: civil 95.6%, mechanical 61.2%, electrical 79.6%, bus and connectors 74.0%, grounding 92.6%, control and communications 44.4%. Substation civil works are complete except three close-out items to be finished by 3 October: reinstatement of a section of the substation perimeter fence, final regrading and the final rock surfacing layer. The utility-interconnection poles were erected over the weekend of 26 and 27 September."
+      "note": "Substation 93.3% on the 5 October production report: civil 96%, mechanical 91%, electrical 93%, bus and connectors 92%, grounding 99%, control and communications 50%. Test programme to 15 October; ready-to-energize carried on 26 October."
     },
     "Bulk earthworks — cut and fill": {
       "done": 100,
@@ -2626,8 +2631,8 @@ window.MURCH_REPORT = {
     ]
   },
   "electricalByCircuit": {
-    "asOf": "October 5, 2026",
-    "basis": "Executed through October 3, 2026. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
+    "asOf": "October 6, 2026",
+    "basis": "Executed through October 5, 2026. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
     "rows": [
       {
         "circuit": "Circuit 11A",
@@ -2683,7 +2688,7 @@ window.MURCH_REPORT = {
           "scope": 110
         },
         "mvJb": {
-          "done": 3,
+          "done": 4,
           "scope": 6
         },
         "mvTerm": {
@@ -2708,11 +2713,11 @@ window.MURCH_REPORT = {
           "scope": 1258
         },
         "homerun": {
-          "done": 43383,
+          "done": 51374,
           "scope": 65846
         },
         "trunk": {
-          "done": 7494,
+          "done": 8632,
           "scope": 10274
         },
         "boxes": {
@@ -2728,11 +2733,11 @@ window.MURCH_REPORT = {
           "scope": 30
         },
         "lvInv": {
-          "done": 2,
+          "done": 40,
           "scope": 220
         },
         "lvBox": {
-          "done": 39,
+          "done": 49,
           "scope": 440
         }
       },
@@ -2755,7 +2760,7 @@ window.MURCH_REPORT = {
           "scope": 107
         },
         "mvJb": {
-          "done": 3,
+          "done": 4,
           "scope": 5
         },
         "mvTerm": {
@@ -2786,11 +2791,11 @@ window.MURCH_REPORT = {
         "scope": 5007
       },
       "homerun": {
-        "done": 167707,
+        "done": 175698,
         "scope": 229435
       },
       "trunk": {
-        "done": 33174,
+        "done": 34312,
         "scope": 40313
       },
       "boxes": {
@@ -2798,7 +2803,7 @@ window.MURCH_REPORT = {
         "scope": 419
       },
       "mvJb": {
-        "done": 15,
+        "done": 17,
         "scope": 23
       },
       "mvTerm": {
@@ -2806,15 +2811,15 @@ window.MURCH_REPORT = {
         "scope": 114
       },
       "mvTermAll": {
-        "done": 144,
+        "done": 147,
         "scope": 264
       },
       "lvInv": {
-        "done": 196,
+        "done": 234,
         "scope": 838
       },
       "lvBox": {
-        "done": 420,
+        "done": 430,
         "scope": 1676
       }
     }
