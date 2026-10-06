@@ -101,7 +101,8 @@ window.MURCH_REPORT = {
       "forecast": "Oct 24, 2026 (last circuit) · SET MC Oct 5",
       "status": "At risk",
       "note": "Contract date not achievable. Circuit mechanical completion dates on the current schedule are 2, 10, 17 and 24 October; substation mechanical completion is carried on 5 October. On the first circuit, low-voltage and medium-voltage terminations are complete and the mechanical-completion tests are in progress (95 strings tested).",
-      "circuits": "11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24"
+      "circuits": "11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24",
+      "pin": true
     },
     {
       "name": "Provisional Interconnection",
@@ -109,7 +110,8 @@ window.MURCH_REPORT = {
       "forecast": "Nov 5, 2026 (last circuit) · Ready to Energize Oct 26",
       "status": "At risk",
       "note": "Ready-to-energize is carried on 26 October on the 1 October schedule revision, which places the Owner review of the substation mechanical completion before energization and the utility review after energization and before export. Gated by the substation at 93.3% and by medium-voltage terminations at 147 of 264; all 23 junction-box bases are complete, 17 of 23 boxes are installed and 13 of 46 units are fully closed.",
-      "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5"
+      "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5",
+      "pin": true
     },
     {
       "name": "Commercial Operation Date",
@@ -117,7 +119,8 @@ window.MURCH_REPORT = {
       "forecast": "Nov 27, 2026 (last circuit)",
       "status": "At risk",
       "note": "Follows placed-in-service by circuit after the substantial-completion tests (capacity and availability tests per circuit). Inherits the exposure above.",
-      "circuits": "11A Nov 12 · 11B Nov 18 · 12A Nov 23 · 12B Nov 27"
+      "circuits": "11A Nov 12 · 11B Nov 18 · 12A Nov 23 · 12B Nov 27",
+      "pin": true
     },
     {
       "name": "Substantial Completion",
@@ -125,7 +128,8 @@ window.MURCH_REPORT = {
       "forecast": "Nov 30, 2026 (last circuit)",
       "status": "Watch",
       "note": "Held at the contract date on the 1 October schedule revision with a seven-day working calendar after energization and no margin; every day lost upstream consumes it. Low-voltage cable, connections, series connection and the medium-voltage junction-box side are the binding scopes.",
-      "circuits": "11A Nov 14 · 11B Nov 20 · 12A Nov 25 · 12B Nov 30"
+      "circuits": "11A Nov 14 · 11B Nov 20 · 12A Nov 25 · 12B Nov 30",
+      "pin": true
     }
   ],
   "series": {
