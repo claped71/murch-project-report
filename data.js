@@ -1,6 +1,6 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated October 5, 2026 by tools/sync.js from the construction dashboard; curated prose updated the same day. Do not hand-edit derived blocks. */
+   Generated October 5, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
