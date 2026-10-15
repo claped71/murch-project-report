@@ -86,7 +86,7 @@ window.MURCH_REPORT = {
     "unit": "%",
     "gate": "71.9% of scope",
     "gatePct": 71.9,
-    "inProgress": "MV 95.7% · 23 of 23 inverter stations set · 418 of 419 boxes · 226,124 lf of cable",
+    "inProgress": "MV 98.1% · 23 of 23 inverter stations set · 418 of 419 boxes · 226,124 lf of cable",
     "earnedPct": 77.6,
     "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
    }
@@ -109,7 +109,7 @@ window.MURCH_REPORT = {
    "contract": "Oct 16, 2026",
    "forecast": "Nov 5, 2026 (last circuit) · Ready to Energize Oct 26",
    "status": "At risk",
-   "note": "Ready-to-energize is carried on 26 October on the 1 October schedule revision, which places the Owner review of the substation mechanical completion before energization and the utility review after energization and before export. Gated by the substation at 94.8% and by medium-voltage terminations at 162 of 264; DC boring and SCADA box installation are complete, 17 of 23 junction boxes are installed and 13 of 46 units are fully closed.",
+   "note": "Ready-to-energize is carried on 26 October on the 1 October schedule revision, which places the Owner review of the substation mechanical completion before energization and the utility review after energization and before export. The substation construction scope is now complete and medium-voltage terminations stand at 231 of 264; DC boring and SCADA box installation are complete, 17 of 23 junction boxes are installed and 13 of 46 units are fully closed.",
    "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5",
    "pin": true
   },
@@ -1376,9 +1376,9 @@ window.MURCH_REPORT = {
   },
   {
    "activity": "Substation (overall)",
-   "done": 96,
-   "status": "Active",
-   "note": "Substation 94.8% on the 6 October production report: civil 96.1%, mechanical 92.6%, electrical 95.1%, bus and connectors 95.4%, grounding 99.96%, control and communications 50%. Test programme to 15 October; ready-to-energize carried on 26 October."
+   "done": 100,
+   "status": "Complete",
+   "note": "The substation civil scope is complete. The pad, the main and small equipment foundations and the O&M building all closed earlier in the year, and the final rock layers in the yard closed on 13 October, which is what allowed the grounding test to proceed."
   }
  ],
  "safety": {
@@ -2030,13 +2030,13 @@ window.MURCH_REPORT = {
    "title": "Medium-voltage terminations",
    "level": "Priority",
    "note": "Terminations reached 231 of 264, or 87.5 per cent. The first three circuits are complete at 57 of 57, 69 of 69 and 75 of 75, the second and third both closing on 15 October when the project manager and the construction manager jointly confirmed their construction scope complete. All 33 terminations outstanding are on the fourth circuit: 12 of 30 on the inverter side and 18 of 33 on the junction-box side.",
-   "detail": "Medium-voltage cable is fully installed and tested, and the DC boring programme is complete at 14 of 14 bores (3,728 feet). Terminations stand at 162 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box); the second circuit is complete on the inverter side with its junction-box side at 24 of 39; the eastern circuit is complete on the inverter side with its first 6 of 45 junction-box terminations; the last circuit stands at 12 of 30 on the inverter side and 3 of 33 on the junction-box side. SCADA boxes stand at 23 of 23, junction-box bases at 23 of 23 and junction boxes installed at 17 of 23; trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed."
+   "detail": "Medium-voltage cable is fully installed and tested, and the DC boring programme is complete at 14 of 14 bores (3,728 feet). Terminations stand at 231 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box); the second circuit is complete on the inverter side with its junction-box side at 24 of 39; the eastern circuit is complete on the inverter side with its first 6 of 45 junction-box terminations; the last circuit stands at 12 of 30 on the inverter side and 3 of 33 on the junction-box side. SCADA boxes stand at 23 of 23, junction-box bases at 23 of 23 and junction boxes installed at 17 of 23; trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed."
   },
   {
    "title": "LV and DC installation",
    "level": "Priority",
-   "note": "Cable holds at 218,593 feet of 269,748 (81.0 per cent): no verifiable footage was reported on 9, 10 or 12 October. Both remaining circuits are past their dates — the third with 7,531 feet open since 1 October and the fourth with 54,692 feet open since 10 October — and a revised forecast for both, with the crew and daily rate behind it, is the outstanding item. Work filed on both circuits is preparation and termination rather than pulling: conduit, trench conditioning, transitions and water extraction, with eleven circuits landed in the cabinets at inverter 12 for which no footage was stated. Box terminations stand at 483 of 1,676 and inverter-side terminations at 234 of 838. Harness assemblies hold at 3,296 of 5,007.",
-   "detail": "Cumulative cable stands at 214,261 feet (79.4%) after 4,251 feet on 6 October: feeder cable at 179,392 of 229,435 feet and trunk cable at 34,869 of 40,313. The eastern circuit stands at 64,257 of 76,120 feet, with power stations 19, 20 and 21 complete on feeder cable and power station 21 complete at the boxes; the last circuit stands at 11,703 feet and requires about 13,670 feet a day over the four working days to its 10 October date. Harness stands at 3,296 of 5,007 assemblies (65.8%). Counted connections stand at 433 of 1,676 at the boxes and 234 of 838 at the inverters; low-voltage terminations are complete on the first circuit and complete on the second circuit except at one inverter station, where box terminations are now progressing."
+   "note": "Cable stands at 226,124 feet of 269,748, or 83.8 per cent, and harness assemblies at 4,339 of 5,007, or 86.7 per cent, after the second and third circuits closed their construction scope on 15 October. Low-voltage terminations stand at 1,252 of 1,676 at the boxes and 626 of 838 at the inverters. Every unit still outstanding on all four of those lines belongs to the fourth circuit.",
+   "detail": "Three of the four circuits are complete on this front. The fourth carries about 45,404 feet of inverter-feeder cable, 9,288 feet of trunk cable, 719 harness assemblies and 636 low-voltage terminations, against a date that passed on 10 October. A revised completion forecast for that circuit is owed."
   },
   {
    "title": "Pile completion",
@@ -2048,7 +2048,7 @@ window.MURCH_REPORT = {
    "title": "Substation and commissioning",
    "level": "Watch",
    "note": "The construction scope at this station is complete across all six disciplines: civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The only construction item outstanding is the grating in the transformer chamber, carried as a punch item. The connection to the utility and the final rock layers in the yard closed on 13 October, and completing the rock allowed the grounding test to proceed that afternoon. What remains is testing and documentation: the register stands at zero of 74 tests passed, with 90 per cent of the reports committed for 15 October and completion of the station for Monday 19 October.",
-   "detail": "94.8% overall on the 6 October production report (six-discipline earned value): civil 96.1%, mechanical 92.6%, electrical 95.1%, bus and connectors 95.4%, grounding 99.96% and control and communications 50%. The substation testing programme (transformer, breakers, instrument transformers, buses, grounding, protection and SCADA) runs to 15 October ahead of energization. Field commissioning of the PV circuits continues on the first circuit, where 95 strings have passed insulation-resistance testing; insulation testing by the installing crews has passed at power stations 21, 22 and 23 on the eastern circuit. The programme — string polarity, continuity and insulation, I-V curves and grounding checks — proceeds circuit by circuit from the first to the last."
+   "detail": "All six disciplines at 100 per cent on 15 October: civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The connection to the utility and the final rock layers in the yard closed on 13 October, and completing the rock allowed the grounding test to proceed that afternoon. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The grating in the transformer chamber is the one construction item outstanding, carried as punch. The commissioning register stands at zero of 74 tests passed; 90 per cent of the reports were committed for 15 October and completion of the station for Monday 19 October."
   }
  ],
  "material": [
@@ -2316,7 +2316,9 @@ window.MURCH_REPORT = {
   },
   "Substation (overall)": {
    "why": "Owner wording for the substation rows (Jose, Sep 28)",
-   "note": "Substation 94.8% on the 6 October production report: civil 96.1%, mechanical 92.6%, electrical 95.1%, bus and connectors 95.4%, grounding 99.96%, control and communications 50%. Test programme to 15 October; ready-to-energize carried on 26 October."
+   "note": "The substation civil scope is complete. The pad, the main and small equipment foundations and the O&M building all closed earlier in the year, and the final rock layers in the yard closed on 13 October, which is what allowed the grounding test to proceed.",
+   "done": 100,
+   "status": "Complete"
   },
   "Bulk earthworks — cut and fill": {
    "done": 100,
