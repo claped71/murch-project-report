@@ -1353,7 +1353,7 @@ window.MURCH_REPORT = {
   {
    "activity": "Substation — pad",
    "done": 100,
-   "status": "Active",
+   "status": "Complete",
    "note": "Complete (5 January to 20 May 2026)."
   },
   {
