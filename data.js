@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
   "client": "Heelstone Renewable Energy"
  },
  "headline": {
-  "overall": 96.1,
+  "overall": 96.5,
   "weights": {
    "piles": 0.28,
    "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
    "civil": 0.1
   },
   "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-  "statement": "This report is issued on Thursday 15 October with production executed through that date. Overall physical progress is 96.1 per cent.\n\nThe third collection circuit is complete in its construction scope — cable, harness, inverters, boxes and junction boxes — confirmed jointly by the project manager and the construction manager. Three of the four circuits are now complete on medium voltage. Terminations stand at 231 of 264, or 87.5 per cent, with 57 of 57, 69 of 69 and 75 of 75 closed on the first three circuits. Every termination that remains, 33 in all, is on the fourth circuit.\n\nLow-voltage cable stands at 226,124 feet, 83.8 per cent, and the harness at 4,140 assemblies, 82.7 per cent. The fourth circuit is now the only one still open on either front, with about 54,692 feet of cable outstanding against a date that passed on 10 October. A revised completion forecast for that circuit is owed.\n\nThe construction scope at the substation is complete apart from control and communications, which stands at 61.11 per cent. The 14 October report carries the mechanical discipline and the bus and connectors discipline at 100 per cent, civil at 97.87 and electrical at 98.36. On 15 October, at the substation, the testing contractor's project manager committed to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests, and to completing the substation on Monday 19 October. The commissioning register stands at zero of 74 tests passed and will be updated when the reports are received.\n\nModules stand at 170,482, or 99.4 per cent. The site safety board records 239,337 safe man-work hours without recordable accidents.",
+  "statement": "This report is issued on Thursday 15 October with production executed through that date. Overall physical progress is 96.5 per cent.\n\nThree of the four collection circuits are complete in their construction scope — cable, harness, inverters, disconnect boxes and junction boxes — confirmed jointly by the project manager and the construction manager. Medium-voltage terminations stand at 231 of 264, or 87.5 per cent, with the first three circuits closed at 57 of 57, 69 of 69 and 75 of 75. Low-voltage cable stands at 226,124 feet, 83.8 per cent, and the harness at 4,339 assemblies, 86.7 per cent.\n\nThe fourth circuit is the only one still open on either front. It carries about 45,404 feet of inverter-feeder cable, 9,288 feet of trunk cable, 719 harness assemblies, 636 low-voltage terminations and the 33 medium-voltage terminations outstanding, against a low-voltage date that passed on 10 October. A revised completion forecast for that circuit is owed.\n\nThe substation is complete in its construction scope across all six disciplines — civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The only construction item outstanding there is the grating in the transformer chamber, carried as a punch item. What remains at the station is testing and documentation: the commissioning register stands at zero of 74 tests passed, and on 15 October the testing contractor's project manager committed to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests, and to completing the station on Monday 19 October.\n\nModules stand at 170,482, or 99.4 per cent. The site safety board records 239,337 safe man-work hours without recordable accidents.",
   "note": null
  },
  "gates": [
@@ -61,9 +61,9 @@ window.MURCH_REPORT = {
    "name": "Electrical — total",
    "pctOnly": true,
    "gatePct": 71.9,
-   "earnedPct": 74.6,
+   "earnedPct": 77.6,
    "unit": "%",
-   "earnedLabel": "74.6% earned incl. work in progress",
+   "earnedLabel": "77.6% earned incl. work in progress",
    "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
    "forecast": "Oct 16, 2026",
    "status": "Below rate"
@@ -87,7 +87,7 @@ window.MURCH_REPORT = {
     "gate": "71.9% of scope",
     "gatePct": 71.9,
     "inProgress": "MV 95.7% · 23 of 23 inverter stations set · 418 of 419 boxes · 226,124 lf of cable",
-    "earnedPct": 74.6,
+    "earnedPct": 77.6,
     "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
    }
   ],
@@ -1353,7 +1353,7 @@ window.MURCH_REPORT = {
   {
    "activity": "Substation — pad",
    "done": 100,
-   "status": "Complete",
+   "status": "Active",
    "note": "Complete (5 January to 20 May 2026)."
   },
   {
@@ -1489,9 +1489,9 @@ window.MURCH_REPORT = {
    "period": "Oct 13 - Oct 17",
    "items": [
     "Receipt of the substation test reports, 90 per cent of which were committed for 15 October, and completion of the station, committed for Monday 19 October.",
-    "Low-voltage cable on the fourth circuit, the only circuit still open, against a date that passed on 10 October.",
-    "The 33 medium-voltage terminations outstanding, all on the fourth circuit.",
-    "Control and communications at the substation, at 61.11 per cent."
+    "The fourth circuit, now the only one open: inverter-feeder and trunk cable, harness, and the low- and medium-voltage terminations, against a date that passed on 10 October.",
+    "A revised completion forecast for the fourth circuit.",
+    "The grating in the transformer chamber, the one construction item outstanding at the substation."
    ]
   },
   {
@@ -2029,7 +2029,7 @@ window.MURCH_REPORT = {
   {
    "title": "Medium-voltage terminations",
    "level": "Priority",
-   "note": "Terminations reached 231 of 264, or 87.5 per cent. The first three circuits are complete at 57 of 57, 69 of 69 and 75 of 75; the third closed on 15 October when the project manager and the construction manager jointly confirmed its construction scope complete, junction boxes included. All 33 terminations outstanding are on the fourth circuit: 12 of 30 on the inverter side and 18 of 33 on the junction-box side.",
+   "note": "Terminations reached 231 of 264, or 87.5 per cent. The first three circuits are complete at 57 of 57, 69 of 69 and 75 of 75, the second and third both closing on 15 October when the project manager and the construction manager jointly confirmed their construction scope complete. All 33 terminations outstanding are on the fourth circuit: 12 of 30 on the inverter side and 18 of 33 on the junction-box side.",
    "detail": "Medium-voltage cable is fully installed and tested, and the DC boring programme is complete at 14 of 14 bores (3,728 feet). Terminations stand at 162 of 264: the first circuit is complete on both sides (24 inverter-side, 33 junction-box); the second circuit is complete on the inverter side with its junction-box side at 24 of 39; the eastern circuit is complete on the inverter side with its first 6 of 45 junction-box terminations; the last circuit stands at 12 of 30 on the inverter side and 3 of 33 on the junction-box side. SCADA boxes stand at 23 of 23, junction-box bases at 23 of 23 and junction boxes installed at 17 of 23; trenches closed and compacted at 101 of 181, cable pull-in at 35 of 46, and 13 of 46 units are fully closed."
   },
   {
@@ -2047,7 +2047,7 @@ window.MURCH_REPORT = {
   {
    "title": "Substation and commissioning",
    "level": "Watch",
-   "note": "The construction scope at this station is complete apart from control and communications. The 14 October report carries the mechanical discipline and the bus and connectors discipline at 100 per cent, civil at 97.87, electrical at 98.36 and grounding at 99.56; control and communications stands at 61.11 per cent. The connection to the utility, with the three phases and the optical ground wire installed from the substation H-frame to the utility pole, and the final rock layers in the yard closed on 13 October as the last two construction activities, and completing the rock allowed the grounding test to proceed that same afternoon. The commissioning register remains at zero of 74 tests passed against the 15 October deadline; physical progress and the test register are two separate measures. On 15 October the testing contractor's project manager committed, on site, to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests and to completing the station on Monday 19 October. The register will be updated when the reports are received.",
+   "note": "The construction scope at this station is complete across all six disciplines: civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The only construction item outstanding is the grating in the transformer chamber, carried as a punch item. The connection to the utility and the final rock layers in the yard closed on 13 October, and completing the rock allowed the grounding test to proceed that afternoon. What remains is testing and documentation: the register stands at zero of 74 tests passed, with 90 per cent of the reports committed for 15 October and completion of the station for Monday 19 October.",
    "detail": "94.8% overall on the 6 October production report (six-discipline earned value): civil 96.1%, mechanical 92.6%, electrical 95.1%, bus and connectors 95.4%, grounding 99.96% and control and communications 50%. The substation testing programme (transformer, breakers, instrument transformers, buses, grounding, protection and SCADA) runs to 15 October ahead of energization. Field commissioning of the PV circuits continues on the first circuit, where 95 strings have passed insulation-resistance testing; insulation testing by the installing crews has passed at power stations 21, 22 and 23 on the eastern circuit. The programme — string polarity, continuity and insulation, I-V curves and grounding checks — proceeds circuit by circuit from the first to the last."
   }
  ],
@@ -2640,8 +2640,8 @@ window.MURCH_REPORT = {
   ]
  },
  "electricalByCircuit": {
-  "asOf": "October 15, 2026",
-  "basis": "Executed through 15 October. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. The third circuit closed its construction scope on 15 October. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
+  "asOf": "October 14, 2026",
+  "basis": "Executed through . Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
   "rows": [
    {
     "circuit": "Circuit 11A",
@@ -2681,7 +2681,7 @@ window.MURCH_REPORT = {
    {
     "circuit": "Circuit 11B",
     "harness": {
-     "done": 1053,
+     "done": 1292,
      "scope": 1292
     },
     "homerun": {
@@ -2697,7 +2697,7 @@ window.MURCH_REPORT = {
      "scope": 110
     },
     "mvJb": {
-     "done": 4,
+     "done": 6,
      "scope": 6
     },
     "mvTerm": {
@@ -2705,12 +2705,12 @@ window.MURCH_REPORT = {
      "scope": 30
     },
     "lvInv": {
-     "done": 8,
+     "done": 220,
      "scope": 220,
      "note": "Complete except one inverter station — count to follow"
     },
     "lvBox": {
-     "done": 12,
+     "done": 440,
      "scope": 440,
      "note": "Complete except one inverter station — count to follow"
     }
@@ -2796,7 +2796,7 @@ window.MURCH_REPORT = {
   },
   "project": {
    "harness": {
-    "done": 4140,
+    "done": 4339,
     "scope": 5007
    },
    "homerun": {
@@ -2812,7 +2812,7 @@ window.MURCH_REPORT = {
     "scope": 419
    },
    "mvJb": {
-    "done": 20,
+    "done": 22,
     "scope": 23
    },
    "mvTerm": {
@@ -2824,11 +2824,11 @@ window.MURCH_REPORT = {
     "scope": 264
    },
    "lvInv": {
-    "done": 414,
+    "done": 626,
     "scope": 838
    },
    "lvBox": {
-    "done": 824,
+    "done": 1252,
     "scope": 1676
    }
   }
