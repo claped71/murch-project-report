@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
   "client": "Heelstone Renewable Energy"
  },
  "headline": {
-  "overall": 96.5,
+  "overall": 97.6,
   "weights": {
    "piles": 0.28,
    "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
    "civil": 0.1
   },
   "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-  "statement": "This report is issued on Thursday 15 October with production executed through that date. Overall physical progress is 96.5 per cent.\n\nThree of the four collection circuits are complete in their construction scope — cable, harness, inverters, disconnect boxes and junction boxes — confirmed jointly by the project manager and the construction manager. Medium-voltage terminations stand at 231 of 264, or 87.5 per cent, with the first three circuits closed at 57 of 57, 69 of 69 and 75 of 75. Low-voltage cable stands at 226,124 feet, 83.8 per cent, and the harness at 4,339 assemblies, 86.7 per cent.\n\nThe fourth circuit is the only one still open on either front. It carries about 45,404 feet of inverter-feeder cable, 9,288 feet of trunk cable, 719 harness assemblies, 636 low-voltage terminations and the 33 medium-voltage terminations outstanding, against a low-voltage date that passed on 10 October. A revised completion forecast for that circuit is owed.\n\nThe substation is complete in its construction scope across all six disciplines — civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The only construction item outstanding there is the grating in the transformer chamber, carried as a punch item. What remains at the station is testing and documentation: the commissioning register stands at zero of 74 tests passed, and on 15 October the testing contractor's project manager committed to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests, and to completing the station on Monday 19 October.\n\nModules stand at 170,482, or 99.4 per cent. The site safety board records 239,337 safe man-work hours without recordable accidents.",
+  "statement": "This report is issued on Thursday 15 October with production executed through that date. Overall physical progress is 97.6 per cent. The civil scope is complete: bulk earthworks, access roads, foundations, the perimeter fence and the sediment basins have all closed construction, with pond cleaning, maintenance and the Area F seeding continuing as non-construction activities.\n\nThree of the four collection circuits are complete in their construction scope — cable, harness, inverters, disconnect boxes and junction boxes — confirmed jointly by the project manager and the construction manager. Medium-voltage terminations stand at 231 of 264, or 87.5 per cent, with the first three circuits closed at 57 of 57, 69 of 69 and 75 of 75. Low-voltage cable stands at 226,124 feet, 83.8 per cent, and the harness at 4,339 assemblies, 86.7 per cent.\n\nThe fourth circuit is the only one still open on either front. It carries about 45,404 feet of inverter-feeder cable, 9,288 feet of trunk cable, 719 harness assemblies, 636 low-voltage terminations and the 33 medium-voltage terminations outstanding, against a low-voltage date that passed on 10 October. A revised completion forecast for that circuit is owed.\n\nThe substation is complete in its construction scope across all six disciplines — civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The only construction item outstanding there is the grating in the transformer chamber, carried as a punch item. What remains at the station is testing and documentation: the commissioning register stands at zero of 74 tests passed, and on 15 October the testing contractor's project manager committed to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests, and to completing the station on Monday 19 October.\n\nModules stand at 170,482, or 99.4 per cent. The site safety board records 239,337 safe man-work hours without recordable accidents.",
   "note": null
  },
  "gates": [
@@ -61,9 +61,9 @@ window.MURCH_REPORT = {
    "name": "Electrical — total",
    "pctOnly": true,
    "gatePct": 71.9,
-   "earnedPct": 77.6,
+   "earnedPct": 84.2,
    "unit": "%",
-   "earnedLabel": "77.6% earned incl. work in progress",
+   "earnedLabel": "84.2% earned incl. work in progress",
    "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
    "forecast": "Oct 16, 2026",
    "status": "Below rate"
@@ -87,7 +87,7 @@ window.MURCH_REPORT = {
     "gate": "71.9% of scope",
     "gatePct": 71.9,
     "inProgress": "MV 98.1% · 23 of 23 inverter stations set · 418 of 419 boxes · 226,124 lf of cable",
-    "earnedPct": 77.6,
+    "earnedPct": 84.2,
     "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
    }
   ],
@@ -1328,15 +1328,15 @@ window.MURCH_REPORT = {
   },
   {
    "activity": "Perimeter fence",
-   "done": 95,
-   "status": "On track",
-   "note": "Areas A to F complete. The Area G remainder and the gates are outstanding, and completion is held by the outstanding drain-commissioning signature rather than by production."
+   "done": 100,
+   "status": "Complete",
+   "note": "Construction complete across all areas."
   },
   {
    "activity": "Sediment basins / environmental controls",
-   "done": 95,
-   "status": "On Track",
-   "note": "Construction FINISHED. Remaining 5% is seeding in Area F only."
+   "done": 100,
+   "status": "Complete",
+   "note": "Construction complete. The sediment basins and environmental controls were built and closed out across all areas."
   },
   {
    "activity": "Internal access roads",
@@ -2297,9 +2297,9 @@ window.MURCH_REPORT = {
  ],
  "civilOverrides": {
   "Perimeter fence": {
-   "done": 95,
-   "status": "On track",
-   "note": "Areas A to F complete. The Area G remainder and the gates are outstanding, and completion is held by the outstanding drain-commissioning signature rather than by production.",
+   "done": 100,
+   "status": "Complete",
+   "note": "Construction complete across all areas.",
    "why": "source note is fully redacted (carries the fencing subcontractor name)"
   },
   "Internal access roads": {
