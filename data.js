@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
   "client": "Heelstone Renewable Energy"
  },
  "headline": {
-  "overall": 95.8,
+  "overall": 96.1,
   "weights": {
    "piles": 0.28,
    "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
    "civil": 0.1
   },
   "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-  "statement": "This report is issued on Thursday 15 October with production executed through that date. Overall physical progress is 95.8 per cent.\n\nThe third collection circuit is complete in its construction scope — cable, harness, inverters, boxes and junction boxes — confirmed jointly by the project manager and the construction manager. Three of the four circuits are now complete on medium voltage. Terminations stand at 231 of 264, or 87.5 per cent, with 57 of 57, 69 of 69 and 75 of 75 closed on the first three circuits. Every termination that remains, 33 in all, is on the fourth circuit.\n\nLow-voltage cable stands at 226,124 feet, 83.8 per cent, and the harness at 4,140 assemblies, 82.7 per cent. The fourth circuit is now the only one still open on either front, with about 54,692 feet of cable outstanding against a date that passed on 10 October. A revised completion forecast for that circuit is owed.\n\nThe construction scope at the substation is complete apart from control and communications, which stands at 61.11 per cent. The 14 October report carries the mechanical discipline and the bus and connectors discipline at 100 per cent, civil at 97.87 and electrical at 98.36. On 15 October, at the substation, the testing contractor's project manager committed to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests, and to completing the substation on Monday 19 October. The commissioning register stands at zero of 74 tests passed and will be updated when the reports are received.\n\nModules stand at 170,482, or 99.4 per cent. The site safety board records 239,337 safe man-work hours without recordable accidents.",
+  "statement": "This report is issued on Thursday 15 October with production executed through that date. Overall physical progress is 96.1 per cent.\n\nThe third collection circuit is complete in its construction scope — cable, harness, inverters, boxes and junction boxes — confirmed jointly by the project manager and the construction manager. Three of the four circuits are now complete on medium voltage. Terminations stand at 231 of 264, or 87.5 per cent, with 57 of 57, 69 of 69 and 75 of 75 closed on the first three circuits. Every termination that remains, 33 in all, is on the fourth circuit.\n\nLow-voltage cable stands at 226,124 feet, 83.8 per cent, and the harness at 4,140 assemblies, 82.7 per cent. The fourth circuit is now the only one still open on either front, with about 54,692 feet of cable outstanding against a date that passed on 10 October. A revised completion forecast for that circuit is owed.\n\nThe construction scope at the substation is complete apart from control and communications, which stands at 61.11 per cent. The 14 October report carries the mechanical discipline and the bus and connectors discipline at 100 per cent, civil at 97.87 and electrical at 98.36. On 15 October, at the substation, the testing contractor's project manager committed to submitting 90 per cent of the test reports by the end of that day, to finalising the remaining tests, and to completing the substation on Monday 19 October. The commissioning register stands at zero of 74 tests passed and will be updated when the reports are received.\n\nModules stand at 170,482, or 99.4 per cent. The site safety board records 239,337 safe man-work hours without recordable accidents.",
   "note": null
  },
  "gates": [
@@ -61,9 +61,9 @@ window.MURCH_REPORT = {
    "name": "Electrical — total",
    "pctOnly": true,
    "gatePct": 71.9,
-   "earnedPct": 72.8,
+   "earnedPct": 74.6,
    "unit": "%",
-   "earnedLabel": "72.8% earned incl. work in progress",
+   "earnedLabel": "74.6% earned incl. work in progress",
    "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
    "forecast": "Oct 16, 2026",
    "status": "Below rate"
@@ -87,7 +87,7 @@ window.MURCH_REPORT = {
     "gate": "71.9% of scope",
     "gatePct": 71.9,
     "inProgress": "MV 95.7% · 23 of 23 inverter stations set · 418 of 419 boxes · 226,124 lf of cable",
-    "earnedPct": 72.8,
+    "earnedPct": 74.6,
     "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
    }
   ],
@@ -2640,8 +2640,8 @@ window.MURCH_REPORT = {
   ]
  },
  "electricalByCircuit": {
-  "asOf": "October 14, 2026",
-  "basis": "Executed through . Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
+  "asOf": "October 15, 2026",
+  "basis": "Executed through 15 October. Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. The third circuit closed its construction scope on 15 October. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
   "rows": [
    {
     "circuit": "Circuit 11A",
@@ -2722,11 +2722,11 @@ window.MURCH_REPORT = {
      "scope": 1258
     },
     "homerun": {
-     "done": 66427,
+     "done": 65846,
      "scope": 65846
     },
     "trunk": {
-     "done": 9693,
+     "done": 10274,
      "scope": 10274
     },
     "boxes": {
@@ -2734,7 +2734,7 @@ window.MURCH_REPORT = {
      "scope": 110
     },
     "mvJb": {
-     "done": 4,
+     "done": 7,
      "scope": 7
     },
     "mvTerm": {
@@ -2742,11 +2742,11 @@ window.MURCH_REPORT = {
      "scope": 30
     },
     "lvInv": {
-     "done": 40,
+     "done": 220,
      "scope": 220
     },
     "lvBox": {
-     "done": 99,
+     "done": 440,
      "scope": 440
     }
    },
@@ -2800,11 +2800,11 @@ window.MURCH_REPORT = {
     "scope": 5007
    },
    "homerun": {
-    "done": 190751,
+    "done": 190170,
     "scope": 229435
    },
    "trunk": {
-    "done": 35373,
+    "done": 35954,
     "scope": 40313
    },
    "boxes": {
@@ -2812,7 +2812,7 @@ window.MURCH_REPORT = {
     "scope": 419
    },
    "mvJb": {
-    "done": 17,
+    "done": 20,
     "scope": 23
    },
    "mvTerm": {
@@ -2824,11 +2824,11 @@ window.MURCH_REPORT = {
     "scope": 264
    },
    "lvInv": {
-    "done": 234,
+    "done": 414,
     "scope": 838
    },
    "lvBox": {
-    "done": 483,
+    "done": 824,
     "scope": 1676
    }
   }
