@@ -98,7 +98,7 @@ window.MURCH_REPORT = {
     {
       "name": "Mechanical Completion",
       "contract": "Sep 25, 2026",
-      "forecast": "Nov 4, 2026 (last circuit) · substation Oct 16",
+      "forecast": "Nov 4, 2026 (last circuit) · SET MC Oct 16",
       "status": "At risk",
       "note": "Contract date not achievable. On the weekly schedule update of 5 October, mechanical completion is achieved on site on 10 and 13 October for the first two circuits and on 22 and 28 October for the last two; with the Owner review period the milestone dates are 16 and 20 October and 29 October and 4 November. Substation mechanical completion is carried on 16 October. The substation construction scope is complete and the first three circuits are closed on every construction measure."
     },
@@ -121,7 +121,7 @@ window.MURCH_REPORT = {
     {
       "name": "Substantial Completion",
       "contract": "Nov 30, 2026",
-      "forecast": "Dec 9, 2026 (last circuit)",
+      "forecast": "Dec 9, 2026 (last circuit) — 9 d past contract",
       "status": "At risk",
       "note": "On the weekly schedule update of 5 October, substantial completion falls nine calendar days past the contract date; the 1 October revision that held the contract date is superseded. Low-voltage cable, connections, series connection and the medium-voltage junction-box side are the binding scopes. Remaining scope after commercial operation is punch list and close-out.",
       "circuits": "11A Dec 7 · 11B Dec 8 · 12A Dec 8 · 12B Dec 9"
