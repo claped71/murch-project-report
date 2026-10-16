@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Issued 15 October; production executed through that date. Overall physical progress 97.6 per cent.\n\nThe civil scope and the substation are complete in their construction scope. Three of the four collection circuits are complete in theirs, confirmed jointly by the project manager and the construction manager.\n\nMedium-voltage terminations 231 of 264. Low-voltage cable 226,124 feet of 269,748. Modules 170,482 of 171,470.\n\nThe fourth circuit is the only one still open, against a low-voltage date that passed on 10 October. A revised completion forecast for it is owed.\n\nAt the substation only testing and documentation remain. The commissioning register stands at zero of 74 tests passed; completion of the station is committed for Monday 19 October.",
+    "statement": "Issued 16 October; production executed through 14 October. Overall physical progress 97.6 per cent.\n\nThe civil scope and the substation are complete in their construction scope. Three of the four collection circuits are complete in theirs.\n\nMedium-voltage terminations 231 of 264. Low-voltage cable 226,124 feet of 269,748. Modules 170,482 of 171,470.\n\nThe fourth circuit is the only one still open, against a low-voltage date that passed on 10 October. A revised completion forecast for it is owed.\n\nAt the substation only testing and documentation remain. The testing contractor reports 97.1 per cent of the test programme carried out, with the remaining reports committed for Monday 19 October; the register records zero of 74 reports received to date.\n\nMilestone dates on this page are the weekly schedule update of 5 October.",
     "note": null
   },
   "gates": [
@@ -98,38 +98,33 @@ window.MURCH_REPORT = {
     {
       "name": "Mechanical Completion",
       "contract": "Sep 25, 2026",
-      "forecast": "Oct 24, 2026 (last circuit) · SET MC Oct 5",
+      "forecast": "Nov 4, 2026 (last circuit) · substation Oct 16",
       "status": "At risk",
-      "note": "Contract date not achievable. Circuit mechanical completion dates on the current schedule are 2, 10, 17 and 24 October; substation mechanical completion is carried on 5 October. On the first circuit, low-voltage and medium-voltage terminations are complete and the mechanical-completion tests are in progress (95 strings tested).",
-      "circuits": "11A Oct 2 · 11B Oct 10 · 12A Oct 17 · 12B Oct 24",
-      "pin": true
+      "note": "Contract date not achievable. On the weekly schedule update of 5 October, mechanical completion is achieved on site on 10 and 13 October for the first two circuits and on 22 and 28 October for the last two; with the Owner review period the milestone dates are 16 and 20 October and 29 October and 4 November. Substation mechanical completion is carried on 16 October. The substation construction scope is complete and the first three circuits are closed on every construction measure."
     },
     {
       "name": "Provisional Interconnection",
       "contract": "Oct 16, 2026",
-      "forecast": "Nov 5, 2026 (last circuit) · Ready to Energize Oct 26",
+      "forecast": "Nov 18, 2026 (all circuits) · Ready to Energize Oct 30",
       "status": "At risk",
-      "note": "Ready-to-energize is carried on 26 October on the 1 October schedule revision, which places the Owner review of the substation mechanical completion before energization and the utility review after energization and before export. The substation construction scope is now complete and medium-voltage terminations stand at 231 of 264; DC boring and SCADA box installation are complete, 17 of 23 junction boxes are installed and 13 of 46 units are fully closed.",
-      "circuits": "11A Oct 22 · 11B Oct 27 · 12A Oct 31 · 12B Nov 5",
-      "pin": true
+      "note": "On the weekly schedule update of 5 October, ready-to-energize is carried on 30 October, substation energization from 31 October to 3 November, utility review and clearance from 4 to 17 November, and initial synchronisation on 18 November, which places all four circuits in service on the same date. The utility review sits after energization and before export. The substation construction scope is complete; medium-voltage terminations stand at 231 of 264, and direct-current boring and SCADA box installation are complete at 23 of 23.",
+      "circuits": "All four circuits Nov 18"
     },
     {
       "name": "Commercial Operation Date",
       "contract": "Nov 9, 2026",
-      "forecast": "Nov 27, 2026 (last circuit)",
+      "forecast": "Dec 5, 2026 (last circuit)",
       "status": "At risk",
-      "note": "Follows placed-in-service by circuit after the substantial-completion tests (capacity and availability tests per circuit). Inherits the exposure above.",
-      "circuits": "11A Nov 12 · 11B Nov 18 · 12A Nov 23 · 12B Nov 27",
-      "pin": true
+      "note": "Follows placed-in-service by circuit after the capacity and availability tests. On the weekly schedule update of 5 October this is 26 days past the contract date, and it inherits the exposure above.",
+      "circuits": "11A Dec 2 · 11B Dec 3 · 12A Dec 4 · 12B Dec 5"
     },
     {
       "name": "Substantial Completion",
       "contract": "Nov 30, 2026",
-      "forecast": "Nov 30, 2026 (last circuit)",
-      "status": "Watch",
-      "note": "Held at the contract date on the 1 October schedule revision with a seven-day working calendar after energization and no margin; every day lost upstream consumes it. Low-voltage cable, connections, series connection and the medium-voltage junction-box side are the binding scopes.",
-      "circuits": "11A Nov 14 · 11B Nov 20 · 12A Nov 25 · 12B Nov 30",
-      "pin": true
+      "forecast": "Dec 9, 2026 (last circuit)",
+      "status": "At risk",
+      "note": "On the weekly schedule update of 5 October, substantial completion falls nine calendar days past the contract date; the 1 October revision that held the contract date is superseded. Low-voltage cable, connections, series connection and the medium-voltage junction-box side are the binding scopes. Remaining scope after commercial operation is punch list and close-out.",
+      "circuits": "11A Dec 7 · 11B Dec 8 · 12A Dec 8 · 12B Dec 9"
     }
   ],
   "series": {
