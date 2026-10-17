@@ -7,7 +7,7 @@ window.MURCH_REPORT = {
   "location": "Lawrence, Van Buren County, Michigan",
   "capacityNote": "Utility-scale photovoltaic generating facility",
   "phase": "Construction — Electrical installation and mechanical close-out",
-  "asOf": "October 17, 2026",
+  "asOf": "October 16, 2026",
   "reportNo": "Construction Progress Report",
   "preparedBy": "GreenSol",
   "client": "Heelstone Renewable Energy"
@@ -2362,7 +2362,7 @@ window.MURCH_REPORT = {
   }
  },
  "workforce": {
-  "basis": "Shift basis 10 hours per person per day, Monday to Saturday. Headcount is taken from the site board and the EHS headcount record, current to August 21, 2026. Days on which the site was fully stopped are excluded from the manhours.",
+  "basis": "Manhours are the EHS-reported total to 15 October. Headcount is taken from the site board, last received 17 September.",
   "tiles": [
    {
     "label": "Personnel on site",
@@ -2381,8 +2381,8 @@ window.MURCH_REPORT = {
    },
    {
     "label": "Manhours to date",
-    "value": "192,200",
-    "note": "Total manhours worked from the start of construction on April 1 through September 17, at 10 h/day, Monday to Saturday."
+    "value": "239,337",
+    "note": "Total manhours worked without a recordable incident, as reported by EHS on Oct 15, 2026."
    },
    {
     "label": "Recordable incident rate",
@@ -2604,60 +2604,7 @@ window.MURCH_REPORT = {
     "v": 202
    }
   ],
-  "manhours": [
-   {
-    "d": "Apr 1",
-    "c": 150
-   },
-   {
-    "d": "Apr 15",
-    "c": 2593
-   },
-   {
-    "d": "May 1",
-    "c": 6849
-   },
-   {
-    "d": "May 15",
-    "c": 12792
-   },
-   {
-    "d": "Jun 1",
-    "c": 23045
-   },
-   {
-    "d": "Jun 15",
-    "c": 35737
-   },
-   {
-    "d": "Jul 1",
-    "c": 55632
-   },
-   {
-    "d": "Jul 15",
-    "c": 77278
-   },
-   {
-    "d": "Aug 1",
-    "c": 108039
-   },
-   {
-    "d": "Aug 15",
-    "c": 136012
-   },
-   {
-    "d": "Sep 1",
-    "c": 167931
-   },
-   {
-    "d": "Sep 15",
-    "c": 188084
-   },
-   {
-    "d": "Sep 17",
-    "c": 192194
-   }
-  ]
+  "manhours": null
  },
  "electricalByCircuit": {
   "asOf": "October 16, 2026",

@@ -379,15 +379,28 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
   setTile(WF.tiles, 'Average headcount', String(mean));
   const startLong = pts[0].t.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
   const endLong = endDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
-  setTile(WF.tiles, 'Manhours to date', fmt(round100(cum)),
-    `Total manhours worked from the start of construction on ${startLong} through ${endLong}, at ${HRS} h/day, Monday to Saturday.`);
+  // REPORTED FIGURE WINS (Jose, Oct 17): when the dashboard carries an EHS-reported
+  // man-hours total, publish THAT, not the figure modelled off the headcount record.
+  // The model is anchored on the last headcount board and goes stale the moment the
+  // boards stop arriving, which is exactly when it is most misleading.
+  const RH = I.control && I.control.safetyHours;
+  const reported = RH && Number(RH.value) > 0 ? Math.round(Number(RH.value)) : null;
+  const mhForRate = reported || cum;
+  if (reported) {
+    setTile(WF.tiles, 'Manhours to date', fmt(reported),
+      `Total manhours worked without a recordable incident, as reported by EHS on ${RH.asOf}.`);
+    WF.manhours = null;            // the modelled curve disagrees with the reported total - do not show it
+  } else {
+    setTile(WF.tiles, 'Manhours to date', fmt(round100(cum)),
+      `Total manhours worked from the start of construction on ${startLong} through ${endLong}, at ${HRS} h/day, Monday to Saturday.`);
+  }
   setTile(WF.tiles, 'Personnel on site', String(last.v), `Latest site-board headcount (${last.d}). Field labor plus management, quality and HSE.`);
 
   // Recordable incident rate: recordables x 200,000 / manhours.
   const recordables = Number((WF.recordables !== undefined) ? WF.recordables : 0);
-  setTile(WF.tiles, 'Recordable incident rate', ((recordables * 200000) / cum).toFixed(2));
-  changed.push(`workforce manhours -> ${fmt(round100(cum))} to date`);
-  note(review, `workforce: manhours recomputed on the ${HRS} h/day Mon-Sat basis — confirm the shift basis still matches site practice, and re-read the tile notes if the headcount record start date moved`);
+  setTile(WF.tiles, 'Recordable incident rate', ((recordables * 200000) / mhForRate).toFixed(2));
+  changed.push(reported ? `workforce manhours -> ${fmt(reported)} (EHS reported, ${RH.asOf})` : `workforce manhours -> ${fmt(round100(cum))} to date (modelled)`);
+  if (!reported) note(review, `workforce: manhours recomputed on the ${HRS} h/day Mon-Sat basis - no EHS-reported total available; confirm the shift basis still matches site practice`);
 
   // CLIENT-FACING POLICY (Jose Romero, Aug 20 2026): the report shows TOTAL personnel,
   // daily manhours and cumulative manhours ONLY. The workforce split by specialty /
