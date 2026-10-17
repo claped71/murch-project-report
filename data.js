@@ -7,7 +7,7 @@ window.MURCH_REPORT = {
   "location": "Lawrence, Van Buren County, Michigan",
   "capacityNote": "Utility-scale photovoltaic generating facility",
   "phase": "Construction — Electrical installation and mechanical close-out",
-  "asOf": "17 October, 2026",
+  "asOf": "October 17, 2026",
   "reportNo": "Construction Progress Report",
   "preparedBy": "GreenSol",
   "client": "Heelstone Renewable Energy"
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
    "civil": 0.1
   },
   "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-  "statement": "Issued 17 October; production executed through 16 October. Overall physical progress 97.7 per cent.\n\nThe civil scope and the substation are complete in their construction scope. Three of the four collection circuits are complete in theirs.\n\nLow-voltage cable 233,151 feet of 269,748, after 7,027 feet placed on the fourth circuit on 16 October. Medium-voltage terminations 231 of 264. Modules 170,482 of 171,470.\n\nThe fourth circuit is the only one still open, against a low-voltage date that passed on 10 October. A revised completion forecast for it is owed.\n\nAt the substation only testing and documentation remain. The test contractor reports 97.1 per cent of the programme carried out, with the remaining reports committed for Monday 19 October; the register records zero of 74 reports received to date.\n\nField testing of the PV plant is reported on a supervised register. Polarity and continuity records stand at 315 of 419 combiner boxes, grounding resistance 9 of 23 inverters, grounding continuity 5 of 23, and the current-voltage curve campaign has no recorded start. These figures are documentary coverage and not electrical acceptance; a missing record does not establish that a test was not performed.\n\nMilestone dates on this page are the weekly schedule update of 5 October.",
+  "statement": "Issued 17 October; production executed through 16 October. Overall physical progress 98.3 per cent.\n\nThe civil scope and the substation are complete in their construction scope. Three of the four collection circuits are complete in theirs, with no station outstanding on any of them.\n\nLow-voltage cable 233,151 feet of 269,748. Low-voltage terminations 1,252 of 1,676 on the box side and 626 of 838 on the inverter side; every one still open is on the fourth circuit. Medium-voltage terminations 231 of 264. Modules 170,482 of 171,470.\n\nThe fourth circuit is the only one still open, against a low-voltage date that passed on 10 October. A revised completion forecast for it is owed.\n\nAt the substation only testing and documentation remain. The test contractor reports 97.1 per cent of the programme carried out, with the remaining reports committed for Monday 19 October; the register records zero of 74 reports received to date.\n\nField testing of the PV plant is reported on a supervised register. Polarity and continuity records stand at 315 of 419 combiner boxes, grounding resistance 9 of 23 inverters, grounding continuity 5 of 23, and the current-voltage curve campaign has no recorded start. These figures are documentary coverage and not electrical acceptance.\n\nMilestone dates on this page are the weekly schedule update of 5 October.",
   "note": null
  },
  "gates": [
@@ -61,9 +61,9 @@ window.MURCH_REPORT = {
    "name": "Electrical — total",
    "pctOnly": true,
    "gatePct": 71.9,
-   "earnedPct": 84.86,
+   "earnedPct": 89.01,
    "unit": "%",
-   "earnedLabel": "84.86% earned incl. work in progress",
+   "earnedLabel": "89.01% earned incl. work in progress",
    "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
    "forecast": "Oct 16, 2026",
    "status": "Below rate"
@@ -87,7 +87,7 @@ window.MURCH_REPORT = {
     "gate": "71.9% of scope",
     "gatePct": 71.9,
     "inProgress": "MV 95.7% · 23 of 23 inverter stations set · 418 of 419 boxes · 233,151 lf of cable",
-    "earnedPct": 84.9,
+    "earnedPct": 89,
     "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
    }
   ],
@@ -2726,13 +2726,11 @@ window.MURCH_REPORT = {
     },
     "lvInv": {
      "done": 220,
-     "scope": 220,
-     "note": "Complete except one inverter station — count to follow"
+     "scope": 220
     },
     "lvBox": {
      "done": 440,
-     "scope": 440,
-     "note": "Complete except one inverter station — count to follow"
+     "scope": 440
     }
    },
    {
