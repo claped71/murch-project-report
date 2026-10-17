@@ -390,11 +390,23 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
     setTile(WF.tiles, 'Manhours to date', fmt(reported),
       `Total manhours worked without a recordable incident, as reported by EHS on ${RH.asOf}.`);
     WF.manhours = null;            // the modelled curve disagrees with the reported total - do not show it
+    // Current headcount derived from the movement between two reported man-hour readings.
+    // The site board stopped arriving in September; this is the only current figure the
+    // reported data supports, and it shows the demobilisation the stale board hides.
+    if (RH.impliedHeadcount) {
+      setTile(WF.tiles, 'Personnel on site', String(RH.impliedHeadcount),
+        `Average per working day across ${RH.prev ? RH.prev.asOf + ' to ' + RH.asOf : 'the latest reported period'}, derived from the reported manhours. The site headcount board has not been issued since September.`);
+      if (Array.isArray(WF.headcount) && RH.asOfISO) {
+        const dLbl = new Date(RH.asOfISO + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        if (!WF.headcount.some(h => h.d === dLbl)) WF.headcount.push({ d: dLbl, v: RH.impliedHeadcount });
+      }
+      changed.push(`workforce headcount -> ${RH.impliedHeadcount} (derived from reported manhours)`);
+    }
   } else {
     setTile(WF.tiles, 'Manhours to date', fmt(round100(cum)),
       `Total manhours worked from the start of construction on ${startLong} through ${endLong}, at ${HRS} h/day, Monday to Saturday.`);
   }
-  setTile(WF.tiles, 'Personnel on site', String(last.v), `Latest site-board headcount (${last.d}). Field labor plus management, quality and HSE.`);
+  if (!reported || !RH.impliedHeadcount) setTile(WF.tiles, 'Personnel on site', String(last.v), `Latest site-board headcount (${last.d}). Field labor plus management, quality and HSE.`);
 
   // Recordable incident rate: recordables x 200,000 / manhours.
   const recordables = Number((WF.recordables !== undefined) ? WF.recordables : 0);

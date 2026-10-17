@@ -2362,12 +2362,12 @@ window.MURCH_REPORT = {
   }
  },
  "workforce": {
-  "basis": "Manhours are the EHS-reported total to 15 October. Headcount is taken from the site board, last received 17 September.",
+  "basis": "Manhours are the EHS-reported total to 15 October. Personnel on site is the average per working day derived from the manhours; the site headcount board has not been issued since 17 September.",
   "tiles": [
    {
     "label": "Personnel on site",
-    "value": "202",
-    "note": "Latest site-board headcount (Sep 17). Field labor plus management, quality and HSE."
+    "value": "87",
+    "note": "Average per working day across Oct 5, 2026 to Oct 15, 2026, derived from the reported manhours. The site headcount board has not been issued since September."
    },
    {
     "label": "Peak headcount",
@@ -2602,6 +2602,10 @@ window.MURCH_REPORT = {
    {
     "d": "Sep 17",
     "v": 202
+   },
+   {
+    "d": "Oct 15",
+    "v": 87
    }
   ],
   "manhours": null
