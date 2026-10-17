@@ -2797,5 +2797,50 @@ window.MURCH_REPORT = {
     "scope": 1676
    }
   }
+ },
+ "testing": {
+  "headline": "PV plant and substation test status",
+  "basis": "Figures are recorded test documentation, not electrical acceptance. A test without a record is not established either way.",
+  "pv": [
+   {
+    "test": "Polarity and continuity (Vdc)",
+    "scope": "419 combiner boxes",
+    "done": "315",
+    "status": "In progress - 75 per cent"
+   },
+   {
+    "test": "Grounding resistance",
+    "scope": "23 inverters",
+    "done": "9",
+    "status": "In progress"
+   },
+   {
+    "test": "Grounding continuity",
+    "scope": "23 inverters",
+    "done": "5",
+    "status": "In progress"
+   },
+   {
+    "test": "Very low frequency and battery bank",
+    "scope": "4 circuits",
+    "done": "1",
+    "status": "In progress"
+   },
+   {
+    "test": "Current-voltage curve",
+    "scope": "419 combiner boxes",
+    "done": "0",
+    "status": "Not started"
+   }
+  ],
+  "set": [
+   {
+    "test": "Substation test programme",
+    "scope": "74 tests",
+    "done": "0",
+    "status": "97 per cent carried out; reports committed for 19 October"
+   }
+  ],
+  "note": "By circuit, polarity and continuity records stand at 110 of 110 on the second circuit, 109 of 110 on the third and 90 of 92 on the first. The fourth circuit carries 101 of the 104 records still open."
  }
 };

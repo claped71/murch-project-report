@@ -484,6 +484,23 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     </div>
   </section>
 
+  <section id="testing">
+    <div class="sechead">
+      <div class="kicker">Testing status</div>
+      <h2 id="tHead"></h2>
+      <p id="tBasis"></p>
+    </div>
+    <div class="card" style="padding:18px 6px">
+      <table><thead><tr><th style="width:46%">Test</th><th style="width:16%">Scope</th><th style="width:16%">Recorded</th><th>Status</th></tr></thead>
+      <tbody id="tPv"></tbody></table>
+    </div>
+    <div class="card" style="padding:18px 6px;margin-top:14px">
+      <table><thead><tr><th style="width:46%">Substation</th><th style="width:16%">Scope</th><th style="width:16%">Recorded</th><th>Status</th></tr></thead>
+      <tbody id="tSet"></tbody></table>
+    </div>
+    <p class="note" style="margin:14px 0 0" id="tNote"></p>
+  </section>
+
   <section id="weather">
     <div class="sechead">
       <div class="kicker">Weather record</div>
@@ -548,7 +565,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=84bd264514"></script>
+<script src="data.js?v=079b07029b"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -841,6 +858,16 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   document.getElementById('safeHead').textContent = D.safety.headline;
   tiles('safeTiles', D.safety.tiles);
   document.getElementById('safeNote').textContent = D.safety.note;
+  if (D.testing) {
+    document.getElementById('tHead').textContent = D.testing.headline;
+    document.getElementById('tBasis').textContent = D.testing.basis;
+    var trow = function (r) {
+      return '<tr><td>' + esc(r.test) + '</td><td>' + esc(r.scope) + '</td><td>' + esc(r.done) + '</td><td>' + esc(r.status) + '</td></tr>';
+    };
+    document.getElementById('tPv').innerHTML = (D.testing.pv || []).map(trow).join('');
+    document.getElementById('tSet').innerHTML = (D.testing.set || []).map(trow).join('');
+    document.getElementById('tNote').textContent = D.testing.note;
+  } else { var ts = document.getElementById('testing'); if (ts) ts.style.display = 'none'; }
   document.getElementById('qHead').textContent = D.quality.headline;
   tiles('qTiles', D.quality.tiles);
   document.getElementById('qNote').textContent = D.quality.note;
@@ -1196,12 +1223,23 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
     function renderWorkforce(){
       var hc = W.headcount, mh = W.manhours;
-      document.getElementById('hcSub').textContent =
-        hc[hc.length-1].v + ' people on site at ' + hc[hc.length-1].d + '. Peak to date ' + Math.max.apply(null, hc.map(function(h){return h.v;})) + '.';
-      document.getElementById('mhSub').textContent =
-        fmt(mh[mh.length-1].c) + ' manhours worked from the start of construction to ' + mh[mh.length-1].d + '.';
-      document.getElementById('hcChart').innerHTML = twoLeg(hc, 'v', '#0f7a52', 'people', function(v){ return Math.round(v); });
-      document.getElementById('mhChart').innerHTML = twoLeg(mh, 'c', '#2769a8', 'manhours', function(v){ return v>=1000 ? Math.round(v/1000)+'k' : Math.round(v); });
+      if (hc && hc.length) {
+        document.getElementById('hcSub').textContent =
+          hc[hc.length-1].v + ' people on site at ' + hc[hc.length-1].d + '. Peak to date ' + Math.max.apply(null, hc.map(function(h){return h.v;})) + '.';
+        document.getElementById('hcChart').innerHTML = twoLeg(hc, 'v', '#0f7a52', 'people', function(v){ return Math.round(v); });
+      }
+      // No modelled manhours curve is drawn when the total is an EHS-reported figure:
+      // the model and the report disagree, and the model is the weaker of the two.
+      var mhCard = document.getElementById('mhChart') && document.getElementById('mhChart').closest('.card, .chartbox, div');
+      if (mh && mh.length) {
+        document.getElementById('mhSub').textContent =
+          fmt(mh[mh.length-1].c) + ' manhours worked from the start of construction to ' + mh[mh.length-1].d + '.';
+        document.getElementById('mhChart').innerHTML = twoLeg(mh, 'c', '#2769a8', 'manhours', function(v){ return v>=1000 ? Math.round(v/1000)+'k' : Math.round(v); });
+      } else {
+        var mhc = document.getElementById('mhChart');
+        if (mhc) { mhc.innerHTML = ''; var box = mhc.parentNode; if (box) box.style.display = 'none'; }
+        var sub = document.getElementById('mhSub'); if (sub) sub.textContent = '';
+      }
     }
     renderWorkforce();
     window.addEventListener('resize', function(){ clearTimeout(window.__wfT); window.__wfT = setTimeout(renderWorkforce, 200); });
