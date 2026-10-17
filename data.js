@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
    "civil": 0.1
   },
   "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-  "statement": "Issued 17 October; production executed through 16 October. Overall physical progress 97.7 per cent.\n\nThe civil scope and the substation are complete in their construction scope. Three of the four collection circuits are complete in theirs.\n\nLow-voltage cable 233,151 feet of 269,748, after 7,027 feet placed on the fourth circuit on 16 October. Medium-voltage terminations 231 of 264. Modules 170,482 of 171,470.\n\nThe fourth circuit is the only one still open, against a low-voltage date that passed on 10 October. A revised completion forecast for it is owed.\n\nAt the substation only testing and documentation remain. The test contractor reports 97.1 per cent of the programme carried out, with the remaining reports committed for Monday 19 October; the register records zero of 74 reports received to date.\n\nField testing of the PV plant is reported on a supervised register. Polarity and continuity records stand at 275 of 419 combiner boxes, grounding resistance 9 of 23 inverters, grounding continuity 5 of 23, and the current-voltage curve campaign has no recorded start. These figures are documentary coverage and not electrical acceptance; a missing record does not establish that a test was not performed.\n\nMilestone dates on this page are the weekly schedule update of 5 October.",
+  "statement": "Issued 17 October; production executed through 16 October. Overall physical progress 97.7 per cent.\n\nThe civil scope and the substation are complete in their construction scope. Three of the four collection circuits are complete in theirs.\n\nLow-voltage cable 233,151 feet of 269,748, after 7,027 feet placed on the fourth circuit on 16 October. Medium-voltage terminations 231 of 264. Modules 170,482 of 171,470.\n\nThe fourth circuit is the only one still open, against a low-voltage date that passed on 10 October. A revised completion forecast for it is owed.\n\nAt the substation only testing and documentation remain. The test contractor reports 97.1 per cent of the programme carried out, with the remaining reports committed for Monday 19 October; the register records zero of 74 reports received to date.\n\nField testing of the PV plant is reported on a supervised register. Polarity and continuity records stand at 315 of 419 combiner boxes, grounding resistance 9 of 23 inverters, grounding continuity 5 of 23, and the current-voltage curve campaign has no recorded start. These figures are documentary coverage and not electrical acceptance; a missing record does not establish that a test was not performed.\n\nMilestone dates on this page are the weekly schedule update of 5 October.",
   "note": null
  },
  "gates": [
@@ -1487,7 +1487,7 @@ window.MURCH_REPORT = {
     "The fourth circuit, the only one open: inverter-feeder and trunk cable, harness, and the low- and medium-voltage terminations, against a date that passed on 10 October.",
     "A revised completion forecast for the fourth circuit.",
     "Start of the current-voltage curve campaign across the 419 combiner boxes, which has no recorded start.",
-    "Field-test records for the second circuit, where 40 of 110 combiner boxes carry no polarity record.",
+    "Field-test records for the fourth circuit, which carries 101 of the 104 open polarity records.",
     "Utility-side work at the interconnection, and the utility review and clearance window.",
     "The grating in the transformer chamber, the one construction item outstanding at the substation."
    ]
@@ -2009,8 +2009,8 @@ window.MURCH_REPORT = {
   {
    "title": "PV field testing — record coverage",
    "level": "Priority",
-   "note": "Polarity and continuity records stand at 275 of 419 combiner boxes. By circuit the record is 109 of 110 and 90 of 92 on the first and third circuits, 70 of 110 on the second and 6 of 107 on the fourth; 141 of the 144 open records sit on those last two. Grounding resistance is 9 of 23 inverters and grounding continuity 5 of 23. The current-voltage curve campaign, 419 boxes, has no recorded start.",
-   "detail": "The figures are documentary coverage on a supervised register, not electrical acceptance, and a missing record does not establish that a test was not performed. The second circuit's 40 open records are concentrated on the three stations that completed construction last."
+   "note": "Polarity and continuity records stand at 315 of 419 combiner boxes. The first and second circuits are closed or effectively closed - the second at 110 of 110 and the first at 90 of 92 - and the third at 109 of 110. The fourth circuit carries 101 of the 104 open records on its own. Grounding resistance is 9 of 23 inverters and grounding continuity 5 of 23. The current-voltage curve campaign, 419 boxes, has no recorded start.",
+   "detail": "The figures are documentary coverage on a supervised register, not electrical acceptance, and a missing record does not establish that a test was not performed. The second circuit has been confirmed complete in the field with no station outstanding, and its records are applied accordingly."
   },
   {
    "title": "Module series connection",
