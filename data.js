@@ -1485,8 +1485,7 @@ window.MURCH_REPORT = {
    "items": [
     "The fourth circuit, the only one open in construction: inverter-feeder and trunk cable, harness, and the low- and medium-voltage terminations.",
     "The remaining twelve inverter-side medium-voltage terminations on the fourth circuit, and its trench compaction, at 13 of 52.",
-    "Repair and re-test of a medium-voltage cable section on the second circuit, where a fault point was located on 20 October.",
-    "Evidence packages for mechanical completion on the second, third and fourth circuits: inverter inspections, string tests, communication-cable tests and grounding-system tests.",
+     "Evidence packages for mechanical completion on the second, third and fourth circuits: inverter inspections, string tests, communication-cable tests and grounding-system tests.",
     "Interim as-built drawings, including the drawing files, and labelling and signage records.",
     "Substation test documentation issued for acceptance.",
     "Utility-side work at the interconnection, and the utility review and clearance window."
