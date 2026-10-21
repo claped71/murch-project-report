@@ -378,8 +378,10 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <p>Plan dates are those of the project schedule issued on 8 September, by collection circuit; the last circuit sets the plant date.</p>
     </div>
     <div class="card" style="padding:18px 6px">
+      <div class="hscroll">
       <table><thead><tr><th>Milestone</th><th>Contract date</th><th>Plan (8 Sep)</th><th>Status</th><th>Key fact</th></tr></thead>
       <tbody id="msBody"></tbody></table>
+      </div>
     </div>
   </section>
 
@@ -408,8 +410,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <h2>Supporting works progress</h2>
     </div>
     <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th>Activity</th><th style="width:180px">Progress</th><th>Status</th><th>Notes</th></tr></thead>
-      <tbody id="civilBody"></tbody></table>
+      <div class="hscroll"><table><thead><tr><th>Activity</th><th style="width:180px">Progress</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody id="civilBody"></tbody></table></div>
     </div>
   </section>
 
@@ -420,8 +422,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     </div>
     <div class="card" style="padding:18px 6px">
       <p class="note block" id="elBasis" style="margin:0 8px 10px"></p>
-      <div class="qscroll"><table class="eltab"><thead><tr><th>Circuit</th><th>Harness<br><small>assemblies</small></th><th>Homerun cable<br><small>ft</small></th><th>Trunk cable<br><small>ft</small></th><th>Disconnect boxes<br><small>units</small></th><th>MV junction boxes<br><small>units</small></th><th>MV terminations<br><small>inverter side</small></th><th>LV terminations<br><small>inverters</small></th><th>LV terminations<br><small>boxes</small></th></tr></thead>
-      <tbody id="elBody"></tbody></table></div>
+      <div class="qscroll"><div class="hscroll"><table class="eltab"><thead><tr><th>Circuit</th><th>Harness<br><small>assemblies</small></th><th>Homerun cable<br><small>ft</small></th><th>Trunk cable<br><small>ft</small></th><th>Disconnect boxes<br><small>units</small></th><th>MV junction boxes<br><small>units</small></th><th>MV terminations<br><small>inverter side</small></th><th>LV terminations<br><small>inverters</small></th><th>LV terminations<br><small>boxes</small></th></tr></thead>
+      <tbody id="elBody"></tbody></table></div></div>
     </div>
   </section>
 
@@ -457,8 +459,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <p>Delivered quantities against project scope. Material availability is not currently constraining installation.</p>
     </div>
     <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th>Item</th><th>Delivered</th><th style="width:170px">Of scope</th><th>Notes</th></tr></thead>
-      <tbody id="matBody"></tbody></table>
+      <div class="hscroll"><table><thead><tr><th>Item</th><th>Delivered</th><th style="width:170px">Of scope</th><th>Notes</th></tr></thead>
+      <tbody id="matBody"></tbody></table></div>
     </div>
   </section>
 
@@ -491,12 +493,12 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <p id="tBasis"></p>
     </div>
     <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th style="width:46%">Test</th><th style="width:16%">Scope</th><th style="width:16%">Recorded</th><th>Status</th></tr></thead>
-      <tbody id="tPv"></tbody></table>
+      <div class="hscroll"><table><thead><tr><th style="width:46%">Test</th><th style="width:16%">Scope</th><th style="width:16%">Recorded</th><th>Status</th></tr></thead>
+      <tbody id="tPv"></tbody></table></div>
     </div>
     <div class="card" style="padding:18px 6px;margin-top:14px">
-      <table><thead><tr><th style="width:46%">Substation</th><th style="width:16%">Scope</th><th style="width:16%">Recorded</th><th>Status</th></tr></thead>
-      <tbody id="tSet"></tbody></table>
+      <div class="hscroll"><table><thead><tr><th style="width:46%">Substation</th><th style="width:16%">Scope</th><th style="width:16%">Recorded</th><th>Status</th></tr></thead>
+      <tbody id="tSet"></tbody></table></div>
     </div>
     <p class="note" style="margin:14px 0 0" id="tNote"></p>
   </section>
@@ -508,8 +510,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
       <p id="wxNote"></p>
     </div>
     <div class="card" style="padding:18px 6px">
-      <table><thead><tr><th style="width:180px">Date</th><th>Condition</th><th>Impact</th><th>Record</th></tr></thead>
-      <tbody id="wxBody"></tbody></table>
+      <div class="hscroll"><table><thead><tr><th style="width:180px">Date</th><th>Condition</th><th>Impact</th><th>Record</th></tr></thead>
+      <tbody id="wxBody"></tbody></table></div>
     </div>
   </section>
 
@@ -545,8 +547,8 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     <div style="height:12px"></div>
     <div id="cqToggle" class="qtoggle"></div>
     <div class="card" style="padding:18px 6px"><div class="qscroll">
-      <table><thead><tr><th>Ref</th><th>Subject</th><th>Discipline</th><th class="n">Raised</th><th class="n">Due</th><th class="n">Responded</th><th class="n">Clock</th><th>With</th><th>Owner</th><th>Status</th></tr></thead>
-      <tbody id="cqBody"></tbody></table>
+      <div class="hscroll"><table><thead><tr><th>Ref</th><th>Subject</th><th>Discipline</th><th class="n">Raised</th><th class="n">Due</th><th class="n">Responded</th><th class="n">Clock</th><th>With</th><th>Owner</th><th>Status</th></tr></thead>
+      <tbody id="cqBody"></tbody></table></div>
     </div></div>
     <div class="card" style="margin-top:10px"><p class="note block" id="cqResp"></p><p class="note block" id="cqNote" style="margin-top:8px"></p></div>
   </section>
