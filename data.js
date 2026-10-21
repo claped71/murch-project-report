@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
    "civil": 0.1
   },
   "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-  "statement": "Issued 21 October; executed through 19 October. Overall progress 98.4 per cent.\n\nCivil, the substation and three of the four circuits are complete in construction scope.\n\nCable 237,385 ft of 269,748. LV terminations 1,252 of 1,676 and 626 of 838. MV terminations 252 of 264. Modules 170,482 of 171,470.\n\nSubstation mechanical completion was achieved on 20 October and the substation test programme is fully executed, 74 of 74; the evidence packages are being compiled. Ready-to-energize is carried on 10 November.\n\nRemaining construction is on the fourth circuit.",
+  "statement": "Issued 21 October; executed through 20 October. Overall progress 98.5 per cent.\n\nCivil, the substation and three of the four circuits are complete in construction scope.\n\nCable 244,760 ft of 269,748, after 7,375 ft on 20 October. LV terminations 1,252 of 1,676 and 626 of 838. MV terminations 252 of 264. Modules 170,482 of 171,470.\n\nSubstation mechanical completion was achieved on 20 October and the substation test programme is fully executed, 74 of 74; the evidence packages are being compiled. Ready-to-energize is carried on 10 November.\n\nRemaining construction is on the fourth circuit.",
   "note": null
  },
  "gates": [
@@ -61,16 +61,16 @@ window.MURCH_REPORT = {
    "name": "Electrical — total",
    "pctOnly": true,
    "gatePct": 71.9,
-   "earnedPct": 89.67,
+   "earnedPct": 90.35,
    "unit": "%",
-   "earnedLabel": "89.67% earned incl. work in progress",
+   "earnedLabel": "90.35% earned incl. work in progress",
    "mix": "LV / DC installation 45% · MV collection 22% · Inverter stations 18% · Substation (SET) 15%",
    "forecast": "Oct 16, 2026",
    "status": "Date passed"
   }
  ],
  "earnedProgress": {
-  "asOf": "October 19, 2026",
+  "asOf": "October 20, 2026",
   "scopes": [
    {
     "scope": "Tracker rows",
@@ -86,8 +86,8 @@ window.MURCH_REPORT = {
     "unit": "%",
     "gate": "71.9% of scope",
     "gatePct": 71.9,
-    "inProgress": "MV 95.7% · 23 of 23 inverter stations set · 418 of 419 boxes · 237,385 lf of cable",
-    "earnedPct": 89.7,
+    "inProgress": "MV 95.7% · 23 of 23 inverter stations set · 418 of 419 boxes · 244,760 lf of cable",
+    "earnedPct": 90.4,
     "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
    }
   ],
@@ -1485,9 +1485,9 @@ window.MURCH_REPORT = {
    "items": [
     "The fourth circuit, the only one open in construction: inverter-feeder and trunk cable, harness, and the low- and medium-voltage terminations.",
     "The remaining twelve inverter-side medium-voltage terminations on the fourth circuit, and its trench compaction, at 13 of 52.",
+    "Repair and re-test of a medium-voltage cable section on the second circuit, where a fault point was located on 20 October.",
     "Evidence packages for mechanical completion on the second, third and fourth circuits: inverter inspections, string tests, communication-cable tests and grounding-system tests.",
-    "Interim as-built drawings, including the drawing files.",
-    "Labelling and signage records for mechanical completion.",
+    "Interim as-built drawings, including the drawing files, and labelling and signage records.",
     "Substation test documentation issued for acceptance.",
     "Utility-side work at the interconnection, and the utility review and clearance window."
    ]
@@ -2427,7 +2427,7 @@ window.MURCH_REPORT = {
   ]
  },
  "electricalByCircuit": {
-  "asOf": "October 19, 2026",
+  "asOf": "October 20, 2026",
   "basis": "Executed through . Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
   "rows": [
    {
@@ -2542,11 +2542,11 @@ window.MURCH_REPORT = {
      "scope": 1340
     },
     "homerun": {
-     "done": 19115.5,
+     "done": 25380.5,
      "scope": 55488
     },
     "trunk": {
-     "done": 3848.9,
+     "done": 4958.9,
      "scope": 10907
     },
     "boxes": {
@@ -2585,11 +2585,11 @@ window.MURCH_REPORT = {
     "scope": 5007
    },
    "homerun": {
-    "done": 199201.5,
+    "done": 205466.5,
     "scope": 229435
    },
    "trunk": {
-    "done": 38183.9,
+    "done": 39293.9,
     "scope": 40313
    },
    "boxes": {
