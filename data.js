@@ -98,14 +98,14 @@ window.MURCH_REPORT = {
     {
       "name": "Mechanical Completion",
       "contract": "Sep 25, 2026",
-      "forecast": "Nov 4, 2026 (last circuit) · SET MC Oct 16",
+      "forecast": "Nov 4, 2026 (last circuit) · SET MC ACHIEVED Oct 20",
       "status": "At risk",
       "note": "Contract date not achievable. On the weekly schedule update of 5 October, mechanical completion is achieved on site on 10 and 13 October for the first two circuits and on 22 and 28 October for the last two; with the Owner review period the milestone dates are 16 and 20 October and 29 October and 4 November. Substation mechanical completion is carried on 16 October. The substation construction scope is complete and the first three circuits are closed on every construction measure."
     },
     {
       "name": "Provisional Interconnection",
       "contract": "Oct 16, 2026",
-      "forecast": "Nov 18, 2026 (all circuits) · Ready to Energize Oct 30",
+      "forecast": "Ready to Energize Nov 10 · PIS restatement owed",
       "status": "At risk",
       "note": "On the weekly schedule update of 5 October, ready-to-energize is carried on 30 October, substation energization from 31 October to 3 November, utility review and clearance from 4 to 17 November, and initial synchronisation on 18 November, which places all four circuits in service on the same date. The utility review sits after energization and before export. The substation construction scope is complete; medium-voltage terminations stand at 231 of 264, and direct-current boring and SCADA box installation are complete at 23 of 23.",
       "circuits": "All four circuits Nov 18"
