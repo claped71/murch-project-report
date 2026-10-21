@@ -565,7 +565,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=108eb61b9f"></script>
+<script src="data.js?v=70e9f46ca3"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -1223,6 +1223,14 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 
     function renderWorkforce(){
       var hc = W.headcount, mh = W.manhours;
+      var hcCard = document.getElementById('hcChart') ? document.getElementById('hcChart').closest('.chartcard') : null;
+      if (!(hc && hc.length)) {
+        if (hcCard) {
+          hcCard.style.display = 'none';
+          var row = hcCard.parentNode;
+          if (row && row.classList && row.classList.contains('g2')) row.style.gridTemplateColumns = '1fr';
+        }
+      }
       if (hc && hc.length) {
         document.getElementById('hcSub').textContent =
           hc[hc.length-1].v + ' people on site at ' + hc[hc.length-1].d + '. Peak to date ' + Math.max.apply(null, hc.map(function(h){return h.v;})) + '.';

@@ -389,14 +389,21 @@ if (C.workforce && Array.isArray(I.manpowerHistory) && I.manpowerHistory.length)
   if (reported) {
     setTile(WF.tiles, 'Manhours to date', fmt(reported),
       `Total manhours worked without a recordable incident, as reported by EHS on ${RH.asOf}.`);
-    WF.manhours = null;            // the modelled curve disagrees with the reported total - do not show it
+    // The modelled curve disagrees with the reported total, so it is never drawn.
+    // Instead plot the REPORTED EHS cumulative readings when the dashboard carries them.
+    WF.manhours = (RH && Array.isArray(RH.series) && RH.series.length)
+      ? RH.series.map(function (p) { return { d: p.d, c: Number(p.c) }; })
+      : null;
+    // Personnel-on-site chart retired (Director of Construction, Oct 21): the manhour
+    // curve replaces it. The headcount TILES stay; only the chart series is cleared.
+    WF.headcount = [];
     // Current headcount derived from the movement between two reported man-hour readings.
     // The site board stopped arriving in September; this is the only current figure the
     // reported data supports, and it shows the demobilisation the stale board hides.
     if (RH.impliedHeadcount) {
       setTile(WF.tiles, 'Personnel on site', String(RH.impliedHeadcount),
         `Average per working day across ${RH.prev ? RH.prev.asOf + ' to ' + RH.asOf : 'the latest reported period'}, derived from the reported manhours. The site headcount board has not been issued since September.`);
-      if (Array.isArray(WF.headcount) && RH.asOfISO) {
+      if (Array.isArray(WF.headcount) && WF.headcount.length && RH.asOfISO) {
         const dLbl = new Date(RH.asOfISO + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         if (!WF.headcount.some(h => h.d === dLbl)) WF.headcount.push({ d: dLbl, v: RH.impliedHeadcount });
       }

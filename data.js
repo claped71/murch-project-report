@@ -1423,7 +1423,7 @@ window.MURCH_REPORT = {
   "note": "The injury record remains clean at the date of this report: zero recordable, zero lost-time and zero restricted-work cases across 186,352 hours, with all three incidence rates at 0.00 - subject to the classification of the 8 September event once the medical outcome is known. The 8 September response - immediate first aid by co-workers, emergency services on site, hospital transfer, area stopped, notification within the day and investigation opened - followed the site emergency procedure as written. The programme behind that response is documented in the EHS management pack issued on 8 September: workers and man-hours by company and month, orientations given, the full incident register, unsafe acts and conditions by type with the corrective action for each, weekly safety walks with subcontractor supervisors, bi-weekly subcontractor safety meetings and monthly general safety meetings with recorded minutes. Heat-stress controls on the substation front are reinforced pending the findings. The 7 August investigation is closed with its corrective actions retained in the daily briefings. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit completed on 30 August closes the exposure on that section."
  },
  "quality": {
-  "headline": "Owner acceptance stands at 886 of 2,486 completed tracker rows (35.6%) and 15,434 installed modules, and converting EPC releases into Owner acceptance remains the controlling quality action: 2,068 tracker rows and 53,060 modules carry EPC approval. Transmittal Q-0024 of 2 October delivered eleven quality documents to the Owner — material certificates for the substation anchor bolts, the auxiliary-transformer factory test records, road compaction reports, the fence check-list for the substation and Area G, the 100% check-lists for piles and trackers, and the harness, feeder, trunk, disconnect-box and inverter installation check-lists for the completed stations — and the quality master list was updated. The mechanical completion application for the substation and the first circuit was submitted on 19 October. The mechanical-completion documentation register is shared with the Owner, updated daily and reviewed jointly every two days; field test records will be loaded as testing completes. Owner comments on the electrical safety procedures submitted on 23 September are awaited.",
+  "headline": "Owner acceptance stands at 886 of 2,486 completed tracker rows (35.6%) and 15,434 installed modules, and converting EPC releases into Owner acceptance remains the controlling quality action: 2,068 tracker rows and 53,060 modules carry EPC approval. Transmittal Q-0024 of 2 October delivered eleven quality documents to the Owner — material certificates for the substation anchor bolts, the auxiliary-transformer factory test records, road compaction reports, the fence check-list for the substation and Area G, the 100% check-lists for piles and trackers, and the harness, feeder, trunk, disconnect-box and inverter installation check-lists for the completed stations — and the quality master list was updated. The mechanical completion application for the substation and the first circuit was submitted on 19 October. The mechanical completion application for the substation and the first circuit was submitted on 19 October. The mechanical completion application for the substation and the first circuit was submitted on 19 October. The mechanical-completion documentation register is shared with the Owner, updated daily and reviewed jointly every two days; field test records will be loaded as testing completes. Owner comments on the electrical safety procedures submitted on 23 September are awaited.",
   "tiles": [
    {
     "label": "Piles executed",
@@ -2390,225 +2390,41 @@ window.MURCH_REPORT = {
     "note": "Recordable cases per 200,000 manhours. Zero recordable incidents across all hours worked."
    }
   ],
-  "headcount": [
-   {
-    "d": "Apr 1",
-    "v": 15
-   },
-   {
-    "d": "Apr 15",
-    "v": 25
-   },
-   {
-    "d": "May 1",
-    "v": 35
-   },
-   {
-    "d": "May 6",
-    "v": 45
-   },
-   {
-    "d": "May 15",
-    "v": 60
-   },
-   {
-    "d": "Jun 1",
-    "v": 85
-   },
-   {
-    "d": "Jun 10",
-    "v": 110
-   },
-   {
-    "d": "Jun 17",
-    "v": 136
-   },
-   {
-    "d": "Jun 25",
-    "v": 149
-   },
-   {
-    "d": "Jun 26",
-    "v": 134
-   },
-   {
-    "d": "Jun 29",
-    "v": 146
-   },
-   {
-    "d": "Jun 30",
-    "v": 148
-   },
-   {
-    "d": "Jul 7",
-    "v": 170
-   },
-   {
-    "d": "Jul 9",
-    "v": 191
-   },
-   {
-    "d": "Jul 13",
-    "v": 191
-   },
-   {
-    "d": "Jul 14",
-    "v": 202
-   },
-   {
-    "d": "Jul 15",
-    "v": 209
-   },
-   {
-    "d": "Jul 16",
-    "v": 198
-   },
-   {
-    "d": "Jul 20",
-    "v": 192
-   },
-   {
-    "d": "Jul 29",
-    "v": 248
-   },
-   {
-    "d": "Jul 30",
-    "v": 253
-   },
-   {
-    "d": "Aug 3",
-    "v": 243
-   },
-   {
-    "d": "Aug 4",
-    "v": 247
-   },
-   {
-    "d": "Aug 5",
-    "v": 248
-   },
-   {
-    "d": "Aug 6",
-    "v": 238
-   },
-   {
-    "d": "Aug 7",
-    "v": 238
-   },
-   {
-    "d": "Aug 8",
-    "v": 130
-   },
-   {
-    "d": "Aug 10",
-    "v": 244
-   },
-   {
-    "d": "Aug 11",
-    "v": 258
-   },
-   {
-    "d": "Aug 12",
-    "v": 257
-   },
-   {
-    "d": "Aug 13",
-    "v": 247
-   },
-   {
-    "d": "Aug 14",
-    "v": 225
-   },
-   {
-    "d": "Aug 17",
-    "v": 217
-   },
-   {
-    "d": "Aug 18",
-    "v": 215
-   },
-   {
-    "d": "Aug 20",
-    "v": 239
-   },
-   {
-    "d": "Aug 21",
-    "v": 228
-   },
+  "headcount": [],
+  "manhours": [
    {
     "d": "Aug 24",
-    "v": 218
-   },
-   {
-    "d": "Aug 25",
-    "v": 239
+    "c": 163438
    },
    {
     "d": "Aug 27",
-    "v": 241
-   },
-   {
-    "d": "Aug 28",
-    "v": 228
-   },
-   {
-    "d": "Aug 31",
-    "v": 230
-   },
-   {
-    "d": "Sep 2",
-    "v": 203
-   },
-   {
-    "d": "Sep 3",
-    "v": 206
-   },
-   {
-    "d": "Sep 4",
-    "v": 191
-   },
-   {
-    "d": "Sep 5",
-    "v": 146
-   },
-   {
-    "d": "Sep 7",
-    "v": 88
+    "c": 165986.8
    },
    {
     "d": "Sep 8",
-    "v": 214
+    "c": 186351.6
    },
    {
     "d": "Sep 9",
-    "v": 219
-   },
-   {
-    "d": "Sep 10",
-    "v": 198
-   },
-   {
-    "d": "Sep 11",
-    "v": 137
-   },
-   {
-    "d": "Sep 12",
-    "v": 40
+    "c": 189206.1
    },
    {
     "d": "Sep 15",
-    "v": 216
+    "c": 199425.6
    },
    {
     "d": "Sep 17",
-    "v": 202
+    "c": 203862.6
+   },
+   {
+    "d": "Oct 5",
+    "c": 231471
    },
    {
     "d": "Oct 15",
-    "v": 87
+    "c": 239337
    }
-  ],
-  "manhours": null
+  ]
  },
  "electricalByCircuit": {
   "asOf": "October 19, 2026",
