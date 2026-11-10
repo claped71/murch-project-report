@@ -13,7 +13,7 @@ window.MURCH_REPORT = {
     "client": "Heelstone Renewable Energy"
   },
   "headline": {
-    "overall": 96.9,
+    "overall": 99.7,
     "weights": {
       "piles": 0.28,
       "trackers": 0.22,
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Issued 10 November. Overall progress 98.84 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe township electrical permit was issued on 5 November, and the final inspection of circuits 11A and 11B is scheduled for 11 November.\n\nModules, piles, tracker rows, civil works and the substation are complete. The substation stands at 256 of 257 activities on the tracker of 9 November; the one open activity is coordination with the utility for first energization.\n\nThe field-test record, at the commissioning portal cut of 4 November, shows polarity and continuity at 400 of 419 combiner boxes, up from 381; very low frequency testing at 4 of 4 circuits; fibre-optic testing at 3 of 4; and the inverter communication loop at 23 of 23 stations. Current-voltage curve sampling stands at 195 of 492 string samples on the sampling basis in force since 4 November. These are measures of documentary coverage, not of acceptance.\n\nRecorded man-hours stand at 250,421 at 6 November, with zero lost-time and zero recordable cases.\n\nEnergization is targeted for 19 to 20 November.",
+    "statement": "Issued 10 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe township electrical permit was issued on 5 November, and the final inspection of circuits 11A and 11B is scheduled for 11 November.\n\nModules, piles, tracker rows, civil works and the substation are complete. The substation stands at 256 of 257 activities on the tracker of 9 November; the one open activity is coordination with the utility for first energization.\n\nThe field-test record, at the commissioning portal cut of 4 November, shows polarity and continuity at 400 of 419 combiner boxes, up from 381; very low frequency testing at 4 of 4 circuits; fibre-optic testing at 3 of 4; and the inverter communication loop at 23 of 23 stations. Current-voltage curve sampling stands at 195 of 492 string samples on the sampling basis in force since 4 November. These are measures of documentary coverage, not of acceptance.\n\nRecorded man-hours stand at 250,421 at 6 November, with zero lost-time and zero recordable cases.\n\nEnergization is targeted for 19 to 20 November.",
     "note": null
   },
   "gates": [
@@ -60,7 +60,7 @@ window.MURCH_REPORT = {
       "key": "electrical",
       "name": "Electrical — total",
       "pctOnly": true,
-      "gatePct": 79.4,
+      "gatePct": 98,
       "earnedPct": 91.69,
       "unit": "%",
       "earnedLabel": "91.69% earned incl. work in progress",
@@ -84,8 +84,8 @@ window.MURCH_REPORT = {
       {
         "scope": "Electrical — all fronts",
         "unit": "%",
-        "gate": "79.4% of scope",
-        "gatePct": 79.4,
+        "gate": "98% of scope",
+        "gatePct": 98,
         "inProgress": "MV 100% · 23 of 23 inverter stations set · 418 of 419 boxes · 257,764 lf of cable",
         "earnedPct": 91.7,
         "detail": "LV and DC cable, MV collection, inverter stations and the substation combined. All 23 stations are set and welded, medium-voltage cable is fully installed and tested and DC boring is complete; inverter-side medium-voltage terminations are complete on the first three circuits and stand at 12 of 30 on the last, all 23 SCADA boxes and junction-box bases are in place, 17 boxes are installed and 13 of 46 units are fully closed."
