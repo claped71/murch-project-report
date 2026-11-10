@@ -1,13 +1,13 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated October 29, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated November 9, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Electrical installation and mechanical close-out",
-    "asOf": "October 29, 2026",
+    "asOf": "November 9, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Issued 30 October. Overall progress 98.84 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October.\n\nThree days were reported. Cable advanced on 27 October only, by 4,002 feet of inverter-feeder cable and 3,096 feet of trunk cable, all on the fourth circuit, which is the only circuit still open in construction. The reports of 28 and 29 October record no cable; those days were messenger installation, pile grounding, prefabrication and testing. Messenger wire advanced by 1,534 feet tensioned and 192 brackets.\n\nMedium-voltage terminations remain complete at 264 of 264, re-confirmed on the control of 27 October. Cable pull-in is complete at 46 of 46 and supervisory boxes at 23 of 23. Trench compaction stands at 142 of 181, with every open trench on the fourth circuit at 13 of 52, and unit close-out at 41 of 46.\n\nModules, piles, tracker rows, civil works and the substation are complete. Substation earned value is 99.85 per cent at 255 of 257 activities, with two electrical activities open: the supervisory control unit configuration and coordination with the utility for first energization.\n\nThe field-test record, reported through the commissioning portal at its cut of 30 October, shows polarity and continuity at 381 of 419 combiner boxes, up from 341; current-voltage curve sampling at 205 of 752 string samples, all validated and now extending to a second circuit; and supervisory-system communications at 17 of 23 inverter stations, up from 5. Very low frequency testing stands at 2.6 of 4 circuits and fibre-optic testing at 2 of 4. These are measures of documentary coverage, not of acceptance.\n\nReady-to-energize is carried on 10 November.",
+    "statement": "Issued 10 November. Overall progress 98.84 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe township electrical permit was issued on 5 November, and the final inspection of circuits 11A and 11B is scheduled for 11 November.\n\nModules, piles, tracker rows, civil works and the substation are complete. The substation stands at 256 of 257 activities on the tracker of 9 November; the one open activity is coordination with the utility for first energization.\n\nThe field-test record, at the commissioning portal cut of 4 November, shows polarity and continuity at 400 of 419 combiner boxes, up from 381; very low frequency testing at 4 of 4 circuits; fibre-optic testing at 3 of 4; and the inverter communication loop at 23 of 23 stations. Current-voltage curve sampling stands at 195 of 492 string samples on the sampling basis in force since 4 November. These are measures of documentary coverage, not of acceptance.\n\nRecorded man-hours stand at 250,421 at 6 November, with zero lost-time and zero recordable cases.\n\nEnergization is targeted for 19 to 20 November.",
     "note": null
   },
   "gates": [
@@ -70,7 +70,7 @@ window.MURCH_REPORT = {
     }
   ],
   "earnedProgress": {
-    "asOf": "October 29, 2026",
+    "asOf": "November 9, 2026",
     "scopes": [
       {
         "scope": "Tracker rows",
@@ -98,16 +98,16 @@ window.MURCH_REPORT = {
     {
       "name": "Mechanical Completion",
       "contract": "Sep 25, 2026",
-      "forecast": "Nov 4, 2026 (last circuit) · SET MC ACHIEVED Oct 20",
+      "forecast": "Circuits 11A and 11B achieved · 12A submitted Nov 3 · 12B to follow · SET achieved Oct 20",
       "status": "At risk",
-      "note": "Contract date not achievable. Substation mechanical completion was achieved on 20 October. On the weekly schedule update of 12 October, mechanical completion of the last circuit is carried on 4 November, with the first three circuits applied for by circuit as their evidence packages close."
+      "note": "Contract date not achievable. Mechanical completion has been achieved for the substation, on 20 October, and for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November; circuit 12B follows on completion."
     },
     {
       "name": "Provisional Interconnection",
       "contract": "Oct 16, 2026",
-      "forecast": "Ready to Energize Nov 10 · PIS restatement owed",
+      "forecast": "Energization targeted Nov 19 – 20",
       "status": "At risk",
-      "note": "On the weekly schedule update of 12 October, ready-to-energize is carried on 10 November, aligned with the backfeed date the Owner has requested, and placed-in-service follows by circuit. The placed-in-service dates are to be restated on that basis.",
+      "note": "Energization is targeted for 19 to 20 November, subject to utility coordination for first energization; placed-in-service follows by circuit.",
       "circuits": "All four circuits Nov 18"
     },
     {
@@ -1377,7 +1377,7 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
-    "headline": "The site safety board records 246,745 safe man-work hours without recordable accidents, photographed on 23 October and up from 239,337 at 15 October. The record for 1 January to 5 October shows zero lost-time, zero recordable and zero days-away cases in every month of 2026.",
+    "headline": "The weekly construction report of 6 November records 250,421 man-hours to date with zero lost-time and zero recordable cases. The record for 1 January to 5 October shows zero lost-time, zero recordable and zero days-away cases in every month of 2026.",
     "tiles": [
       {
         "label": "Recordable accidents",
@@ -1423,7 +1423,7 @@ window.MURCH_REPORT = {
     "note": "The injury record remains clean at the date of this report: zero recordable, zero lost-time and zero restricted-work cases across 186,352 hours, with all three incidence rates at 0.00 - subject to the classification of the 8 September event once the medical outcome is known. The 8 September response - immediate first aid by co-workers, emergency services on site, hospital transfer, area stopped, notification within the day and investigation opened - followed the site emergency procedure as written. The programme behind that response is documented in the EHS management pack issued on 8 September: workers and man-hours by company and month, orientations given, the full incident register, unsafe acts and conditions by type with the corrective action for each, weekly safety walks with subcontractor supervisors, bi-weekly subcontractor safety meetings and monthly general safety meetings with recorded minutes. Heat-stress controls on the substation front are reinforced pending the findings. The 7 August investigation is closed with its corrective actions retained in the daily briefings. Environmental events on the wetland drilling crossing during August were contained, cleaned and notified, and the conduit completed on 30 August closes the exposure on that section."
   },
   "quality": {
-    "headline": "Owner acceptance stands at 886 of 2,486 completed tracker rows (35.6%) and 15,434 installed modules, and converting EPC releases into Owner acceptance remains the controlling quality action: 2,068 tracker rows and 53,060 modules carry EPC approval. Transmittal Q-0024 of 2 October delivered eleven quality documents to the Owner — material certificates for the substation anchor bolts, the auxiliary-transformer factory test records, road compaction reports, the fence check-list for the substation and Area G, the 100% check-lists for piles and trackers, and the harness, feeder, trunk, disconnect-box and inverter installation check-lists for the completed stations — and the quality master list was updated. The mechanical completion application for the substation and the first circuit was submitted on 19 October. The mechanical-completion documentation register is shared with the Owner, updated daily and reviewed jointly every two days; field test records will be loaded as testing completes. Owner comments on the electrical safety procedures submitted on 23 September are awaited.",
+    "headline": "Owner acceptance stands at 886 of 2,486 completed tracker rows (35.6%) and 15,434 installed modules, and converting EPC releases into Owner acceptance remains the controlling quality action: 2,068 tracker rows and 53,060 modules carry EPC approval. Transmittal Q-0024 of 2 October delivered eleven quality documents to the Owner — material certificates for the substation anchor bolts, the auxiliary-transformer factory test records, road compaction reports, the fence check-list for the substation and Area G, the 100% check-lists for piles and trackers, and the harness, feeder, trunk, disconnect-box and inverter installation check-lists for the completed stations — and the quality master list was updated. Mechanical completion has been achieved for circuits 11A and 11B, and the application for circuit 12A was submitted on 3 November. The mechanical-completion documentation register is shared with the Owner, updated daily and reviewed jointly every two days; field test records will be loaded as testing completes. Owner comments on the electrical safety procedures submitted on 23 September are awaited.",
     "tiles": [
       {
         "label": "Piles executed",
@@ -1481,31 +1481,28 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Oct 31 - Nov 7",
+      "period": "Nov 10 - Nov 14",
       "items": [
-        "Inverter-feeder and trunk cable on the fourth circuit, the only circuit still open in construction.",
-        "Trench compaction on the fourth circuit, at 13 of 52, and unit close-out at 41 of 46 project-wide.",
-        "Polarity and continuity records on the fourth circuit, which carries 37 of the 38 open records, and in the one area still at zero.",
-        "Very low frequency and fibre-optic testing on the second and third circuits.",
-        "Current-voltage curve sampling beyond the first two circuits, subject to the minimum irradiance the specification requires.",
-        "Supervisory-system communications on the fourth circuit, the only one still at zero.",
-        "Supervisory control unit configuration and utility coordination for first energization, the two activities still open at the substation.",
-        "Evidence packages for mechanical completion on the second, third and fourth circuits, and the substation test documentation issued for acceptance."
+        "Final inspection of circuits 11A and 11B under the township electrical permit, on 11 November.",
+        "Completion of the remaining stations on circuit 12B and its mechanical completion application.",
+        "Owner review of the mechanical completion application for circuit 12A.",
+        "Polarity and continuity, grounding, fibre-optic and precommissioning records on circuit 12B.",
+        "Current-voltage curve sampling on circuits 12A and 12B, subject to the minimum irradiance the specification requires.",
+        "Utility coordination for first energization, the one activity open at the substation."
       ]
     },
     {
-      "period": "Nov 8 - Nov 15",
+      "period": "Nov 16 - Nov 21",
       "items": [
-        "Completion of the fourth circuit and its mechanical completion application.",
-        "Ready-to-energize on 10 November, followed by substation energization and hot commissioning.",
+        "Plant-wide mechanical completion application.",
+        "Substation energization, targeted for 19 to 20 November, followed by hot commissioning.",
         "Point-to-point verification of the supervisory control system.",
-        "Utility-side work at the interconnection, and the utility clearance that follows energization.",
-        "Restatement of the dates downstream of ready-to-energize."
+        "Restatement of the dates downstream of energization."
       ]
     }
   ],
   "ownerActions": {
-    "asOf": "Oct 30, 2026",
+    "asOf": "Nov 10, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -2005,13 +2002,13 @@ window.MURCH_REPORT = {
     {
       "title": "Updated project schedule — fulfilment tracking",
       "level": "Priority",
-      "note": "The weekly schedule update of 12 October carries substation mechanical completion, which was achieved on 20 October, and ready-to-energize on 10 November, aligned with the backfeed date the Owner has requested. Mechanical completion of the last circuit is carried on 4 November and substantial completion on 12 December. Dates downstream of ready-to-energize are to be restated on that basis.",
+      "note": "Mechanical completion has been achieved for the substation and for circuits 11A and 11B; the application for circuit 12A was submitted on 3 November and circuit 12B follows on completion. Energization is targeted for 19 to 20 November. The weekly schedule update of 12 October carries substantial completion on 12 December; the dates downstream of energization are to be restated.",
       "detail": "The weekly schedule update of 5 October supersedes the revision of 1 October, which had held substantial completion at the contract date. Three circuits are complete in their construction scope; the fourth is the only one open, past its 10 October low-voltage date, and a revised forecast for it is owed."
     },
     {
       "title": "PV field testing — record coverage",
       "level": "Priority",
-      "note": "Polarity and continuity records stand at 381 of 419 combiner boxes, up from 341 on 26 October. The first and third circuits are closed at 92 of 92 and 110 of 110, the second stands at 109 of 110, and the fourth has moved from 30 to 70 of 107. By area, one area closed outright this week and another moved from 75 to 93 of 111; a single area remains at 0 of 18. Grounding resistance is recorded at 18 of 23 inverter stations and grounding continuity at 18 of 23 blocks. Current-voltage curve measurement has extended to a second circuit: 205 of 752 string samples are recorded, all validated, against 131 on 26 October. Combiner-box coverage stands at 137 of 396 sampled boxes plus 1 of 23 fully sampled boxes. Very low frequency testing is recorded at 2.6 of 4 circuits, fibre-optic testing at 2 of 4, inverter precommissioning inspection at 3 of 4, and supervisory-system communications at 17 of 23 inverter stations, up from 5. These figures are documentary coverage of the test record and are not statements of acceptance.",
+      "note": "At the commissioning portal cut of 4 November, polarity and continuity records stand at 400 of 419 combiner boxes, up from 381: 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Grounding resistance and grounding continuity are each recorded at 18 of 23. Very low frequency testing is recorded on 4 of 4 circuits, fibre-optic testing on 3 of 4 and the inverter precommissioning inspection on 3 of 4. The inverter communication loop is recorded at 23 of 23 stations. Current-voltage curve sampling stands at 195 of 492 string samples on the sampling basis in force since 4 November.",
       "detail": "The figures are documentary coverage on a supervised register, not electrical acceptance, and a missing record does not establish that a test was not performed. The second circuit has been confirmed complete in the field with no station outstanding, and its records are applied accordingly."
     },
     {
@@ -2041,7 +2038,7 @@ window.MURCH_REPORT = {
     {
       "title": "LV and DC installation",
       "level": "Priority",
-      "note": "Cable stands at 257,764 feet of 269,748, or 95.6 per cent, and harness assemblies at 4,379 of 5,007, or 87.5 per cent. Installation on 27 October added 4,002 feet of inverter-feeder cable and 3,096 feet of trunk cable, all on the fourth circuit. No cable was reported on 28 or 29 October; work on those days was messenger installation, grounding, prefabrication and testing. Messenger wire advanced by 1,534 feet tensioned and 192 brackets over the two days. Trunk cable has reached 43,546 feet against a take-off of 40,313 and is reported at its full take-off quantity pending reconciliation of the measurement.",
+      "note": "Cable stands at 257,764 feet of 269,748, or 95.6 per cent, and harness assemblies at 4,379 of 5,007, or 87.5 per cent, executed through 29 October. No production quantities have been reported since that date and the figures are held. Three of the four circuits are complete on this front; circuit 12B is the only one open.",
       "detail": "Three of the four circuits are complete on this front. The fourth carries about 45,404 feet of inverter-feeder cable, 9,288 feet of trunk cable, 719 harness assemblies and 636 low-voltage terminations, against a date that passed on 10 October. A revised completion forecast for that circuit is owed."
     },
     {
@@ -2053,7 +2050,7 @@ window.MURCH_REPORT = {
     {
       "title": "Substation and commissioning",
       "level": "Watch",
-      "note": "The construction scope at this station is complete across civil, mechanical, bus and connectors, and the grounding system, each at 100 per cent. Earned value stands at 99.85 per cent, 255 of 257 activities, on the tracker of 30 October. Two activities remain open, both electrical: the supervisory control unit configuration, reported at 95 per cent, and coordination with the utility for first energization, reported at 50 per cent. Substation mechanical completion was achieved on 20 October and the substation test programme is executed in full, 74 of 74.",
+      "note": "The construction scope at this station is complete across all six disciplines. The tracker of 9 November stands at 256 of 257 activities; the one open activity is coordination with the utility for first energization. The test programme stands executed at 74 of 74. All 23 inverter stations communicate with the control room. Energization is targeted for 19 to 20 November.",
       "detail": "All six disciplines at 100 per cent on 15 October: civil, mechanical, electrical, bus and connectors, grounding, and control and communications. The connection to the utility and the final rock layers in the yard closed on 13 October, and completing the rock allowed the grounding test to proceed that afternoon. The control system is installed and communicating, with the substation one-line running live on the control screen on 15 October. The grating in the transformer chamber is the one construction item outstanding, carried as punch. The commissioning register stands at zero of 74 tests passed; 90 per cent of the reports were committed for 15 October and completion of the station for Monday 19 October."
     }
   ],
@@ -2368,8 +2365,8 @@ window.MURCH_REPORT = {
     "tiles": [
       {
         "label": "Personnel on site",
-        "value": "106",
-        "note": "Average per working day across Oct 15, 2026 to Oct 23, 2026, derived from the reported manhours. The site headcount board has not been issued since September."
+        "value": "59",
+        "note": "Average per working day across Oct 23, 2026 to Nov 6, 2026, derived from the reported manhours. The site headcount board has not been issued since September."
       },
       {
         "label": "Peak headcount",
@@ -2383,8 +2380,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "246,745",
-        "note": "Total manhours worked without a recordable incident, as reported by EHS on Oct 23, 2026."
+        "value": "250,421",
+        "note": "Total manhours worked without a recordable incident, as reported by EHS on Nov 6, 2026."
       },
       {
         "label": "Recordable incident rate",
@@ -2429,11 +2426,15 @@ window.MURCH_REPORT = {
       {
         "d": "Oct 23",
         "c": 246745
+      },
+      {
+        "d": "Nov 6",
+        "c": 250421
       }
     ]
   },
   "electricalByCircuit": {
-    "asOf": "October 29, 2026",
+    "asOf": "November 9, 2026",
     "basis": "Executed through . Harness in assemblies; cable in feet; disconnect boxes and medium-voltage junction boxes in units; terminations in count. Production not yet placed on a circuit is carried on its own line and included in the project totals.",
     "rows": [
       {
@@ -2631,32 +2632,50 @@ window.MURCH_REPORT = {
       {
         "test": "Polarity and continuity (Vdc)",
         "scope": "419 combiner boxes",
-        "done": "315",
-        "status": "In progress - 75 per cent"
+        "done": "400",
+        "status": "In progress - 95 per cent"
       },
       {
         "test": "Grounding resistance",
         "scope": "23 inverters",
-        "done": "9",
+        "done": "18",
         "status": "In progress"
       },
       {
         "test": "Grounding continuity",
         "scope": "23 inverters",
-        "done": "5",
+        "done": "18",
         "status": "In progress"
       },
       {
-        "test": "Very low frequency and battery bank",
+        "test": "Very low frequency",
         "scope": "4 circuits",
-        "done": "1",
+        "done": "4",
+        "status": "Recorded on all four circuits"
+      },
+      {
+        "test": "Fibre-optic testing",
+        "scope": "4 circuits",
+        "done": "3",
         "status": "In progress"
       },
       {
-        "test": "Current-voltage curve",
-        "scope": "419 combiner boxes",
-        "done": "0",
-        "status": "Not started — the minimum project-required irradiance has not been met"
+        "test": "Inverter precommissioning inspection",
+        "scope": "4 circuits",
+        "done": "3",
+        "status": "In progress"
+      },
+      {
+        "test": "Inverter communication loop",
+        "scope": "23 inverters",
+        "done": "23",
+        "status": "Recorded on all stations"
+      },
+      {
+        "test": "Current-voltage curve sampling",
+        "scope": "492 string samples",
+        "done": "195",
+        "status": "In progress"
       }
     ],
     "set": [
@@ -2667,6 +2686,6 @@ window.MURCH_REPORT = {
         "status": "Executed in full; evidence packages being compiled"
       }
     ],
-    "note": "By circuit, polarity and continuity records stand at 110 of 110 on the second circuit, 109 of 110 on the third and 90 of 92 on the first. The fourth circuit carries 101 of the 104 records still open, and the polarity campaign moves onto it next. Very low frequency testing is complete and delivered on the first circuit and begins on the third on 25 October, followed by the fourth. Inverter inspections, communication-cable tests and grounding-system tests for the second, third and fourth circuits are being compiled; low- and medium-voltage cable testing is complete."
+    "note": "By circuit, polarity and continuity records stand at 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Figures are taken from the commissioning portal at its cut of 4 November and are documentary coverage, not electrical acceptance."
   }
 };
