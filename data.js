@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Issued 10 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe township electrical permit was issued on 5 November, and the final electrical inspection of circuits 11A and 11B was completed and approved on 11 November.\n\nModules, piles, tracker rows, civil works and the substation are complete. The substation stands at 256 of 257 activities on the tracker of 9 November; the one open activity is coordination with the utility for first energization.\n\nThe field-test record, at the commissioning portal cut of 4 November, shows polarity and continuity at 400 of 419 combiner boxes, up from 381; very low frequency testing at 4 of 4 circuits; fibre-optic testing at 3 of 4; and the inverter communication loop at 23 of 23 stations. Current-voltage curve sampling stands at 195 of 492 string samples on the sampling basis in force since 4 November. These are measures of documentary coverage, not of acceptance.\n\nRecorded man-hours stand at 250,421 at 6 November, with zero lost-time and zero recordable cases.\n\nEnergization is targeted for 19 to 20 November.",
+    "statement": "Issued 10 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nTownship electrical permits are issued for all four circuits. The final electrical inspection of circuits 11A and 11B was completed and approved on 11 November; the final inspection of 12A and 12B follows completion of 12B.\n\nModules, piles, tracker rows, civil works and the substation are complete. The substation stands at 256 of 257 activities on the tracker of 9 November; the one open activity is coordination with the utility for first energization.\n\nThe field-test record, at the commissioning portal cut of 11 November, shows polarity and continuity at 400 of 419 combiner boxes; very low frequency testing at 4 of 4 circuits; fibre-optic testing at 3 of 4; the inverter precommissioning inspection at 20 of 23 inverters; and the inverter communication loop at 23 of 23 stations. Current-voltage curve sampling stands at 256 of 492 string samples, up from 195 on 4 November. These are measures of documentary coverage, not of acceptance.\n\nRecorded man-hours stand at 250,323 at 31 October, with zero recordable and zero lost-time cases; the recordable and DART rates are both 0.00.\n\nEnergization is targeted for 19 to 20 November.",
     "note": null
   },
   "gates": [
@@ -2008,7 +2008,7 @@ window.MURCH_REPORT = {
     {
       "title": "PV field testing — record coverage",
       "level": "Priority",
-      "note": "At the commissioning portal cut of 4 November, polarity and continuity records stand at 400 of 419 combiner boxes, up from 381: 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Grounding resistance and grounding continuity are each recorded at 18 of 23. Very low frequency testing is recorded on 4 of 4 circuits, fibre-optic testing on 3 of 4 and the inverter precommissioning inspection on 3 of 4. The inverter communication loop is recorded at 23 of 23 stations. Current-voltage curve sampling stands at 195 of 492 string samples on the sampling basis in force since 4 November.",
+      "note": "At the commissioning portal cut of 11 November, polarity and continuity records stand at 400 of 419 combiner boxes: 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Grounding resistance and grounding continuity are each recorded at 18 of 23. Very low frequency testing is recorded on 4 of 4 circuits, fibre-optic testing on 3 of 4 and the inverter precommissioning inspection on 20 of 23 inverters. The inverter communication loop is recorded at 23 of 23 stations. Current-voltage curve sampling stands at 256 of 492 string samples, up from 195 on 4 November: 103 of 165 on 11A, 109 of 110 on 11B, 44 of 110 on 12A and none yet on 12B.",
       "detail": "The figures are documentary coverage on a supervised register, not electrical acceptance, and a missing record does not establish that a test was not performed. The second circuit has been confirmed complete in the field with no station outstanding, and its records are applied accordingly."
     },
     {
@@ -2366,7 +2366,7 @@ window.MURCH_REPORT = {
       {
         "label": "Personnel on site",
         "value": "59",
-        "note": "Average per working day across Oct 23, 2026 to Nov 6, 2026, derived from the reported manhours. The site headcount board has not been issued since September."
+        "note": "Average per working day across Oct 23, 2026 to Oct 31, 2026, derived from the reported manhours. The site headcount board has not been issued since September."
       },
       {
         "label": "Peak headcount",
@@ -2380,8 +2380,8 @@ window.MURCH_REPORT = {
       },
       {
         "label": "Manhours to date",
-        "value": "250,421",
-        "note": "Total manhours worked without a recordable incident, as reported by EHS on Nov 6, 2026."
+        "value": "250,323",
+        "note": "Total manhours worked without a recordable incident, as reported by EHS on Oct 31, 2026."
       },
       {
         "label": "Recordable incident rate",
@@ -2428,8 +2428,8 @@ window.MURCH_REPORT = {
         "c": 246745
       },
       {
-        "d": "Nov 6",
-        "c": 250421
+        "d": "Oct 31",
+        "c": 250323
       }
     ]
   },
