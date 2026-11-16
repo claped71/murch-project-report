@@ -1,13 +1,13 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated November 16, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated November 9, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Electrical installation and mechanical close-out",
-    "asOf": "November 16, 2026",
+    "asOf": "November 9, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
@@ -105,7 +105,7 @@ window.MURCH_REPORT = {
     {
       "name": "Provisional Interconnection",
       "contract": "Oct 16, 2026",
-      "forecast": "Substation backfeed targeted Nov 19",
+      "forecast": "Energization targeted Nov 19 – 20",
       "status": "At risk",
       "note": "Substation backfeed is targeted for 19 November, subject to utility coordination for first energization; energization of the collection circuits and placed-in-service follow by circuit.",
       "circuits": "All four circuits Nov 18"
