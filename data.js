@@ -1,13 +1,13 @@
 'use strict';
 /* Murch Solar Project — Owner Project Report. Physical progress dataset.
-   Generated November 9, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
+   Generated November 16, 2026 by tools/sync.js from the construction dashboard. Do not hand-edit derived blocks. */
 window.MURCH_REPORT = {
   "meta": {
     "project": "Murch Solar Project",
     "location": "Lawrence, Van Buren County, Michigan",
     "capacityNote": "Utility-scale photovoltaic generating facility",
     "phase": "Construction — Electrical installation and mechanical close-out",
-    "asOf": "November 9, 2026",
+    "asOf": "November 16, 2026",
     "reportNo": "Construction Progress Report",
     "preparedBy": "GreenSol",
     "client": "Heelstone Renewable Energy"
@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Issued 10 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nTownship electrical permits are issued for all four circuits. The final electrical inspection of circuits 11A and 11B was completed and approved on 11 November; the final inspection of 12A and 12B follows completion of 12B.\n\nModules, piles, tracker rows, civil works and the substation are complete. The substation stands at 256 of 257 activities on the tracker of 9 November; the one open activity is coordination with the utility for first energization.\n\nThe field-test record, at the commissioning portal cut of 11 November, shows polarity and continuity at 400 of 419 combiner boxes; very low frequency testing at 4 of 4 circuits; fibre-optic testing at 3 of 4; the inverter precommissioning inspection at 20 of 23 inverters; and the inverter communication loop at 23 of 23 stations. Current-voltage curve sampling stands at 256 of 492 string samples, up from 195 on 4 November. These are measures of documentary coverage, not of acceptance.\n\nRecorded man-hours stand at 250,323 at 31 October, with zero recordable and zero lost-time cases; the recordable and DART rates are both 0.00.\n\nEnergization is targeted for 19 to 20 November.",
+    "statement": "Issued 16 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for the substation and for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe final electrical inspection of circuits 11A and 11B was approved on 11 November; the final inspection of 12A and 12B follows completion of 12B.\n\nThe substation stands at 256 of 257 activities; the one open activity is coordination with the utility for first energization. Substation backfeed is targeted for 19 November.\n\nAt the commissioning portal cut of 12 November, current-voltage curve sampling stands at 316 of 479 string samples, up from 256; fibre-optic testing is recorded on 4 of 4 circuits, grounding resistance on 20 of 23 inverters, and polarity and continuity on 400 of 419 combiner boxes. These are measures of documentary coverage, not of acceptance.\n\nThe punch-list register of 13 November carries 145 items: EPC responses record 60 as completed and 23 submitted for closure or under review, with closure evidence being issued for verification.\n\nRecorded man-hours stand at 250,323 at 31 October, with zero recordable cases; the recordable and DART rates are both 0.00.",
     "note": null
   },
   "gates": [
@@ -105,9 +105,9 @@ window.MURCH_REPORT = {
     {
       "name": "Provisional Interconnection",
       "contract": "Oct 16, 2026",
-      "forecast": "Energization targeted Nov 19 – 20",
+      "forecast": "Substation backfeed targeted Nov 19",
       "status": "At risk",
-      "note": "Energization is targeted for 19 to 20 November, subject to utility coordination for first energization; placed-in-service follows by circuit.",
+      "note": "Substation backfeed is targeted for 19 November, subject to utility coordination for first energization; energization of the collection circuits and placed-in-service follow by circuit.",
       "circuits": "All four circuits Nov 18"
     },
     {
@@ -1377,7 +1377,7 @@ window.MURCH_REPORT = {
     }
   ],
   "safety": {
-    "headline": "The weekly construction report of 6 November records 250,421 man-hours to date with zero lost-time and zero recordable cases. The record for 1 January to 5 October shows zero lost-time, zero recordable and zero days-away cases in every month of 2026.",
+    "headline": "Recorded man-hours stand at 250,323 to 31 October with zero recordable and zero lost-time cases; the recordable and DART rates are both 0.00 for 2026 to date.",
     "tiles": [
       {
         "label": "Recordable accidents",
@@ -1481,28 +1481,28 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Nov 10 - Nov 14",
+      "period": "Nov 16 - Nov 20",
       "items": [
-        "Final inspection of circuits 11A and 11B under the township electrical permit, on 11 November.",
-        "Completion of the remaining stations on circuit 12B and its mechanical completion application.",
+        "Substation backfeed, targeted for 19 November, followed by hot commissioning.",
+        "Supervisory control and data acquisition point verification and the grid-operator onboarding test.",
+        "Completion of the remaining stations on circuit 12B and its test records: polarity and continuity, grounding and precommissioning.",
         "Owner review of the mechanical completion application for circuit 12A.",
-        "Polarity and continuity, grounding, fibre-optic and precommissioning records on circuit 12B.",
-        "Current-voltage curve sampling on circuits 12A and 12B, subject to the minimum irradiance the specification requires.",
-        "Utility coordination for first energization, the one activity open at the substation."
+        "Issue of punch-list closure evidence for Owner verification; weekly punch-list review on 19 November.",
+        "Current-voltage curve sampling on circuits 12A and 12B, subject to the minimum irradiance the specification requires."
       ]
     },
     {
-      "period": "Nov 16 - Nov 21",
+      "period": "Nov 23 - Nov 27",
       "items": [
-        "Plant-wide mechanical completion application.",
-        "Substation energization, targeted for 19 to 20 November, followed by hot commissioning.",
-        "Point-to-point verification of the supervisory control system.",
+        "Mechanical completion application for circuit 12B and the plant-wide application.",
+        "Final electrical inspection of circuits 12A and 12B.",
+        "Energization of the collection circuits following substation backfeed.",
         "Restatement of the dates downstream of energization."
       ]
     }
   ],
   "ownerActions": {
-    "asOf": "Nov 10, 2026",
+    "asOf": "Nov 16, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -2008,8 +2008,14 @@ window.MURCH_REPORT = {
     {
       "title": "PV field testing — record coverage",
       "level": "Priority",
-      "note": "At the commissioning portal cut of 11 November, polarity and continuity records stand at 400 of 419 combiner boxes: 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Grounding resistance and grounding continuity are each recorded at 18 of 23. Very low frequency testing is recorded on 4 of 4 circuits, fibre-optic testing on 3 of 4 and the inverter precommissioning inspection on 20 of 23 inverters. The inverter communication loop is recorded at 23 of 23 stations. Current-voltage curve sampling stands at 256 of 492 string samples, up from 195 on 4 November: 103 of 165 on 11A, 109 of 110 on 11B, 44 of 110 on 12A and none yet on 12B.",
-      "detail": "The figures are documentary coverage on a supervised register, not electrical acceptance, and a missing record does not establish that a test was not performed. The second circuit has been confirmed complete in the field with no station outstanding, and its records are applied accordingly."
+      "note": "At the commissioning portal cut of 12 November, polarity and continuity records stand at 400 of 419 combiner boxes: 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Grounding resistance is recorded at 20 of 23 inverters and grounding continuity at 18 of 23. Very low frequency testing and fibre-optic testing are each recorded on 4 of 4 circuits, and the inverter precommissioning inspection on 20 of 23 inverters. Current-voltage curve sampling stands at 316 of 479 string samples, up from 256 on 11 November: 149 of 152 on 11A, 110 of 110 on 11B, 57 of 110 on 12A and none yet on 12B.",
+      "detail": "The figures are documentary coverage on a supervised register, not electrical acceptance, and a missing record does not establish that a test was not performed. The sampling scope for circuit 11A was restated by the test contractor on 12 November, from 165 to 152 string samples, giving a project scope of 479."
+    },
+    {
+      "title": "Punch list — closure progress",
+      "level": "Priority",
+      "note": "The punch-list register of 13 November carries 145 items from the site walks of August and October, the inverter-manual review and the environmental compliance audit. EPC responses record 60 items as completed, 15 submitted for closure and 8 under review; 62 are in progress. Closure evidence, including photographs, is being issued to the Owner for verification, and the register is reviewed in a weekly punch-list meeting.",
+      "detail": "Counts are taken from the EPC response column of the shared register. Items are closed in the Owner's status column on the Owner's verification."
     },
     {
       "title": "Module series connection",
@@ -2638,7 +2644,7 @@ window.MURCH_REPORT = {
       {
         "test": "Grounding resistance",
         "scope": "23 inverters",
-        "done": "18",
+        "done": "20",
         "status": "In progress"
       },
       {
@@ -2656,13 +2662,13 @@ window.MURCH_REPORT = {
       {
         "test": "Fibre-optic testing",
         "scope": "4 circuits",
-        "done": "3",
-        "status": "In progress"
+        "done": "4",
+        "status": "Recorded on all four circuits"
       },
       {
         "test": "Inverter precommissioning inspection",
-        "scope": "4 circuits",
-        "done": "3",
+        "scope": "23 inverters",
+        "done": "20",
         "status": "In progress"
       },
       {
@@ -2673,8 +2679,8 @@ window.MURCH_REPORT = {
       },
       {
         "test": "Current-voltage curve sampling",
-        "scope": "492 string samples",
-        "done": "195",
+        "scope": "479 string samples",
+        "done": "316",
         "status": "In progress"
       }
     ],
@@ -2686,6 +2692,6 @@ window.MURCH_REPORT = {
         "status": "Executed in full; evidence packages being compiled"
       }
     ],
-    "note": "By circuit, polarity and continuity records stand at 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B. Figures are taken from the commissioning portal at its cut of 4 November and are documentary coverage, not electrical acceptance."
+    "note": "By circuit, polarity and continuity records stand at 92 of 92 on circuit 11A, 110 of 110 on 11B, 109 of 110 on 12A and 89 of 107 on 12B; current-voltage sampling at 149 of 152, 110 of 110, 57 of 110 and 0 of 107. Figures are taken from the commissioning portal at its cut of 12 November and are documentary coverage, not electrical acceptance."
   }
 };
