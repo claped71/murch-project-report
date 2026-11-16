@@ -2100,6 +2100,13 @@ window.MURCH_REPORT = {
   ],
   "photos": [
     {
+      "src": "assets/photo-83.jpg",
+      "poster": true,
+      "date": "November 13, 2026",
+      "title": "250,000 hours worked without a recordable incident",
+      "note": "Site celebration on 13 November marking 250,000 hours worked on the project without a recordable incident. Recorded man-hours stand at 250,323 to 31 October, with recordable and DART rates of 0.00."
+    },
+    {
       "src": "assets/photo-82.jpg",
       "date": "October 17, 2026",
       "title": "Utility crews working the interconnection",

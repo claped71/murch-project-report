@@ -175,6 +175,7 @@ svg{display:block;width:100%;overflow:visible}
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 .ph{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .ph img{width:100%;height:190px;object-fit:cover;display:block;background:var(--panel)}
+.ph.ph-poster img{height:auto;max-height:520px;object-fit:contain}
 .ph .cap{padding:13px}
 .ph .cap .dt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .ph .cap h4{margin:4px 0 5px;font-size:14px;font-weight:700}
@@ -253,6 +254,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
   .tile .v{font-size:21px}
   .gal{grid-template-columns:1fr}
   .ph img{height:210px}
+  .ph.ph-poster img{height:auto}
   .la li{font-size:13px}
   .brandbar .wrap{padding-top:12px;padding-bottom:12px}
   .brandbar img{height:26px}
@@ -567,7 +569,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
 </div>
 
 <div class="tt" id="tt"></div>
-<script src="data.js?v=c203bdf390"></script>
+<script src="data.js?v=39dc2b1c47"></script>
 <script>
 (function(){
   var D = window.MURCH_REPORT;
@@ -1261,7 +1263,7 @@ footer{margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--line);colo
     // Phones pull the small variant (~30 KB) instead of the full image (~200 KB).
     var sm = p.src.replace(/\.jpg$/, '-sm.jpg');
     var md = p.src.replace(/\.jpg$/, '-md.jpg');
-    return '<div class="ph"><img src="'+sm+'" srcset="'+sm+' 520w, '+md+' 820w, '+p.src+' 1200w" '
+    return '<div class="ph'+(p.poster?' ph-poster':'')+'"><img src="'+sm+'" srcset="'+sm+' 520w, '+md+' 820w, '+p.src+' 1200w" '
       + 'sizes="(max-width:720px) 60vw, (max-width:1100px) 50vw, 320px" '
       + 'alt="'+esc(p.title)+'" loading="lazy" decoding="async"><div class="cap"><div class="dt">'+esc(p.date)+'</div><h4>'+esc(p.title)+'</h4><p>'+esc(p.note)+'</p></div></div>';
   }).join('');
