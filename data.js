@@ -22,7 +22,7 @@ window.MURCH_REPORT = {
       "civil": 0.1
     },
     "overallNote": "Weighted physical completion. Weighting: piles 28%, trackers 22%, modules 26%, electrical 14%, civil 10%. The electrical component covers all four electrical fronts — LV and DC cable, MV collection, inverter stations and the substation — combined into one total. Civil excludes the substation so it is not counted twice.",
-    "statement": "Issued 16 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for the substation and for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe final electrical inspection of circuits 11A and 11B was approved on 11 November; the final inspection of 12A and 12B follows completion of 12B.\n\nThe substation stands at 256 of 257 activities; the one open activity is coordination with the utility for first energization. Substation backfeed is targeted for 19 November.\n\nAt the commissioning portal cut of 12 November, current-voltage curve sampling stands at 316 of 479 string samples, up from 256; fibre-optic testing is recorded on 4 of 4 circuits, grounding resistance on 20 of 23 inverters, and polarity and continuity on 400 of 419 combiner boxes. These are measures of documentary coverage, not of acceptance.\n\nThe punch-list register of 13 November carries 145 items: EPC responses record 60 as completed and 23 submitted for closure or under review, with closure evidence being issued for verification.\n\nRecorded man-hours stand at 250,323 at 31 October, with zero recordable cases; the recordable and DART rates are both 0.00.",
+    "statement": "Issued 18 November. Overall progress 99.7 per cent. Cable 257,764 feet of 269,748, or 95.6 per cent, executed through 29 October; no further production quantities have been reported since that date and the figures are held.\n\nMechanical completion has been achieved for the substation and for circuits 11A and 11B. The application for circuit 12A was submitted on 3 November. Circuit 12B is the only circuit open in construction; its application follows on completion, ahead of the plant-wide application.\n\nThe final electrical inspection of circuits 11A and 11B was approved on 11 November; the final inspection of 12A and 12B follows completion of 12B.\n\nThe substation stands at 256 of 257 activities; the one open activity is coordination with the utility for first energization. Substation backfeed is targeted for 19 November, and the protection load test with the utility is scheduled for 24 November.\n\nAt the commissioning portal cut of 12 November, current-voltage curve sampling stands at 316 of 479 string samples, up from 256; fibre-optic testing is recorded on 4 of 4 circuits, grounding resistance on 20 of 23 inverters, and polarity and continuity on 400 of 419 combiner boxes. These are measures of documentary coverage, not of acceptance.\n\nThe punch-list register, updated 18 November, carries 145 items: EPC responses record 62 as completed and 22 submitted for closure or under review, with closure evidence being issued for verification.\n\nRecorded man-hours stand at 250,323 at 31 October, with zero recordable cases; the recordable and DART rates are both 0.00.",
     "note": null
   },
   "gates": [
@@ -1481,7 +1481,7 @@ window.MURCH_REPORT = {
   "weatherNote": "Days on which weather or air quality reduced or stopped production. Scheduled non-working days are not listed.",
   "lookahead": [
     {
-      "period": "Nov 16 - Nov 20",
+      "period": "Nov 18 - Nov 20",
       "items": [
         "Substation backfeed, targeted for 19 November, followed by hot commissioning.",
         "Supervisory control and data acquisition point verification and the grid-operator onboarding test.",
@@ -1494,6 +1494,7 @@ window.MURCH_REPORT = {
     {
       "period": "Nov 23 - Nov 27",
       "items": [
+        "Protection load test with the utility, scheduled for 24 November, with hot commissioning of the inverters beforehand.",
         "Mechanical completion application for circuit 12B and the plant-wide application.",
         "Final electrical inspection of circuits 12A and 12B.",
         "Energization of the collection circuits following substation backfeed.",
@@ -1502,7 +1503,7 @@ window.MURCH_REPORT = {
     }
   ],
   "ownerActions": {
-    "asOf": "Nov 16, 2026",
+    "asOf": "Nov 18, 2026",
     "responseNote": "Days outstanding are counted to the publication date of this report. This register supports coordination and does not replace or vary any notice provision of the Agreement.",
     "items": [
       {
@@ -2014,7 +2015,7 @@ window.MURCH_REPORT = {
     {
       "title": "Punch list — closure progress",
       "level": "Priority",
-      "note": "The punch-list register of 13 November carries 145 items from the site walks of August and October, the inverter-manual review and the environmental compliance audit. EPC responses record 60 items as completed, 15 submitted for closure and 8 under review; 62 are in progress. Closure evidence, including photographs, is being issued to the Owner for verification, and the register is reviewed in a weekly punch-list meeting.",
+      "note": "The punch-list register, updated 18 November, carries 145 items from the site walks of August and October, the inverter-manual review and the environmental compliance audit. EPC responses record 62 items as completed, 15 submitted for closure and 7 under review; 61 are in progress. Closure evidence, including photographs, is being issued to the Owner for verification, and the register is reviewed in a weekly punch-list meeting.",
       "detail": "Counts are taken from the EPC response column of the shared register. Items are closed in the Owner's status column on the Owner's verification."
     },
     {
